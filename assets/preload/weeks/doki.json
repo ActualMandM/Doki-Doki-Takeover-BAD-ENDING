@@ -1,0 +1,22 @@
+{
+	"songs": [
+		["STAGNANT", "sayori", [165, 0, 77]],
+		["MARKOV", "yuri-crazy", [165, 0, 77]],
+		["HOME", "natsuki", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekBackground": "",
+
+	"storyName": "",
+	"weekBefore": "doki",
+	"weekName": "BAD END",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

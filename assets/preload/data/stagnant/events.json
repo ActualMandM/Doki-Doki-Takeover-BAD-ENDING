@@ -1,0 +1,59 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "dokiclubroom",
+		"player1": "bf",
+		"player2": "sayori",
+		"player3": null,
+		"events": [
+			[
+				24045.8333333333,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0"
+					]
+				]
+			],
+			[
+				44666.6666666667,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.5"
+					]
+				]
+			],
+			[
+				66500,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0"
+					]
+				]
+			],
+			[
+				87750,
+				[
+					[
+						"Change Scroll Speed",
+						"1.12",
+						"3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 180,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Stagnant"
+	}
+}
