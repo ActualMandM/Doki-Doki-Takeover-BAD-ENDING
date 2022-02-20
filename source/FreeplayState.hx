@@ -55,9 +55,6 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		if (!FlxG.sound.music.playing)
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages();
 		#end
@@ -158,7 +155,7 @@ class FreeplayState extends MusicBeatState
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 
 		changeSelection();
-		// changeDiff();
+		changeDiff();
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
@@ -182,6 +179,7 @@ class FreeplayState extends MusicBeatState
 		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
 		textBG.alpha = 0.6;
 		add(textBG);
+
 		#if PRELOAD_ALL
 		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
 		var size:Int = 16;
@@ -274,13 +272,12 @@ class FreeplayState extends MusicBeatState
 			changeSelection(shiftMult);
 		}
 
-		/* 		if (controls.UI_LEFT_P)
-				changeDiff(-1);
-			else if (controls.UI_RIGHT_P)
-				changeDiff(1);
-			else if (upP || downP)
-				changeDiff();
-		 */
+		if (controls.UI_LEFT_P)
+			changeDiff(-1);
+		else if (controls.UI_RIGHT_P)
+			changeDiff(1);
+		else if (upP || downP)
+			changeDiff();
 
 		if (controls.BACK)
 		{
@@ -377,28 +374,27 @@ class FreeplayState extends MusicBeatState
 		vocals = null;
 	}
 
-	/* 
-		function changeDiff(change:Int = 0)
-		{
-			curDifficulty += change;
+	function changeDiff(change:Int = 0)
+	{
+		curDifficulty += change;
 
-			if (curDifficulty < 0)
-				curDifficulty = CoolUtil.difficulties.length - 1;
-			if (curDifficulty >= CoolUtil.difficulties.length)
-				curDifficulty = 0;
+		if (curDifficulty < 0)
+			curDifficulty = CoolUtil.difficulties.length - 1;
+		if (curDifficulty >= CoolUtil.difficulties.length)
+			curDifficulty = 0;
 
-			lastDifficultyName = CoolUtil.difficulties[curDifficulty];
+		lastDifficultyName = CoolUtil.difficulties[curDifficulty];
 
-			#if !switch
-			intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
-			intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
-			#end
+		#if !switch
+		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
+		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
+		#end
 
-			PlayState.storyDifficulty = curDifficulty;
-			diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
-			positionHighscore();
-		}
-	 */
+		PlayState.storyDifficulty = curDifficulty;
+		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
+		positionHighscore();
+	}
+
 	function changeSelection(change:Int = 0, playSound:Bool = true)
 	{
 		if (playSound)
