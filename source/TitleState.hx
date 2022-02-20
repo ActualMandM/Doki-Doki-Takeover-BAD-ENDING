@@ -68,7 +68,7 @@ class TitleState extends MusicBeatState
 
 	var wackyImage:FlxSprite;
 
-	var easterEggEnabled:Bool = false; // Disable this to hide the easter egg
+	var easterEggEnabled:Bool = true; // Disable this to hide the easter egg
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; // bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
@@ -80,8 +80,6 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		// FlxG.autoPause = false;
-
 		#if MODS_ALLOWED
 		// Just to load a mod on start up if ya got one. For mods that change the menu music and bg
 		if (FileSystem.exists("modsList.txt"))
@@ -180,17 +178,10 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('dokitakeover', 'ddtoteam');
+		FlxG.save.bind('funkin', 'ninjamuffin99');
 		ClientPrefs.loadPrefs();
 
-		LangUtil.localeList = CoolUtil.coolTextFile(Paths.txt('data/textData', 'preload', true));
-
 		Highscore.load();
-
-		#if FEATURE_GAMEJOLT
-		GameJoltAPI.connect();
-		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
-		#end
 
 		if (FlxG.save.data.weekCompleted != null)
 		{
@@ -203,7 +194,7 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if (!FlxG.save.data.extra2beaten || FlxG.save.data.extra2beaten == null)
+		if (FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
@@ -310,7 +301,7 @@ class TitleState extends MusicBeatState
 		#end
 
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
@@ -340,29 +331,29 @@ class TitleState extends MusicBeatState
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
-		// add(gfDance);
+		add(gfDance);
 		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		// logoBl.shader = swagShader.shader;
 
 		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
-		// #if (desktop && MODS_ALLOWED)
-		// var path = "mods/" + Paths.currentModDirectory + "/images/titleEnter.png";
-		// // trace(path, FileSystem.exists(path));
-		// if (!FileSystem.exists(path))
-		// {
-		// 	path = "mods/images/titleEnter.png";
-		// }
-		// // trace(path, FileSystem.exists(path));
-		// if (!FileSystem.exists(path))
-		// {
-		// 	path = "assets/images/titleEnter.png";
-		// }
-		// // trace(path, FileSystem.exists(path));
-		// titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path), File.getContent(StringTools.replace(path, ".png", ".xml")));
-		// #else
-		titleText.frames = Paths.getSparrowAtlas('titleEnter', 'preload', true);
-		// #end
+		#if (desktop && MODS_ALLOWED)
+		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnter.png";
+		// trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path))
+		{
+			path = "mods/images/titleEnter.png";
+		}
+		// trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path))
+		{
+			path = "assets/images/titleEnter.png";
+		}
+		// trace(path, FileSystem.exists(path));
+		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path), File.getContent(StringTools.replace(path, ".png", ".xml")));
+		#else
+		titleText.frames = Paths.getSparrowAtlas('titleEnter');
+		#end
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
 		titleText.antialiasing = ClientPrefs.globalAntialiasing;
@@ -399,7 +390,7 @@ class TitleState extends MusicBeatState
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
 		ngSpr.updateHitbox();
 		ngSpr.screenCenter(X);
-		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
+		ngSpr.antialiasing = true;
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -413,7 +404,7 @@ class TitleState extends MusicBeatState
 
 	function getIntroTextShit():Array<Array<String>>
 	{
-		var fullText:String = Assets.getText(Paths.txt('data/introText'));
+		var fullText:String = Assets.getText(Paths.txt('introText'));
 
 		var firstArray:Array<String> = fullText.split('\n');
 		var swagGoodArray:Array<Array<String>> = [];
@@ -601,8 +592,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		// if (logoBl != null)
-		// 	logoBl.animation.play('bump');
+		if (logoBl != null)
+			logoBl.animation.play('bump', true);
 
 		if (gfDance != null)
 		{
