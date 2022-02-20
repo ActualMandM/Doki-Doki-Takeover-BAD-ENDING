@@ -67,6 +67,10 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		#if STREAMER_DEMO
+		optionShit.remove('freeplay');
+		#end
+
 		if (!FlxG.sound.music.playing)
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
@@ -287,8 +291,11 @@ class MainMenuState extends MusicBeatState
 		switch (daChoice)
 		{
 			case 'story_mode' | 'story mode':
-				// MusicBeatState.switchState(new StoryMenuState());
+				#if STREAMER_DEMO
+				PlayState.storyPlaylist = ['STAGNANT'];
+				#else
 				PlayState.storyPlaylist = ['STAGNANT', 'MARKOV', 'HOME'];
+				#end
 				PlayState.isStoryMode = true;
 				PlayState.storyDifficulty = 1;
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());
