@@ -14,7 +14,7 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 ### Doki Doki Takeover
 - [Jorge_SunSpirit](https://twitter.com/Jorge_SunSpirit) and [M&M](https://twitter.com/ActualMandM) - Programming
 - [SirDusterBuster](https://twitter.com/SirDusterBuster) and [TokyoGalaxyOG](https://twitter.com/TokyoGalaxyOG) - Art
-- [CelShader](https://www.youtube.com/channel/UCm3eGs2etEOMzRX0iQ4QzqQ), [ClemO](https://twitter.com/ClemO___O), [HighPoweredKeyz](https://twitter.com/HighPoweredArt), [Kallionic](https://youtube.com/kallionic), [kekb](https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos), [Matt$](https://twitter.com/matt_currency), [Saruky](https://twitter.com/Saruky__), [Starrie_blu](https://twitter.com/starrie_blu), [Stardust Tunes](https://twitter.com/StardustTunes), [Tony Astro](https://twitter.com/TonyAstroVEVO) - Music
+- [FruityDaLei](https://twitter.com/FruityDaLei), [ClemO](https://twitter.com/ClemO___O), [HighPoweredKeyz](https://twitter.com/HighPoweredArt), [Kallionic](https://youtube.com/kallionic), [kekb](https://www.youtube.com/channel/UCbty7MoajjV1ZbmYz2OtDLw/videos), [Matt$](https://twitter.com/matt_currency), [Saruky](https://twitter.com/Saruky__), [Starrie_blu](https://twitter.com/starrie_blu), [Stardust Tunes](https://twitter.com/StardustTunes), [Tony Astro](https://twitter.com/TonyAstroVEVO) - Music
 - [Esther Christo, voice of Monika](https://twitter.com/carimellevo)
 - [Miss Beepy, voice of Natsuki](https://twitter.com/MissBeepy)
 - [Loganne Digma, voice of Yuri](https://twitter.com/Loganne_Digma)
@@ -50,5 +50,5 @@ DDLC+ Links: **[DDLC+ Official Website](http://ddlc.plus) ⋅ [Steam page](https
 ### Psych Engine
 - [ShadowMario](https://twitter.com/Shadow_Mario_) - Maintainer and lead coder
 - [RiverOaken](https://twitter.com/river_oaken) - Art and animations
-- [bbpanzu](https://twitter.com/bbsub3) - Assistant coder
+- [shubs](https://twitter.com/yoshubs) - Assistant coder
 - [The contributors](https://github.com/ShadowMario/FNF-PsychEngine/graphs/contributors)

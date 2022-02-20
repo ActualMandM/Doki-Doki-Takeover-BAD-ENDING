@@ -47,7 +47,7 @@ Jorge_SunSpirit - https://twitter.com/Jorge_SunSpirit
 M&M - https://twitter.com/ActualMandM
 
 Charting:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLeiglobalAntialiasing
 Cval - https://twitter.com/cval_brown
 Joe
 MtH - https://twitter.com/emmnyaa
@@ -73,10 +73,10 @@ Loganne Digma [Yuri Singing/Speaking Voice] - https://twitter.com/Loganne_Digma
 Esther Christo [Monika Singing/Speaking Voice] - https://twitter.com/carimellevo
 
 Music Director:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLeiglobalAntialiasing
 
 Musicians:
-CelShader - https://twitter.com/CELSHDR
+FruityDaLei - https://twitter.com/FruityDaLeiglobalAntialiasing
 ClemO - https://twitter.com/ClemO___O
 HighPoweredKeyz - https://twitter.com/HighPoweredArt
 Kallionic - https://youtube.com/kallionic
@@ -134,8 +134,8 @@ https://twitter.com/kawaisprite
 Doki Doki Literature Club! is owned by Dan Salvato (https://twitter.com/dansalvato) and published by Team Salvato (https://twitter.com/TeamSalvato).
 https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/
 
-Doki Doki Takeover! is built off of Kade Engine, maintained by KadeDev and its contributors.
-https://github.com/KadeDev/Kade-Engine
-https://twitter.com/KadeDeveloper
-https://github.com/KadeDev/Kade-Engine/graphs/contributors
+Doki Doki Takeover! Bad Ending is built off of Psych Engine, maintained by Shadow Mario and its contributors.
+https://github.com/ShadowMario/FNF-PsychEngine
+https://twitter.com/Shadow_Mario_
+https://github.com/ShadowMario/FNF-PsychEngine/graphs/contributors
 Engine Tweaks/Reworks by Jorge_SunSpirit & M&M

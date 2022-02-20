@@ -84,21 +84,23 @@ class CreditsState extends MusicBeatState
 				'C30085'
 			],
 			[
-				'bb-panzu',
-				'bb-panzu',
+				'shubs',
+				'shubs',
 				'Additional Programmer of Psych Engine',
+				'https://twitter.com/yoshubs',
+				'4494E6'
+			],
+			[''],
+			['Former Engine Members'],
+			[
+				'bb-panzu',
+				'bb-panzu',
+				'Ex-Programmer of Psych Engine',
 				'https://twitter.com/bbsub3',
 				'389A58'
 			],
 			[''],
 			['Psych Engine Contributors'],
-			[
-				'shubs',
-				'shubs',
-				'New Input System Programmer',
-				'https://twitter.com/yoshubs',
-				'4494E6'
-			],
 			[
 				'SqirraRNG',
 				'gedehari',
@@ -156,15 +158,6 @@ class CreditsState extends MusicBeatState
 				"Composer of Friday Night Funkin'",
 				'https://twitter.com/kawaisprite',
 				'6475F3'
-			],
-			[''],
-			["Special Thanks"],
-			[
-				'Dan Salvato',
-				'dan',
-				"Creator of Doki Doki Literature Club!",
-				'https://twitter.com/dansalvato',
-				'789BD1'
 			]
 		];
 
