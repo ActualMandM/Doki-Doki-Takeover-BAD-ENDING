@@ -74,7 +74,7 @@ class CreditsState extends MusicBeatState
 				'shadowmario',
 				'Main Programmer of Psych Engine',
 				'https://twitter.com/Shadow_Mario_',
-				'FFDD33'
+				'444444'
 			],
 			[
 				'RiverOaken',
@@ -128,6 +128,13 @@ class CreditsState extends MusicBeatState
 				'Note Splash Animations',
 				'https://twitter.com/Keoiki_',
 				'FFFFFF'
+			],
+			[
+				'Smokey',
+				'smokey',
+				'Spritemap Texture Support',
+				'https://twitter.com/Smokey_5_',
+				'0033CC'
 			],
 			[''],
 			["Funkin' Crew"],
