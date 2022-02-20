@@ -68,29 +68,6 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			// Name - Icon name - Description - Link - BG Color
-			['DDTO Team'],
-			[
-				'SirDusterBuster',
-				'duster',
-				'Director, Artist',
-				'https://twitter.com/SirDusterBuster',
-				'A1D8EC'
-			],
-			[
-				'Jorge Sun Spirit',
-				'jorge',
-				'Director, Programmer',
-				'https://twitter.com/Jorge_SunSpirit',
-				'DB8B2E'
-			],
-			[
-				'Kallionic',
-				'kallionic',
-				'Musician, HOME',
-				'https://youtube.com/kallionic',
-				'DD3F75'
-			],
-			[''],
 			['Psych Engine Team'],
 			[
 				'Shadow Mario',
