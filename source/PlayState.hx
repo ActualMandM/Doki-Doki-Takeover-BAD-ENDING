@@ -1917,11 +1917,16 @@ class PlayState extends MusicBeatState
 	override public function onFocusLost():Void
 	{
 		#if desktop
-		if (health > 0 && !paused)
+		if (health > 0 && !paused && FlxG.autoPause)
 		{
 			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
 		#end
+
+		if (!FlxG.autoPause && !paused && canPause && startedCountdown && !cpuControlled)
+		{
+			pauseState();
+		}
 
 		super.onFocusLost();
 	}
@@ -2125,38 +2130,7 @@ class PlayState extends MusicBeatState
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
-			var ret:Dynamic = callOnLuas('onPause', []);
-			if (ret != FunkinLua.Function_Stop)
-			{
-				persistentUpdate = false;
-				persistentDraw = true;
-				paused = true;
-
-				// 1 / 1000 chance for Gitaroo Man easter egg
-				/*if (FlxG.random.bool(0.1))
-				{
-					// gitaroo man easter egg
-					cancelFadeTween();
-					CustomFadeTransition.nextCamera = camOther;
-					MusicBeatState.switchState(new GitarooPause());
-				}
-				else { */
-				if (FlxG.sound.music != null)
-				{
-					FlxG.sound.music.pause();
-					vocals.pause();
-				}
-				PauseSubState.transCamera = camOther;
-				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-				// FlxTransitionableState.skipNextTransIn = true;
-				// FlxTransitionableState.skipNextTransOut = true;
-				// MusicBeatState.switchState(new GitarooPause());
-				// }
-
-				#if desktop
-				DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
-				#end
-			}
+			pauseState();
 		}
 
 		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
@@ -2531,6 +2505,38 @@ class PlayState extends MusicBeatState
 		setOnLuas('botPlay', cpuControlled);
 		callOnLuas('onUpdatePost', [elapsed]);
 		#end
+	}
+
+	function pauseState()
+	{
+		var ret:Dynamic = callOnLuas('onPause', []);
+		if (ret != FunkinLua.Function_Stop)
+		{
+			persistentUpdate = false;
+			persistentDraw = true;
+			paused = true;
+
+			// 1 / 1000 chance for Gitaroo Man easter egg
+			/*if (FlxG.random.bool(0.1))
+			{
+				// gitaroo man easter egg
+				cancelMusicFadeTween();
+				CustomFadeTransition.nextCamera = camOther;
+				MusicBeatState.switchState(new GitarooPause());
+			}
+			else { */
+			if (FlxG.sound.music != null)
+			{
+				FlxG.sound.music.pause();
+				vocals.pause();
+			}
+			openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+			// }
+
+			#if desktop
+			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			#end
+		}
 	}
 
 	public var isDead:Bool = false; // Don't mess with this on Lua!!!

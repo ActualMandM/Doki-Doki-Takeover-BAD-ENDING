@@ -29,6 +29,7 @@ class ClientPrefs
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = false;
+	public static var autoPause:Bool = true;
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'songspeed' => 1.0,
@@ -113,6 +114,7 @@ class ClientPrefs
 		FlxG.save.data.safeFrames = safeFrames;
 		FlxG.save.data.gameplaySettings = gameplaySettings;
 		FlxG.save.data.controllerMode = controllerMode;
+		FlxG.save.data.autoPause = autoPause;
 
 		FlxG.save.data.language = language;
 
@@ -248,6 +250,11 @@ class ClientPrefs
 		if (FlxG.save.data.controllerMode != null)
 		{
 			controllerMode = FlxG.save.data.controllerMode;
+		}
+		if (FlxG.save.data.autoPause != null)
+		{
+			autoPause = FlxG.save.data.autoPause;
+			FlxG.autoPause = autoPause;
 		}
 		if (FlxG.save.data.gameplaySettings != null)
 		{
