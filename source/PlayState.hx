@@ -407,10 +407,16 @@ class PlayState extends MusicBeatState
 
 		defaultCamZoom = stageData.defaultZoom;
 		isPixelStage = stageData.isPixelStage;
-		BFCAM_X = stageData.boyfriend_camera[0];
-		BFCAM_Y = stageData.boyfriend_camera[1];
-		DADCAM_X = stageData.opponent_camera[0];
-		DADCAM_Y = stageData.opponent_camera[1];
+		if (stageData.boyfriend_camera != null)
+		{
+			BFCAM_X = stageData.boyfriend_camera[0];
+			BFCAM_Y = stageData.boyfriend_camera[1];
+		}
+		if (stageData.opponent_camera != null)
+		{
+			DADCAM_X = stageData.opponent_camera[0];
+			DADCAM_Y = stageData.opponent_camera[1];
+		}
 		BF_X = stageData.boyfriend[0];
 		BF_Y = stageData.boyfriend[1];
 		GF_X = stageData.girlfriend[0];
