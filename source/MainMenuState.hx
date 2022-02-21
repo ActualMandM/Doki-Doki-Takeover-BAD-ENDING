@@ -302,8 +302,7 @@ class MainMenuState extends MusicBeatState
 				#end
 				PlayState.isStoryMode = true;
 				PlayState.storyDifficulty = 2;
-				var poop:String = Highscore.formatSong(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyDifficulty);
-				PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0].toLowerCase());
+				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
 				PlayState.campaignScore = 0;
 				PlayState.campaignMisses = 0;
 				LoadingState.loadAndSwitchState(new PlayState(), true);
