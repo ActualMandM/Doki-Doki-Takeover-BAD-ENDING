@@ -66,8 +66,9 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(bg);
 
-		var backdrop:FlxBackdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
+		var backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
 		backdrop.velocity.set(-40, -40);
+		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
 
 		// avoids lagspikes while scrolling through menus!

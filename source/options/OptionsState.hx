@@ -79,8 +79,9 @@ class OptionsState extends MusicBeatState
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(bg);
 
-		var backdrop:FlxBackdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
+		var backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
 		backdrop.velocity.set(-40, -40);
+		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();

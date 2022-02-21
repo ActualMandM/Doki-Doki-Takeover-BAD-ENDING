@@ -89,8 +89,10 @@ class MainMenuState extends MusicBeatState
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 
-		add(backdrop = new FlxBackdrop(Paths.image('scrolling_BG')));
+		backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
 		backdrop.velocity.set(-40, -40);
+		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
+		add(backdrop);
 
 		logo = new FlxSprite(-900, -359).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
