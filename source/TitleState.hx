@@ -265,6 +265,7 @@ class TitleState extends MusicBeatState
 		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none")
 		{
 			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
+			add(bg);
 		}
 		else
 		{
@@ -274,12 +275,6 @@ class TitleState extends MusicBeatState
 			backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 			add(backdrop);
 		}
-
-		// bg.antialiasing = ClientPrefs.globalAntialiasing;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
-
-		add(bg);
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 
