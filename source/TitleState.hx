@@ -268,7 +268,11 @@ class TitleState extends MusicBeatState
 		}
 		else
 		{
-			bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+			// bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+			backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
+			backdrop.velocity.set(-40, -40);
+			backdrop.antialiasing = ClientPrefs.globalAntialiasing;
+			add(backdrop);
 		}
 
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -276,11 +280,6 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 
 		add(bg);
-
-		backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
-		backdrop.velocity.set(-40, -40);
-		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
-		add(backdrop);
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 

@@ -111,7 +111,7 @@ class MainMenuState extends MusicBeatState
 
 		//-600, -400
 		logoBl = new FlxSprite(-800, -400);
-		logoBl.frames = Paths.getSparrowAtlas('DDLCStart_Screen_Assets');
+		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.scale.set(0.5, 0.5);
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
@@ -282,6 +282,9 @@ class MainMenuState extends MusicBeatState
 			#end
 		}
 
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
 		super.update(elapsed);
 	}
 
@@ -350,5 +353,12 @@ class MainMenuState extends MusicBeatState
 
 			spr.updateHitbox();
 		});
+	}
+
+	override function beatHit()
+	{
+		super.beatHit();
+
+		logoBl.animation.play('bump', true);
 	}
 }

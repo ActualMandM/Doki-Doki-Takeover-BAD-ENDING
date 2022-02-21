@@ -62,11 +62,6 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			'imagesPersist', 'bool', false);
 		option.onChange = onChangePersistentData; // Persistent Cached Data changes FlxGraphic.defaultPersist
 		addOption(option);
-
-		// Show the actual language name to the user instead of the language code
-		var option:Option = new Option('Language', "The language the mod will be in.\nOnly basic translation is available.", 'language', 'string', 'en-US',
-			['en-US', 'es-US', 'ru-RU', 'nl-NL', 'pt-BR']);
-		addOption(option);
 		super();
 	}
 
