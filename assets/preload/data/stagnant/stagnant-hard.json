@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
+		"player1": "bf-doki",
 		"player2": "sayori",
 		"notes": [
 			{
@@ -9623,7 +9623,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "gf-realdoki",
 		"events": [
 			[
 				24045.8333333333,
@@ -9666,8 +9666,8 @@
 				]
 			]
 		],
-		"player3": "bf",
-		"song": "Stagnant",
+		"player3": "gf-realdoki",
+		"song": "STAGNANT",
 		"validScore": true,
 		"needsVoices": true,
 		"stage": "dokiclubroom",
