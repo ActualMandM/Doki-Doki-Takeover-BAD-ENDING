@@ -31,9 +31,6 @@ class FlxBackdrop extends FlxSprite
 	var _spaceX:Int = 0;
 	var _spaceY:Int = 0;
 
-	var _boundW:Int = 0;
-	var _boundH:Int = 0;
-
 	/**
 	 * Frame used for tiling
 	 */
@@ -60,11 +57,9 @@ class FlxBackdrop extends FlxSprite
 	 * @param   RepeatY 	If the backdrop should repeat on the Y axis.
 	 * @param	SpaceX		Amount of spacing between tiles on the X axis
 	 * @param	SpaceY		Amount of spacing between tiles on the Y axis
-	 * @param	BoundW		The width of the bounding box for the backdrop.
-	 * @param	BoundH		The height of the bounding box for the backdrop.
 	 */
 	public function new(?Graphic:FlxGraphicAsset, ScrollX:Float = 1, ScrollY:Float = 1, RepeatX:Bool = true, RepeatY:Bool = true, SpaceX:Int = 0,
-			SpaceY:Int = 0, ?BoundW:Int, ?BoundH:Int)
+			SpaceY:Int = 0)
 	{
 		super();
 
@@ -81,16 +76,6 @@ class FlxBackdrop extends FlxSprite
 
 		scrollFactor.x = ScrollX;
 		scrollFactor.y = ScrollY;
-
-		if (BoundW != null)
-			_boundW = BoundW;
-		else
-			_boundW = FlxG.width;
-
-		if (BoundH != null)
-			_boundH = BoundH;
-		else
-			_boundH = FlxG.height;
 
 		if (Graphic != null)
 			loadGraphic(Graphic);
@@ -244,9 +229,9 @@ class FlxBackdrop extends FlxSprite
 		var frameBitmap:BitmapData = null;
 
 		if (_repeatX)
-			w += _boundW;
+			w += FlxG.width;
 		if (_repeatY)
-			h += _boundH;
+			h += FlxG.height;
 
 		if (FlxG.renderBlit)
 		{
