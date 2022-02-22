@@ -64,7 +64,7 @@ class FlxBackdrop extends FlxSprite
 	 * @param	BoundH		The height of the bounding box for the backdrop.
 	 */
 	public function new(?Graphic:FlxGraphicAsset, ScrollX:Float = 1, ScrollY:Float = 1, RepeatX:Bool = true, RepeatY:Bool = true, SpaceX:Int = 0,
-			SpaceY:Int = 0, BoundW:Int = 0, BoundH:Int = 0)
+			SpaceY:Int = 0, ?BoundW:Int, ?BoundH:Int)
 	{
 		super();
 
@@ -82,12 +82,12 @@ class FlxBackdrop extends FlxSprite
 		scrollFactor.x = ScrollX;
 		scrollFactor.y = ScrollY;
 
-		if (BoundW != 0)
+		if (BoundW != null)
 			_boundW = BoundW;
 		else
 			_boundW = FlxG.width;
 
-		if (BoundH != 0)
+		if (BoundH != null)
 			_boundH = BoundH;
 		else
 			_boundH = FlxG.height;
