@@ -1,8 +1,8 @@
 {
 	"song": {
 		"speed": 2.5,
-		"stage": "dokiclubroom",
-		"player1": "bf",
+		"stage": "stagnant",
+		"player1": "bf-doki",
 		"player2": "sayori",
 		"player3": null,
 		"events": [
@@ -45,15 +45,45 @@
 						"3"
 					]
 				]
+			],
+			[
+				109333.333333333,
+				[
+					[
+						"Change Combo UI",
+						"poemUI/",
+						"-poem"
+					]
+				]
+			],
+			[
+				152000,
+				[
+					[
+						"Change Combo UI",
+						"",
+						""
+					]
+				]
+			],
+			[
+				194666.666666667,
+				[
+					[
+						"Change Combo UI",
+						"poemUI/",
+						"-poem"
+					]
+				]
 			]
 		],
 		"notes": [],
 		"splashSkin": null,
 		"validScore": false,
-		"gfVersion": "gf",
+		"gfVersion": "gf-realdoki",
 		"bpm": 180,
 		"arrowSkin": null,
 		"needsVoices": true,
-		"song": "Stagnant"
+		"song": "STAGNANT"
 	}
 }

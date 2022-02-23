@@ -197,6 +197,10 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
+	// Bad Ending specific variables
+	var pixelShitPart1:String = "";
+	var pixelShitPart2:String = '';
+
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
 
@@ -526,6 +530,8 @@ class PlayState extends MusicBeatState
 		if (isPixelStage)
 		{
 			introSoundsSuffix = '-pixel';
+			pixelShitPart1 = 'pixelUI/';
+			pixelShitPart2 = '-pixel';
 		}
 
 		add(gfGroup);
@@ -3192,6 +3198,10 @@ class PlayState extends MusicBeatState
 						}
 					});
 				}
+
+			case 'Change Combo UI':
+				pixelShitPart1 = value1;
+				pixelShitPart2 = value2;
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -3597,15 +3607,6 @@ class PlayState extends MusicBeatState
 		else if (combo > 4)
 			daRating = 'bad';
 	 */
-
-		var pixelShitPart1:String = "";
-		var pixelShitPart2:String = '';
-
-		if (PlayState.isPixelStage)
-		{
-			pixelShitPart1 = 'pixelUI/';
-			pixelShitPart2 = '-pixel';
-		}
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 		rating.cameras = [camHUD];

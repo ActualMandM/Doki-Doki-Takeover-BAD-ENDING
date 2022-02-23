@@ -105,6 +105,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Change Scroll Speed',
 			"Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."
+		],
+		[
+			'Change Combo UI',
+			"Value 1: The prefix for the UI graphic\n(this can be a folder)\nValue 2: The suffix for the UI graphic"
 		]
 	];
 
