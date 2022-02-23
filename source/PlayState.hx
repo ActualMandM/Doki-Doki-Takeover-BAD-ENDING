@@ -504,8 +504,8 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -250, -167, 0.4, 0.6);
-				evilClubBG.visible = false;
+				evilClubBG = new BGSprite('bigmonika/BG', -260, -290, 0.4, 0.6);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				add(evilClubBG);
 			
 			case 'clubroomevil': // DDTO BAD ENDING
@@ -517,7 +517,8 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -250, -167, 0.4, 0.6);
+				evilClubBG = new BGSprite('bigmonika/BG', -260, -290, 0.4, 0.6);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				add(evilClubBG);
 		}
 
@@ -2029,12 +2030,76 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
 
+	#if debug
+	var debugScale:Float = 1.0;
+	#end
+
 	override public function update(elapsed:Float)
 	{
-		/*if (FlxG.keys.justPressed.NINE)
+		#if debug
+		if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L))
 		{
-			iconP1.swapOldIcon();
-	}*/
+			trace(evilClubBG.x + " X " + evilClubBG.y + ' y');
+			// Camera positioning and velocity changes
+			if (FlxG.keys.pressed.I)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					evilClubBG.y += -50;
+				}
+				else
+				{
+					evilClubBG.y += -10;
+				}
+			}
+			else if (FlxG.keys.pressed.K)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					evilClubBG.y += 50;
+				}
+				else
+				{
+					evilClubBG.y += 10;
+				}
+			}
+
+			if (FlxG.keys.pressed.J)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					evilClubBG.x += -50;
+				}
+				else
+				{
+					evilClubBG.x += -10;
+				}
+			}
+			else if (FlxG.keys.pressed.L)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+				{
+					evilClubBG.x += 50;
+				}
+				else
+				{
+					evilClubBG.x += 10;
+				}
+			}
+		}
+
+		if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.U || FlxG.keys.pressed.O))
+		{
+			trace('scale: ' + debugScale);
+
+			if (FlxG.keys.pressed.O)
+				debugScale += 0.01;
+			if (FlxG.keys.pressed.U)
+				debugScale -= 0.01;
+
+			evilClubBG.setGraphicSize(Std.int(evilClubBG.width * debugScale));
+		}
+		#end
 
 		callOnLuas('onUpdate', [elapsed]);
 
