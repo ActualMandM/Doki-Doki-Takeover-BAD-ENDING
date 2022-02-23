@@ -14,6 +14,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.FlxSubState;
+import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
 import flixel.addons.effects.FlxTrailArea;
@@ -231,6 +232,9 @@ class PlayState extends MusicBeatState
 	var bgGhouls:BGSprite;
 
 	var deskfront:BGSprite;
+
+	var evilSpace:FlxBackdrop;
+	var evilClubBG:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -475,6 +479,46 @@ class PlayState extends MusicBeatState
 					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
 					deskfront.updateHitbox();
 				}
+
+			case 'stagnant': // hueh
+				var closet:BGSprite = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
+				closet.setGraphicSize(Std.int(closet.width * 1.6));
+				closet.updateHitbox();
+				add(closet);
+
+				var clubroom:BGSprite = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
+				clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
+				clubroom.updateHitbox();
+				add(clubroom);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					deskfront = new BGSprite('clubroom/DesksFront', -700, -520, 1.3, 0.9);
+					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
+					deskfront.updateHitbox();
+
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace.velocity.set(-10, 0);
+					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
+					evilSpace.visible = false;
+					add(evilSpace);
+				}
+
+				evilClubBG = new BGSprite('bigmonika/BG', -250, -167, 0.4, 0.6);
+				evilClubBG.visible = false;
+				add(evilClubBG);
+			
+			case 'clubroomevil': // DDTO BAD ENDING
+				if (!ClientPrefs.lowQuality)
+				{
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace.velocity.set(-10, 0);
+					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
+					add(evilSpace);
+				}
+
+				evilClubBG = new BGSprite('bigmonika/BG', -250, -167, 0.4, 0.6);
+				add(evilClubBG);
 		}
 
 		if (isPixelStage)

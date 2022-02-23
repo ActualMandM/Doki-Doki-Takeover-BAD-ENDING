@@ -9670,7 +9670,7 @@
 		"song": "STAGNANT",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "dokiclubroom",
+		"stage": "stagnant",
 		"noteStyle": "normal",
 		"speed": 2.5,
 		"bpm": 180

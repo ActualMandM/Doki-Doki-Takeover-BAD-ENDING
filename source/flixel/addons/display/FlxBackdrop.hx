@@ -47,6 +47,13 @@ class FlxBackdrop extends FlxSprite
 	 */
 	public var useScaleHack:Bool = false;
 
+	/*
+	 * The amount the bounding box is scaled by.
+	 * This is a pretty nasty hack, but it works until a proper fix is found.
+	 * All the modified code regarding this has its original on top, commented out.
+	 */
+	public var boundingScale:Float = 2;
+
 	/**
 	 * Creates an instance of the FlxBackdrop class, used to create infinitely scrolling backgrounds.
 	 *
@@ -140,12 +147,17 @@ class FlxBackdrop extends FlxSprite
 			var ssw:Float = _scrollW * Math.abs(scale.x);
 			var ssh:Float = _scrollH * Math.abs(scale.y);
 
+			var boundW:Float = (FlxG.width - (FlxG.width * boundingScale));
+			var boundH:Float = FlxG.height - (FlxG.height * boundingScale);
+
 			// Find x position
 			if (_repeatX)
 			{
-				_ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw);
+				// _ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw);
+				_ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw) + (boundW / 2);
 
-				if (_ppoint.x > 0)
+				// if (_ppoint.x > 0)
+				if (_ppoint.x > boundW)
 					_ppoint.x -= ssw;
 			}
 			else
@@ -158,7 +170,8 @@ class FlxBackdrop extends FlxSprite
 			{
 				_ppoint.y = ((y - offset.y - camera.scroll.y * scrollFactor.y) % ssh);
 
-				if (_ppoint.y > 0)
+				// if (_ppoint.y > 0)
+				if (_ppoint.y > boundH)
 					_ppoint.y -= ssh;
 			}
 			else
@@ -175,7 +188,8 @@ class FlxBackdrop extends FlxSprite
 				if (dirty)
 					calcFrame(useFramePixels);
 
-				_flashRect2.setTo(0, 0, graphic.width, graphic.height);
+				// _flashRect2.setTo(0, 0, graphic.width, graphic.height);
+				_flashRect2.setTo(boundW, boundH, graphic.width, graphic.height);
 				camera.copyPixels(frame, framePixels, _flashRect2, _ppoint, colorTransform, blend, antialiasing, shader);
 			}
 			else
@@ -198,8 +212,10 @@ class FlxBackdrop extends FlxSprite
 
 				_matrix.scale(scaleX, scaleY);
 
-				var tx:Float = _matrix.tx;
-				var ty:Float = _matrix.ty;
+				// var tx:Float = _matrix.tx;
+				// var ty:Float = _matrix.ty;
+				var tx:Float = _matrix.tx * boundingScale;
+				var ty:Float = _matrix.ty * boundingScale;
 
 				for (j in 0..._numTiles)
 				{
@@ -228,10 +244,14 @@ class FlxBackdrop extends FlxSprite
 
 		var frameBitmap:BitmapData = null;
 
+		// if (_repeatX)
+		// 	w += FlxG.width;
+		// if (_repeatY)
+		// 	h += FlxG.height;
 		if (_repeatX)
-			w += FlxG.width;
+			w += Std.int(FlxG.width * boundingScale);
 		if (_repeatY)
-			h += FlxG.height;
+			h += Std.int(FlxG.height * boundingScale);
 
 		if (FlxG.renderBlit)
 		{
