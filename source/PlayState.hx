@@ -504,8 +504,9 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -260, -290, 0.4, 0.6);
+				evilClubBG = new BGSprite('bigmonika/BG', -130, -230, 0.8, 0.8);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
+				evilClubBG.visible = false;
 				add(evilClubBG);
 			
 			case 'clubroomevil': // DDTO BAD ENDING
@@ -517,7 +518,7 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -260, -290, 0.4, 0.6);
+				evilClubBG = new BGSprite('bigmonika/BG', -130, -230, 0.8, 0.8);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				add(evilClubBG);
 		}
