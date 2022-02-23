@@ -235,8 +235,9 @@ class PlayState extends MusicBeatState
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
 
+	var closet:BGSprite;
+	var clubroom:BGSprite;
 	var deskfront:BGSprite;
-
 	var evilSpace:FlxBackdrop;
 	var evilClubBG:BGSprite;
 
@@ -467,12 +468,12 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'dokiclubroom': // DDTO
-				var closet:BGSprite = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
+				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
 				add(closet);
 
-				var clubroom:BGSprite = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
+				clubroom = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
 				clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
 				clubroom.updateHitbox();
 				add(clubroom);
@@ -485,12 +486,12 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'stagnant': // hueh
-				var closet:BGSprite = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
+				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
 				add(closet);
 
-				var clubroom:BGSprite = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
+				clubroom = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
 				clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
 				clubroom.updateHitbox();
 				add(clubroom);
@@ -3202,6 +3203,26 @@ class PlayState extends MusicBeatState
 			case 'Change Combo UI':
 				pixelShitPart1 = value1;
 				pixelShitPart2 = value2;
+			
+			case 'Change Stagnant Stage':
+				closet.visible = false;
+				clubroom.visible = false;
+				deskfront.visible = false;
+				evilSpace.visible = false;
+				evilClubBG.visible = false;
+
+				switch (value1)
+				{
+					default:
+						closet.visible = true;
+						clubroom.visible = true;
+						deskfront.visible = true;
+					case 'evil':
+						evilSpace.visible = true;
+						evilClubBG.visible = true;
+					case 'poem':
+						// poem assets aren't implemented yet
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

@@ -20,9 +20,9 @@
 				24000,
 				[
 					[
-						"Screen Shake",
-						"1,0.05",
-						"0,0"
+						"Change Stagnant Stage",
+						"evil",
+						""
 					]
 				]
 			],
@@ -60,9 +60,9 @@
 				45333.3333333333,
 				[
 					[
-						"Screen Shake",
-						"1,0.05",
-						"0,0"
+						"Change Stagnant Stage",
+						"",
+						""
 					]
 				]
 			],
@@ -90,9 +90,9 @@
 				66666.6666666667,
 				[
 					[
-						"Screen Shake",
-						"1,0.05",
-						"0,0"
+						"Change Stagnant Stage",
+						"evil",
+						""
 					]
 				]
 			],
@@ -113,6 +113,11 @@
 						"Change Combo UI",
 						"poemUI/",
 						"-poem"
+					],
+					[
+						"Change Stagnant Stage",
+						"poem",
+						""
 					]
 				]
 			],
@@ -122,6 +127,11 @@
 					[
 						"Change Combo UI",
 						"",
+						""
+					],
+					[
+						"Change Stagnant Stage",
+						"evil",
 						""
 					]
 				]
@@ -133,6 +143,11 @@
 						"Change Combo UI",
 						"poemUI/",
 						"-poem"
+					],
+					[
+						"Change Stagnant Stage",
+						"poem",
+						""
 					]
 				]
 			]

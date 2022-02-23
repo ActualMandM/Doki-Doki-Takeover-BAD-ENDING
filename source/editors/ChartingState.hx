@@ -109,6 +109,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Change Combo UI',
 			"Value 1: The prefix for the UI graphic\n(this can be a folder)\nValue 2: The suffix for the UI graphic"
+		],
+		[
+			'Change Stagnant Stage',
+			"Value 1: The version of the stage to switch to.\nValid values: evil, poem\nInvalid values go to regular clubroom."
 		]
 	];
 
