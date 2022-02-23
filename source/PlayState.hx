@@ -509,7 +509,7 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -130, -230, 0.8, 0.8);
+				evilClubBG = new BGSprite('bigmonika/BG', -140, -260, 1, 1);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				evilClubBG.visible = false;
 				add(evilClubBG);
@@ -523,7 +523,7 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -130, -230, 0.8, 0.8);
+				evilClubBG = new BGSprite('bigmonika/BG', -140, -260, 1, 1);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				add(evilClubBG);
 		}
