@@ -113,6 +113,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Change Stagnant Stage',
 			"Value 1: The version of the stage to switch to.\nValid values: evil, poem\nInvalid values go to regular clubroom."
+		],
+		[
+			'Glitch Effect',
+			"Value 1: The duration of the effect\nValue 2: The sound that gets played"
 		]
 	];
 

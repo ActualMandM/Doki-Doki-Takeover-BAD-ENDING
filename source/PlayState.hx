@@ -20,11 +20,13 @@ import flixel.addons.effects.FlxTrail;
 import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
+import flixel.addons.effects.chainable.FlxGlitchEffect;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
+import flixel.math.FlxMatrix;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.system.FlxSound;
@@ -42,6 +44,7 @@ import lime.utils.Assets;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
+import openfl.geom.Point;
 import openfl.utils.Assets as OpenFlAssets;
 import editors.ChartingState;
 import editors.CharacterEditorState;
@@ -3255,8 +3258,54 @@ class PlayState extends MusicBeatState
 					case 'poem':
 						// poem assets aren't implemented yet
 				}
+			case 'Glitch Effect':
+				var val1:Float = Std.parseFloat(value1);
+				if (Math.isNaN(val1))
+					val1 = 0.5;
+
+				funnyGlitch(val1, value2);
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
+	}
+
+	function funnyGlitch(duration:Float, sound:String):Void
+	{
+		var calcWidth:Int = Std.int(FlxG.width / defaultCamZoom);
+		var calcHeight:Int = Std.int(FlxG.height / defaultCamZoom);
+
+		var offsetX:Int = Std.int(Math.abs(FlxG.width - calcWidth));
+		var offsetY:Int = Std.int(Math.abs(FlxG.height - calcHeight));
+
+		var screenHUD:FlxSprite = new FlxSprite().makeGraphic(calcWidth, calcHeight, FlxColor.TRANSPARENT);
+		screenHUD.drawFrame();
+		var screenPixels = screenHUD.framePixels;
+
+		if (FlxG.renderBlit)
+			screenPixels.copyPixels(FlxG.camera.buffer, FlxG.camera.buffer.rect, new Point());
+		else
+			screenPixels.draw(FlxG.camera.canvas, new FlxMatrix(1, 0, 0, 1, 0, 0));
+
+		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
+		var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
+		glitchSprite.antialiasing = ClientPrefs.globalAntialiasing;
+		glitchSprite.scrollFactor.set(0, 0);
+		glitchSprite.x = -offsetX / 2;
+		glitchSprite.y = -offsetY / 2; // still offset by a bit
+		add(glitchSprite);
+
+		glitchEffect.active = true;
+
+		if (sound != '')
+			FlxG.sound.play(Paths.sound(sound));
+
+		new FlxTimer().start(duration, function(tmr:FlxTimer)
+		{
+			glitchEffect.active = false;
+			remove(glitchSprite);
+			remove(screenHUD);
+			glitchSprite.destroy();
+			screenHUD.destroy();
+		});
 	}
 
 	function moveCameraSection(?id:Int = 0):Void
