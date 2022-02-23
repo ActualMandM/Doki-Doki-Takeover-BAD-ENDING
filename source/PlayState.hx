@@ -2047,67 +2047,89 @@ class PlayState extends MusicBeatState
 		#if debug
 		if (evilClubBG != null)
 		{
+			// Position
 			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L))
 			{
-				trace(evilClubBG.x + " X " + evilClubBG.y + ' y');
-				// Camera positioning and velocity changes
 				if (FlxG.keys.pressed.I)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-					{
-						evilClubBG.y += -50;
-					}
+						evilClubBG.y -= 50;
 					else
-					{
-						evilClubBG.y += -10;
-					}
+						evilClubBG.y -= 10;
 				}
 				else if (FlxG.keys.pressed.K)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-					{
 						evilClubBG.y += 50;
-					}
 					else
-					{
 						evilClubBG.y += 10;
-					}
 				}
 
 				if (FlxG.keys.pressed.J)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-					{
-						evilClubBG.x += -50;
-					}
+						evilClubBG.x -= 50;
 					else
-					{
-						evilClubBG.x += -10;
-					}
+						evilClubBG.x -= 10;
 				}
 				else if (FlxG.keys.pressed.L)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-					{
 						evilClubBG.x += 50;
-					}
 					else
-					{
 						evilClubBG.x += 10;
-					}
 				}
+
+				trace('X: ${evilClubBG.x} | Y: ${evilClubBG.y}');
 			}
 
+			// Scroll Factor
+			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.T || FlxG.keys.pressed.F || FlxG.keys.pressed.G || FlxG.keys.pressed.H))
+			{
+				if (FlxG.keys.pressed.T)
+				{
+					if (FlxG.keys.pressed.SHIFT)
+						evilClubBG.scrollFactor.y -= 0.01;
+					else
+						evilClubBG.scrollFactor.y -= 0.1;
+				}
+				else if (FlxG.keys.pressed.G)
+				{
+					if (FlxG.keys.pressed.SHIFT)
+						evilClubBG.scrollFactor.y += 0.01;
+					else
+						evilClubBG.scrollFactor.y += 0.1;
+				}
+
+				if (FlxG.keys.pressed.F)
+				{
+					if (FlxG.keys.pressed.SHIFT)
+						evilClubBG.scrollFactor.x -= 0.01;
+					else
+						evilClubBG.scrollFactor.x -= 0.1;
+				}
+				else if (FlxG.keys.pressed.H)
+				{
+					if (FlxG.keys.pressed.SHIFT)
+						evilClubBG.scrollFactor.x += 0.01;
+					else
+						evilClubBG.scrollFactor.x += 0.1;
+				}
+
+				trace('scrollX: ${evilClubBG.scrollFactor.x} | scrollY: ${evilClubBG.scrollFactor.y}');
+			}
+
+			// Scale
 			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.U || FlxG.keys.pressed.O))
 			{
-				trace('scale: ' + debugScale);
-
 				if (FlxG.keys.pressed.O)
 					debugScale += 0.01;
 				if (FlxG.keys.pressed.U)
 					debugScale -= 0.01;
 
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * debugScale));
+
+				trace('Scale: ' + debugScale);
 			}
 		}
 		#end
