@@ -530,7 +530,7 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
-		if (curStage == 'dokiclubroom' && !ClientPrefs.lowQuality)
+		if (deskfront != null && !ClientPrefs.lowQuality)
 			add(deskfront);
 
 		#if LUA_ALLOWED
