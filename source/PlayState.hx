@@ -3270,9 +3270,14 @@ class PlayState extends MusicBeatState
 
 	function funnyGlitch(duration:Float, sound:String):Void
 	{
+		// don't do anything if the user decided to be funny
+		if (duration <= 0)
+			return;
+
 		var calcWidth:Int = Std.int(FlxG.width / defaultCamZoom);
 		var calcHeight:Int = Std.int(FlxG.height / defaultCamZoom);
 
+		// need to figure out correct offset calculation
 		var offsetX:Int = Std.int(Math.abs(FlxG.width - calcWidth));
 		var offsetY:Int = Std.int(Math.abs(FlxG.height - calcHeight));
 
@@ -3288,10 +3293,11 @@ class PlayState extends MusicBeatState
 		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
 		var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
 		glitchSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		glitchSprite.scrollFactor.set(0, 0);
-		glitchSprite.x = -offsetX / 2;
-		glitchSprite.y = -offsetY / 2; // still offset by a bit
-		add(glitchSprite);
+		glitchSprite.cameras = [camHUD];
+		glitchSprite.scale.set(defaultCamZoom, defaultCamZoom);
+		glitchSprite.updateHitbox();
+		// glitchSprite.offset.set(offsetX, offsetY);
+		insert(0, glitchSprite);
 
 		glitchEffect.active = true;
 
