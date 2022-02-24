@@ -45,14 +45,17 @@ class FlxBackdrop extends FlxSprite
 	 * Try to eliminate 1 px gap between tiles in tile render mode by increasing tile scale,
 	 * so the tile will look one pixel wider than it is.
 	 */
-	public var useScaleHack:Bool = false;
+	public var useScaleHack:Bool = true;
 
-	/*
-	 * The amount the bounding box is scaled by.
-	 * This is a pretty nasty hack, but it works until a proper fix is found.
-	 * All the modified code regarding this has its original on top, commented out.
+	// TODO: remove this hack and have the backdrop properly scale with the camera zoom for both tile and blit modes
+
+	/**
+	 * The lowest zoom value that the backdrop will support before
+	 * it starts to show the bounding area.
 	 */
-	public var boundingScale:Float = 2;
+	public var lowestCamZoom:Float = 1;
+
+	var _camZoom:Float = 1;
 
 	/**
 	 * Creates an instance of the FlxBackdrop class, used to create infinitely scrolling backgrounds.
@@ -144,20 +147,21 @@ class FlxBackdrop extends FlxSprite
 			if (!camera.visible || !camera.exists)
 				continue;
 
+			if (_camZoom != lowestCamZoom)
+			{
+				_camZoom = lowestCamZoom;
+				regenGraphic();
+			}
+
 			var ssw:Float = _scrollW * Math.abs(scale.x);
 			var ssh:Float = _scrollH * Math.abs(scale.y);
-
-			var boundW:Float = (FlxG.width - (FlxG.width * boundingScale));
-			var boundH:Float = FlxG.height - (FlxG.height * boundingScale);
 
 			// Find x position
 			if (_repeatX)
 			{
-				// _ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw);
-				_ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw) + (boundW / 2);
+				_ppoint.x = ((x - offset.x - camera.scroll.x * scrollFactor.x) % ssw);
 
-				// if (_ppoint.x > 0)
-				if (_ppoint.x > boundW)
+				if (_ppoint.x > 0)
 					_ppoint.x -= ssw;
 			}
 			else
@@ -170,8 +174,7 @@ class FlxBackdrop extends FlxSprite
 			{
 				_ppoint.y = ((y - offset.y - camera.scroll.y * scrollFactor.y) % ssh);
 
-				// if (_ppoint.y > 0)
-				if (_ppoint.y > boundH)
+				if (_ppoint.y > 0)
 					_ppoint.y -= ssh;
 			}
 			else
@@ -188,8 +191,7 @@ class FlxBackdrop extends FlxSprite
 				if (dirty)
 					calcFrame(useFramePixels);
 
-				// _flashRect2.setTo(0, 0, graphic.width, graphic.height);
-				_flashRect2.setTo(boundW, boundH, graphic.width, graphic.height);
+				_flashRect2.setTo(0, 0, graphic.width, graphic.height);
 				camera.copyPixels(frame, framePixels, _flashRect2, _ppoint, colorTransform, blend, antialiasing, shader);
 			}
 			else
@@ -212,10 +214,8 @@ class FlxBackdrop extends FlxSprite
 
 				_matrix.scale(scaleX, scaleY);
 
-				// var tx:Float = _matrix.tx;
-				// var ty:Float = _matrix.ty;
-				var tx:Float = _matrix.tx * boundingScale;
-				var ty:Float = _matrix.ty * boundingScale;
+				var tx:Float = _matrix.tx;
+				var ty:Float = _matrix.ty;
 
 				for (j in 0..._numTiles)
 				{
@@ -242,16 +242,15 @@ class FlxBackdrop extends FlxSprite
 		var w:Int = ssw;
 		var h:Int = ssh;
 
+		var bw:Int = Std.int(FlxG.width - (FlxG.width / _camZoom));
+		var bh:Int = Std.int(FlxG.height - (FlxG.height / _camZoom));
+
 		var frameBitmap:BitmapData = null;
 
-		// if (_repeatX)
-		// 	w += FlxG.width;
-		// if (_repeatY)
-		// 	h += FlxG.height;
 		if (_repeatX)
-			w += Std.int(FlxG.width * boundingScale);
+			w += Std.int(FlxG.width / _camZoom);
 		if (_repeatY)
-			h += Std.int(FlxG.height * boundingScale);
+			h += Std.int(FlxG.height / _camZoom);
 
 		if (FlxG.renderBlit)
 		{
@@ -269,7 +268,8 @@ class FlxBackdrop extends FlxSprite
 			height = frameHeight = h;
 		}
 
-		_ppoint.x = _ppoint.y = 0;
+		_ppoint.x = bw;
+		_ppoint.y = bh;
 
 		if (FlxG.renderBlit)
 		{
@@ -304,7 +304,7 @@ class FlxBackdrop extends FlxSprite
 				_matrix.ty += ssh;
 			}
 
-			_ppoint.x = 0;
+			_ppoint.x = bw;
 			_ppoint.y += ssh;
 		}
 
