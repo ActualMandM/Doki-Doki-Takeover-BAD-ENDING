@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "SayoPoemIdle"
+		},
+		{
+			"offsets": [
+				10,
+				8
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "SayoPoemUp"
+		},
+		{
+			"offsets": [
+				28,
+				8
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SayoPoemLeft"
+		},
+		{
+			"offsets": [
+				11,
+				3
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SayoPoemRight"
+		},
+		{
+			"offsets": [
+				-3,
+				31
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SayoPoemDown"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SayoHappyThoughts_Assets",
+	"position": [
+		0,
+		10
+	],
+	"healthicon": "sayoripoem",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-30,
+		140
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

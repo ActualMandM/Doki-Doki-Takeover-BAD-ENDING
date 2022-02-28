@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "BFPoemIdle"
+		},
+		{
+			"offsets": [
+				10,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "BFPoemUp"
+		},
+		{
+			"offsets": [
+				28,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "BFPoemLeft"
+		},
+		{
+			"offsets": [
+				11,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "BFPoemRight"
+		},
+		{
+			"offsets": [
+				-3,
+				31
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "BFPoemDown"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BFHappyThoughts_Assets",
+	"position": [
+		0,
+		170
+	],
+	"healthicon": "bfpoem",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-30,
+		140
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

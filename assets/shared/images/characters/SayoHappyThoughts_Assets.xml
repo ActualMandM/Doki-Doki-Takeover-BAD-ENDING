@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SayoHappyThoughts_Assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SayoPoemDown0000" x="10" y="10" width="570" height="735" frameX="-8" frameY="0" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0001" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0002" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0003" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0004" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0005" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0006" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0007" x="1785" y="10" width="587" height="716" frameX="0" frameY="-19" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0008" x="1785" y="10" width="587" height="716" frameX="0" frameY="-19" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0009" x="1785" y="10" width="587" height="716" frameX="0" frameY="-19" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0010" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0011" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0012" x="590" y="10" width="587" height="716" frameX="0" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0013" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0014" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemDown0015" x="1187" y="10" width="588" height="717" frameX="-1" frameY="-18" frameWidth="589" frameHeight="735"/>
+	<SubTexture name="SayoPoemIdle0000" x="2382" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0001" x="2382" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0002" x="2382" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0003" x="2382" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0004" x="2979" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0005" x="2979" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0006" x="2979" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0007" x="2979" y="10" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0008" x="10" y="755" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0009" x="10" y="755" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0010" x="10" y="755" width="587" height="722"/>
+	<SubTexture name="SayoPoemIdle0011" x="10" y="755" width="587" height="722"/>
+	<SubTexture name="SayoPoemLeft0000" x="607" y="755" width="610" height="723"/>
+	<SubTexture name="SayoPoemLeft0001" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0002" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0003" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0004" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0005" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0006" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0007" x="2422" y="755" width="587" height="716" frameX="0" frameY="-2" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0008" x="2422" y="755" width="587" height="716" frameX="0" frameY="-2" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0009" x="2422" y="755" width="587" height="716" frameX="0" frameY="-2" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0010" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0011" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0012" x="1227" y="755" width="587" height="716" frameX="0" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0013" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0014" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemLeft0015" x="1824" y="755" width="588" height="717" frameX="-1" frameY="-1" frameWidth="610" frameHeight="723"/>
+	<SubTexture name="SayoPoemRight0000" x="3019" y="755" width="612" height="705" frameX="0" frameY="-12" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0001" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0002" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0003" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0004" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0005" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0006" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0007" x="1206" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0008" x="1206" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0009" x="1206" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0010" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0011" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0012" x="10" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0013" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0014" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemRight0015" x="608" y="1488" width="588" height="717" frameX="-26" frameY="0" frameWidth="614" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0000" x="1804" y="1488" width="568" height="694" frameX="-9" frameY="-23" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0001" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0002" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0003" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0004" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0005" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0006" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0007" x="10" y="2215" width="587" height="716" frameX="0" frameY="-1" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0008" x="10" y="2215" width="587" height="716" frameX="0" frameY="-1" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0009" x="10" y="2215" width="587" height="716" frameX="0" frameY="-1" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0010" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0011" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0012" x="2382" y="1488" width="587" height="716" frameX="0" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0013" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0014" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+	<SubTexture name="SayoPoemUp0015" x="2979" y="1488" width="588" height="717" frameX="-1" frameY="0" frameWidth="589" frameHeight="717"/>
+</TextureAtlas>
