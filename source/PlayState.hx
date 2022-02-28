@@ -39,6 +39,8 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSort;
 import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
+import motion.Actuate;
+import motion.easing.*;
 import haxe.Json;
 import lime.utils.Assets;
 import openfl.display.BlendMode;
@@ -246,6 +248,8 @@ class PlayState extends MusicBeatState
 	var deskfront:BGSprite;
 	var evilSpace:FlxBackdrop;
 	var evilClubBG:BGSprite;
+	var evilClubBGScribbly:BGSprite;
+	var evilPoem:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -526,6 +530,17 @@ class PlayState extends MusicBeatState
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
 				evilClubBG.visible = false;
 				add(evilClubBG);
+
+				evilClubBGScribbly = new BGSprite('BGsketch', -140, -260, 1, 1, ['BGSketch'], true);
+				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.7));
+				evilClubBGScribbly.visible = false;
+				evilClubBGScribbly.alpha = 0;
+				add(evilClubBGScribbly);
+
+				evilPoem = new BGSprite('PaperBG', -140, -260, 1, 1, ['PaperBG'], true);
+				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.7));
+				evilPoem.visible = false;
+				add(evilPoem);
 			
 			case 'clubroomevil': // DDTO BAD ENDING
 				if (!ClientPrefs.lowQuality)
@@ -1905,6 +1920,8 @@ class PlayState extends MusicBeatState
 			if (carTimer != null)
 				carTimer.active = false;
 
+			Actuate.pauseAll();
+
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
 			{
@@ -1950,6 +1967,8 @@ class PlayState extends MusicBeatState
 
 			if (carTimer != null)
 				carTimer.active = true;
+
+			Actuate.resumeAll();
 
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
@@ -3251,11 +3270,19 @@ class PlayState extends MusicBeatState
 				pixelShitPart2 = value2;
 			
 			case 'Change Stagnant Stage':
+				var val2:Float = Std.parseFloat(value2);
+				if (Math.isNaN(val2))
+					val2 = 0;
+
 				closet.visible = false;
 				clubroom.visible = false;
 				deskfront.visible = false;
 				evilSpace.visible = false;
 				evilClubBG.visible = false;
+				evilClubBGScribbly.visible = false;
+				evilPoem.visible = false;
+				
+				evilClubBGScribbly.alpha = 0;
 
 				switch (value1)
 				{
@@ -3266,8 +3293,17 @@ class PlayState extends MusicBeatState
 					case 'evil':
 						evilSpace.visible = true;
 						evilClubBG.visible = true;
+						evilClubBGScribbly.visible = true;
 					case 'poem':
-						// poem assets aren't implemented yet
+						evilPoem.visible = true;
+				}
+
+				if (val2 > 0)
+				{
+					Actuate.tween(evilClubBGScribbly, val2, {alpha: 1}).ease(Sine.easeIn).onComplete(function()
+					{
+						evilClubBGScribbly.alpha = 1;
+					});
 				}
 			case 'Glitch Effect':
 				var val1:Float = Std.parseFloat(value1);
@@ -3275,6 +3311,34 @@ class PlayState extends MusicBeatState
 					val1 = 0.5;
 
 				funnyGlitch(val1, value2);
+			case 'Character Visibility':
+				var charType:Int = 0;
+				var visibleBool:Bool = true;
+				switch (value1)
+				{
+					case 'gf' | 'girlfriend':
+						charType = 2;
+					case 'dad' | 'opponent':
+						charType = 1;
+					default:
+						charType = Std.parseInt(value1);
+						if (Math.isNaN(charType)) charType = 0;
+				}
+
+				if (value2 == 'false')
+					visibleBool = false;
+
+				switch (charType)
+				{
+					case 0:
+						boyfriend.visible = visibleBool;
+					case 1:
+						dad.visible = false;
+					case 2:
+						gf.visible = false;
+				}
+			case 'Change Strumline Graphics':
+				trace('not implemented yet');
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

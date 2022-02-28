@@ -100,23 +100,32 @@ class ChartingState extends MusicBeatState
 		],
 		[
 			'Change Character',
-			"Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"
+			"Value 1: Character to change (dad, bf, gf)\nValue 2: New character's name"
 		],
 		[
 			'Change Scroll Speed',
 			"Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."
 		],
+		// Bad Ending events below
 		[
 			'Change Combo UI',
 			"Value 1: The prefix for the UI graphic\n(this can be a folder)\nValue 2: The suffix for the UI graphic"
 		],
 		[
 			'Change Stagnant Stage',
-			"Value 1: The version of the stage to switch to.\nValid values: evil, poem\nInvalid values go to regular clubroom."
+			"Value 1: The version of the stage to switch to.\nValue2: Fade in duration for sketch effect\n\nValid for Value 1: evil, poem\nInvalid values go to regular clubroom."
 		],
 		[
 			'Glitch Effect',
 			"Value 1: The duration of the effect\nValue 2: The sound that gets played"
+		],
+		[
+			'Character Visibility',
+			"Value 1: Character to change (dad, bf, gf)\nValue 2: true or false"
+		],
+		[
+			'Change Strumline Graphics',
+			"Value 1: Strumline graphic to change to\nNote: Not implemented yet"
 		]
 	];
 
