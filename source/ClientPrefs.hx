@@ -107,7 +107,7 @@ class ClientPrefs
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
-		FlxG.save.data.gpuTextures = gpuTextures;
+		// FlxG.save.data.gpuTextures = gpuTextures;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.timeBarType = timeBarType;
 		FlxG.save.data.scoreZoom = scoreZoom;
@@ -207,10 +207,12 @@ class ClientPrefs
 		{
 			arrowHSV = FlxG.save.data.arrowHSV;
 		}
+		/*
 		if (FlxG.save.data.gpuTextures != null)
 		{
 			gpuTextures = FlxG.save.data.gpuTextures;
 		}
+		*/
 		if (FlxG.save.data.ghostTapping != null)
 		{
 			ghostTapping = FlxG.save.data.ghostTapping;

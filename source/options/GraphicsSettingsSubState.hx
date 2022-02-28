@@ -56,10 +56,12 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.displayFormat = '%v FPS';
 		option.onChange = onChangeFramerate;
 
+		/*
 		var option:Option = new Option('GPU Textures',
 			'EXPERIMENTAL! If checked, images will be loaded through the\nGPU instead, reducing memory usage.',
 			'gpuTextures', 'bool', false);
 		addOption(option);
+		*/
 		#end
 		super();
 	}
