@@ -66,6 +66,9 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
+	// glitch testing
+	var glitch:GlitchShader;
+
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], // From 0% to 19%
 		['Shit', 0.4], // From 20% to 39%
@@ -302,6 +305,9 @@ class PlayState extends MusicBeatState
 		Paths.destroyLoadedImages();
 		#end
 
+		// glitch testing
+		glitch = new GlitchShader();
+
 		// for lua
 		instance = this;
 
@@ -346,6 +352,9 @@ class PlayState extends MusicBeatState
 		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOther;
 		// FlxG.cameras.setDefaultDrawTarget(camGame, true);
+
+		camGame.setFilters([new ShaderFilter(glitch)]);
+		camGame.filtersEnabled = false;
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -3276,6 +3285,7 @@ class PlayState extends MusicBeatState
 		if (duration <= 0)
 			return;
 
+		/*
 		var calcWidth:Int = Std.int(FlxG.width / defaultCamZoom);
 		var calcHeight:Int = Std.int(FlxG.height / defaultCamZoom);
 
@@ -3302,17 +3312,23 @@ class PlayState extends MusicBeatState
 		insert(0, glitchSprite);
 
 		glitchEffect.active = true;
+		*/
+
+		camGame.filtersEnabled = true;
 
 		if (sound != '')
 			FlxG.sound.play(Paths.sound(sound));
 
 		new FlxTimer().start(duration, function(tmr:FlxTimer)
 		{
+			/*
 			glitchEffect.active = false;
 			remove(glitchSprite);
 			remove(screenHUD);
 			glitchSprite.destroy();
 			screenHUD.destroy();
+			*/
+			camGame.filtersEnabled = false;
 		});
 	}
 
