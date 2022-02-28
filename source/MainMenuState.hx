@@ -77,7 +77,7 @@ class MainMenuState extends MusicBeatState
 		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
 
-		logo = new FlxSprite(-260, 1).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo = new FlxSprite(-260, 0).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logo);
 		if (firstStart)
