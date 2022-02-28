@@ -328,17 +328,19 @@ class WeekEditorState extends MusicBeatState
 	{
 		bgSprite.visible = true;
 		var assetName:String = weekFile.weekBackground;
+
 		var isMissing:Bool = true;
 		if (assetName != null && assetName.length > 0)
 		{
 			if (#if MODS_ALLOWED FileSystem.exists(Paths.modsImages('menubackgrounds/menu_' +
-				assetName)) || #end Assets.exists(Paths.getPath('images/menubackgrounds/menu_'
-				+ assetName, IMAGE), IMAGE))
+				assetName)) || #end Assets.exists(Paths.image('menubackgrounds/menu_'
+				+ assetName), IMAGE))
 			{
 				bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
 				isMissing = false;
 			}
 		}
+
 		if (isMissing)
 		{
 			bgSprite.visible = false;
@@ -354,13 +356,14 @@ class WeekEditorState extends MusicBeatState
 		var isMissing:Bool = true;
 		if (assetName != null && assetName.length > 0)
 		{
-			if (#if MODS_ALLOWED FileSystem.exists(Paths.modsImages('storymenu/' + assetName)) || #end Assets.exists(Paths.getPath('images/storymenu/'
-				+ assetName, IMAGE), IMAGE))
+			if (#if MODS_ALLOWED FileSystem.exists(Paths.modsImages('storymenu/' + assetName)) || #end Assets.exists(Paths.image('storymenu/' + assetName),
+				IMAGE))
 			{
 				weekThing.loadGraphic(Paths.image('storymenu/' + assetName));
 				isMissing = false;
 			}
 		}
+
 		if (isMissing)
 		{
 			weekThing.visible = false;
@@ -368,6 +371,7 @@ class WeekEditorState extends MusicBeatState
 			missingFileText.text = 'MISSING FILE: images/storymenu/' + assetName + '.png';
 		}
 		recalculateStuffPosition();
+
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Week Editor", "Editting: " + weekFileName);
