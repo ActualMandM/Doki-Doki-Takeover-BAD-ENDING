@@ -523,7 +523,7 @@ class PlayState extends MusicBeatState
 
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.75;
+					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					evilSpace.visible = false;
 					add(evilSpace);
@@ -550,7 +550,7 @@ class PlayState extends MusicBeatState
 				{
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.75;
+					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 				}
@@ -3296,11 +3296,12 @@ class PlayState extends MusicBeatState
 						clubroom.visible = true;
 						deskfront.visible = true;
 					case 'evil':
+						defaultCamZoom = 0.8;
 						evilSpace.visible = true;
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
 					case 'poem':
-						defaultCamZoom = 1;
+						defaultCamZoom = 0.9;
 						evilPoem.visible = true;
 				}
 
