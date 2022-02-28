@@ -46,22 +46,10 @@ class MainMenuState extends MusicBeatState
 
 	public static var firstStart:Bool = true;
 
-	var newGaming:FlxText;
-	var newGaming2:FlxText;
-	var newInput:Bool = true;
 	var logo:FlxSprite;
-	var fumo:FlxSprite;
-	var menu_character:FlxSprite;
-	var magenta:FlxSprite;
-	var camFollow:FlxObject;
+	var logoBl:FlxSprite;
 
 	var backdrop:FlxBackdrop;
-	var logoBl:FlxSprite;
-	var grpLocks:FlxTypedGroup<FlxSprite>;
-	var difficultySelectors:FlxGroup;
-	var sprDifficulty:FlxSprite;
-	var leftArrow:FlxSprite;
-	var rightArrow:FlxSprite;
 
 	var debugKeys:Array<FlxKey>;
 
@@ -84,21 +72,16 @@ class MainMenuState extends MusicBeatState
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
-		persistentUpdate = persistentDraw = true;
-
-		camFollow = new FlxObject(0, 0, 1, 1);
-		add(camFollow);
-
 		backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
 		backdrop.velocity.set(-40, -40);
 		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
 
-		logo = new FlxSprite(-900, -359).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo = new FlxSprite(-260, 1).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logo);
 		if (firstStart)
-			FlxTween.tween(logo, {x: -700}, 1.2, {
+			FlxTween.tween(logo, {x: -60}, 1.2, {
 				ease: FlxEase.elasticOut,
 				onComplete: function(flxTween:FlxTween)
 				{
@@ -107,10 +90,9 @@ class MainMenuState extends MusicBeatState
 				}
 			});
 		else
-			logo.x = -700;
+			logo.x = -60;
 
-		//-600, -400
-		logoBl = new FlxSprite(-800, -400);
+		logoBl = new FlxSprite(-160, -40);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.scale.set(0.5, 0.5);
@@ -119,7 +101,7 @@ class MainMenuState extends MusicBeatState
 		logoBl.updateHitbox();
 		add(logoBl);
 		if (firstStart)
-			FlxTween.tween(logoBl, {x: -600}, 1.2, {
+			FlxTween.tween(logoBl, {x: 40}, 1.2, {
 				ease: FlxEase.elasticOut,
 				onComplete: function(flxTween:FlxTween)
 				{
@@ -128,7 +110,7 @@ class MainMenuState extends MusicBeatState
 				}
 			});
 		else
-			logoBl.x = -600;
+			logoBl.x = 40;
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -160,8 +142,6 @@ class MainMenuState extends MusicBeatState
 			else
 				menuItem.x = 50;
 		}
-
-		FlxG.camera.follow(camFollow);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -205,7 +185,6 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var selectedSomethin:Bool = false;
-
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.8)
@@ -218,6 +197,8 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
+			var ctrl = FlxG.keys.justPressed.CONTROL;
+
 			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -230,11 +211,9 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
-			if (controls.BACK)
+			if (ctrl && curSelected == 0)
 			{
-				selectedSomethin = true;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new TitleState());
+				openSubState(new GameplayChangersSubstate());
 			}
 
 			if (controls.ACCEPT)
