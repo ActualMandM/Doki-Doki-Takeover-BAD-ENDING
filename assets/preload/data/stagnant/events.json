@@ -228,6 +228,16 @@
 						"Change Stagnant Stage",
 						"poem",
 						""
+					],
+					[
+						"Change Character",
+						"BF",
+						"bfpoem"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"sayopoem"
 					]
 				]
 			],
@@ -243,6 +253,16 @@
 						"Change Stagnant Stage",
 						"evil",
 						""
+					],
+					[
+						"Change Character",
+						"BF",
+						"bf-doki"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"sayori"
 					]
 				]
 			],
@@ -258,6 +278,16 @@
 						"Change Stagnant Stage",
 						"poem",
 						""
+					],
+					[
+						"Change Character",
+						"BF",
+						"bfpoem"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"sayopoem"
 					]
 				]
 			]
