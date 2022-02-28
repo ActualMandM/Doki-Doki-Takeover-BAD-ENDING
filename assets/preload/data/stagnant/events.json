@@ -27,46 +27,6 @@
 				]
 			],
 			[
-				22666.6666666667,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				23000,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				23333.3333333333,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				23666.6666666667,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
 				24000,
 				[
 					[
@@ -88,16 +48,6 @@
 			],
 			[
 				42666.6666666667,
-				[
-					[
-						"Glitch Effect",
-						"0.5",
-						""
-					]
-				]
-			],
-			[
-				44000,
 				[
 					[
 						"Glitch Effect",
@@ -142,46 +92,6 @@
 					[
 						"Glitch Effect",
 						"0.5",
-						""
-					]
-				]
-			],
-			[
-				65333.3333333334,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				65666.6666666667,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				66000,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
-						""
-					]
-				]
-			],
-			[
-				66333.3333333334,
-				[
-					[
-						"Glitch Effect",
-						"0.25",
 						""
 					]
 				]
@@ -238,6 +148,11 @@
 						"Change Character",
 						"dad",
 						"sayopoem"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"false"
 					]
 				]
 			],
@@ -263,6 +178,11 @@
 						"Change Character",
 						"dad",
 						"sayori"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"true"
 					]
 				]
 			],
@@ -288,6 +208,11 @@
 						"Change Character",
 						"dad",
 						"sayopoem"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"false"
 					]
 				]
 			]

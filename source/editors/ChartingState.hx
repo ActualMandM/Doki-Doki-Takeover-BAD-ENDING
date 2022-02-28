@@ -124,7 +124,7 @@ class ChartingState extends MusicBeatState
 			"Value 1: Character to change (dad, bf, gf)\nValue 2: true or false"
 		],
 		[
-			'Change Strumline Graphics',
+			'Change Strumline',
 			"Value 1: Strumline graphic to change to\nNote: Not implemented yet"
 		]
 	];

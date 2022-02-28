@@ -3337,7 +3337,7 @@ class PlayState extends MusicBeatState
 					case 2:
 						gf.visible = false;
 				}
-			case 'Change Strumline Graphics':
+			case 'Change Strumline':
 				trace('not implemented yet');
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
