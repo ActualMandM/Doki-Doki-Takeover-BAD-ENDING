@@ -55,7 +55,7 @@ class Paths
 				@:privateAccess
 				if (obj != null)
 				{
-					GPUFunctions.disposeTexturesByKey(key);
+					// GPUFunctions.disposeTexturesByKey(key);
 					openfl.Assets.cache.removeBitmapData(key);
 					FlxG.bitmap._cache.remove(key);
 					obj.destroy();
@@ -79,7 +79,7 @@ class Paths
 			var obj = FlxG.bitmap._cache.get(key);
 			if (obj != null && !currentTrackedAssets.exists(key))
 			{
-				GPUFunctions.disposeTexturesByKey(key);
+				// GPUFunctions.disposeTexturesByKey(key);
 				openfl.Assets.cache.removeBitmapData(key);
 				FlxG.bitmap._cache.remove(key);
 				obj.destroy();
@@ -328,15 +328,15 @@ class Paths
 			{
 				// idk if this works lol
 				var newGraphic:FlxGraphic;
-				if (ClientPrefs.gpuTextures)
-				{
-					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(modsImages(key)), false, key, false);
-				}
-				else
-				{
+				// if (ClientPrefs.gpuTextures)
+				// {
+				// 	newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(modsImages(key)), false, key, false);
+				// }
+				// else
+				// {
 					var newBitmap:BitmapData = BitmapData.fromFile(modsImages(key));
 					newGraphic = FlxGraphic.fromBitmapData(newBitmap, false, key);
-				}
+				// }
 				currentTrackedAssets.set(key, newGraphic);
 			}
 			localTrackedAssets.push(key);
@@ -349,14 +349,14 @@ class Paths
 			if (!currentTrackedAssets.exists(key))
 			{
 				var newGraphic:FlxGraphic;
-				if (ClientPrefs.gpuTextures)
-				{
-					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, path, false);
-				}
-				else
-				{
+				// if (ClientPrefs.gpuTextures)
+				// {
+				// 	newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, path, false);
+				// }
+				// else
+				// {
 					newGraphic = FlxG.bitmap.add(path, false, path);
-				}
+				// }
 				currentTrackedAssets.set(key, newGraphic);
 			}
 			localTrackedAssets.push(key);
