@@ -265,6 +265,7 @@ class PlayState extends MusicBeatState
 	public static var deathCounter:Int = 0;
 
 	public var defaultCamZoom:Float = 1.05;
+	var defaultStageZoom:Float = 1.05;
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -431,7 +432,7 @@ class PlayState extends MusicBeatState
 			};
 		}
 
-		defaultCamZoom = stageData.defaultZoom;
+		defaultStageZoom = stageData.defaultZoom;
 		isPixelStage = stageData.isPixelStage;
 		if (stageData.boyfriend_camera != null)
 		{
@@ -453,6 +454,8 @@ class PlayState extends MusicBeatState
 		boyfriendGroup = new FlxSpriteGroup(BF_X, BF_Y);
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
+
+		defaultCamZoom = defaultStageZoom;
 
 		switch (curStage)
 		{
@@ -3274,6 +3277,8 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(val2))
 					val2 = 0;
 
+				defaultCamZoom = defaultStageZoom;
+
 				closet.visible = false;
 				clubroom.visible = false;
 				deskfront.visible = false;
@@ -3295,6 +3300,7 @@ class PlayState extends MusicBeatState
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
 					case 'poem':
+						defaultCamZoom = 1;
 						evilPoem.visible = true;
 				}
 
