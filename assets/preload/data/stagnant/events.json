@@ -7,12 +7,52 @@
 		"player3": null,
 		"events": [
 			[
+				21333.3333333333,
+				[
+					[
+						"Glitch Effect",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				22000,
+				[
+					[
+						"Glitch Effect",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				24000,
+				[
+					[
+						"Change Stagnant Stage",
+						"evil",
+						""
+					]
+				]
+			],
+			[
 				24045.8333333333,
 				[
 					[
 						"Change Scroll Speed",
 						"0.8",
 						"0"
+					]
+				]
+			],
+			[
+				42666.6666666667,
+				[
+					[
+						"Glitch Effect",
+						"0.5",
+						""
 					]
 				]
 			],
@@ -27,12 +67,52 @@
 				]
 			],
 			[
+				45333.3333333333,
+				[
+					[
+						"Change Stagnant Stage",
+						"",
+						""
+					]
+				]
+			],
+			[
+				64000,
+				[
+					[
+						"Glitch Effect",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				64666.6666666667,
+				[
+					[
+						"Glitch Effect",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
 				66500,
 				[
 					[
 						"Change Scroll Speed",
 						"0.8",
 						"0"
+					]
+				]
+			],
+			[
+				66666.6666666667,
+				[
+					[
+						"Change Stagnant Stage",
+						"evil",
+						""
 					]
 				]
 			],
@@ -47,12 +127,92 @@
 				]
 			],
 			[
-				88000,
+				109333.333333333,
 				[
+					[
+						"Change Combo UI",
+						"poemUI/",
+						"-poem"
+					],
+					[
+						"Change Stagnant Stage",
+						"poem",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"bfpoem"
+					],
+					[
+						"Change Character",
+						"dad",
+						"sayopoem"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"false"
+					]
+				]
+			],
+			[
+				152000,
+				[
+					[
+						"Change Combo UI",
+						"",
+						""
+					],
 					[
 						"Change Stagnant Stage",
 						"evil",
-						"2"
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-doki"
+					],
+					[
+						"Change Character",
+						"dad",
+						"sayori"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"true"
+					]
+				]
+			],
+			[
+				194666.666666667,
+				[
+					[
+						"Change Combo UI",
+						"poemUI/",
+						"-poem"
+					],
+					[
+						"Change Stagnant Stage",
+						"poem",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"bfpoem"
+					],
+					[
+						"Change Character",
+						"dad",
+						"sayopoem"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"false"
 					]
 				]
 			]
