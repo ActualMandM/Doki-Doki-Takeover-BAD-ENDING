@@ -22,7 +22,7 @@ class ClientPrefs
 	public static var hideHud:Bool = false;
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	public static var imagesPersist:Bool = false;
+	public static var gpuTextures:Bool = false;
 	public static var ghostTapping:Bool = true;
 	public static var timeBarType:String = 'Time Left';
 	public static var scoreZoom:Bool = true;
@@ -107,7 +107,7 @@ class ClientPrefs
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
-		FlxG.save.data.imagesPersist = imagesPersist;
+		FlxG.save.data.gpuTextures = gpuTextures;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.timeBarType = timeBarType;
 		FlxG.save.data.scoreZoom = scoreZoom;
@@ -207,10 +207,9 @@ class ClientPrefs
 		{
 			arrowHSV = FlxG.save.data.arrowHSV;
 		}
-		if (FlxG.save.data.imagesPersist != null)
+		if (FlxG.save.data.gpuTextures != null)
 		{
-			imagesPersist = FlxG.save.data.imagesPersist;
-			FlxGraphic.defaultPersist = ClientPrefs.imagesPersist;
+			gpuTextures = FlxG.save.data.gpuTextures;
 		}
 		if (FlxG.save.data.ghostTapping != null)
 		{
