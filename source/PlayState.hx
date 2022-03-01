@@ -3308,11 +3308,13 @@ class PlayState extends MusicBeatState
 						deskfront.visible = true;
 					case 'evil':
 						defaultCamZoom = 0.8;
+						FlxG.camera.zoom = 0.8;
 						evilSpace.visible = true;
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
 					case 'poem':
 						defaultCamZoom = 0.9;
+						FlxG.camera.zoom = 0.9;
 						evilPoem.visible = true;
 				}
 
