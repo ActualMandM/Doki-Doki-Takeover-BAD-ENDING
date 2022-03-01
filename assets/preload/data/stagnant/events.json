@@ -33,6 +33,16 @@
 						"Change Stagnant Stage",
 						"evil",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sadsayo"
+					],
+					[
+						"Change Character",
+						"bf",
+						"gf"
 					]
 				]
 			],
@@ -73,6 +83,16 @@
 						"Change Stagnant Stage",
 						"",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sayori"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-doki"
 					]
 				]
 			],
@@ -113,6 +133,16 @@
 						"Change Stagnant Stage",
 						"evil",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sadsayo"
+					],
+					[
+						"Change Character",
+						"bf",
+						"gf"
 					]
 				]
 			],
@@ -187,12 +217,12 @@
 					[
 						"Change Character",
 						"bf",
-						"bf-doki"
+						"gf"
 					],
 					[
 						"Change Character",
 						"dad",
-						"sayori"
+						"sadsayo"
 					],
 					[
 						"Character Visibility",

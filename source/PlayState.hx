@@ -3360,9 +3360,9 @@ class PlayState extends MusicBeatState
 					case 0:
 						boyfriend.visible = visibleBool;
 					case 1:
-						dad.visible = false;
+						dad.visible = visibleBool;
 					case 2:
-						gf.visible = false;
+						gf.visible = visibleBool;
 				}
 			case 'Change Strumline':
 				if (value1 == '' || value1 == null)
