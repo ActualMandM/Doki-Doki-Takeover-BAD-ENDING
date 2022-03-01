@@ -3289,6 +3289,7 @@ class PlayState extends MusicBeatState
 					val2 = 0;
 
 				defaultCamZoom = defaultStageZoom;
+				FlxG.camera.zoom = defaultStageZoom;
 
 				closet.visible = false;
 				clubroom.visible = false;
