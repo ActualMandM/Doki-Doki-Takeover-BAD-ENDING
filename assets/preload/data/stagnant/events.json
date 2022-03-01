@@ -163,6 +163,11 @@
 						"Character Visibility",
 						"gf",
 						"false"
+					],
+					[
+						"Change Strumline",
+						"poem",
+						"false"
 					]
 				]
 			],
@@ -193,6 +198,11 @@
 						"Character Visibility",
 						"gf",
 						"true"
+					],
+					[
+						"Change Strumline",
+						"",
+						"false"
 					]
 				]
 			],
@@ -222,6 +232,11 @@
 					[
 						"Character Visibility",
 						"gf",
+						"false"
+					],
+					[
+						"Change Strumline",
+						"poem",
 						"false"
 					]
 				]
