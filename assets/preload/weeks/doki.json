@@ -1,8 +1,8 @@
 {
 	"songs": [
-		["STAGNANT", "sayori", [165, 0, 77]],
-		["MARKOV", "yuri-crazy", [165, 0, 77]],
-		["HOME", "natsuki", [165, 0, 77]]
+		["STAGNANT", "sayorisad", [255, 0, 0]],
+		["MARKOV", "yuri-crazy", [255, 0, 0]],
+		["HOME", "glitchnatsuki", [255, 0, 0]]
 	],
 
 	"weekCharacters": [
