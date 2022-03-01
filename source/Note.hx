@@ -70,6 +70,7 @@ class Note extends FlxSprite
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
 	public var distance:Float = 2000; // plan on doing scroll directions soon -bb
+	public var noteStyle:String = '';
 
 	private function set_texture(value:String):String
 	{
@@ -121,13 +122,14 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?noteStyle:String = '')
 	{
 		super();
 
 		if (prevNote == null)
 			prevNote = this;
 
+		this.noteStyle = noteStyle;
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
 		this.inEditor = inEditor;
@@ -194,7 +196,7 @@ class Note extends FlxSprite
 
 			offsetX -= width / 2;
 
-			if (PlayState.isPixelStage)
+			if (noteStyle == 'pixel')
 				offsetX += 30;
 
 			if (prevNote.isSustainNote)
@@ -217,7 +219,7 @@ class Note extends FlxSprite
 					prevNote.scale.y *= PlayState.instance.songSpeed;
 				}
 
-				if (PlayState.isPixelStage)
+				if (noteStyle == 'pixel')
 				{
 					prevNote.scale.y *= 1.19;
 				}
@@ -225,7 +227,7 @@ class Note extends FlxSprite
 				// prevNote.setGraphicSize();
 			}
 
-			if (PlayState.isPixelStage)
+			if (noteStyle == 'pixel')
 			{
 				scale.y *= PlayState.daPixelZoom;
 				updateHitbox();
@@ -268,32 +270,37 @@ class Note extends FlxSprite
 
 		var lastScaleY:Float = scale.y;
 		var blahblah:String = arraySkin.join('/');
-		if (PlayState.isPixelStage)
+
+		switch (noteStyle)
 		{
-			if (isSustainNote)
-			{
-				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'));
-				width = width / 4;
-				height = height / 2;
-				loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'), true, Math.floor(width), Math.floor(height));
-			}
-			else
-			{
-				loadGraphic(Paths.image('pixelUI/' + blahblah));
-				width = width / 4;
-				height = height / 5;
-				loadGraphic(Paths.image('pixelUI/' + blahblah), true, Math.floor(width), Math.floor(height));
-			}
-			setGraphicSize(Std.int(width * PlayState.daPixelZoom));
-			loadPixelNoteAnims();
-			antialiasing = false;
+			case 'pixel':
+				if (isSustainNote)
+				{
+					loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'));
+					width = width / 4;
+					height = height / 2;
+					loadGraphic(Paths.image('pixelUI/' + blahblah + 'ENDS'), true, Math.floor(width), Math.floor(height));
+				}
+				else
+				{
+					loadGraphic(Paths.image('pixelUI/' + blahblah));
+					width = width / 4;
+					height = height / 5;
+					loadGraphic(Paths.image('pixelUI/' + blahblah), true, Math.floor(width), Math.floor(height));
+				}
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
+				loadPixelNoteAnims();
+				antialiasing = false;
+			case 'poem':
+				frames = Paths.getSparrowAtlas('poemUI/' + blahblah);
+				loadNoteAnims();
+				antialiasing = ClientPrefs.globalAntialiasing;
+			default:
+				frames = Paths.getSparrowAtlas(blahblah);
+				loadNoteAnims();
+				antialiasing = ClientPrefs.globalAntialiasing;
 		}
-		else
-		{
-			frames = Paths.getSparrowAtlas(blahblah);
-			loadNoteAnims();
-			antialiasing = ClientPrefs.globalAntialiasing;
-		}
+
 		if (isSustainNote)
 		{
 			scale.y = lastScaleY;

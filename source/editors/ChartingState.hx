@@ -125,7 +125,7 @@ class ChartingState extends MusicBeatState
 		],
 		[
 			'Change Strumline',
-			"Value 1: Strumline graphic to change to\nNote: Not implemented yet"
+			"Value 1: Strumline graphic to change to\nValue 2: Whether or not to have it fade in"
 		]
 	];
 
@@ -328,7 +328,7 @@ class ChartingState extends MusicBeatState
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		for (i in 0...8)
 		{
-			var note:StrumNote = new StrumNote(GRID_SIZE * (i + 1), strumLine.y, i % 4, 0);
+			var note:StrumNote = new StrumNote(GRID_SIZE * (i + 1), strumLine.y, i % 4, 0, '');
 			note.setGraphicSize(GRID_SIZE, GRID_SIZE);
 			note.updateHitbox();
 			note.playAnim('static', true);
@@ -687,6 +687,7 @@ class ChartingState extends MusicBeatState
 	var check_changeBPM:FlxUICheckBox;
 	var stepperSectionBPM:FlxUINumericStepper;
 	var check_altAnim:FlxUICheckBox;
+	var noteStyleSectionText:FlxUIInputText;
 
 	var sectionToCopy:Int = 0;
 	var notesCopied:Array<Dynamic>;
@@ -871,6 +872,9 @@ class ChartingState extends MusicBeatState
 		copyLastButton.setGraphicSize(80, 30);
 		copyLastButton.updateHitbox();
 
+		noteStyleSectionText = new FlxUIInputText(10, 330, 70, _song.notes[curSection].noteStyle, 8);
+		blockPressWhileTypingOn.push(noteStyleSectionText);
+
 		tab_group_section.add(stepperLength);
 		tab_group_section.add(stepperSectionBPM);
 		tab_group_section.add(check_mustHitSection);
@@ -883,6 +887,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(swapSection);
 		tab_group_section.add(stepperCopy);
 		tab_group_section.add(copyLastButton);
+		tab_group_section.add(noteStyleSectionText);
 
 		UI_box.addGroup(tab_group_section);
 	}
@@ -2653,7 +2658,8 @@ class ChartingState extends MusicBeatState
 			gfSection: false,
 			sectionNotes: [],
 			typeOfSection: 0,
-			altAnim: false
+			altAnim: false,
+			noteStyle: ''
 		};
 
 		_song.notes.push(sec);

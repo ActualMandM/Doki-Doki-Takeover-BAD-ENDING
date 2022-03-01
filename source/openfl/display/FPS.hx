@@ -92,10 +92,6 @@ class FPS extends TextField
 			#end
 
 			textColor = 0xFFFF0000;
-			if (memoryMegas > 3000 || currentFPS < 60)
-			{
-				textColor = 0xFF00FFFF;
-			}
 
 			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
 			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();

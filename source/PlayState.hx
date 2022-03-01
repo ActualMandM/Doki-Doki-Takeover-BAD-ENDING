@@ -1698,6 +1698,11 @@ class PlayState extends MusicBeatState
 		{
 			for (songNotes in section.sectionNotes)
 			{
+				var noteStyle:String = isPixelStage ? 'pixel' : '';
+
+				if (section.noteStyle != '' || section.noteStyle != null)
+					noteStyle = section.noteStyle;
+
 				var daStrumTime:Float = songNotes[0];
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 
@@ -1721,6 +1726,7 @@ class PlayState extends MusicBeatState
 				swagNote.noteType = songNotes[3];
 				if (!Std.isOfType(songNotes[3], String))
 					swagNote.noteType = editors.ChartingState.noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
+				swagNote.noteStyle = noteStyle;
 				swagNote.scrollFactor.set();
 				var susLength:Float = swagNote.sustainLength;
 
@@ -1855,8 +1861,14 @@ class PlayState extends MusicBeatState
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1[0], Obj2[0]);
 	}
 
-	private function generateStaticArrows(player:Int):Void
+	private function generateStaticArrows(player:Int, ?noteStyle:String, ?tween:Bool = true):Void
 	{
+		if (noteStyle == '' || noteStyle == null)
+		{
+			if (isPixelStage)
+				noteStyle = 'pixel';
+		}
+
 		for (i in 0...4)
 		{
 			// FlxG.log.add(i);
@@ -1864,8 +1876,8 @@ class PlayState extends MusicBeatState
 			if (player < 1 && ClientPrefs.middleScroll)
 				targetAlpha = 0.35;
 
-			var babyArrow:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player);
-			if (!isStoryMode)
+			var babyArrow:StrumNote = new StrumNote(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, strumLine.y, i, player, noteStyle);
+			if (!isStoryMode && tween)
 			{
 				babyArrow.y -= 10;
 				babyArrow.alpha = 0;
@@ -2556,7 +2568,7 @@ class PlayState extends MusicBeatState
 							{
 								daNote.y += 10.5 * (fakeCrochet / 400) * 1.5 * roundedSpeed + (46 * (roundedSpeed - 1));
 								daNote.y -= 46 * (1 - (fakeCrochet / 600)) * roundedSpeed;
-								if (PlayState.isPixelStage)
+								if (daNote.noteStyle == 'pixel')
 								{
 									daNote.y += 8;
 								}
@@ -3345,7 +3357,23 @@ class PlayState extends MusicBeatState
 						gf.visible = false;
 				}
 			case 'Change Strumline':
-				trace('not implemented yet');
+				if (value1 == '' || value1 == null)
+					return;
+
+				var tweenBool:Bool = false;
+				if (value2 == 'true')
+					tweenBool = true;
+
+				remove(strumLineNotes);
+				strumLineNotes = new FlxTypedGroup<StrumNote>();
+				strumLineNotes.cameras = [camHUD];
+				add(strumLineNotes);
+
+				playerStrums = new FlxTypedGroup<StrumNote>();
+				opponentStrums = new FlxTypedGroup<StrumNote>();
+
+				generateStaticArrows(0, value1, tweenBool);
+				generateStaticArrows(1, value1, tweenBool);
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4864,7 +4892,7 @@ class PlayState extends MusicBeatState
 		var spr:StrumNote = null;
 		if (isDad)
 		{
-			spr = strumLineNotes.members[id];
+			spr = opponentStrums.members[id];
 		}
 		else
 		{
