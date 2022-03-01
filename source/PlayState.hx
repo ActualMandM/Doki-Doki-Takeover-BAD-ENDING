@@ -3376,6 +3376,18 @@ class PlayState extends MusicBeatState
 
 				generateStaticArrows(0, value1, tweenBool);
 				generateStaticArrows(1, value1, tweenBool);
+			case 'Change Camera Zoom':
+				var val1:Float = Std.parseFloat(value1);
+				if (Math.isNaN(val1))
+					val1 = defaultStageZoom;
+
+				var forceBool:Bool = false;
+				if (value2 == 'true')
+					forceBool = true;
+
+				defaultCamZoom = val1;
+				if (forceBool)
+					FlxG.camera.zoom = val1;
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

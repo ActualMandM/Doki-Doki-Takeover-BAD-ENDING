@@ -126,6 +126,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Change Strumline',
 			"Value 1: Strumline graphic to change to\nValue 2: Whether or not to have it fade in"
+		],
+		[
+			'Change Camera Zoom',
+			"Value 1: Zoom for the camera to change to\nValue 2: Whether or not to suddenly zoom in"
 		]
 	];
 
