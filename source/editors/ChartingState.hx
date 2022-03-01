@@ -872,7 +872,7 @@ class ChartingState extends MusicBeatState
 		copyLastButton.setGraphicSize(80, 30);
 		copyLastButton.updateHitbox();
 
-		noteStyleSectionText = new FlxUIInputText(10, 330, 70, _song.notes[curSection].noteStyle, 8);
+		noteStyleSectionText = new FlxUIInputText(10, 330, 70, '', 8);
 		blockPressWhileTypingOn.push(noteStyleSectionText);
 
 		tab_group_section.add(stepperLength);
@@ -888,6 +888,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(stepperCopy);
 		tab_group_section.add(copyLastButton);
 		tab_group_section.add(noteStyleSectionText);
+		tab_group_section.add(new FlxText(noteStyleSectionText.x, noteStyleSectionText.y - 15, 0, 'Note Style:'));
 
 		UI_box.addGroup(tab_group_section);
 	}
@@ -1448,6 +1449,10 @@ class ChartingState extends MusicBeatState
 			if (sender == noteSplashesInputText)
 			{
 				_song.splashSkin = noteSplashesInputText.text;
+			}
+			else if (sender == noteStyleSectionText)
+			{
+				_song.notes[curSection].noteStyle = noteStyleSectionText.text;
 			}
 			else if (curSelectedNote != null)
 			{
@@ -2561,6 +2566,9 @@ class ChartingState extends MusicBeatState
 				nextRenderedNotes.add(note);
 			}
 		}
+
+		if (curSection != lastSection)
+			noteStyleSectionText.text = (_song.notes[curSection].noteStyle == null ? '' : _song.notes[curSection].noteStyle);
 	}
 
 	function setupNoteData(i:Array<Dynamic>, isNextSection:Bool):Note

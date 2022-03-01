@@ -1718,7 +1718,7 @@ class PlayState extends MusicBeatState
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 				else
 					oldNote = null;
-				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
+				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, false, noteStyle);
 
 				swagNote.mustPress = gottaHitNote;
 				swagNote.sustainLength = songNotes[2];
@@ -1726,7 +1726,6 @@ class PlayState extends MusicBeatState
 				swagNote.noteType = songNotes[3];
 				if (!Std.isOfType(songNotes[3], String))
 					swagNote.noteType = editors.ChartingState.noteTypeList[songNotes[3]]; // Backward compatibility + compatibility with Week 7 charts
-				swagNote.noteStyle = noteStyle;
 				swagNote.scrollFactor.set();
 				var susLength:Float = swagNote.sustainLength;
 
@@ -1742,7 +1741,7 @@ class PlayState extends MusicBeatState
 						var sustainNote:Note = new Note(daStrumTime
 							+ (Conductor.stepCrochet * susNote)
 							+ (Conductor.stepCrochet / FlxMath.roundDecimal(songSpeed, 2)), daNoteData, oldNote,
-							true);
+							true, false, noteStyle);
 
 						sustainNote.mustPress = gottaHitNote;
 						sustainNote.gfNote = (section.gfSection && (songNotes[1] < 4));
