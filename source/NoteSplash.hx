@@ -28,14 +28,28 @@ class NoteSplash extends FlxSprite
 		antialiasing = ClientPrefs.globalAntialiasing;
 	}
 
-	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null, hueColor:Float = 0, satColor:Float = 0, brtColor:Float = 0)
+	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null, hueColor:Float = 0, satColor:Float = 0, brtColor:Float = 0, noteStyle:String = '')
 	{
 		setPosition(x - Note.swagWidth * 0.95, y - Note.swagWidth);
 		alpha = 0.6;
 
 		if (texture == null)
 		{
-			texture = 'noteSplashes';
+			if (noteStyle != null)
+			{
+				switch (noteStyle)
+				{
+					case 'poem':
+						texture = 'poemUI/noteSplashes';
+					default:
+						texture = 'noteSplashes';
+				}
+			}
+			else
+			{
+				texture = 'noteSplashes';
+			}
+
 			if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
 				texture = PlayState.SONG.splashSkin;
 		}
