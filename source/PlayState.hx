@@ -250,6 +250,7 @@ class PlayState extends MusicBeatState
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
 	var evilPoem:BGSprite;
+	var poemTransition:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -544,6 +545,11 @@ class PlayState extends MusicBeatState
 				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.7));
 				evilPoem.visible = false;
 				add(evilPoem);
+
+				poemTransition = new BGSprite('PoemTransition', 0, 0, 1, 1, ['poemtransition'], false);
+				poemTransition.cameras = [camHUD];
+				poemTransition.visible = false;
+				add(poemTransition);
 			
 			case 'clubroomevil': // DDTO BAD ENDING
 				if (!ClientPrefs.lowQuality)
