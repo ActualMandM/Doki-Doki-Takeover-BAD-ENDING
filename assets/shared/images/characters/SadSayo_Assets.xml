@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SadSayo_Assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SadSayo Down0000" x="10" y="10" width="379" height="521" frameX="0" frameY="-1" frameWidth="390" frameHeight="522"/>
+	<SubTexture name="SadSayo Down0001" x="10" y="10" width="379" height="521" frameX="0" frameY="-1" frameWidth="390" frameHeight="522"/>
+	<SubTexture name="SadSayo Down0002" x="399" y="10" width="388" height="522" frameX="0" frameY="0" frameWidth="390" frameHeight="522"/>
+	<SubTexture name="SadSayo Down0003" x="399" y="10" width="388" height="522" frameX="0" frameY="0" frameWidth="390" frameHeight="522"/>
+	<SubTexture name="SadSayo Down0004" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0005" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0006" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0007" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0008" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0009" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0010" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0011" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0012" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Down0013" x="797" y="10" width="390" height="522"/>
+	<SubTexture name="SadSayo Idle0000" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0001" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0002" x="1548" y="10" width="332" height="530" frameX="-5" frameY="-5" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0003" x="1548" y="10" width="332" height="530" frameX="-5" frameY="-5" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0004" x="1890" y="10" width="335" height="512" frameX="0" frameY="-24" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0005" x="1890" y="10" width="335" height="512" frameX="0" frameY="-24" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0006" x="2235" y="10" width="369" height="518" frameX="-4" frameY="-17" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0007" x="2235" y="10" width="369" height="518" frameX="-4" frameY="-17" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0008" x="2614" y="10" width="360" height="516" frameX="-7" frameY="-19" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0009" x="2614" y="10" width="360" height="516" frameX="-7" frameY="-19" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0010" x="2984" y="10" width="358" height="516" frameX="-7" frameY="-19" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0011" x="2984" y="10" width="358" height="516" frameX="-7" frameY="-19" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0012" x="3352" y="10" width="374" height="518" frameX="-11" frameY="-17" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0013" x="3352" y="10" width="374" height="518" frameX="-11" frameY="-17" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0014" x="10" y="551" width="374" height="522" frameX="-11" frameY="-13" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0015" x="10" y="551" width="374" height="522" frameX="-11" frameY="-13" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0016" x="394" y="551" width="354" height="535" frameX="-7" frameY="0" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0017" x="394" y="551" width="354" height="535" frameX="-7" frameY="0" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0018" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0019" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0020" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0021" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0022" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Idle0023" x="1197" y="10" width="341" height="531" frameX="-7" frameY="-4" frameWidth="385" frameHeight="536"/>
+	<SubTexture name="SadSayo Left0000" x="758" y="551" width="295" height="516" frameX="-4" frameY="-13" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0001" x="758" y="551" width="295" height="516" frameX="-4" frameY="-13" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0002" x="1063" y="551" width="295" height="526" frameX="-1" frameY="-3" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0003" x="1063" y="551" width="295" height="526" frameX="-1" frameY="-3" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0004" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0005" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0006" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0007" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0008" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0009" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0010" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0011" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0012" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Left0013" x="1368" y="551" width="296" height="529" frameX="0" frameY="0" frameWidth="299" frameHeight="529"/>
+	<SubTexture name="SadSayo Right0000" x="1674" y="551" width="362" height="522" frameX="0" frameY="0" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0001" x="1674" y="551" width="362" height="522" frameX="0" frameY="0" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0002" x="2046" y="551" width="363" height="521" frameX="-1" frameY="-1" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0003" x="2046" y="551" width="363" height="521" frameX="-1" frameY="-1" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0004" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0005" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0006" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0007" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0008" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0009" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0010" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0011" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0012" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Right0013" x="2419" y="551" width="362" height="520" frameX="-1" frameY="-2" frameWidth="364" frameHeight="522"/>
+	<SubTexture name="SadSayo Up0000" x="2791" y="551" width="307" height="525" frameX="-1" frameY="-5" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0001" x="2791" y="551" width="307" height="525" frameX="-1" frameY="-5" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0002" x="3108" y="551" width="300" height="528" frameX="0" frameY="-2" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0003" x="3108" y="551" width="300" height="528" frameX="0" frameY="-2" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0004" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0005" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0006" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0007" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0008" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0009" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0010" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0011" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0012" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0013" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0014" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+	<SubTexture name="SadSayo Up0015" x="3418" y="551" width="301" height="530" frameX="0" frameY="0" frameWidth="308" frameHeight="530"/>
+</TextureAtlas>
