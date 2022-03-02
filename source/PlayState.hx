@@ -530,24 +530,26 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -140, -260, 1, 1);
-				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
+				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				evilClubBG.visible = false;
 				add(evilClubBG);
 
-				evilClubBGScribbly = new BGSprite('BGsketch', -140, -260, 1, 1, ['BGSketch'], true);
-				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.7));
+				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
+				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
 				evilClubBGScribbly.visible = false;
 				evilClubBGScribbly.alpha = 0;
 				add(evilClubBGScribbly);
 
-				evilPoem = new BGSprite('PaperBG', -140, -260, 1, 1, ['PaperBG'], true);
-				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.7));
+				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
+				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
 				evilPoem.visible = false;
 				add(evilPoem);
 
-				poemTransition = new BGSprite('PoemTransition', 0, 0, 1, 1, ['poemtransition'], false);
+				// todo: add event to make transition appear
+				poemTransition = new BGSprite('PoemTransition', 0, 0, 1, 1, ['poemtransition']);
 				poemTransition.cameras = [camHUD];
+				poemTransition.screenCenter();
 				poemTransition.visible = false;
 				add(poemTransition);
 			
@@ -561,8 +563,8 @@ class PlayState extends MusicBeatState
 					add(evilSpace);
 				}
 
-				evilClubBG = new BGSprite('bigmonika/BG', -140, -260, 1, 1);
-				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.7));
+				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				add(evilClubBG);
 		}
 
