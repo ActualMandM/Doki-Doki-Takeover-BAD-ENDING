@@ -5,10 +5,10 @@
 				1,
 				0
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "idle",
-			"loop": true,
+			"indices": [],
 			"name": "BFPoemIdle"
 		},
 		{
@@ -16,10 +16,10 @@
 				10,
 				8
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": true,
+			"indices": [],
 			"name": "BFPoemUp"
 		},
 		{
@@ -27,10 +27,10 @@
 				28,
 				8
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": true,
+			"indices": [],
 			"name": "BFPoemLeft"
 		},
 		{
@@ -38,10 +38,10 @@
 				11,
 				3
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": true,
+			"indices": [],
 			"name": "BFPoemRight"
 		},
 		{
@@ -49,18 +49,18 @@
 				-3,
 				31
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": true,
+			"indices": [],
 			"name": "BFPoemDown"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/BFHappyThoughts_Assets",
 	"position": [
-		0,
-		170
+		-60,
+		260
 	],
 	"healthicon": "bfpoem",
 	"flip_x": true,
@@ -70,8 +70,8 @@
 		0
 	],
 	"camera_position": [
-		-30,
-		140
+		0,
+		0
 	],
 	"sing_duration": 6,
 	"scale": 1

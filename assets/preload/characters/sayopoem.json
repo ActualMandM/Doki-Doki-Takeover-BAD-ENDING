@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				1,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SayoPoemIdle"
+			"fps": 24,
+			"name": "SayoPoemIdle",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				10,
 				8
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SayoPoemUp"
+			"fps": 24,
+			"name": "SayoPoemUp",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				28,
 				8
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SayoPoemLeft"
+			"fps": 24,
+			"name": "SayoPoemLeft",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				11,
 				3
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SayoPoemRight"
+			"fps": 24,
+			"name": "SayoPoemRight",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-3,
 				31
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SayoPoemDown"
+			"fps": 24,
+			"name": "SayoPoemDown",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/SayoHappyThoughts_Assets",
 	"position": [
-		0,
-		10
+		-40,
+		50
 	],
 	"healthicon": "sayoripoem",
 	"flip_x": false,
@@ -70,8 +70,8 @@
 		0
 	],
 	"camera_position": [
-		-30,
-		140
+		0,
+		30
 	],
 	"sing_duration": 6,
 	"scale": 1
