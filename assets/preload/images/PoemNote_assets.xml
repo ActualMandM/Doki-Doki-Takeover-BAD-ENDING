@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="PoemNote_assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue hold end0000" x="10" y="10" width="50" height="64"/>
+	<SubTexture name="blue hold piece0000" x="70" y="10" width="50" height="44"/>
+	<SubTexture name="blueee0000" x="130" y="10" width="164" height="162"/>
+	<SubTexture name="blueee0001" x="130" y="10" width="164" height="162"/>
+	<SubTexture name="blueee0002" x="304" y="10" width="164" height="162"/>
+	<SubTexture name="blueee0003" x="304" y="10" width="164" height="162"/>
+	<SubTexture name="blueee0004" x="478" y="10" width="164" height="162"/>
+	<SubTexture name="blueee0005" x="478" y="10" width="164" height="162"/>
+	<SubTexture name="green hold end0000" x="10" y="10" width="50" height="64"/>
+	<SubTexture name="green hold piece0000" x="70" y="10" width="50" height="44"/>
+	<SubTexture name="greennn0000" x="652" y="10" width="164" height="162"/>
+	<SubTexture name="greennn0001" x="652" y="10" width="164" height="162"/>
+	<SubTexture name="greennn0002" x="826" y="10" width="164" height="162"/>
+	<SubTexture name="greennn0003" x="826" y="10" width="164" height="162"/>
+	<SubTexture name="greennn0004" x="10" y="182" width="164" height="162"/>
+	<SubTexture name="greennn0005" x="10" y="182" width="164" height="162"/>
+	<SubTexture name="pruple end hold0000" x="10" y="10" width="50" height="64"/>
+	<SubTexture name="purple0000" x="184" y="182" width="162" height="164"/>
+	<SubTexture name="purple0001" x="184" y="182" width="162" height="164"/>
+	<SubTexture name="purple0002" x="356" y="182" width="162" height="164"/>
+	<SubTexture name="purple0003" x="356" y="182" width="162" height="164"/>
+	<SubTexture name="purple0004" x="528" y="182" width="162" height="164"/>
+	<SubTexture name="purple0005" x="528" y="182" width="162" height="164"/>
+	<SubTexture name="purple hold piece0000" x="70" y="10" width="50" height="44"/>
+	<SubTexture name="red hold end0000" x="10" y="10" width="50" height="64"/>
+	<SubTexture name="red hold piece0000" x="70" y="10" width="50" height="44"/>
+	<SubTexture name="reddd0000" x="700" y="182" width="162" height="164"/>
+	<SubTexture name="reddd0001" x="700" y="182" width="162" height="164"/>
+	<SubTexture name="reddd0002" x="10" y="356" width="162" height="164"/>
+	<SubTexture name="reddd0003" x="10" y="356" width="162" height="164"/>
+	<SubTexture name="reddd0004" x="182" y="356" width="162" height="164"/>
+	<SubTexture name="reddd0005" x="182" y="356" width="162" height="164"/>
+</TextureAtlas>
