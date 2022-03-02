@@ -293,7 +293,7 @@ class Note extends FlxSprite
 				antialiasing = false;
 			case 'poem':
 				frames = Paths.getSparrowAtlas('poemUI/' + blahblah);
-				loadNoteAnims();
+				loadPoemNoteAnims();
 				antialiasing = ClientPrefs.globalAntialiasing;
 			default:
 				frames = Paths.getSparrowAtlas(blahblah);
@@ -366,6 +366,30 @@ class Note extends FlxSprite
 			animation.add('blueScroll', [BLUE_NOTE + 4]);
 			animation.add('purpleScroll', [PURP_NOTE + 4]);
 		}
+	}
+
+	function loadPoemNoteAnims()
+	{
+		animation.addByPrefix('greenScroll', 'green instance');
+		animation.addByPrefix('redScroll', 'red instance');
+		animation.addByPrefix('blueScroll', 'blue instance');
+		animation.addByPrefix('purpleScroll', 'purple instance');
+
+		if (isSustainNote)
+		{
+			animation.addByPrefix('purpleholdend', 'pruple end hold');
+			animation.addByPrefix('greenholdend', 'green hold end');
+			animation.addByPrefix('redholdend', 'red hold end');
+			animation.addByPrefix('blueholdend', 'blue hold end');
+
+			animation.addByPrefix('purplehold', 'purple hold piece');
+			animation.addByPrefix('greenhold', 'green hold piece');
+			animation.addByPrefix('redhold', 'red hold piece');
+			animation.addByPrefix('bluehold', 'blue hold piece');
+		}
+
+		setGraphicSize(Std.int(width * 0.7));
+		updateHitbox();
 	}
 
 	override function update(elapsed:Float)
