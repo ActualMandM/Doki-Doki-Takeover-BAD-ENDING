@@ -546,7 +546,6 @@ class PlayState extends MusicBeatState
 				evilPoem.visible = false;
 				add(evilPoem);
 
-				// todo: add event to make transition appear
 				poemTransition = new BGSprite('PoemTransition', 0, 0, 1, 1, ['poemtransition']);
 				poemTransition.cameras = [camHUD];
 				poemTransition.screenCenter();
@@ -3417,6 +3416,18 @@ class PlayState extends MusicBeatState
 				}
 				char.specialAnim = false;
 				char.dance();
+			case 'Poem Transition':
+				var tweenBool:Bool = true;
+				if (value1 == 'false')
+					tweenBool = false;
+
+				if (tweenBool)
+				{
+					poemTransition.visible = true;
+					poemTransition.animation.play('poemtransition', true);
+				}
+				else
+					poemTransition.visible = false;
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

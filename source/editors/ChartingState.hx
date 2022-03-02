@@ -134,6 +134,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Force Dance',
 			"Value 1: Character to force dance on"
+		],
+		[
+			'Poem Transition',
+			"Value 1: True or False on visiblity\nNOTE: True plays the animation"
 		]
 	];
 
