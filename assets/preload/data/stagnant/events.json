@@ -43,6 +43,11 @@
 						"Change Character",
 						"bf",
 						"sadbf"
+					],
+					[
+						"Play Animation",
+						"necksnap",
+						"gf"
 					]
 				]
 			],
@@ -93,6 +98,11 @@
 						"Change Character",
 						"bf",
 						"bf-doki"
+					],
+					[
+						"Force Dance",
+						"gf",
+						""
 					]
 				]
 			],
@@ -143,6 +153,11 @@
 						"Change Character",
 						"bf",
 						"sadbf"
+					],
+					[
+						"Play Animation",
+						"necksnap",
+						"gf"
 					]
 				]
 			],
