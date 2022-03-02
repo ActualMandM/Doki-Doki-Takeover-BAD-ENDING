@@ -3397,27 +3397,26 @@ class PlayState extends MusicBeatState
 				if (forceBool)
 					FlxG.camera.zoom = val1;
 			case 'Force Dance':
-				var charType:Int = 0;
-				switch (value1)
+				var char:Character = dad;
+				switch (value1.toLowerCase().trim())
 				{
+					case 'bf' | 'boyfriend':
+						char = boyfriend;
 					case 'gf' | 'girlfriend':
-						charType = 2;
-					case 'dad' | 'opponent':
-						charType = 1;
+						char = gf;
 					default:
-						charType = Std.parseInt(value1);
-						if (Math.isNaN(charType)) charType = 0;
-				}
+						var val2:Int = Std.parseInt(value2);
+						if (Math.isNaN(val2))
+							val2 = 0;
 
-				switch (charType)
-				{
-					case 0:
-						boyfriend.dance();
-					case 1:
-						dad.dance();
-					case 2:
-						gf.dance();
+						switch (val2)
+						{
+							case 1: char = boyfriend;
+							case 2: char = gf;
+						}
 				}
+				char.specialAnim = false;
+				char.dance();
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
