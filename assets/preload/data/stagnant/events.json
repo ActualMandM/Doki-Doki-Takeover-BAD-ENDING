@@ -182,6 +182,16 @@
 				]
 			],
 			[
+				108666.666666667,
+				[
+					[
+						"Poem Transition",
+						"true",
+						""
+					]
+				]
+			],
+			[
 				109333.333333333,
 				[
 					[
@@ -213,6 +223,11 @@
 						"Change Strumline",
 						"poem",
 						"false"
+					],
+					[
+						"Poem Transition",
+						"false",
+						""
 					]
 				]
 			],
@@ -252,6 +267,16 @@
 				]
 			],
 			[
+				194000,
+				[
+					[
+						"Poem Transition",
+						"true",
+						""
+					]
+				]
+			],
+			[
 				194666.666666667,
 				[
 					[
@@ -283,6 +308,11 @@
 						"Change Strumline",
 						"poem",
 						"false"
+					],
+					[
+						"Poem Transition",
+						"false",
+						""
 					]
 				]
 			]
