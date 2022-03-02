@@ -39,8 +39,6 @@
 
 	<define name="BAD_END"/>
 	<!-- <define name="STREAMER_DEMO" /> -->
-	<define name="EMBED_ASSETS" if="STREAMER_DEMO" unless="web || debug" />
-	<define name="DONT_EMBED_ASSETS" unless="EMBED_ASSETS" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -82,19 +80,10 @@
 	<assets path="dlls/" rename='' if="VIDEOS_ALLOWED windows" />
 	<assets path="assets/videos" library="videos" if="VIDEOS_ALLOWED"/>
 
-	<section if="EMBED_ASSETS">
-		<assets path="assets/preload" rename="assets" embed='true'/>
-		<assets path="assets/songs" library="songs" embed='true'/>
-		<assets path="assets/shared" library="shared" embed='true'/>
-		<assets path="assets/doki" library="doki" embed='true'/>
-	</section>
-
-	<section if="DONT_EMBED_ASSETS">
-		<assets path="assets/preload" rename="assets" />
-		<assets path="assets/songs" library="songs" />
-		<assets path="assets/shared" library="shared" />
-		<assets path="assets/doki" library="doki" />
-	</section>
+	<assets path="assets/preload" rename="assets" />
+	<assets path="assets/songs" library="songs" />
+	<assets path="assets/shared" library="shared" />
+	<assets path="assets/doki" library="doki" />
 
 	<!-- <assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/> -->
 	<assets path='art/readme.txt' rename='fnf_readme.txt' />
