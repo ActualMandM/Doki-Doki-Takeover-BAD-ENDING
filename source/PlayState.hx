@@ -3424,10 +3424,17 @@ class PlayState extends MusicBeatState
 				if (tweenBool)
 				{
 					poemTransition.visible = true;
+					poemTransition.alpha = 1;
 					poemTransition.animation.play('poemtransition', true);
 				}
 				else
-					poemTransition.visible = false;
+				{
+					Actuate.tween(poemTransition, 0.25, {alpha: 0}).ease(Sine.easeOut).onComplete(function()
+					{
+						poemTransition.alpha = 0;
+						poemTransition.visible = false;
+					});
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
