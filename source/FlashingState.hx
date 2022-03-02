@@ -22,11 +22,9 @@ class FlashingState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
-		warnText = new FlxText(0, 0, FlxG.width, "Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.\n
-			Press ESCAPE to ignore this message.\n
-			You've been warned!", 32);
+		warnText = new FlxText(0, 0, FlxG.width, "Hey!\n
+			You haven't beaten the festival week yet!\n
+			Press ENTER to go to DDTO's download page.", 32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
@@ -41,9 +39,14 @@ class FlashingState extends MusicBeatState
 			FlxTween.tween(warnText, {alpha: 0}, 1, {
 				onComplete: function(twn:FlxTween)
 				{
+					#if debug
+					FlxG.save.data.extra2beaten = true;
+					MusicBeatState.switchState(new TitleState());
+					#else
 					// TODO: change URL based on if the build is going on GB or GJ
 					CoolUtil.browserLoad('https://gamebanana.com/mods/47364');
 					CoolUtil.crash();
+					#end
 				}
 			});
 		}
