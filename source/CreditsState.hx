@@ -106,10 +106,10 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Jackie',
-				'mandm',
+				'jackie',
 				'Programmer',
 				'https://twitter.com/Jack_exe_lol',
-				'1DADBB'
+				'FFF9B5'
 			],
 			[
 				'Matt$',

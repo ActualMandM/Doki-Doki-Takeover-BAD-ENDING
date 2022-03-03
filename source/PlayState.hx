@@ -68,9 +68,6 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
-	// glitch testing
-	var glitch:GlitchShader;
-
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], // From 0% to 19%
 		['Shit', 0.4], // From 20% to 39%
@@ -310,9 +307,6 @@ class PlayState extends MusicBeatState
 	{
 		Paths.clearStoredMemory();
 
-		// glitch testing
-		glitch = new GlitchShader();
-
 		// for lua
 		instance = this;
 
@@ -350,6 +344,7 @@ class PlayState extends MusicBeatState
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 		camCache.bgColor.alpha = 0;
+		camGame.filtersEnabled = false;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
@@ -360,12 +355,6 @@ class PlayState extends MusicBeatState
 		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOther;
 		// FlxG.cameras.setDefaultDrawTarget(camGame, true);
-
-		// caching the shader
-		camCache.setFilters([new ShaderFilter(glitch)]);
-
-		camGame.setFilters([new ShaderFilter(glitch)]);
-		camGame.filtersEnabled = false;
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -514,6 +503,7 @@ class PlayState extends MusicBeatState
 				var staticlol:StaticShader;
 				staticlol = new StaticShader();
 				camGame.setFilters([new ShaderFilter(staticlol)]);
+				camCache.setFilters([new ShaderFilter(staticlol)]);
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
@@ -1128,12 +1118,62 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
+	public function reloadHealthBarGraphic(prefix:String = '', suffix:String = '')
+	{
+		var path:String = prefix + 'healthBar' + suffix;
+		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
+
+		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
+			path = 'healthBar';
+
+		remove(healthBarBG);
+		healthBarBG = new AttachedSprite(path);
+		healthBarBG.y = FlxG.height * 0.89;
+		healthBarBG.screenCenter(X);
+		healthBarBG.scrollFactor.set();
+		healthBarBG.visible = !ClientPrefs.hideHud;
+		healthBarBG.xAdd = -4;
+		healthBarBG.yAdd = -4;
+		healthBarBG.cameras = [camHUD];
+		// add(healthBarBG);
+		insert(0, healthBarBG);
+		if (ClientPrefs.downScroll)
+			healthBarBG.y = 0.11 * FlxG.height;
+
+		reloadHealthBarColors();
+	}
+
 	public function reloadHealthBarColors()
 	{
 		healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 
 		healthBar.updateBar();
+	}
+
+	public function reloadTimeBarGraphic(prefix:String = '', suffix:String = '')
+	{
+		var path:String = prefix + 'timeBar' + suffix;
+		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
+
+		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end!OpenFlAssets.exists(gamePath, IMAGE))
+			path = 'timeBar';
+
+		remove(timeBarBG);
+		timeBarBG = new AttachedSprite('timeBar');
+		timeBarBG.x = timeTxt.x;
+		timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
+		timeBarBG.scrollFactor.set();
+		timeBarBG.alpha = 0;
+		timeBarBG.visible = ClientPrefs.timeBarType != 'Disabled';
+		timeBarBG.color = FlxColor.BLACK;
+		timeBarBG.xAdd = -4;
+		timeBarBG.yAdd = -4;
+		timeBarBG.cameras = [camHUD];
+		// add(timeBarBG);
+		insert(0, timeBarBG);
+
+		timeBar.updateBar();
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int)
@@ -1614,6 +1654,9 @@ class PlayState extends MusicBeatState
 	function startSong():Void
 	{
 		startingSong = false;
+
+		// disable filters on the caching camera
+		camCache.filtersEnabled = false;
 
 		previousFrameTime = FlxG.game.ticks;
 		lastReportedPlayheadPosition = 0;
@@ -3299,6 +3342,8 @@ class PlayState extends MusicBeatState
 			case 'Change Combo UI':
 				pixelShitPart1 = value1;
 				pixelShitPart2 = value2;
+				reloadHealthBarGraphic(value1, value2);
+				// reloadTimeBarGraphic(value1, value2);
 			
 			case 'Change Stagnant Stage':
 				var val2:Float = Std.parseFloat(value2);
