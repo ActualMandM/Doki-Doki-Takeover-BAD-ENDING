@@ -42,10 +42,13 @@ typedef TitleData =
 {
 	titlex:Float,
 	titley:Float,
+	titlescale:Float,
 	startx:Float,
 	starty:Float,
+	startscale:Float,
 	gfx:Float,
 	gfy:Float,
+	gfscale:Float,
 	backgroundSprite:String,
 	bpm:Int
 }
@@ -295,6 +298,7 @@ class TitleState extends MusicBeatState
 		}
 		// trace(path, FileSystem.exists(path));
 		logoBl.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path), File.getContent(StringTools.replace(path, ".png", ".xml")));
+		logoBl.setGraphicSize(Std.int(logoBl.width * titleJSON.titlescale));
 		#else
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		#end
@@ -323,6 +327,7 @@ class TitleState extends MusicBeatState
 			// trace(path, FileSystem.exists(path));
 		}
 		gfDance.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path), File.getContent(StringTools.replace(path, ".png", ".xml")));
+		gfDance.setGraphicSize(Std.int(gfDance.width * titleJSON.gfscale));
 		#else
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		#end
@@ -350,6 +355,7 @@ class TitleState extends MusicBeatState
 		}
 		// trace(path, FileSystem.exists(path));
 		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path), File.getContent(StringTools.replace(path, ".png", ".xml")));
+		titleText.setGraphicSize(Std.int(titleText.width * titleJSON.startscale));
 		#else
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		#end
