@@ -127,9 +127,9 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Crim',
-				'Icon',
+				'crim',
 				'did the sad sayo uh jorge help finish this fuck LOL',
-				'https://twitter.com/RisingRyota',
+				'https://twitter.com/CrimiiCrim',
 				'DD3F75'
 			],
 			[''],

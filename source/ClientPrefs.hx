@@ -207,11 +207,6 @@ class ClientPrefs
 		{
 			arrowHSV = FlxG.save.data.arrowHSV;
 		}
-		if (FlxG.save.data.imagesPersist != null)
-		{
-			imagesPersist = FlxG.save.data.imagesPersist;
-			FlxGraphic.defaultPersist = ClientPrefs.imagesPersist;
-		}
 		if (FlxG.save.data.ghostTapping != null)
 		{
 			ghostTapping = FlxG.save.data.ghostTapping;
