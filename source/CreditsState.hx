@@ -91,7 +91,7 @@ class CreditsState extends MusicBeatState
 				'A1D8EC'
 			],
 			[
-				'RiverOaken',
+				'Sun Spirit',
 				'sunspirit',
 				'Director/Programmer',
 				'https://twitter.com/Jorge_SunSpirit',
