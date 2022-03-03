@@ -137,7 +137,7 @@ class CreditsState extends MusicBeatState
 				'crim',
 				'Art Assets - Sayori Sprites',
 				'https://twitter.com/CrimiiCrim',
-				'DD3F75'
+				'E51154'
 			],
 			[
 				'Ito', 
