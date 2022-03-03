@@ -55,6 +55,10 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		#if STREAMER_DEMO
+		optionShit.remove('story mode');
+		#end
+
 		if (!FlxG.sound.music.playing)
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
