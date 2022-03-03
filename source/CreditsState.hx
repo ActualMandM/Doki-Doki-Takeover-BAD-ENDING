@@ -86,7 +86,7 @@ class CreditsState extends MusicBeatState
 			[
 				'SirDusterBuster',
 				'duster',
-				'Director',
+				'Director/Main Artist',
 				'https://twitter.com/SirDusterBuster',
 				'A1D8EC'
 			],
@@ -105,32 +105,46 @@ class CreditsState extends MusicBeatState
 				'1DADBB'
 			],
 			[
-				'FruityDaLei',
-				'lei',
-				'Music Director',
-				'https://twitter.com/FruityDaLei',
-				'FFF484'
+				'Jackie',
+				'mandm',
+				'Programmer',
+				'https://twitter.com/Jack_exe_lol',
+				'1DADBB'
 			],
 			[
 				'Matt$',
 				'matt',
-				'Musician',
+				'Musician - STAGNANT and MARKOV',
 				'https://twitter.com/matt_currency',
 				'88DE30'
 			],
 			[
 				'Kallionic',
 				'kallionic',
-				'Musician',
+				'Musician - HOME',
 				'https://twitter.com/RisingRyota',
 				'DD3F75'
 			],
 			[
+				'DiscWraith',
+				'discwraith',
+				'Charting',
+				'https://twitter.com/DiscWraith',
+				'B94C7D'
+			],
+			[
 				'Crim',
 				'crim',
-				'did the sad sayo uh jorge help finish this fuck LOL',
+				'Art Assets - Sayori Sprites',
 				'https://twitter.com/CrimiiCrim',
-				'DD3F75'
+				'E51154'
+			],
+			[
+				'Ito', 
+				'ito', 
+				'Art Assets - Stages', 
+				'https://twitter.com/ItoSaihara_', 
+				'D42B52'
 			],
 			[''],
 			['Psych Engine Team'],

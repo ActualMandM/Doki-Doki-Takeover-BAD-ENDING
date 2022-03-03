@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="yuri_static.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="static_yuri0000" x="0" y="0" width="1083" height="720"/>
+	<SubTexture name="static_yuri0001" x="1083" y="0" width="1083" height="720"/>
+	<SubTexture name="static_yuri0002" x="2166" y="0" width="1083" height="720"/>
+</TextureAtlas>
