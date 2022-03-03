@@ -105,24 +105,31 @@ class CreditsState extends MusicBeatState
 				'1DADBB'
 			],
 			[
-				'Jackie', 
-				'mandm', 
-				'Programmer', 
-				'https://twitter.com/Jack_exe_lol', 
+				'Jackie',
+				'mandm',
+				'Programmer',
+				'https://twitter.com/Jack_exe_lol',
 				'1DADBB'
 			],
 			[
 				'Matt$',
 				'matt',
-				'Musician - Markov and Stagnant',
+				'Musician - STAGNANT and MARKOV',
 				'https://twitter.com/matt_currency',
 				'88DE30'
 			],
 			[
 				'Kallionic',
 				'kallionic',
-				'Musician - Home',
+				'Musician - HOME',
 				'https://twitter.com/RisingRyota',
+				'DD3F75'
+			],
+			[
+				'DiscWraith',
+				'kallionic',
+				'Charting',
+				'https://twitter.com/DiscWraith',
 				'DD3F75'
 			],
 			[
