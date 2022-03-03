@@ -55,10 +55,6 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-		#if STREAMER_DEMO
-		optionShit.remove('freeplay');
-		#end
-
 		if (!FlxG.sound.music.playing)
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
