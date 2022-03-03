@@ -158,4 +158,25 @@ class CoolUtil
 		Sys.exit(0);
 		#end
 	}
+
+	public static function getFont(type:String = 'vcr'):String
+	{
+		var font:String = '';
+
+		switch (type.toLowerCase())
+		{
+			case 'animal':
+				font = 'vtks animal 2';
+			case 'aller':
+				font = 'Aller';
+			case 'riffic':
+				font = 'Riffic Free Bold';
+			case 'pixel':
+				font = 'LanaPixel';
+			default:
+				font = 'VCR OSD Mono';
+		}
+
+		return font;
+	}
 }
