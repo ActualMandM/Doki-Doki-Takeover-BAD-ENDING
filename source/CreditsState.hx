@@ -127,10 +127,10 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'DiscWraith',
-				'kallionic',
+				'discwraith',
 				'Charting',
 				'https://twitter.com/DiscWraith',
-				'DD3F75'
+				'B94C7D'
 			],
 			[
 				'Crim',
@@ -141,7 +141,7 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Ito', 
-				'itoicon', 
+				'ito', 
 				'Art Assets - Stages', 
 				'https://twitter.com/ItoSaihara_', 
 				'D42B52'
