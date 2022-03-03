@@ -504,6 +504,9 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'stagnant': // hueh
+				var staticlol:StaticShader;
+				staticlol = new StaticShader();
+				camGame.setFilters([new ShaderFilter(staticlol)]);
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
