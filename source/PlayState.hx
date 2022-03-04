@@ -134,6 +134,7 @@ class PlayState extends MusicBeatState
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 
+	var daStatic:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
 
@@ -580,6 +581,20 @@ class PlayState extends MusicBeatState
 		add(gfGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
+
+		switch (curStage)
+		{
+			case 'stagnant':
+			daStatic= new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
+			daStatic.cameras = [camHUD];	
+			daStatic.setGraphicSize(FlxG.width, FlxG.height);
+			daStatic.screenCenter();
+			daStatic.alpha = 0;
+			add(daStatic);
+		}
+		trace(boyfriendGroup);
+		trace(dadGroup);
+		trace(gfGroup);
 
 		if (deskfront != null && !ClientPrefs.lowQuality)
 			add(deskfront);
@@ -3387,6 +3402,21 @@ class PlayState extends MusicBeatState
 					val1 = 0.5;
 
 				funnyGlitch(val1, value2);
+			case 'Glitch increase':
+				switch (Std.parseFloat(value1))
+				{
+					case 1:
+						FlxTween.tween(daStatic, {alpha: 0.65}, 3.5, {ease: FlxEase.circOut});
+					case 2:
+						FlxTween.cancelTweensOf(daStatic);
+						daStatic.visible = false;
+					case 3:
+						FlxTween.cancelTweensOf(daStatic);
+						daStatic.visible = true;
+					case 4:
+						FlxTween.cancelTweensOf(daStatic);
+						remove(daStatic);
+				}
 			case 'Character Visibility':
 				var charType:Int = 0;
 				var visibleBool:Bool = true;

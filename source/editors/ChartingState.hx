@@ -146,6 +146,14 @@ class ChartingState extends MusicBeatState
 		[
 			'Poem Transition',
 			"Value 1: True or False on visiblity\nNOTE: True plays the animation"
+		],
+		[
+			'Glitch increase',
+			"Value 1
+			1 = Fade in
+			2 = Invisible
+			3 = visible
+			4 = remove the static"
 		]
 	];
 
