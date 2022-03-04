@@ -112,6 +112,14 @@ class ChartingState extends MusicBeatState
 			"Value 1: The prefix for the UI graphic\n(this can be a folder)\nValue 2: The suffix for the UI graphic"
 		],
 		[
+			'Change Health Graphic',
+			"Value 1: The prefix and suffix for the graphic\nValue 2: The offset of the graphic\n(both separated by commas)"
+		],
+		[
+			'Change Time Graphic',
+			"Value 1: The prefix and suffix for the graphic\nValue 2: The offset of the graphic\n(both separated by commas)"
+		],
+		[
 			'Change Stagnant Stage',
 			"Value 1: The version of the stage to switch to.\nValue2: Fade in duration for sketch effect\n\nValid for Value 1: evil, poem\nInvalid values go to regular clubroom."
 		],

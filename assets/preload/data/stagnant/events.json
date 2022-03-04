@@ -200,6 +200,16 @@
 						"-poem"
 					],
 					[
+						"Change Health Graphic",
+						"poemUI/,-poem",
+						"10,12.5"
+					],
+					[
+						"Change Time Graphic",
+						"poemUI/,-poem",
+						"10,12.5"
+					],
+					[
 						"Change Stagnant Stage",
 						"poem",
 						""
@@ -236,6 +246,16 @@
 				[
 					[
 						"Change Combo UI",
+						"",
+						""
+					],
+					[
+						"Change Health Graphic",
+						"",
+						""
+					],
+					[
+						"Change Time Graphic",
 						"",
 						""
 					],
@@ -283,6 +303,16 @@
 						"Change Combo UI",
 						"poemUI/",
 						"-poem"
+					],
+					[
+						"Change Health Graphic",
+						"poemUI/,-poem",
+						"10,12.5"
+					],
+					[
+						"Change Time Graphic",
+						"poemUI/,-poem",
+						"10,12.5"
 					],
 					[
 						"Change Stagnant Stage",

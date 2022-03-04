@@ -1118,7 +1118,7 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	public function reloadHealthBarGraphic(prefix:String = '', suffix:String = '')
+	public function reloadHealthBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
 	{
 		var path:String = prefix + 'healthBar' + suffix;
 		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
@@ -1126,21 +1126,8 @@ class PlayState extends MusicBeatState
 		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
 			path = 'healthBar';
 
-		remove(healthBarBG);
-		healthBarBG = new AttachedSprite(path);
-		healthBarBG.y = FlxG.height * 0.89;
-		healthBarBG.screenCenter(X);
-		healthBarBG.scrollFactor.set();
-		healthBarBG.visible = !ClientPrefs.hideHud;
-		healthBarBG.xAdd = -4;
-		healthBarBG.yAdd = -4;
-		healthBarBG.cameras = [camHUD];
-		// add(healthBarBG);
-		insert(0, healthBarBG);
-		if (ClientPrefs.downScroll)
-			healthBarBG.y = 0.11 * FlxG.height;
-
-		reloadHealthBarColors();
+		healthBarBG.loadGraphic(Paths.image(path));
+		healthBarBG.offset.set(offsetX, offsetY);
 	}
 
 	public function reloadHealthBarColors()
@@ -1151,29 +1138,16 @@ class PlayState extends MusicBeatState
 		healthBar.updateBar();
 	}
 
-	public function reloadTimeBarGraphic(prefix:String = '', suffix:String = '')
+	public function reloadTimeBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
 	{
 		var path:String = prefix + 'timeBar' + suffix;
 		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
 
-		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end!OpenFlAssets.exists(gamePath, IMAGE))
+		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
 			path = 'timeBar';
 
-		remove(timeBarBG);
-		timeBarBG = new AttachedSprite('timeBar');
-		timeBarBG.x = timeTxt.x;
-		timeBarBG.y = timeTxt.y + (timeTxt.height / 4);
-		timeBarBG.scrollFactor.set();
-		timeBarBG.alpha = 0;
-		timeBarBG.visible = ClientPrefs.timeBarType != 'Disabled';
-		timeBarBG.color = FlxColor.BLACK;
-		timeBarBG.xAdd = -4;
-		timeBarBG.yAdd = -4;
-		timeBarBG.cameras = [camHUD];
-		// add(timeBarBG);
-		insert(0, timeBarBG);
-
-		timeBar.updateBar();
+		timeBarBG.loadGraphic(Paths.image(path));
+		timeBarBG.offset.set(offsetX, offsetY);
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int)
@@ -3342,8 +3316,20 @@ class PlayState extends MusicBeatState
 			case 'Change Combo UI':
 				pixelShitPart1 = value1;
 				pixelShitPart2 = value2;
-				reloadHealthBarGraphic(value1, value2);
-				// reloadTimeBarGraphic(value1, value2);
+
+			case 'Change Health Graphic':
+				var stringArray:Array<String> = value1.trim().split(',');
+				var offsetArray:Array<String> = value2.trim().split(',');
+				if (value2 == '') offsetArray = ['0', '0'];
+
+				reloadHealthBarGraphic(stringArray[0], stringArray[1], Std.parseFloat(offsetArray[0]), Std.parseFloat(offsetArray[1]));
+			
+			case 'Change Time Graphic':
+				var stringArray:Array<String> = value1.trim().split(',');
+				var offsetArray:Array<String> = value2.trim().split(',');
+				if (value2 == '') offsetArray = ['0', '0'];
+
+				reloadTimeBarGraphic(stringArray[0], stringArray[1], Std.parseFloat(offsetArray[0]), Std.parseFloat(offsetArray[1]));
 			
 			case 'Change Stagnant Stage':
 				var val2:Float = Std.parseFloat(value2);
