@@ -134,6 +134,9 @@ class PlayState extends MusicBeatState
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 
+	var staticlol:StaticShader;
+	private var staticAlpha:Float = 0;
+
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<Dynamic> = [];
@@ -500,10 +503,12 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'stagnant': // hueh
-				var staticlol:StaticShader;
+				//shaders right here lol
 				staticlol = new StaticShader();
 				camGame.setFilters([new ShaderFilter(staticlol)]);
 				camCache.setFilters([new ShaderFilter(staticlol)]);
+				staticlol.alpha.value = [staticAlpha];
+
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
@@ -2125,6 +2130,8 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		staticlol.alpha.value = [staticAlpha];
+
 		#if debug
 		if (evilClubBG != null)
 		{
@@ -3516,6 +3523,7 @@ class PlayState extends MusicBeatState
 		*/
 
 		camGame.filtersEnabled = true;
+		FlxTween.tween(this, {staticAlpha: 1}, 0.5, {ease:FlxEase.circOut});
 
 		if (sound != '')
 			FlxG.sound.play(Paths.sound(sound));

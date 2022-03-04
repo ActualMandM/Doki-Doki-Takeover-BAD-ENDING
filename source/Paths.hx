@@ -23,7 +23,7 @@ import flash.media.Sound;
 using StringTools;
 
 class Paths
-{
+{	
 	inline public static var SOUND_EXT = "ogg";
 	inline public static var VIDEO_EXT = "mp4";
 
@@ -412,6 +412,11 @@ class Paths
 	inline static public function modsTxt(key:String)
 	{
 		return modFolders('images/' + key + '.txt');
+	}
+
+	inline static public function shaderFragment(key:String, ?library:String)
+	{
+		return getPath('shaders/$key.frag', TEXT, library);
 	}
 
 	static public function modFolders(key:String)
