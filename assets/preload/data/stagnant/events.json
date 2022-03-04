@@ -1,6 +1,6 @@
 {
 	"song": {
-		"speed": 2.5,
+		"speed": 2.6,
 		"stage": "stagnant",
 		"player1": "bf-doki",
 		"player2": "sayori",
@@ -56,7 +56,7 @@
 				[
 					[
 						"Change Scroll Speed",
-						"0.8",
+						"0.66",
 						"0"
 					]
 				]
@@ -131,7 +131,7 @@
 				[
 					[
 						"Change Scroll Speed",
-						"0.8",
+						"0.66",
 						"0"
 					]
 				]
@@ -166,7 +166,7 @@
 				[
 					[
 						"Change Scroll Speed",
-						"1.12",
+						"1.10",
 						"3"
 					]
 				]
