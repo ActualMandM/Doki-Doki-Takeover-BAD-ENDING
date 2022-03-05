@@ -67,6 +67,31 @@
 				]
 			],
 			[
+				23333.3333333333,
+				[
+					[
+						"Glitch Effect",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				23666.6666666667,
+				[
+					[
+						"Glitch Effect",
+						"0.3",
+						""
+					],
+					[
+						"Glitch increase",
+						"3",
+						""
+					]
+				]
+			],
+			[
 				24000,
 				[
 					[
@@ -88,6 +113,11 @@
 						"Play Animation",
 						"necksnap",
 						"gf"
+					],
+					[
+						"Change Camera Zoom",
+						"1",
+						"0"
 					]
 				]
 			],
@@ -247,6 +277,16 @@
 				]
 			],
 			[
+				66333.3333333334,
+				[
+					[
+						"Glitch increase",
+						"4",
+						""
+					]
+				]
+			],
+			[
 				66500,
 				[
 					[
@@ -278,6 +318,11 @@
 						"Play Animation",
 						"necksnap",
 						"gf"
+					],
+					[
+						"Change Camera Zoom",
+						"1",
+						""
 					]
 				]
 			],
@@ -298,6 +343,11 @@
 						"Change Stagnant Stage",
 						"evil",
 						"2"
+					],
+					[
+						"Change Camera Zoom",
+						"0.8",
+						""
 					]
 				]
 			],
@@ -307,6 +357,16 @@
 					[
 						"Poem Transition",
 						"true",
+						""
+					]
+				]
+			],
+			[
+				109166.666666667,
+				[
+					[
+						"Change Camera Zoom",
+						"1",
 						""
 					]
 				]
@@ -355,8 +415,48 @@
 						"false"
 					],
 					[
+						"Add Camera Zoom",
+						"0.017",
+						"0.03"
+					],
+					[
 						"Poem Transition",
 						"false",
+						""
+					]
+				]
+			],
+			[
+				141333.333333333,
+				[
+					[
+						"Change Camera Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				146666.666666667,
+				[
+					[
+						"Change Camera Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				151833.333333333,
+				[
+					[
+						"Glitch increase",
+						"3",
+						""
+					],
+					[
+						"Glitch Effect",
+						"0.2",
 						""
 					]
 				]
@@ -403,6 +503,71 @@
 						"Change Strumline",
 						"normal",
 						"false"
+					],
+					[
+						"Change Camera Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				162333.333333333,
+				[
+					[
+						"Glitch Effect",
+						"0.1",
+						""
+					]
+				]
+			],
+			[
+				173333.333333333,
+				[
+					[
+						"Change Camera Zoom",
+						"1",
+						"0.8"
+					]
+				]
+			],
+			[
+				178666.666666667,
+				[
+					[
+						"Change Camera Zoom",
+						"1.2",
+						"0.8"
+					]
+				]
+			],
+			[
+				184000,
+				[
+					[
+						"Change Camera Zoom",
+						"1.4",
+						"0.8"
+					]
+				]
+			],
+			[
+				189333.333333334,
+				[
+					[
+						"Change Camera Zoom",
+						"0.75",
+						"3"
+					],
+					[
+						"Change Stagnant Stage",
+						"evil",
+						"2"
+					],
+					[
+						"Glitch Effect",
+						"0.3",
+						""
 					]
 				]
 			],
@@ -412,6 +577,16 @@
 					[
 						"Poem Transition",
 						"true",
+						""
+					]
+				]
+			],
+			[
+				194500,
+				[
+					[
+						"Change Camera Zoom",
+						"1.3",
 						""
 					]
 				]
@@ -462,6 +637,91 @@
 					[
 						"Poem Transition",
 						"false",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"0.03",
+						"0.04"
+					]
+				]
+			],
+			[
+				216000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.025",
+						"0.05"
+					],
+					[
+						"Change Camera Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				219250,
+				[
+					[
+						"Glitch Effect",
+						"0.2",
+						""
+					],
+					[
+						"Glitch increase",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				220000,
+				[
+					[
+						"Glitch Effect",
+						"0.2",
+						""
+					]
+				]
+			],
+			[
+				220416.666666667,
+				[
+					[
+						"Poem Transition",
+						"true",
+						""
+					]
+				]
+			],
+			[
+				220666.666666667,
+				[
+					[
+						"Glitch Effect",
+						"0.4",
+						""
+					],
+					[
+						"Glitch increase",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				221333.333333334,
+				[
+					[
+						"Glitch increase",
+						"3",
+						""
+					],
+					[
+						"Glitch Effect",
+						"5",
 						""
 					]
 				]

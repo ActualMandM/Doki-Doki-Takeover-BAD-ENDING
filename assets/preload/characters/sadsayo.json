@@ -1,59 +1,115 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				181,
 				412
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "SadSayo Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SadSayo Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				176,
+				397
+			],
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SadSayo Down"
+		},
+		{
+			"offsets": [
+				188,
+				403
+			],
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SadSayo Left"
+		},
+		{
+			"offsets": [
+				169,
 				398
 			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "SadSayo Down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				183,
-				407
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
 			],
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "SadSayo Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				170,
-				400
-			],
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "SadSayo Right",
-			"indices": []
+			"loop": false,
+			"name": "SadSayo Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				179,
-				408
+				407
 			],
-			"anim": "singUP",
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
 			"fps": 24,
-			"name": "SadSayo Up",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "SadSayo Up"
 		}
 	],
 	"no_antialiasing": false,
