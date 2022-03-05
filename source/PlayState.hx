@@ -236,6 +236,7 @@ class PlayState extends MusicBeatState
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
 	var vignette:FlxSprite;
+	var darkScreen:FlxSprite;
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
@@ -967,7 +968,6 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -1003,6 +1003,16 @@ class PlayState extends MusicBeatState
 		#end
 
 		var daSong:String = Paths.formatToSongPath(curSong);
+
+		switch (daSong)
+		{
+			case 'stagnant' | 'markov' | 'home': //This is for the dark start thing
+				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+				add(darkScreen);
+				darkScreen.cameras = [camHUD];
+		}
+
+		
 		if (isStoryMode && !seenCutscene)
 		{
 			switch (daSong)
@@ -2931,6 +2941,29 @@ class PlayState extends MusicBeatState
 	{
 		switch (eventName)
 		{
+			case 'remove darkScreen':
+				if (darkScreen != null)
+				{
+					var val1:Float = Std.parseFloat(value1);
+
+					if (Math.isNaN(val1) || val1 == 0)
+					{
+						val1 = 0.0001;
+						remove(darkScreen);
+					}
+					
+					if (val1 != 0)
+					{
+						FlxTween.tween(darkScreen, {alpha: 0}, val1, {
+							ease: FlxEase.linear,
+							onComplete: function(twn:FlxTween)
+							{
+								remove(darkScreen);
+							}
+						});
+					}
+				}
+
 			case 'Hey!':
 				var value:Int = 2;
 				switch (value1.toLowerCase().trim())
@@ -4943,6 +4976,7 @@ class PlayState extends MusicBeatState
 			// Conductor.changeBPM(SONG.bpm);
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
+
 
 		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
 		{

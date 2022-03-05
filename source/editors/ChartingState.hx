@@ -159,6 +159,12 @@ class ChartingState extends MusicBeatState
 			'Add/Remove Vignette',
 			"Value 1 is the alpha of the vignette
 			Value 2 is the speed it appears"
+		],
+		[
+			'remove darkScreen',
+			"Exactly what it says
+			Value 1 is how fast it fades out.
+			Only use in DDTOBE songs"
 		]
 	];
 
