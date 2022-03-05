@@ -46,7 +46,7 @@ class DemoThanksState extends MusicBeatState
 		thanks.alpha = 0;
 		add(thanks);
 
-		streamer = new FlxSprite(-260, 0).loadGraphic(Paths.image('thankyou/replacablestreamer'));
+		streamer = new FlxSprite(-260, 0).loadGraphic(Paths.image('thankyou/sketchystreamer'));
 		streamer.screenCenter();
 		streamer.antialiasing = ClientPrefs.globalAntialiasing;
 		streamer.alpha = 0;
