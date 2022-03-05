@@ -167,7 +167,7 @@ class CreditsState extends MusicBeatState
 				'shubs',
 				'Additional Programmer of Psych Engine',
 				'https://twitter.com/yoshubs',
-				'4494E6'
+				'279ADC'
 			],
 			[''],
 			['Former Engine Members'],
@@ -181,18 +181,18 @@ class CreditsState extends MusicBeatState
 			[''],
 			['Psych Engine Contributors'],
 			[
+				'iFlicky',
+				'iflicky',
+				'Delay/Combo Menu Song Composer\nand Dialogue Sounds',
+				'https://twitter.com/flicky_i',
+				'AA32FE'
+			],
+			[
 				'SqirraRNG',
 				'gedehari',
 				'Chart Editor\'s Sound Waveform base',
 				'https://twitter.com/gedehari',
 				'FF9300'
-			],
-			[
-				'iFlicky',
-				'iflicky',
-				'Delay/Combo Menu Song Composer\nand Dialogue Sounds',
-				'https://twitter.com/flicky_i',
-				'C549DB'
 			],
 			[
 				'PolybiusProxy',
@@ -213,7 +213,7 @@ class CreditsState extends MusicBeatState
 				'smokey',
 				'Spritemap Texture Support',
 				'https://twitter.com/Smokey_5_',
-				'0033CC'
+				'4D5DBD'
 			],
 			[''],
 			["Funkin' Crew"],
