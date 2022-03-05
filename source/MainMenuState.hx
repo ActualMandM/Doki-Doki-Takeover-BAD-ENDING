@@ -214,6 +214,12 @@ class MainMenuState extends MusicBeatState
 				changeItem(1);
 			}
 
+			#if debug
+			if (FlxG.keys.pressed.I)
+				MusicBeatState.switchState(new DemoThanksState());
+			#end
+
+			
 			if (ctrl && curSelected == 0)
 			{
 				openSubState(new GameplayChangersSubstate());

@@ -154,6 +154,11 @@ class ChartingState extends MusicBeatState
 			2 = Invisible
 			3 = visible
 			4 = remove the static"
+		],
+		[
+			'Add/Remove Vignette',
+			"Value 1 is the alpha of the vignette
+			Value 2 is the speed it appears"
 		]
 	];
 
@@ -2592,8 +2597,8 @@ class ChartingState extends MusicBeatState
 			}
 		}
 
-		if (curSection != lastSection)
-			noteStyleSectionText.text = (_song.notes[curSection].noteStyle == null ? '' : _song.notes[curSection].noteStyle);
+		//if (curSection != lastSection)
+			//noteStyleSectionText.text = (_song.notes[curSection].noteStyle == null ? '' : _song.notes[curSection].noteStyle);
 	}
 
 	function setupNoteData(i:Array<Dynamic>, isNextSection:Bool):Note

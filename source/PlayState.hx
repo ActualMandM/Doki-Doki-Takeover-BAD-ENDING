@@ -235,7 +235,7 @@ class PlayState extends MusicBeatState
 	var grpLimoParticles:FlxTypedGroup<BGSprite>;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
-
+	var vignette:FlxSprite;
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
@@ -581,6 +581,13 @@ class PlayState extends MusicBeatState
 		add(gfGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
+
+		//stealing this from DDTO
+		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('vignette', 'doki'));
+		vignette.scrollFactor.set();
+		vignette.cameras = [camHUD];
+		vignette.alpha = 0.00001;
+		add(vignette);
 
 		switch (curStage)
 		{
@@ -1525,6 +1532,16 @@ class PlayState extends MusicBeatState
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+
+				switch (Paths.formatToSongPath(curSong))
+				{
+					case 'stagnant' | 'home' | 'markov':
+						trace('songcheck');
+						introSoundsSuffix = '-ddto';
+						introAssets.set('default', ['blank', 'blank', 'blank']);
+					default:
+						introAssets.set('default', ['ready', 'set', 'go']);
+				}
 				introAssets.set('default', ['ready', 'set', 'go']);
 				introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
 
@@ -2145,7 +2162,8 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		staticlol.alpha.value = [staticAlpha];
+		if (staticlol != null)
+			staticlol.alpha.value = [staticAlpha];
 
 		#if debug
 		if (evilClubBG != null)
@@ -3473,6 +3491,25 @@ class PlayState extends MusicBeatState
 				defaultCamZoom = val1;
 				if (forceBool)
 					FlxG.camera.zoom = val1;
+
+			case 'Add/Remove Vignette':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				// Value 1 for alpha
+				// Value 2 for speed it appears
+				FlxTween.cancelTweensOf(vignette);
+
+				if (Math.isNaN(val1))
+					val1 = 0;
+				if (Math.isNaN(val2) || val2 == 0)
+					val2 = 0.0001;
+			
+				trace(val1 + ' & ' + val2);
+
+				if (val2 != 0)
+					FlxTween.tween(vignette, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+				
+
 			case 'Force Dance':
 				var char:Character = dad;
 				switch (value1.toLowerCase().trim())
@@ -3851,7 +3888,11 @@ class PlayState extends MusicBeatState
 				{
 					CustomFadeTransition.nextCamera = null;
 				}
+				#if STREAMER_DEMO
+				MusicBeatState.switchState(new DemoThanksState());
+				#else
 				MusicBeatState.switchState(new FreeplayState());
+				#end
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
