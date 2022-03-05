@@ -2,24 +2,6 @@
 <TextureAtlas imagePath="credits_assets.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="challenge basic0000" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0001" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0002" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0003" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0004" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0005" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0006" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0007" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge basic0008" x="0" y="0" width="447" height="26"/>
-	<SubTexture name="challenge white0000" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0001" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0002" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0003" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0004" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0005" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0006" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0007" x="0" y="36" width="447" height="26"/>
-	<SubTexture name="challenge white0008" x="0" y="36" width="447" height="26"/>
 	<SubTexture name="credits basic0000" x="0" y="72" width="447" height="26"/>
 	<SubTexture name="credits basic0001" x="0" y="72" width="447" height="26"/>
 	<SubTexture name="credits basic0002" x="0" y="72" width="447" height="26"/>
