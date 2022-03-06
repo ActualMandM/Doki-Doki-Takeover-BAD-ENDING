@@ -23,7 +23,7 @@ class FlashingState extends MusicBeatState
 		add(bg);
 
 		warnText = new FlxText(0, 0, FlxG.width, "Hey!\n
-			You haven't beaten the festival week yet!\n
+			We recommend you to bet the festival week!\n
 			Press ENTER to go to DDTO's download page.", 32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
@@ -39,14 +39,9 @@ class FlashingState extends MusicBeatState
 			FlxTween.tween(warnText, {alpha: 0}, 1, {
 				onComplete: function(twn:FlxTween)
 				{
-					#if debug
-					FlxG.save.data.extra2beaten = true;
-					MusicBeatState.switchState(new TitleState());
-					#else
 					// TODO: change URL based on if the build is going on GB or GJ
 					CoolUtil.browserLoad('https://gamebanana.com/mods/47364');
-					CoolUtil.crash();
-					#end
+					MusicBeatState.switchState(new TitleState());
 				}
 			});
 		}
