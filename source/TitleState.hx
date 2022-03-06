@@ -196,15 +196,19 @@ class TitleState extends MusicBeatState
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
 
+		#if debug
+		hasPassedFlashing = true;
+		#else
+		if (FlxG.save.data.extra2beaten)
+			hasPassedFlashing = true;
+		#end
+
 		FlxG.mouse.visible = false;
 		#if FREEPLAY
 		MusicBeatState.switchState(new FreeplayState());
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if (FlxG.save.data.extra2beaten)
-			hasPassedFlashing = true;
-
 		if (!hasPassedFlashing)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
