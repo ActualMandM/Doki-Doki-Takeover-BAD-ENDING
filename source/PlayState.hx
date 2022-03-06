@@ -506,10 +506,13 @@ class PlayState extends MusicBeatState
 
 			case 'stagnant': // hueh
 				//shaders right here lol
-				staticlol = new StaticShader();
-				camGame.setFilters([new ShaderFilter(staticlol)]);
-				camCache.setFilters([new ShaderFilter(staticlol)]);
-				staticlol.alpha.value = [staticAlpha];
+				if (!ClientPrefs.lowQuality)
+				{
+					staticlol = new StaticShader();
+					camGame.setFilters([new ShaderFilter(staticlol)]);
+					camCache.setFilters([new ShaderFilter(staticlol)]);
+					staticlol.alpha.value = [staticAlpha];
+				}
 
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
@@ -2172,7 +2175,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if (staticlol != null)
+		if (staticlol != null && !ClientPrefs.lowQuality)
 			staticlol.alpha.value = [staticAlpha];
 
 		#if debug
@@ -3414,8 +3417,11 @@ class PlayState extends MusicBeatState
 
 				closet.visible = false;
 				clubroom.visible = false;
-				deskfront.visible = false;
-				evilSpace.visible = false;
+				if (!ClientPrefs.lowQuality)
+				{
+					deskfront.visible = false;
+					evilSpace.visible = false;
+				}
 				evilClubBG.visible = false;
 				evilClubBGScribbly.visible = false;
 				evilPoem.visible = false;
@@ -3427,11 +3433,11 @@ class PlayState extends MusicBeatState
 					default:
 						closet.visible = true;
 						clubroom.visible = true;
-						deskfront.visible = true;
+						if (!ClientPrefs.lowQuality) deskfront.visible = true;
 					case 'evil':
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
-						evilSpace.visible = true;
+						if (!ClientPrefs.lowQuality) evilSpace.visible = true;
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
 					case 'poem':
@@ -3452,7 +3458,7 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(val1))
 					val1 = 0.5;
 
-				funnyGlitch(val1, value2);
+				if (!ClientPrefs.lowQuality) funnyGlitch(val1, value2);
 			case 'Glitch increase':
 				switch (Std.parseFloat(value1))
 				{
@@ -3593,35 +3599,6 @@ class PlayState extends MusicBeatState
 		if (duration <= 0)
 			return;
 
-		/*
-		var calcWidth:Int = Std.int(FlxG.width / defaultCamZoom);
-		var calcHeight:Int = Std.int(FlxG.height / defaultCamZoom);
-
-		// need to figure out correct offset calculation
-		var offsetX:Int = Std.int(Math.abs(FlxG.width - calcWidth));
-		var offsetY:Int = Std.int(Math.abs(FlxG.height - calcHeight));
-
-		var screenHUD:FlxSprite = new FlxSprite().makeGraphic(calcWidth, calcHeight, FlxColor.TRANSPARENT);
-		screenHUD.drawFrame();
-		var screenPixels = screenHUD.framePixels;
-
-		if (FlxG.renderBlit)
-			screenPixels.copyPixels(FlxG.camera.buffer, FlxG.camera.buffer.rect, new Point());
-		else
-			screenPixels.draw(FlxG.camera.canvas, new FlxMatrix(1, 0, 0, 1, 0, 0));
-
-		var glitchEffect:FlxGlitchEffect = new FlxGlitchEffect(10, 2, 0.05, HORIZONTAL);
-		var glitchSprite:FlxEffectSprite = new FlxEffectSprite(screenHUD, [glitchEffect]);
-		glitchSprite.antialiasing = ClientPrefs.globalAntialiasing;
-		glitchSprite.cameras = [camHUD];
-		glitchSprite.scale.set(defaultCamZoom, defaultCamZoom);
-		glitchSprite.updateHitbox();
-		// glitchSprite.offset.set(offsetX, offsetY);
-		insert(0, glitchSprite);
-
-		glitchEffect.active = true;
-		*/
-
 		camGame.filtersEnabled = true;
 		FlxTween.tween(this, {staticAlpha: 1}, 0.5, {ease:FlxEase.circOut});
 
@@ -3630,13 +3607,6 @@ class PlayState extends MusicBeatState
 
 		new FlxTimer().start(duration, function(tmr:FlxTimer)
 		{
-			/*
-			glitchEffect.active = false;
-			remove(glitchSprite);
-			remove(screenHUD);
-			glitchSprite.destroy();
-			screenHUD.destroy();
-			*/
 			camGame.filtersEnabled = false;
 		});
 	}
