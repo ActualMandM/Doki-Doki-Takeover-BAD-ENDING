@@ -1,0 +1,109 @@
+{
+	"song": {
+		"speed": 2.7,
+		"stage": "dokiclubroom",
+		"player1": "bf-doki",
+		"player2": "natsuki",
+		"player3": null,
+		"events": [
+			[
+				2400,
+				[
+					[
+						"remove darkScreen",
+						"5",
+						""
+					]
+				]
+			],
+			[
+				28200,
+				[
+					[
+						"Change Scroll Speed",
+						"0.6",
+						"5.5"
+					]
+				]
+			],
+			[
+				33900,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.2"
+					]
+				]
+			],
+			[
+				46800,
+				[
+					[
+						"Change Scroll Speed",
+						"1.18",
+						"10"
+					]
+				]
+			],
+			[
+				97275,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.2"
+					]
+				]
+			],
+			[
+				116175,
+				[
+					[
+						"Change Scroll Speed",
+						"1.18",
+						"0.2"
+					]
+				]
+			],
+			[
+				176400,
+				[
+					[
+						"Change Scroll Speed",
+						"0.85",
+						"0.2"
+					]
+				]
+			],
+			[
+				195300,
+				[
+					[
+						"Change Scroll Speed",
+						"0.95",
+						"0.1"
+					]
+				]
+			],
+			[
+				214275,
+				[
+					[
+						"Change Scroll Speed",
+						"0.85",
+						"0.2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 200,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "HOME"
+	}
+}

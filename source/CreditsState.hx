@@ -122,7 +122,7 @@ class CreditsState extends MusicBeatState
 				'Kallionic',
 				'kallionic',
 				'Musician - HOME',
-				'https://twitter.com/RisingRyota',
+				'https://kallionic.com',
 				'DD3F75'
 			],
 			[
