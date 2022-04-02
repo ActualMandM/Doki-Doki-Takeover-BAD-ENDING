@@ -765,7 +765,7 @@ class EditorPlayState extends MusicBeatState
 		{
 			switch (note.noteType)
 			{
-				case 'Hurt Note': // Hurt note
+				case 'Hurt Note' | 'Note of Markov': // Hurt note
 					noteMiss(note.noteData);
 					--songMisses;
 					if (!note.isSustainNote)
