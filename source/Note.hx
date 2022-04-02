@@ -22,6 +22,7 @@ class Note extends FlxSprite
 	public var ignoreNote:Bool = false;
 	public var hitByOpponent:Bool = false;
 	public var noteWasHit:Bool = false;
+	public var willMiss:Bool = false;
 	public var prevNote:Note;
 
 	public var sustainLength:Float = 0;
@@ -38,6 +39,7 @@ class Note extends FlxSprite
 	public var gfNote:Bool = false;
 
 	private var earlyHitMult:Float = 0.5;
+	private var lateHitMult:Float = 1.3;
 
 	public static var swagWidth:Float = 160 * 0.7;
 	public static var PURP_NOTE:Int = 0;
@@ -381,17 +383,32 @@ class Note extends FlxSprite
 	{
 		super.update(elapsed);
 
+		if (noteType == 'Note of Markov')
+		{
+			lateHitMult = 0.3;
+			earlyHitMult = 0.2;
+		}
+
 		if (mustPress)
 		{
-			// ok river
-			if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset
-				&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult))
-				canBeHit = true;
-			else
-				canBeHit = false;
-
-			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
+			if (willMiss && !wasGoodHit)
+			{
 				tooLate = true;
+				canBeHit = false;
+			}
+			else
+			{
+				if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * lateHitMult))
+				{
+					if (strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult))
+						canBeHit = true;
+				}
+				else
+				{
+					canBeHit = true;
+					willMiss = true;
+				}
+			}
 		}
 		else
 		{
