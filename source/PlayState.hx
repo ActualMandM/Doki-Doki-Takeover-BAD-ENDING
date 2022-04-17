@@ -3521,12 +3521,13 @@ class PlayState extends MusicBeatState
 			case 'Change Camera Zoom':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
-				// if value2 isn't a numerical value, then use the old method
+
+				if (Math.isNaN(val1))
+					val1 = defaultStageZoom;
+
+				// if value2 isn't a numerical value, then rely on defaultCamZoom
 				if (Math.isNaN(val2))
 				{
-					if (Math.isNaN(val1))
-						val1 = defaultStageZoom;
-	
 					var forceBool:Bool = false;
 					if (value2 == 'true')
 						forceBool = true;
@@ -3537,9 +3538,6 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if (Math.isNaN(val1))
-						val1 = defaultStageZoom;
-
 					Actuate.tween(FlxG.camera, val2, {zoom: val1}).ease(Linear.easeNone).onComplete(function()
 					{
 						defaultCamZoom = val1;
