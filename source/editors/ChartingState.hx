@@ -137,7 +137,7 @@ class ChartingState extends MusicBeatState
 		],
 		[
 			'Change Camera Zoom',
-			"Value 1: Zoom for the camera to change to\nValue 2: Whether or not to suddenly zoom in"
+			"Value 1: Zoom for the camera to change to\nValue 2: true/false to suddenly zoom, or\nnumerical value for duration"
 		],
 		[
 			'Force Dance',

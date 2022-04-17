@@ -3520,16 +3520,31 @@ class PlayState extends MusicBeatState
 				generateStaticArrows(1, value1, tweenBool);
 			case 'Change Camera Zoom':
 				var val1:Float = Std.parseFloat(value1);
-				if (Math.isNaN(val1))
-					val1 = defaultStageZoom;
+				var val2:Float = Std.parseFloat(value2);
+				// if value2 isn't a numerical value, then use the old method
+				if (Math.isNaN(val2))
+				{
+					if (Math.isNaN(val1))
+						val1 = defaultStageZoom;
+	
+					var forceBool:Bool = false;
+					if (value2 == 'true')
+						forceBool = true;
+	
+					defaultCamZoom = val1;
+					if (forceBool)
+						FlxG.camera.zoom = val1;
+				}
+				else
+				{
+					if (Math.isNaN(val1))
+						val1 = defaultStageZoom;
 
-				var forceBool:Bool = false;
-				if (value2 == 'true')
-					forceBool = true;
-
-				defaultCamZoom = val1;
-				if (forceBool)
-					FlxG.camera.zoom = val1;
+					Actuate.tween(FlxG.camera, val2, {zoom: val1}).ease(Linear.easeNone).onComplete(function()
+					{
+						defaultCamZoom = val1;
+					});
+				}
 
 			case 'Add/Remove Vignette':
 				var val1:Float = Std.parseFloat(value1);
@@ -3547,7 +3562,6 @@ class PlayState extends MusicBeatState
 
 				if (val2 != 0)
 					FlxTween.tween(vignette, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
-				
 
 			case 'Force Dance':
 				var char:Character = dad;
