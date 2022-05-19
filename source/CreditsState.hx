@@ -123,7 +123,7 @@ class CreditsState extends MusicBeatState
 				'kallionic',
 				'Musician - HOME',
 				'https://kallionic.com',
-				'DD3F75'
+				'D4F6FF'
 			],
 			[
 				'DiscWraith',
