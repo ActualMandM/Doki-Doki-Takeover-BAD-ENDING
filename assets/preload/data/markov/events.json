@@ -17,12 +17,12 @@
 				]
 			],
 			[
-				118871.334681496,
+				44589.0410958904,
 				[
 					[
 						"Change Scroll Speed",
-						"1.31",
-						"1"
+						"1.35",
+						"0.5"
 					]
 				]
 			]
@@ -31,7 +31,7 @@
 		"splashSkin": null,
 		"validScore": false,
 		"gfVersion": "gf-realdoki",
-		"bpm": 138,
+		"bpm": 146,
 		"arrowSkin": null,
 		"needsVoices": true,
 		"song": "MARKOV"

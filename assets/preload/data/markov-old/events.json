@@ -1,0 +1,39 @@
+{
+	"song": {
+		"speed": 2.3,
+		"stage": "clubroomevil",
+		"player1": "bf-doki",
+		"player2": "yuri-crazy",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"remove darkScreen",
+						"10",
+						""
+					]
+				]
+			],
+			[
+				118871.334681496,
+				[
+					[
+						"Change Scroll Speed",
+						"1.31",
+						"1"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-realdoki",
+		"bpm": 138,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "MARKOV"
+	}
+}
