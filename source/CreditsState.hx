@@ -123,14 +123,14 @@ class CreditsState extends MusicBeatState
 				'kallionic',
 				'Musician - HOME',
 				'https://kallionic.com',
-				'D4F6FF'
+				'FF4D7D'
 			],
 			[
 				'DiscWraith',
 				'discwraith',
 				'Charting',
 				'https://twitter.com/DiscWraith',
-				'B94C7D'
+				'671FCF'
 			],
 			[
 				'Crim',
@@ -144,7 +144,7 @@ class CreditsState extends MusicBeatState
 				'ito', 
 				'Art Assets - Stages', 
 				'https://twitter.com/ItoSaihara_', 
-				'D42B52'
+				'C5005C'
 			],
 			[''],
 			['Psych Engine Team'],
