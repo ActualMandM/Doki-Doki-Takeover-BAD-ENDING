@@ -3,7 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.util.FlxSave;
 import flixel.input.keyboard.FlxKey;
-import flixel.graphics.FlxGraphic;
+import lime.app.Application;
 import Controls;
 
 class ClientPrefs
@@ -174,16 +174,27 @@ class ClientPrefs
 		if (FlxG.save.data.framerate != null)
 		{
 			framerate = FlxG.save.data.framerate;
-			if (framerate > FlxG.drawFramerate)
+		}
+		#if !html5
+		else
+		{
+			var refreshRate:Int = Application.current.window.displayMode.refreshRate;
+			if (framerate != refreshRate)
 			{
-				FlxG.updateFramerate = framerate;
-				FlxG.drawFramerate = framerate;
+				framerate = refreshRate;
+
+				if (framerate < 60)
+					framerate = 60;
+
+				else if (framerate > 240)
+					framerate = 240;
 			}
-			else
-			{
-				FlxG.drawFramerate = framerate;
-				FlxG.updateFramerate = framerate;
-			}
+		}
+		#end
+		if (framerate != FlxG.drawFramerate)
+		{
+			FlxG.updateFramerate = framerate;
+			FlxG.drawFramerate = framerate;
 		}
 		/*if(FlxG.save.data.cursing != null) {
 				cursing = FlxG.save.data.cursing;
