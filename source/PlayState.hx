@@ -138,6 +138,8 @@ class PlayState extends MusicBeatState
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
 
+	var swagShader:ColorSwap;
+
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<Dynamic> = [];
@@ -504,6 +506,20 @@ class PlayState extends MusicBeatState
 					deskfront.updateHitbox();
 				}
 
+			case 'clubroomevil': // DDTO BAD ENDING
+				if (!ClientPrefs.lowQuality)
+				{
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace.velocity.set(-10, 0);
+					evilSpace.lowestCamZoom = 0.8;
+					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
+					add(evilSpace);
+				}
+
+				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
+				add(evilClubBG);
+
 			case 'stagnant': // hueh
 				//shaders right here lol
 				if (!ClientPrefs.lowQuality)
@@ -559,8 +575,8 @@ class PlayState extends MusicBeatState
 				poemTransition.screenCenter();
 				poemTransition.visible = false;
 				add(poemTransition);
-			
-			case 'clubroomevil': // DDTO BAD ENDING
+
+			case 'markov':
 				if (!ClientPrefs.lowQuality)
 				{
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
@@ -573,6 +589,31 @@ class PlayState extends MusicBeatState
 				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				add(evilClubBG);
+
+			case 'home':
+				swagShader = new ColorSwap();
+				swagShader.saturation = -100;
+
+				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
+				closet.setGraphicSize(Std.int(closet.width * 1.6));
+				closet.updateHitbox();
+				closet.shader = swagShader.shader;
+				add(closet);
+
+				clubroom = new BGSprite('clubroom/DDLCbg', -700, -520, 1, 0.9);
+				clubroom.setGraphicSize(Std.int(clubroom.width * 1.6));
+				clubroom.updateHitbox();
+				clubroom.shader = swagShader.shader;
+				add(clubroom);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					deskfront = new BGSprite('clubroom/DesksFront', -700, -520, 1.3, 0.9);
+					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
+					deskfront.updateHitbox();
+					deskfront.shader = swagShader.shader;
+				}
+
 		}
 
 		if (isPixelStage)

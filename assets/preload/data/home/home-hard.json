@@ -10091,11 +10091,11 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "gf-realdoki",
 		"events": [],
 		"player3": null,
 		"song": "HOME",
-		"stage": "dokiclubroom",
+		"stage": "home",
 		"needsVoices": true,
 		"validScore": true,
 		"speed": 2.7,

@@ -10530,7 +10530,7 @@
 		"song": "MARKOV",
 		"needsVoices": true,
 		"validScore": true,
-		"stage": "clubroomevil",
+		"stage": "markov",
 		"bpm": 146,
 		"speed": 2.3,
 		"noteStyle": "normal"
