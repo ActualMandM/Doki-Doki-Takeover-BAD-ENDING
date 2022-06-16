@@ -5,10 +5,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "idle",
-			"loop": true,
+			"indices": [],
 			"name": "YuriCloseIdle"
 		},
 		{
@@ -16,10 +16,10 @@
 				-9,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "YuriCloseUp"
 		},
 		{
@@ -27,10 +27,10 @@
 				8,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "YuriCloseDown"
 		},
 		{
@@ -38,10 +38,10 @@
 				83,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "YuriCloseLeft"
 		},
 		{
@@ -49,10 +49,10 @@
 				-48,
 				-1
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "YuriCloseRight"
 		},
 		{
@@ -60,10 +60,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "final",
-			"loop": true,
+			"indices": [],
 			"name": "YuriFinal"
 		},
 		{
@@ -71,17 +71,17 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "jumpscareintro",
-			"loop": false,
+			"indices": [],
 			"name": "YuriJumpscare"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Yuri_Doesnt_Understand_Personal_Space",
 	"position": [
-		0,
+		-290,
 		0
 	],
 	"healthicon": "yuri-crazy",
@@ -92,8 +92,8 @@
 		210
 	],
 	"camera_position": [
-		-140,
-		40
+		-160,
+		99
 	],
 	"sing_duration": 6,
 	"scale": 1

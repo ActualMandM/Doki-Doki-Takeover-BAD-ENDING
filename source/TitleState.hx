@@ -68,6 +68,7 @@ class TitleState extends MusicBeatState
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+	var tbdSpr:FlxSprite;
 
 	var curWacky:Array<String> = [];
 
@@ -406,6 +407,14 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = true;
 
+		tbdSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('TBDLogoBW'));
+		add(tbdSpr);
+		tbdSpr.visible = false;
+		tbdSpr.setGraphicSize(Std.int(tbdSpr.width * 0.8));
+		tbdSpr.updateHitbox();
+		tbdSpr.screenCenter(X);
+		tbdSpr.antialiasing = true;
+
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
 		if (initialized)
@@ -632,40 +641,21 @@ class TitleState extends MusicBeatState
 					#end
 				// credTextShit.visible = true;
 				case 3:
-					#if PSYCH_WATERMARKS
-					addMoreText('The DDTO Team', 15);
-					addMoreText('presents', 15);
-					#else
-					addMoreText('present');
-					#end
+					addMoreText('Team TBD', 15);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
-				case 4:
-					deleteCoolText();
+				case 5:
+					tbdSpr.visible = true;
 				// credTextShit.visible = false;
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
-				case 5:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
-					#else
-					createCoolText(['In association', 'with'], -40);
-					#end
 				case 7:
-					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
-				// credTextShit.text += '\nNewgrounds';
-				case 8:
 					deleteCoolText();
-					ngSpr.visible = false;
-				// credTextShit.visible = false;
-
-				// credTextShit.text = 'Shoutouts Tom Fulp';
-				// credTextShit.screenCenter();
-				case 9:
+					tbdSpr.visible = false;
+				case 8:
 					createCoolText([curWacky[0]]);
 				// credTextShit.visible = true;
-				case 11:
+				case 10:
 					addMoreText(curWacky[1]);
 				// credTextShit.text += '\nlmao';
 				case 12:
@@ -695,6 +685,7 @@ class TitleState extends MusicBeatState
 		if (!skippedIntro)
 		{
 			remove(ngSpr);
+			remove(tbdSpr);
 
 			FlxG.camera.flash(FlxColor.WHITE, 4);
 			remove(credGroup);

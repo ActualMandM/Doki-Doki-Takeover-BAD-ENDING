@@ -121,7 +121,7 @@ class ChartingState extends MusicBeatState
 		],
 		[
 			'Change Stagnant Stage',
-			"Value 1: The version of the stage to switch to.\nValue2: Fade in duration for sketch effect\n\nValid for Value 1: evil, poem\nInvalid values go to regular clubroom."
+			"Value 1: The version of the stage to switch to.\nValue2: Fade in duration for sketch effect\n\nValid for Value 1: evil, poem, closet\nInvalid values go to regular clubroom."
 		],
 		[
 			'Glitch Effect',

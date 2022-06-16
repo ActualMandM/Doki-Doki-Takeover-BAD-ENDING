@@ -256,6 +256,7 @@ class PlayState extends MusicBeatState
 	var evilClubBGScribbly:BGSprite;
 	var evilPoem:BGSprite;
 	var poemTransition:BGSprite;
+	var closetCloseUp:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -589,6 +590,17 @@ class PlayState extends MusicBeatState
 				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				add(evilClubBG);
+
+				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
+				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
+				evilPoem.visible = false;
+				add(evilPoem);
+
+				closetCloseUp = new BGSprite('ClosetBG', -250, 0, 1, 1);
+				closetCloseUp.setGraphicSize(Std.int(closetCloseUp.width * 0.85));
+				closetCloseUp.updateHitbox();
+//				closetCloseUp.visible = false;
+				add(closetCloseUp);
 
 			case 'home':
 				swagShader = new ColorSwap();
@@ -3466,6 +3478,7 @@ class PlayState extends MusicBeatState
 				evilClubBG.visible = false;
 				evilClubBGScribbly.visible = false;
 				evilPoem.visible = false;
+				closetCloseUp.visible = false;
 				
 				evilClubBGScribbly.alpha = 0;
 
@@ -3485,6 +3498,10 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.9;
 						FlxG.camera.zoom = 0.9;
 						evilPoem.visible = true;
+					case 'closet':
+						defaultCamZoom = 1.0;
+						FlxG.camera.zoom = 1.0;
+						closetCloseUp.visible = true;
 				}
 
 				if (val2 > 0)
