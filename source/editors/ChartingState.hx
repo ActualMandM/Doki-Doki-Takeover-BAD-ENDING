@@ -165,6 +165,14 @@ class ChartingState extends MusicBeatState
 			"Exactly what it says
 			Value 1 is how fast it fades out.
 			Only use in DDTOBE songs"
+		],
+		[
+			'Eye Popup',
+			"Value 1: x\nValue 2: y"
+		],
+		[
+			'Strumline Visibility',
+			"Value 1: Strumline to affect (dad, bf)\nValue 2: alpha value"
 		]
 	];
 

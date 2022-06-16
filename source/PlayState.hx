@@ -3642,6 +3642,39 @@ class PlayState extends MusicBeatState
 						poemTransition.visible = false;
 					});
 				}
+
+			case 'Eye Popup':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				var eye:FlxSprite = new FlxSprite(val1, val2);
+				eye.frames = Paths.getSparrowAtlas('MarkovEyes', 'doki');
+				eye.animation.addByPrefix('idle', 'MarkovWindow', 24, false);
+				eye.animation.play('idle');
+				eye.antialiasing = ClientPrefs.globalAntialiasing;
+				eye.scrollFactor.set();
+				eye.cameras = [camHUD];
+				add(eye);
+				// TODO: make this delete itself so it don't take up memory lol
+
+			case 'Strumline Visibility':
+				var strum:FlxTypedGroup<StrumNote>;
+				var val2:Float = Std.parseFloat(value2);
+
+				if (Math.isNaN(val2))
+					val2 = 1;
+
+				switch (value1)
+				{
+					case 'dad' | 'opponent':
+						strum = opponentStrums;
+					default:
+						strum = playerStrums;
+				}
+
+				for (i in 0...4)
+				{
+					strum.members[i].alpha = val2;
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
