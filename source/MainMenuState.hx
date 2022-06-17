@@ -48,6 +48,7 @@ class MainMenuState extends MusicBeatState
 
 	var logo:FlxSprite;
 	var logoBl:FlxSprite;
+	var ghostdoki:FlxSprite;
 
 	var backdrop:FlxBackdrop;
 
@@ -76,6 +77,10 @@ class MainMenuState extends MusicBeatState
 		backdrop.velocity.set(-40, -40);
 		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
+
+		ghostdoki = new FlxSprite(460, 0).loadGraphic(Paths.image('GhostDokis'));
+		ghostdoki.antialiasing = ClientPrefs.globalAntialiasing;
+		add(ghostdoki);
 
 		logo = new FlxSprite(-260, 0).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
