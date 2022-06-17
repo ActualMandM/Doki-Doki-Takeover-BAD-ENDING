@@ -239,6 +239,7 @@ class PlayState extends MusicBeatState
 	var fastCar:BGSprite;
 	var vignette:FlxSprite;
 	var darkScreen:FlxSprite;
+	var darkoverlay:FlxSprite;
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
 	var santa:BGSprite;
@@ -791,6 +792,11 @@ class PlayState extends MusicBeatState
 			dad.setPosition(GF_X, GF_Y);
 			gf.visible = false;
 		}
+
+		darkoverlay = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+		darkoverlay.alpha = 0.0001;
+		darkoverlay.scrollFactor.set(0, 0);
+		add(darkoverlay);
 
 		switch (curStage)
 		{
@@ -3014,6 +3020,23 @@ class PlayState extends MusicBeatState
 						});
 					}
 				}
+			case 'Screen in Darkness':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				if (Math.isNaN(val1) || val1 == 0)
+				{
+					val1 = 0.0001;
+				}
+				if (Math.isNaN(val2) || val2 == 0)
+				{
+					val2 = 0.0001;
+				}
+				if (val1 >= 1)
+				{
+					val1 = 1;
+				}
+				FlxTween.cancelTweensOf(darkoverlay);
+				FlxTween.tween(darkoverlay, {alpha: val1}, val2, {ease: FlxEase.linear});
 
 			case 'Hey!':
 				var value:Int = 2;
@@ -3675,7 +3698,11 @@ class PlayState extends MusicBeatState
 				eye.cameras = [camHUD];
 				add(eye);
 				// TODO: make this delete itself so it don't take up memory lol
-
+				// goku goes super saiyan
+				new FlxTimer().start(4.6, function(tmr:FlxTimer)
+				{
+					remove(eye);
+				});
 			case 'Strumline Visibility':
 				var strum:FlxTypedGroup<StrumNote>;
 				var val2:Float = Std.parseFloat(value2);

@@ -173,6 +173,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Strumline Visibility',
 			"Value 1: Strumline to affect (dad, bf)\nValue 2: alpha value"
+		],
+		[
+			'Screen in Darkness',
+			"Value 1: How transparent is the black overlay\nValue 2: How slow/fast it goes"
 		]
 	];
 
