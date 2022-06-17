@@ -49,6 +49,7 @@ class MainMenuState extends MusicBeatState
 	var logo:FlxSprite;
 	var logoBl:FlxSprite;
 	var ghostdoki:FlxSprite;
+	var vignette:FlxSprite;
 
 	var backdrop:FlxBackdrop;
 
@@ -159,6 +160,10 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
+		vignette.alpha = 0.6;
+		add(vignette);
 
 		// NG.core.calls.event.logEvent('swag').send();
 

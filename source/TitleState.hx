@@ -238,6 +238,7 @@ class TitleState extends MusicBeatState
 	var backdrop:FlxBackdrop;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
+	var vignette:FlxSprite;
 	var swagShader:ColorSwap = null;
 
 	function startIntro()
@@ -376,6 +377,10 @@ class TitleState extends MusicBeatState
 		titleText.updateHitbox();
 		// titleText.screenCenter(X);
 		add(titleText);
+
+		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
+		vignette.alpha = 0.8;
+		add(vignette);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
