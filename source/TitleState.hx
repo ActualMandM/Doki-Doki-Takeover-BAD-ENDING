@@ -50,7 +50,7 @@ typedef TitleData =
 	gfy:Float,
 	gfscale:Float,
 	backgroundSprite:String,
-	bpm:Int
+	bpm:Float
 }
 
 class TitleState extends MusicBeatState
