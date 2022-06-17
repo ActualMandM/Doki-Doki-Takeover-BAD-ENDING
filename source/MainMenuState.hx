@@ -45,12 +45,12 @@ class MainMenuState extends MusicBeatState
 	];
 
 	public static var firstStart:Bool = true;
+	var focused:Bool = true;
 
 	var logo:FlxSprite;
 	var logoBl:FlxSprite;
-	var ghostdoki:FlxSprite;
 	var vignette:FlxSprite;
-
+	var oof:FlxSprite;
 	var backdrop:FlxBackdrop;
 
 	var debugKeys:Array<FlxKey>;
@@ -79,9 +79,21 @@ class MainMenuState extends MusicBeatState
 		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
 		add(backdrop);
 
-		ghostdoki = new FlxSprite(460, 0).loadGraphic(Paths.image('GhostDokis'));
-		ghostdoki.antialiasing = ClientPrefs.globalAntialiasing;
-		add(ghostdoki);
+		var random:Int = FlxG.random.int(1, 100);
+
+		if (random == 1)
+		{
+			//Can't let my child go to waste :)
+			var fumo:FlxSprite = new FlxSprite(-100, -250).loadGraphic(Paths.image('Fumo'));
+			fumo.scale.set(1, 1);
+			add(fumo);
+		}
+		else
+		{
+			var ghostdoki:FlxSprite = new FlxSprite(460, 0).loadGraphic(Paths.image('GhostDokis'));
+			ghostdoki.antialiasing = ClientPrefs.globalAntialiasing;
+			add(ghostdoki);
+		}
 
 		logo = new FlxSprite(-260, 0).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
@@ -160,6 +172,11 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
+		oof = new FlxSprite(0, 0).loadGraphic(Paths.image('DonTabOut'));
+		oof.screenCenter();
+		oof.alpha = 0.0001;
+		add(oof);
 
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
 		vignette.alpha = 0.6;
@@ -358,5 +375,28 @@ class MainMenuState extends MusicBeatState
 		super.beatHit();
 
 		logoBl.animation.play('bump', true);
+	}
+
+	override public function onFocusLost():Void
+	{
+		if (focused == true)
+		{
+			new FlxTimer().start(5, function(tmr:FlxTimer)
+			{
+				focused = false;
+				FlxTween.tween(oof, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
+			});
+		}
+		super.onFocusLost();
+	}
+
+	override public function onFocus():Void
+	{
+		if (focused == false)
+		{
+			focused = true;
+			FlxTween.tween(oof, {alpha: 0.0001}, 0.1, {ease: FlxEase.circOut});
+		}
+		super.onFocus();
 	}
 }
