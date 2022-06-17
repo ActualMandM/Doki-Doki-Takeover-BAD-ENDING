@@ -47,6 +47,7 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	var focused:Bool = true;
 
+	var funnyTimer:FlxTimer;
 	var logo:FlxSprite;
 	var logoBl:FlxSprite;
 	var vignette:FlxSprite;
@@ -379,11 +380,12 @@ class MainMenuState extends MusicBeatState
 
 	override public function onFocusLost():Void
 	{
+		trace('we tabbed out');
 		if (focused == true)
 		{
-			new FlxTimer().start(5, function(tmr:FlxTimer)
+			focused = false;
+			funnyTimer = new FlxTimer().start(5, function(tmr:FlxTimer)
 			{
-				focused = false;
 				FlxTween.tween(oof, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 			});
 		}
@@ -392,8 +394,10 @@ class MainMenuState extends MusicBeatState
 
 	override public function onFocus():Void
 	{
+		trace('we tabbed in');
 		if (focused == false)
 		{
+			funnyTimer.cancel();
 			focused = true;
 			FlxTween.tween(oof, {alpha: 0.0001}, 0.1, {ease: FlxEase.circOut});
 		}
