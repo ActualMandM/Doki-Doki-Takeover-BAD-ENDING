@@ -592,6 +592,12 @@ class PlayState extends MusicBeatState
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				add(evilClubBG);
 
+				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
+				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
+				evilClubBGScribbly.visible = false;
+				evilClubBGScribbly.alpha = 0;
+				add(evilClubBGScribbly);
+
 				closetCloseUp = new BGSprite('ClosetBG', -250, 0, 1, 1);
 				closetCloseUp.setGraphicSize(Std.int(closetCloseUp.width * 0.85));
 				closetCloseUp.updateHitbox();
@@ -3485,23 +3491,31 @@ class PlayState extends MusicBeatState
 
 				defaultCamZoom = defaultStageZoom;
 				FlxG.camera.zoom = defaultStageZoom;
-
-				closet.visible = false;
-				clubroom.visible = false;
-				if (!ClientPrefs.lowQuality)
-				{
-					deskfront.visible = false;
-					evilSpace.visible = false;
-				}
+				
+				//Considering all songs this should be shared
 				evilClubBG.visible = false;
 				
 
 				switch (curStage)//per stage stuff
 				{
 					case 'home':
+						if (!ClientPrefs.lowQuality)
+						{
+							deskfront.visible = false;
+							evilSpace.visible = false;
+						}
+						closet.visible = false;
+						clubroom.visible = false;
 					case 'markov':
 						closetCloseUp.visible = false;
 					case 'stagnant':
+						if (!ClientPrefs.lowQuality)
+						{
+							deskfront.visible = false;
+							evilSpace.visible = false;
+						}
+						closet.visible = false;
+						clubroom.visible = false;
 						evilClubBGScribbly.visible = false;
 						evilPoem.visible = false;
 				}
