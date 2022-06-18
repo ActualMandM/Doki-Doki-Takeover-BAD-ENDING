@@ -64,12 +64,6 @@
 						"0.5"
 					],
 					[
-						"Play Animation",
-						"jumpscareintro",
-						"dad",
-						""
-					],
-					[
 						"Glitch Effect",
 						"0.4",
 						""
@@ -230,7 +224,7 @@
 						"Screen in Darkness",
 						"0",
 						"1",
-						null
+						""
 					]
 				]
 			]

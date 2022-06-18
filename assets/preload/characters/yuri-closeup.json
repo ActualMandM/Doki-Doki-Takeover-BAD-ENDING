@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "YuriCloseIdle"
+			"fps": 24,
+			"name": "YuriIdle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-9,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "YuriCloseUp"
+			"fps": 24,
+			"name": "YuriUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				8,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "YuriCloseDown"
+			"fps": 24,
+			"name": "YuriDown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				83,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "YuriCloseLeft"
+			"fps": 24,
+			"name": "YuriLeft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-48,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "YuriCloseRight"
+			"fps": 24,
+			"name": "YuriRight",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": true,
-			"fps": 24,
-			"anim": "final",
-			"indices": [],
-			"name": "YuriFinal"
-		},
-		{
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
+			"anim": "final",
 			"fps": 24,
-			"anim": "jumpscareintro",
-			"indices": [],
-			"name": "YuriJumpscare"
+			"name": "YuriFinal",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				410,
+				190
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "YuriFirstPersonJumpscare",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

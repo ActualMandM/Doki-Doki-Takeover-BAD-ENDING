@@ -523,15 +523,6 @@ class PlayState extends MusicBeatState
 				add(evilClubBG);
 
 			case 'stagnant': // hueh
-				//shaders right here lol
-				if (!ClientPrefs.lowQuality)
-				{
-					staticlol = new StaticShader();
-					camGame.setFilters([new ShaderFilter(staticlol)]);
-					camCache.setFilters([new ShaderFilter(staticlol)]);
-					staticlol.alpha.value = [staticAlpha];
-				}
-
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
@@ -630,6 +621,16 @@ class PlayState extends MusicBeatState
 
 		}
 
+		// shaders right here lol
+		// funny static for all stages
+		if (!ClientPrefs.lowQuality)
+		{
+			staticlol = new StaticShader();
+			camGame.setFilters([new ShaderFilter(staticlol)]);
+			camCache.setFilters([new ShaderFilter(staticlol)]);
+			staticlol.alpha.value = [staticAlpha];
+		}
+
 		if (isPixelStage)
 		{
 			introSoundsSuffix = '-pixel';
@@ -648,16 +649,14 @@ class PlayState extends MusicBeatState
 		vignette.alpha = 0.00001;
 		add(vignette);
 
-		switch (curStage)
-		{
-			case 'stagnant':
-			daStatic= new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
-			daStatic.cameras = [camHUD];	
-			daStatic.setGraphicSize(FlxG.width, FlxG.height);
-			daStatic.screenCenter();
-			daStatic.alpha = 0;
-			add(daStatic);
-		}
+		daStatic= new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
+		daStatic.cameras = [camHUD];	
+		daStatic.setGraphicSize(FlxG.width, FlxG.height);
+		daStatic.screenCenter();
+		daStatic.alpha = 0;
+		add(daStatic);
+
+		
 		trace(boyfriendGroup);
 		trace(dadGroup);
 		trace(gfGroup);
@@ -3588,9 +3587,15 @@ class PlayState extends MusicBeatState
 				else if (val2 == 0)
 					val2 = 0.0001;
 
-				if (Math.isNaN(val3) || val3 <= 0)
-					val3 = 0.01;
+				if (Math.isNaN(val3) || val3 == 0)
+					val3 = 0.0001;
 
+				if (value2 == 'true')
+					val2 = 1;
+				else if (value2 == 'false')
+					val2 = 0.0001;
+				
+				trace(value1 + ' & ' + value2 + ' & ' + value3);
 				switch (value1)
 				{
 					case 'gf' | 'girlfriend':
@@ -3719,6 +3724,7 @@ class PlayState extends MusicBeatState
 			case 'Eye Popup':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
+				trace(value3);
 				var eye:FlxSprite = new FlxSprite(val1, val2);
 				eye.frames = Paths.getSparrowAtlas('MarkovEyes', 'doki');
 				eye.animation.addByPrefix('idle', 'MarkovWindow', 24, false);
@@ -3734,6 +3740,7 @@ class PlayState extends MusicBeatState
 					remove(eye);
 				});
 			case 'Strumline Visibility':
+				
 				var strum:FlxTypedGroup<StrumNote>;
 				var val2:Float = Std.parseFloat(value2);
 				var val3:Float = Std.parseFloat(value3);
@@ -3745,6 +3752,8 @@ class PlayState extends MusicBeatState
 
 				if (Math.isNaN(val3) || val3 <= 0)
 					val3 = 0.01;
+
+				trace(value1 + ' & ' + value2 + ' & ' + value3);
 
 				switch (value1)
 				{
