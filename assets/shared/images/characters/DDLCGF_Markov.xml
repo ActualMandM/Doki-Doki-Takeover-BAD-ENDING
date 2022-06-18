@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DDLCGF_Markov.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Markov Idle0000" x="5" y="5" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0001" x="5" y="5" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0002" x="798" y="5" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0003" x="798" y="5" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0004" x="1584" y="5" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0005" x="2453" y="5" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0006" x="5" y="688" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0007" x="5" y="688" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0008" x="864" y="688" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0009" x="864" y="688" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0010" x="1737" y="688" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0011" x="1737" y="688" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0012" x="2528" y="688" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0013" x="2528" y="688" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
+</TextureAtlas>

@@ -601,7 +601,7 @@ class PlayState extends MusicBeatState
 				closetCloseUp = new BGSprite('ClosetBG', -250, 0, 1, 1);
 				closetCloseUp.setGraphicSize(Std.int(closetCloseUp.width * 0.85));
 				closetCloseUp.updateHitbox();
-				//closetCloseUp.visible = false;
+				closetCloseUp.visible = false;
 				add(closetCloseUp);
 
 			case 'home':
