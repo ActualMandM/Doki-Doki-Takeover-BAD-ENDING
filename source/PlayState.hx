@@ -1825,12 +1825,13 @@ class PlayState extends MusicBeatState
 			{
 				for (i in 0...event[1].length)
 				{
-					var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
+					var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2], event[1][i][3]];
 					var subEvent:Array<Dynamic> = [
 						newEventNote[0] + ClientPrefs.noteOffset - eventNoteEarlyTrigger(newEventNote),
 						newEventNote[1],
 						newEventNote[2],
-						newEventNote[3]
+						newEventNote[3],
+						newEventNote[4]
 					];
 					eventNotes.push(subEvent);
 					eventPushed(subEvent);
@@ -1929,12 +1930,13 @@ class PlayState extends MusicBeatState
 		{
 			for (i in 0...event[1].length)
 			{
-				var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
+				var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2], event[1][i][3]];
 				var subEvent:Array<Dynamic> = [
 					newEventNote[0] + ClientPrefs.noteOffset - eventNoteEarlyTrigger(newEventNote),
 					newEventNote[1],
 					newEventNote[2],
-					newEventNote[3]
+					newEventNote[3],
+					newEventNote[4]
 				];
 				eventNotes.push(subEvent);
 				eventPushed(subEvent);
@@ -2988,7 +2990,11 @@ class PlayState extends MusicBeatState
 			if (eventNotes[0][3] != null)
 				value2 = eventNotes[0][3];
 
-			triggerEventNote(eventNotes[0][1], value1, value2);
+			var value3:String = '';
+			if (eventNotes[0][4] != null)
+				value3 = eventNotes[0][4];
+
+			triggerEventNote(eventNotes[0][1], value1, value2, value3);
 			eventNotes.shift();
 		}
 	}
@@ -3000,7 +3006,7 @@ class PlayState extends MusicBeatState
 		return pressed;
 	}
 
-	public function triggerEventNote(eventName:String, value1:String, value2:String)
+	public function triggerEventNote(eventName:String, value1:String, value2:String, value3:String)
 	{
 		switch (eventName)
 		{
@@ -3574,7 +3580,17 @@ class PlayState extends MusicBeatState
 				}
 			case 'Character Visibility':
 				var charType:Int = 0;
-				var visibleBool:Bool = true;
+				var val2:Float = Std.parseFloat(value2);
+				var val3:Float = Std.parseFloat(value3);
+
+				if (Math.isNaN(val2))
+					val2 = 1;
+				else if (val2 == 0)
+					val2 = 0.0001;
+
+				if (Math.isNaN(val3) || val3 <= 0)
+					val3 = 0.01;
+
 				switch (value1)
 				{
 					case 'gf' | 'girlfriend':
@@ -3586,17 +3602,17 @@ class PlayState extends MusicBeatState
 						if (Math.isNaN(charType)) charType = 0;
 				}
 
-				if (value2 == 'false')
-					visibleBool = false;
-
 				switch (charType)
 				{
 					case 0:
-						boyfriend.visible = visibleBool;
+						FlxTween.cancelTweensOf(boyfriend);
+						FlxTween.tween(boyfriend, {alpha: val2}, val3, {ease: FlxEase.circOut});
 					case 1:
-						dad.visible = visibleBool;
+						FlxTween.cancelTweensOf(dad);
+						FlxTween.tween(dad, {alpha: val2}, val3, {ease: FlxEase.circOut});
 					case 2:
-						gf.visible = visibleBool;
+						FlxTween.cancelTweensOf(gf);
+						FlxTween.tween(gf, {alpha: val2}, val3, {ease: FlxEase.circOut});
 				}
 			case 'Change Strumline':
 				if (value1 == '' || value1 == null)
@@ -3713,16 +3729,22 @@ class PlayState extends MusicBeatState
 				add(eye);
 				// TODO: make this delete itself so it don't take up memory lol
 				// goku goes super saiyan
-				new FlxTimer().start(4.6, function(tmr:FlxTimer)
+				new FlxTimer().start(4.61, function(tmr:FlxTimer)
 				{
 					remove(eye);
 				});
 			case 'Strumline Visibility':
 				var strum:FlxTypedGroup<StrumNote>;
 				var val2:Float = Std.parseFloat(value2);
+				var val3:Float = Std.parseFloat(value3);
 
 				if (Math.isNaN(val2))
 					val2 = 1;
+				else if (val2 == 0)
+					val2 = 0.0001;
+
+				if (Math.isNaN(val3) || val3 <= 0)
+					val3 = 0.01;
 
 				switch (value1)
 				{
@@ -3734,7 +3756,8 @@ class PlayState extends MusicBeatState
 
 				for (i in 0...4)
 				{
-					strum.members[i].alpha = val2;
+					FlxTween.cancelTweensOf(strum.members[i]);
+					FlxTween.tween(strum.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
 				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);

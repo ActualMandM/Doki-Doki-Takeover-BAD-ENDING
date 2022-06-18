@@ -129,7 +129,11 @@ class ChartingState extends MusicBeatState
 		],
 		[
 			'Character Visibility',
-			"Value 1: Character to change (dad, bf, gf)\nValue 2: true or false"
+			"Value 1: Character to change (dad, bf, gf)\nValue 2: How transparent the character is\nValue 3: Speed of the fade in"
+		],
+		[
+			'Strumline Visibility',
+			"Value 1: Strumline to affect (dad, bf)\nValue 2: How transparent the strum is\nValue 3: Speed of the fade in"
 		],
 		[
 			'Change Strumline',
@@ -169,10 +173,6 @@ class ChartingState extends MusicBeatState
 		[
 			'Eye Popup',
 			"Value 1: x\nValue 2: y"
-		],
-		[
-			'Strumline Visibility',
-			"Value 1: Strumline to affect (dad, bf)\nValue 2: alpha value"
 		],
 		[
 			'Screen in Darkness',
@@ -241,6 +241,7 @@ class ChartingState extends MusicBeatState
 
 	var value1InputText:FlxUIInputText;
 	var value2InputText:FlxUIInputText;
+	var value3InputText:FlxUIInputText;
 	var currentSongName:String;
 
 	var zoomTxt:FlxText;
@@ -1064,7 +1065,7 @@ class ChartingState extends MusicBeatState
 		eventPushedMap = null;
 		#end
 
-		descText = new FlxText(20, 200, 0, eventStuff[0][0]);
+		descText = new FlxText(20, 240, 0, eventStuff[0][0]);
 
 		var leEvents:Array<String> = [];
 		for (i in 0...eventStuff.length)
@@ -1098,6 +1099,11 @@ class ChartingState extends MusicBeatState
 		tab_group_event.add(text);
 		value2InputText = new FlxUIInputText(20, 150, 100, "");
 		blockPressWhileTypingOn.push(value2InputText);
+
+		var text:FlxText = new FlxText(20, 170, 0, "Value 3:");
+		tab_group_event.add(text);
+		value3InputText = new FlxUIInputText(20, 190, 100, "");
+		blockPressWhileTypingOn.push(value3InputText);
 
 		// New event buttons
 		var removeButton:FlxButton = new FlxButton(eventDropDown.x + eventDropDown.width + 10, eventDropDown.y, '-', function()
@@ -1138,7 +1144,7 @@ class ChartingState extends MusicBeatState
 			if (curSelectedNote != null && curSelectedNote[2] == null) // Is event note
 			{
 				var eventsGroup:Array<Dynamic> = curSelectedNote[1];
-				eventsGroup.push(['', '', '']);
+				eventsGroup.push(['', '', '', '']);
 
 				changeEventSelected(1);
 				updateGrid();
@@ -1180,6 +1186,7 @@ class ChartingState extends MusicBeatState
 		tab_group_event.add(descText);
 		tab_group_event.add(value1InputText);
 		tab_group_event.add(value2InputText);
+		tab_group_event.add(value3InputText);
 		tab_group_event.add(eventDropDown);
 
 		UI_box.addGroup(tab_group_event);
@@ -1512,6 +1519,11 @@ class ChartingState extends MusicBeatState
 				else if (sender == value2InputText)
 				{
 					curSelectedNote[1][curEventSelected][2] = value2InputText.text;
+					updateGrid();
+				}
+				else if (sender == value3InputText)
+				{
+					curSelectedNote[1][curEventSelected][3] = value3InputText.text;
 					updateGrid();
 				}
 				else if (sender == strumTimeInputText)
@@ -2482,6 +2494,7 @@ class ChartingState extends MusicBeatState
 				}
 				value1InputText.text = curSelectedNote[1][curEventSelected][1];
 				value2InputText.text = curSelectedNote[1][curEventSelected][2];
+				value3InputText.text = curSelectedNote[1][curEventSelected][3];
 			}
 			strumTimeInputText.text = '' + curSelectedNote[0];
 		}
@@ -2570,8 +2583,8 @@ class ChartingState extends MusicBeatState
 				if (note.y < -150)
 					note.y = -150;
 
-				var text:String = 'Event: ' + note.eventName + ' (' + Math.floor(note.strumTime) + ' ms)' + '\nValue 1: ' + note.eventVal1 + '\nValue 2: '
-					+ note.eventVal2;
+				var text:String = 'Event: ' + note.eventName + ' (' + Math.floor(note.strumTime) + ' ms)' + '\nValue 1: ' + note.eventVal1 + '\nValue 2: ' 
+					+ note.eventVal2 + '\nValue 3: ' + note.eventVal3;
 				if (note.eventLength > 1)
 					text = note.eventLength + ' Events:\n' + note.eventName;
 
@@ -2648,6 +2661,7 @@ class ChartingState extends MusicBeatState
 			{
 				note.eventVal1 = i[1][0][1];
 				note.eventVal2 = i[1][0][2];
+				note.eventVal3 = i[1][0][3];
 			}
 			note.noteData = -1;
 			daNoteInfo = -1;
@@ -2855,7 +2869,8 @@ class ChartingState extends MusicBeatState
 			var event = eventStuff[Std.parseInt(eventDropDown.selectedId)][0];
 			var text1 = value1InputText.text;
 			var text2 = value2InputText.text;
-			_song.events.push([noteStrum, [[event, text1, text2]]]);
+			var text3 = value3InputText.text;
+			_song.events.push([noteStrum, [[event, text1, text2, text3]]]);
 			curSelectedNote = _song.events[_song.events.length - 1];
 			curEventSelected = 0;
 			changeEventSelected();
