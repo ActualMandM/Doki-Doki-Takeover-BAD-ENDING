@@ -87,7 +87,8 @@ class MainMenuState extends MusicBeatState
 		{
 			//Can't let my child go to waste :)
 			var fumo:FlxSprite = new FlxSprite(-100, -250).loadGraphic(Paths.image('Fumo'));
-			fumo.scale.set(1, 1);
+			fumo.screenCenter();
+			fumo.x += 100;
 			add(fumo);
 		}
 		else
