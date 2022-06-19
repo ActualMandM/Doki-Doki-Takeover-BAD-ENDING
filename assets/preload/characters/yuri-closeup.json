@@ -81,7 +81,7 @@
 	"no_antialiasing": true,
 	"image": "characters/Yuri_Doesnt_Understand_Personal_Space",
 	"position": [
-		-250,
+		-260,
 		-40
 	],
 	"healthicon": "yuri-crazy",
@@ -92,7 +92,7 @@
 		210
 	],
 	"camera_position": [
-		-160,
+		-170,
 		99
 	],
 	"sing_duration": 6,

@@ -54,6 +54,7 @@ class FreeplayState extends MusicBeatState
 	var intendedRating:Float = 0;
 
 	var songname:FlxText;
+	var vignette:FlxSprite;
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
@@ -145,6 +146,10 @@ class FreeplayState extends MusicBeatState
 
 		sayori = new FlxSprite().loadGraphic(Paths.image('freeplay/sayso', 'preload'));
 		#end
+
+		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
+		vignette.alpha = 0.8;
+		add(vignette);
 
 		sayori.setPosition(107, 0);
 		sayori.antialiasing = ClientPrefs.globalAntialiasing;
