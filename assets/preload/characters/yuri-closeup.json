@@ -78,11 +78,11 @@
 			"indices": []
 		}
 	],
-	"no_antialiasing": false,
+	"no_antialiasing": true,
 	"image": "characters/Yuri_Doesnt_Understand_Personal_Space",
 	"position": [
-		-290,
-		0
+		-250,
+		-40
 	],
 	"healthicon": "yuri-crazy",
 	"flip_x": false,
