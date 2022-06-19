@@ -589,6 +589,11 @@ class PlayState extends MusicBeatState
 				evilClubBGScribbly.alpha = 0;
 				add(evilClubBGScribbly);
 
+				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
+				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
+				evilPoem.visible = false;
+				add(evilPoem);
+
 				closetCloseUp = new BGSprite('ClosetBG', -250, 0, 1, 1);
 				closetCloseUp.setGraphicSize(Std.int(closetCloseUp.width * 0.85));
 				closetCloseUp.updateHitbox();
@@ -656,7 +661,7 @@ class PlayState extends MusicBeatState
 		daStatic.alpha = 0;
 		add(daStatic);
 
-		
+
 		trace(boyfriendGroup);
 		trace(dadGroup);
 		trace(gfGroup);
@@ -3499,6 +3504,8 @@ class PlayState extends MusicBeatState
 				
 				//Considering all songs this should be shared
 				evilClubBG.visible = false;
+				evilClubBGScribbly.visible = false;
+				evilPoem.visible = false;
 				
 
 				switch (curStage)//per stage stuff
@@ -3521,8 +3528,6 @@ class PlayState extends MusicBeatState
 						}
 						closet.visible = false;
 						clubroom.visible = false;
-						evilClubBGScribbly.visible = false;
-						evilPoem.visible = false;
 				}
 				
 				evilClubBGScribbly.alpha = 0;

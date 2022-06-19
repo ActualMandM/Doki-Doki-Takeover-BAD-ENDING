@@ -81,8 +81,9 @@ class MainMenuState extends MusicBeatState
 		add(backdrop);
 
 		var random:Int = FlxG.random.int(1, 100);
+		trace(random);
 
-		if (random == 1)
+		if (random == 64)
 		{
 			//Can't let my child go to waste :)
 			var fumo:FlxSprite = new FlxSprite(-100, -250).loadGraphic(Paths.image('Fumo'));
