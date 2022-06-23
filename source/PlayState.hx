@@ -3959,6 +3959,33 @@ class PlayState extends MusicBeatState
 					});
 				}
 
+			case 'Tint Character':
+				//Only used for home but might as well make it universal
+				var char:Character = boyfriend;
+				var val3:Int = Std.parseInt(value3);
+				switch (value2.toLowerCase().trim())
+				{
+					default:
+						char = boyfriend;
+					case 'gf' | 'girlfriend':
+						char = gf;
+					case 'dad':
+						char = dad;
+				}
+				
+				switch (value1)
+				{
+					case 'black' | 'Black':
+						char.color = FlxColor.BLACK;
+					case 'gray' | 'Gray' | 'Grey' | 'grey':
+						char.color = FlxColor.GRAY;
+					case 'white' | 'White':
+						char.color = FlxColor.WHITE;
+					default:
+						char.color = val3;
+
+				}
+
 			case 'Eye Popup':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);

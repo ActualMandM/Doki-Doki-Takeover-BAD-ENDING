@@ -216,6 +216,12 @@ class ChartingState extends MusicBeatState
 			'UI visibilty',
 			"Self explanitory
 			Value 1: true or false in lowercase"
+		],
+		[
+			'Tint Character',
+			"Self explanitory
+			Value 1: Color to be tinted
+			Value 2: Character affected"
 		]
 	];
 
