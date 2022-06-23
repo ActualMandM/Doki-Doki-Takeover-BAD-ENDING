@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "YuriIdle"
+			"fps": 24,
+			"name": "YuriIdle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-9,
+				-4,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "YuriUp"
+			"fps": 24,
+			"name": "YuriUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				8,
+				37,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "YuriDown"
+			"fps": 24,
+			"name": "YuriDown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				83,
+				86,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "YuriLeft"
+			"fps": 24,
+			"name": "YuriLeft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-48,
+				-20,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "YuriRight"
+			"fps": 24,
+			"name": "YuriRight",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				2,
 				0
 			],
-			"anim": "ded",
+			"loop": false,
 			"fps": 24,
-			"name": "YuriAlivent",
-			"indices": []
+			"anim": "ded",
+			"indices": [],
+			"name": "YuriAlivent"
 		}
 	],
 	"no_antialiasing": true,
