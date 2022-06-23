@@ -30,6 +30,7 @@ class ClientPrefs
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = false;
 	public static var autoPause:Bool = true;
+	public static var storycomplete:Bool = false;
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative',
@@ -101,6 +102,7 @@ class ClientPrefs
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
 		FlxG.save.data.framerate = framerate;
+		FlxG.save.data.storycomplete = storycomplete;
 		// FlxG.save.data.cursing = cursing;
 		// FlxG.save.data.violence = violence;
 		FlxG.save.data.camZooms = camZooms;
@@ -146,6 +148,10 @@ class ClientPrefs
 		if (FlxG.save.data.middleScroll != null)
 		{
 			middleScroll = FlxG.save.data.middleScroll;
+		}
+		if (FlxG.save.data.storycomplete != null)
+		{
+			storycomplete = FlxG.save.data.storycomplete;
 		}
 		if (FlxG.save.data.showFPS != null)
 		{

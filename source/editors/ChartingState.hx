@@ -162,7 +162,12 @@ class ChartingState extends MusicBeatState
 		[
 			'Add/Remove Vignette',
 			"Value 1 is the alpha of the vignette
-			Value 2 is the speed it appears"
+			Value 2 is the speed of the alpha"
+		],
+		[
+			'Red Static',
+			"Value 1 is the alpha of the Red Static
+			Value 2 is the speed of the alpha"
 		],
 		[
 			'remove darkScreen',
@@ -177,6 +182,40 @@ class ChartingState extends MusicBeatState
 		[
 			'Screen in Darkness',
 			"Value 1: How transparent is the black overlay\nValue 2: How slow/fast it goes"
+		],
+		[
+			'Move Character',
+			"Move Character position
+			Value 1: X
+			Value 2: Y
+			Value 3: Character affected (bf,dad,gf)
+			Leave either value blank for the default position"
+		],
+		[
+			'Move Boyfriend Tween',
+			"Move Character position
+			Value 1: X
+			Value 2: Y
+			Value 3: Speed of the tween
+			Leave either value blank for the default position"
+		],
+		[
+			'Move Opponent Tween',
+			"Move Character position
+			Value 1: X
+			Value 2: Y
+			Value 3: Speed of the tween
+			Leave either value blank for the default position"
+		],
+		[
+			'Show death screen',
+			"Self explanitory
+			Value 1: Just set it to 'true' in lowercase"	
+		],
+		[
+			'UI visibilty',
+			"Self explanitory
+			Value 1: true or false in lowercase"
 		]
 	];
 

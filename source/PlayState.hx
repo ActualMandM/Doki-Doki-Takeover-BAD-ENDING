@@ -135,6 +135,9 @@ class PlayState extends MusicBeatState
 	public var boyfriend:Boyfriend;
 
 	var daStatic:BGSprite;
+	var redStatic:BGSprite;
+	var inthenotepad:BGSprite;
+	var stageStatic:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
 
@@ -238,6 +241,7 @@ class PlayState extends MusicBeatState
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
 	var vignette:FlxSprite;
+	var imdead:FlxSprite;
 	var darkScreen:FlxSprite;
 	var darkoverlay:FlxSprite;
 	var upperBoppers:BGSprite;
@@ -255,6 +259,9 @@ class PlayState extends MusicBeatState
 	var evilSpace:FlxBackdrop;
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
+	var ruinedClubBG:BGSprite;
+	var glitchfront:BGSprite;
+	var glitchback:BGSprite;
 	var evilPoem:BGSprite;
 	var poemTransition:BGSprite;
 	var closetCloseUp:BGSprite;
@@ -604,6 +611,26 @@ class PlayState extends MusicBeatState
 				swagShader = new ColorSwap();
 				swagShader.saturation = -100;
 
+				stageStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 1.0, 1.0, ['HomeStatic'], true);
+				//stageStatic.setGraphicSize(FlxG.width, FlxG.height);
+				stageStatic.screenCenter();
+				stageStatic.y = -140;
+				stageStatic.visible = false;
+				add(stageStatic);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace.velocity.set(-10, 0);
+					evilSpace.lowestCamZoom = 0.8;
+					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
+					add(evilSpace);
+				}
+
+				inthenotepad = new BGSprite('notepad', 0, 0, 1, 1);
+				inthenotepad.visible = false;
+				add(inthenotepad);
+
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
@@ -615,6 +642,37 @@ class PlayState extends MusicBeatState
 				clubroom.updateHitbox();
 				clubroom.shader = swagShader.shader;
 				add(clubroom);
+
+				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
+				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
+				evilClubBG.visible = false;
+				add(evilClubBG);
+
+				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
+				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
+				evilPoem.visible = false;
+				add(evilPoem);
+
+				glitchback = new BGSprite('ruinedclub/glitchback1', -220, -110, 0.9, 1);
+				glitchback.setGraphicSize(Std.int(glitchback.width * 1.3));
+				glitchback.visible = false;
+				add(glitchback);
+
+				ruinedClubBG = new BGSprite('ruinedclub/BG', -220, -110, 1, 1);
+				ruinedClubBG.setGraphicSize(Std.int(ruinedClubBG.width * 1.3));
+				ruinedClubBG.visible = false;
+				add(ruinedClubBG);
+
+				glitchfront = new BGSprite('ruinedclub/glitchfront1', -220, -110, 1, 1);
+				glitchfront.setGraphicSize(Std.int(glitchfront.width * 1.3));
+				glitchfront.visible = false;
+
+				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
+				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
+				evilClubBGScribbly.visible = false;
+				evilClubBGScribbly.alpha = 0;
+				add(evilClubBGScribbly);
+				
 
 				if (!ClientPrefs.lowQuality)
 				{
@@ -647,6 +705,11 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
+		if(curStage == 'home')
+		{
+			add(glitchfront);
+		}
+
 		//stealing this from DDTO
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('vignette', 'doki'));
 		vignette.scrollFactor.set();
@@ -658,8 +721,15 @@ class PlayState extends MusicBeatState
 		daStatic.cameras = [camHUD];	
 		daStatic.setGraphicSize(FlxG.width, FlxG.height);
 		daStatic.screenCenter();
-		daStatic.alpha = 0;
+		daStatic.alpha = 0.0001;
 		add(daStatic);
+
+		redStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 1.0, 1.0, ['HomeStatic'], true);
+		redStatic.cameras = [camHUD];
+		redStatic.setGraphicSize(FlxG.width, FlxG.height);
+		redStatic.screenCenter();
+		redStatic.alpha = 0.0001;
+		add(redStatic);
 
 
 		trace(boyfriendGroup);
@@ -846,6 +916,10 @@ class PlayState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
+
+		if (isStoryMode)
+			showTime = false;
+
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
 		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
@@ -1077,6 +1151,12 @@ class PlayState extends MusicBeatState
 				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				add(darkScreen);
 				darkScreen.cameras = [camHUD];
+
+				imdead = new FlxSprite(0, 0).loadGraphic(Paths.image('everyoneisdead', 'doki'));
+				imdead.scrollFactor.set();
+				imdead.cameras = [camHUD];
+				imdead.alpha = 0.00001;
+				add(imdead);
 		}
 
 		
@@ -2253,34 +2333,34 @@ class PlayState extends MusicBeatState
 				if (FlxG.keys.justPressed.I)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.y -= 50;
+						stageStatic.y -= 50;
 					else
-						evilClubBG.y -= 10;
+						stageStatic.y -= 10;
 				}
 				else if (FlxG.keys.justPressed.K)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.y += 50;
+						stageStatic.y += 50;
 					else
-						evilClubBG.y += 10;
+						stageStatic.y += 10;
 				}
 
 				if (FlxG.keys.justPressed.J)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.x -= 50;
+						stageStatic.x -= 50;
 					else
-						evilClubBG.x -= 10;
+						stageStatic.x -= 10;
 				}
 				else if (FlxG.keys.justPressed.L)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.x += 50;
+						stageStatic.x += 50;
 					else
-						evilClubBG.x += 10;
+						stageStatic.x += 10;
 				}
 
-				trace('X: ${evilClubBG.x} | Y: ${evilClubBG.y}');
+				trace('X: ${stageStatic.x} | Y: ${stageStatic.y}');
 			}
 
 			// Scroll Factor
@@ -3507,6 +3587,7 @@ class PlayState extends MusicBeatState
 				evilClubBGScribbly.visible = false;
 				evilPoem.visible = false;
 				
+				isCameraOnForcedPos = false;
 
 				switch (curStage)//per stage stuff
 				{
@@ -3516,8 +3597,15 @@ class PlayState extends MusicBeatState
 							deskfront.visible = false;
 							evilSpace.visible = false;
 						}
+						stageStatic.visible = false;
+						ruinedClubBG.visible = false;
+						glitchfront.visible = false;
+						glitchback.visible = false;
 						closet.visible = false;
 						clubroom.visible = false;
+						inthenotepad.visible = false;
+						boyfriendGroup.x = BF_X;
+						boyfriendGroup.y = BF_Y;
 					case 'markov':
 						closetCloseUp.visible = false;
 					case 'stagnant':
@@ -3552,6 +3640,34 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
 						closetCloseUp.visible = true;
+					case 'ruined':
+						defaultCamZoom = 0.8;
+						FlxG.camera.zoom = 0.8;
+						if (!ClientPrefs.lowQuality) evilSpace.visible = true;
+						ruinedClubBG.visible = true;
+						glitchfront.visible = true;
+						glitchback.visible = true;
+					case 'notepad':
+						//fates are written, cause pandora didn't listen, time will march here with me, the screams of last you'll ever see
+						//I will kill you, I am marty the armidillou,the stinky smells won't deter me, I will drink all your pee
+						defaultCamZoom = 1.0;
+						FlxG.camera.zoom = 1.0;
+						//We are going to lock the camera for this event
+						inthenotepad.visible = true;
+						isCameraOnForcedPos = true;
+						camFollow.set(650, 360);
+						camFollowPos.setPosition(650, 360);
+						boyfriendGroup.x = 430;
+						boyfriendGroup.y = -140;
+					case 'void':
+						defaultCamZoom = 0.9;
+						FlxG.camera.zoom = 0.9;
+						//basically don't unhide anything lmao
+					case 'redstatic':
+						defaultCamZoom = 0.9;
+						FlxG.camera.zoom = 0.9;
+						stageStatic.visible = true;
+
 				}
 
 				if (val2 > 0)
@@ -3624,6 +3740,74 @@ class PlayState extends MusicBeatState
 						FlxTween.cancelTweensOf(gf);
 						FlxTween.tween(gf, {alpha: val2}, val3, {ease: FlxEase.circOut});
 				}
+			case 'Move Character':
+				var charType:Int = 0;
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+
+				switch (value3)
+				{
+					case 'dad' | 'Dad' | 'DAD':
+						charType = 1;
+					case 'gf' | 'GF' | 'girlfriend' | 'Girlfriend':
+						charType = 2;
+					default:
+						charType = 0;
+				}
+
+				switch (charType)
+				{
+					case 1:
+						if (Math.isNaN(val1)) dadGroup.x = DAD_X;
+						else dadGroup.x = val1;
+
+						if (Math.isNaN(val2)) dadGroup.y = DAD_Y;
+						else dadGroup.y = val2;
+					case 2:
+						if (Math.isNaN(val1)) gfGroup.x = GF_X;
+						else gfGroup.x = val1;
+						
+						if (Math.isNaN(val2)) gfGroup.y = GF_Y;
+						else gfGroup.y = val2;
+					default:
+						if (Math.isNaN(val1)) boyfriendGroup.x = BF_X;
+						else boyfriendGroup.x = val1;
+
+						if (Math.isNaN(val2)) boyfriendGroup.y = BF_Y;
+						else boyfriendGroup.y = val2;
+				}
+			case 'Move Opponent Tween':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				var val3:Float = Std.parseFloat(value3);
+			
+				if (Math.isNaN(val3) || val3 == 0)
+					val3 = 0.0001;
+
+				if (Math.isNaN(val1))
+					val1 = DAD_X;
+				if (Math.isNaN(val2))
+					val2 = DAD_Y;
+
+				FlxTween.cancelTweensOf(dadGroup);
+				FlxTween.tween(dadGroup, {x: val1, y: val2}, val3, {ease: FlxEase.circOut});
+
+			case 'Move Boyfriend Tween':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				var val3:Float = Std.parseFloat(value3);
+
+				if (Math.isNaN(val3) || val3 == 0)
+					val3 = 0.0001;
+
+				if (Math.isNaN(val1))
+					val1 = BF_X;
+				if (Math.isNaN(val2))
+					val2 = BF_Y;
+
+				FlxTween.cancelTweensOf(boyfriendGroup);
+				FlxTween.tween(boyfriendGroup, {x: val1, y: val2}, val3, {ease: FlxEase.circOut});
+
 			case 'Change Strumline':
 				if (value1 == '' || value1 == null)
 					return;
@@ -3684,7 +3868,56 @@ class PlayState extends MusicBeatState
 
 				if (val2 != 0)
 					FlxTween.tween(vignette, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+			case 'Red Static':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				// Value 1 for alpha
+				// Value 2 for speed it appears
+				FlxTween.cancelTweensOf(redStatic);
 
+				if (Math.isNaN(val1))
+					val1 = 0;
+				if (Math.isNaN(val2) || val2 == 0)
+					val2 = 0.0001;
+			
+				trace(val1 + ' & ' + val2);
+
+				if (val2 != 0)
+					FlxTween.tween(redStatic, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+
+			case 'Show death screen':
+				if (value1 == null || value1 == 'false')
+					imdead.alpha = 0.00001;
+				if (value1 == 'true')
+					imdead.alpha = 1;
+
+			case 'UI visibilty':
+				if (value1 == null || value1 == 'false')
+				{
+					iconP1.visible = false;
+					healthBar.visible = false;
+					healthBarBG.visible = false;
+					iconP1.visible = false;
+					iconP2.visible = false;
+					scoreTxt.visible = false;
+					botplayTxt.visible = false;
+					timeBar.visible = false;
+					timeBarBG.visible = false;
+					timeTxt.visible = false;
+				}
+				if (value1 == 'true')
+				{
+					iconP1.visible = true;
+					healthBar.visible = true;
+					healthBarBG.visible = true;
+					iconP1.visible = true;
+					iconP2.visible = true;
+					scoreTxt.visible = true;
+					botplayTxt.visible = true;
+					timeBar.visible = true;
+					timeBarBG.visible = true;
+					timeTxt.visible = true;
+				}
 			case 'Force Dance':
 				var char:Character = dad;
 				switch (value1.toLowerCase().trim())
@@ -3999,6 +4232,12 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+					if (curSong == 'home')
+					{
+						ClientPrefs.storycomplete = true;
+						ClientPrefs.saveSettings();
+					}
 
 					cancelMusicFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
