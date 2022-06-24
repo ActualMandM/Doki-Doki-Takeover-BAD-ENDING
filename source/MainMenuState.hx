@@ -320,7 +320,7 @@ class MainMenuState extends MusicBeatState
 				PlayState.storyPlaylist = ['STAGNANT', 'MARKOV', 'HOME'];
 				#end
 				PlayState.isStoryMode = true;
-				PlayState.storyDifficulty = 2;
+				PlayState.storyDifficulty = 0;
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
 				PlayState.campaignScore = 0;
 				PlayState.campaignMisses = 0;
