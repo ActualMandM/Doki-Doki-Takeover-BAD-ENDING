@@ -4080,7 +4080,12 @@ class PlayState extends MusicBeatState
 				switch (value1)
 				{
 					case 'dad' | 'opponent':
+					{
 						strum = opponentStrums;
+
+						if (ClientPrefs.middleScroll)
+							val2 *= 0.35;
+					}
 					default:
 						strum = playerStrums;
 				}
