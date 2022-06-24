@@ -217,13 +217,13 @@ class CharacterEditorState extends MusicBeatState
 		}
 		bgLayer.clear();
 		var playerXDifference = 0;
-		if (char.isPlayer)
+		if (char.flipChara)
 			playerXDifference = 670;
 
 		if (onPixelBG)
 		{
 			var playerYDifference:Float = 0;
-			if (char.isPlayer)
+			if (char.flipChara)
 			{
 				playerXDifference += 200;
 				playerYDifference = 220;
@@ -424,7 +424,7 @@ class CharacterEditorState extends MusicBeatState
 		check_player.checked = daAnim.startsWith('bf');
 		check_player.callback = function()
 		{
-			char.isPlayer = !char.isPlayer;
+			char.flipChara = !char.flipChara;
 			char.flipX = !char.flipX;
 			updatePointerPos();
 			reloadBGs();
@@ -549,13 +549,13 @@ class CharacterEditorState extends MusicBeatState
 
 		flipXCheckBox = new FlxUICheckBox(singDurationStepper.x + 80, singDurationStepper.y, null, null, "Flip X", 50);
 		flipXCheckBox.checked = char.flipX;
-		if (char.isPlayer)
+		if (char.flipChara)
 			flipXCheckBox.checked = !flipXCheckBox.checked;
 		flipXCheckBox.callback = function()
 		{
 			char.originalFlipX = !char.originalFlipX;
 			char.flipX = char.originalFlipX;
-			if (char.isPlayer)
+			if (char.flipChara)
 				char.flipX = !char.flipX;
 
 			ghostChar.flipX = char.flipX;
@@ -982,11 +982,11 @@ class CharacterEditorState extends MusicBeatState
 			--i;
 		}
 		charLayer.clear();
-		ghostChar = new Character(0, 0, daAnim, !isDad);
+		ghostChar = new Character(0, 0, daAnim, !isDad, false, true);
 		ghostChar.debugMode = true;
 		ghostChar.alpha = 0.6;
 
-		char = new Character(0, 0, daAnim, !isDad);
+		char = new Character(0, 0, daAnim, !isDad, false, true);
 		if (char.animationsArray[0] != null)
 		{
 			char.playAnim(char.animationsArray[0].anim, true);
@@ -1020,7 +1020,7 @@ class CharacterEditorState extends MusicBeatState
 	{
 		var x:Float = char.getMidpoint().x;
 		var y:Float = char.getMidpoint().y;
-		if (!char.isPlayer)
+		if (!char.flipChara)
 		{
 			x += 150 + char.cameraPosition[0];
 		}

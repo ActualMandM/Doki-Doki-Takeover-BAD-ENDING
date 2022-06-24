@@ -56,7 +56,16 @@ using StringTools;
 class ChartingState extends MusicBeatState
 {
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
-		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation', 'Note of Markov'];
+		[
+			'',
+			'Alt Animation',
+			'Hey!',
+			'Hurt Note',
+			'GF Sing',
+			'No Animation',
+			'Note of Markov',
+			'Sayo Sing', 
+			'Yuri Sing'];
 
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -221,7 +230,14 @@ class ChartingState extends MusicBeatState
 			'Tint Character',
 			"Self explanitory
 			Value 1: Color to be tinted
-			Value 2: Character affected"
+			Value 2: Character affected
+			Value 3: SUPER SPECIFIC COLOR this does not override Value 1. example: 0xFF1256FF|0xAARRGGBB"
+		],
+		[
+			'Summon Sayori or Yuri',
+			"Self explanitory
+			Value 1:Summons 'sayori' or 'yuri'
+			Value 2: Speed of their appearance."
 		]
 	];
 

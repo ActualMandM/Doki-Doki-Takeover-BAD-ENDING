@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 2.7,
-		"stage": "dokiclubroom",
+		"stage": "home",
 		"player1": "bf-doki",
 		"player2": "natsuki",
 		"player3": null,
@@ -672,6 +672,28 @@
 				]
 			],
 			[
+				181200,
+				[
+					[
+						"Summon Sayori or Yuri",
+						"sayori",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				195600,
+				[
+					[
+						"Summon Sayori or Yuri",
+						"yuri",
+						"3",
+						""
+					]
+				]
+			],
+			[
 				214350,
 				[
 					[
@@ -685,7 +707,7 @@
 		"notes": [],
 		"splashSkin": null,
 		"validScore": false,
-		"gfVersion": "gf",
+		"gfVersion": "gf-realdoki",
 		"bpm": 200,
 		"arrowSkin": null,
 		"needsVoices": true,

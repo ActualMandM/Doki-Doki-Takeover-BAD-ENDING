@@ -38,6 +38,8 @@ class Note extends FlxSprite
 	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
 	public var gfNote:Bool = false;
+	public var extrachar1Note:Bool = false;
+	public var extrachar2Note:Bool = false;
 
 	private var earlyHitMult:Float = 0.5;
 	private var lateHitMult:Float = 1.3;
@@ -125,6 +127,10 @@ class Note extends FlxSprite
 					noAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+				case 'Sayo Sing':
+					extrachar1Note = true;
+				case 'Yuri Sing':
+					extrachar2Note = true;
 			}
 			noteType = value;
 		}

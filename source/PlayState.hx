@@ -134,6 +134,9 @@ class PlayState extends MusicBeatState
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
 
+	public var extra1:Character;
+	public var extra2:Character;
+
 	var daStatic:BGSprite;
 	var redStatic:BGSprite;
 	var inthenotepad:BGSprite;
@@ -701,6 +704,18 @@ class PlayState extends MusicBeatState
 			pixelShitPart2 = '-pixel';
 		}
 
+		extra1 = new Character(-150, 70, 'sil_sayori');
+		extra1.scrollFactor.set(0.95, 0.95);
+		extra1.alpha = 0.0001;
+		extra1.color = FlxColor.GRAY;
+		add(extra1);
+
+		extra2 = new Character(1050, 10, 'sil_yuri', true, true);
+		extra2.scrollFactor.set(0.95, 0.95);
+		extra2.alpha = 0.0001;
+		extra2.color = FlxColor.GRAY;
+		add(extra2);
+
 		add(gfGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
@@ -862,6 +877,7 @@ class PlayState extends MusicBeatState
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
+
 
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
@@ -2333,34 +2349,57 @@ class PlayState extends MusicBeatState
 				if (FlxG.keys.justPressed.I)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						stageStatic.y -= 50;
+						extra1.y -= 50;
 					else
-						stageStatic.y -= 10;
+						extra1.y -= 10;
 				}
 				else if (FlxG.keys.justPressed.K)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						stageStatic.y += 50;
+						extra1.y += 50;
 					else
-						stageStatic.y += 10;
+						extra1.y += 10;
 				}
 
 				if (FlxG.keys.justPressed.J)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						stageStatic.x -= 50;
+						extra1.x -= 50;
 					else
-						stageStatic.x -= 10;
+						extra1.x -= 10;
 				}
 				else if (FlxG.keys.justPressed.L)
 				{
 					if (FlxG.keys.pressed.SHIFT)
-						stageStatic.x += 50;
+						extra1.x += 50;
 					else
-						stageStatic.x += 10;
+						extra1.x += 10;
 				}
 
-				trace('X: ${stageStatic.x} | Y: ${stageStatic.y}');
+				trace('X: ${extra1.x} | Y: ${extra1.y}');
+			}
+
+			if (FlxG.keys.pressed.SHIFT && (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L))
+			{
+				if (FlxG.keys.justPressed.I)
+				{
+						extra2.y -= 10;
+				}
+				else if (FlxG.keys.justPressed.K)
+				{
+						extra2.y += 10;
+				}
+
+				if (FlxG.keys.justPressed.J)
+				{
+						extra2.x -= 10;
+				}
+				else if (FlxG.keys.justPressed.L)
+				{
+						extra2.x += 10;
+				}
+
+				trace('X: ${extra2.x} | Y: ${extra2.y}');
 			}
 
 			// Scroll Factor
@@ -4006,6 +4045,22 @@ class PlayState extends MusicBeatState
 				{
 					remove(eye);
 				});
+			case 'Summon Sayori or Yuri':
+				var char:Character = extra1;
+				var val2:Float = Std.parseFloat(value2);
+				switch (value1)
+				{
+					case 'sayori' | 'sayo' | 'Sayori':
+						char = extra1;
+					case 'yuri' | 'Yuri':
+						char = extra2;
+				}
+
+				if (Math.isNaN(val2) || val2 == 0)
+					val2 = 0.0001;
+
+				FlxTween.tween(char, {alpha: 1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+
 			case 'Strumline Visibility':
 				
 				var strum:FlxTypedGroup<StrumNote>;
@@ -4094,6 +4149,11 @@ class PlayState extends MusicBeatState
 			camFollow.x += dad.cameraPosition[0];
 			camFollow.y += dad.cameraPosition[1];
 			tweenCamIn();
+
+			if (dad.facing != dad.initFacing)
+			{
+				camFollow.x += 150;
+			}
 		}
 		else
 		{
@@ -4112,6 +4172,11 @@ class PlayState extends MusicBeatState
 
 			camFollow.x -= boyfriend.cameraPosition[0] + BFCAM_X;
 			camFollow.y += boyfriend.cameraPosition[1] + BFCAM_Y;
+
+			if (boyfriend.facing != boyfriend.initFacing)
+			{
+				camFollow.x -= 450;
+			}
 
 			if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
 			{
@@ -4925,6 +4990,16 @@ class PlayState extends MusicBeatState
 				char = gf;
 			}
 
+			if (note.extrachar1Note)
+			{
+				char = extra1;
+			}
+
+			if (note.extrachar2Note)
+			{
+				char = extra2;
+			}
+
 			if (note.noteType != 'Note of Markov')
 			{
 				char.playAnim(animToPlay, true);
@@ -5436,6 +5511,14 @@ class PlayState extends MusicBeatState
 			if (dad.animation.curAnim.name != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
 			{
 				dad.dance();
+			}
+			if (extra1.animation.curAnim.name != null && !extra1.animation.curAnim.name.startsWith("sing") && !extra1.stunned)
+			{
+				extra1.dance();
+			}
+			if (extra2.animation.curAnim.name != null && !extra2.animation.curAnim.name.startsWith("sing"))
+			{
+				extra2.dance();
 			}
 		}
 		else if (dad.danceIdle
