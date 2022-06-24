@@ -229,7 +229,7 @@ class ChartingState extends MusicBeatState
 		[
 			'Tint Character',
 			"Self explanitory
-			Value 1: Color to be tinted
+			Value 1: Color to be tinted, White will remove all color keep this in mind
 			Value 2: Character affected
 			Value 3: SUPER SPECIFIC COLOR this does not override Value 1. example: 0xFF1256FF|0xAARRGGBB"
 		],

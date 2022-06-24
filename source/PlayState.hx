@@ -4021,7 +4021,7 @@ class PlayState extends MusicBeatState
 						char.color = FlxColor.BLACK;
 					case 'gray' | 'Gray' | 'Grey' | 'grey':
 						char.color = FlxColor.GRAY;
-					case 'white' | 'White':
+					case 'white' | 'White' | 'default':
 						char.color = FlxColor.WHITE;
 					default:
 						char.color = val3;
