@@ -3972,6 +3972,9 @@ class PlayState extends MusicBeatState
 					case 'dad':
 						char = dad;
 				}
+
+				if (Math.isNaN(val3))
+					val3 = 0xFFFFFFFF;
 				
 				switch (value1)
 				{
@@ -3983,7 +3986,6 @@ class PlayState extends MusicBeatState
 						char.color = FlxColor.WHITE;
 					default:
 						char.color = val3;
-
 				}
 
 			case 'Eye Popup':
