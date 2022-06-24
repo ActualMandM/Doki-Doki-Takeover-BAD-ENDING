@@ -1,6 +1,6 @@
 {
 	"song": {
-		"speed": 2.6,
+		"speed": 2.8,
 		"stage": "stagnant",
 		"player1": "bf-doki",
 		"player2": "sayori",
@@ -952,6 +952,12 @@
 					[
 						"Glitch Effect",
 						"5",
+						""
+					],
+					[
+						"Screen in Darkness",
+						"1",
+						"0",
 						""
 					]
 				]
