@@ -67,7 +67,7 @@
 			"name": "BlurriAppear"
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/Yuri_Closet",
 	"position": [
 		60,
