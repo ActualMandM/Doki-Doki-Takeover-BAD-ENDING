@@ -241,18 +241,6 @@
 						"bf",
 						"sadbf",
 						""
-					],
-					[
-						"Strumline Visibility",
-						"dad",
-						"1",
-						"0"
-					],
-					[
-						"Strumline Visibility",
-						"bf",
-						"1",
-						"0"
 					]
 				]
 			],
@@ -412,29 +400,12 @@
 				]
 			],
 			[
-				57600,
-				[
-					[
-						"Change Camera Zoom",
-						"1.6",
-						"0",
-						""
-					],
-					[
-						"Glitch Effect",
-						"0.2",
-						"",
-						""
-					]
-				]
-			],
-			[
 				58800,
 				[
 					[
 						"Change Character",
-						"dad",
-						"natsuki-home",
+						"bf",
+						"sadbf",
 						""
 					],
 					[
@@ -442,6 +413,12 @@
 						"570",
 						"100",
 						"0.2"
+					],
+					[
+						"Change Camera Zoom",
+						"1.5",
+						"0.2",
+						""
 					]
 				]
 			],
