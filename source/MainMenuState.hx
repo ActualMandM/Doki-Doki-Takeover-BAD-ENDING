@@ -58,7 +58,7 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-		#if !debug
+		#if PUBLIC_BUILD
 		if (!ClientPrefs.storycomplete)
 			optionShit.remove('freeplay');
 		#end

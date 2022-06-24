@@ -37,8 +37,11 @@
 
 	<!-- _____________________________ DDTO Settings ____________________________ -->
 
-	<define name="BAD_END"/>
+	<!-- Defines whether or not this is the streamer demo. -->
 	<!-- <define name="STREAMER_DEMO" /> -->
+
+	<!-- Defines whether or not this is a public build. -->
+	<!-- <define name="PUBLIC_BUILD" /> -->
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
