@@ -946,12 +946,13 @@
 				[
 					[
 						"Glitch increase",
-						"3",
+						"2",
 						""
 					],
 					[
-						"Glitch Effect",
-						"5",
+						"Poem Transition",
+						"false",
+						"",
 						""
 					],
 					[
