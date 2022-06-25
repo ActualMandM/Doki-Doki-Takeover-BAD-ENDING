@@ -47,7 +47,7 @@ class Song
 	public var player3:String = 'gf'; // deprecated
 	public var gfVersion:String = 'gf';
 
-	private static function onLoadJson(songJson) // Convert old charts to newest format
+	private static function onLoadJson(songJson:Dynamic) // Convert old charts to newest format
 	{
 		if (songJson.gfVersion == null)
 		{
