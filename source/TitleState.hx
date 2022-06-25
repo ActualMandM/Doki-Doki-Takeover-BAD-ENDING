@@ -170,12 +170,8 @@ class TitleState extends MusicBeatState
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
 
-		#if debug
-		hasPassedFlashing = true;
-		#else
-		if (FlxG.save.data.extra2beaten)
+		if (!ClientPrefs.firststart)
 			hasPassedFlashing = true;
-		#end
 
 		FlxG.mouse.visible = false;
 		#if FREEPLAY
