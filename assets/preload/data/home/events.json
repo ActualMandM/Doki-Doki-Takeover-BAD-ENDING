@@ -1180,6 +1180,18 @@
 						"false",
 						"",
 						""
+					],
+					[
+						"Strumline Visibility",
+						"dad",
+						"0",
+						"0"
+					],
+					[
+						"Strumline Visibility",
+						"bf",
+						"0",
+						"0"
 					]
 				]
 			],
@@ -1189,18 +1201,30 @@
 					[
 						"Change Character",
 						"bf",
-						"sil-bf",
+						"sil_bf",
 						""
 					],
 					[
 						"Change Character",
 						"dad",
-						"sil-natsuki",
+						"sil_natsuki",
 						""
 					],
 					[
 						"Change Stagnant Stage",
 						"void",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"gf",
+						"sil_gf",
+						""
+					],
+					[
+						"Change Camera Zoom",
+						"0.8",
 						"",
 						""
 					]
@@ -1220,6 +1244,12 @@
 						"gf",
 						"0",
 						"0"
+					],
+					[
+						"Tint Character",
+						"gray",
+						"gf",
+						""
 					]
 				]
 			],
@@ -1240,29 +1270,46 @@
 					[
 						"Character Visibility",
 						"bf",
-						"0.5",
-						""
+						"1",
+						"0.7"
+					],
+					[
+						"Strumline Visibility",
+						"bf",
+						"1",
+						"0.5"
 					]
 				]
 			],
 			[
-				181200,
+				178950,
+				[
+					[
+						"Character Visibility",
+						"gf",
+						"1",
+						"0.7"
+					]
+				]
+			],
+			[
+				180750,
 				[
 					[
 						"Summon Sayori or Yuri",
 						"sayori",
-						"3",
+						"0.7",
 						""
 					]
 				]
 			],
 			[
-				195600,
+				195150,
 				[
 					[
 						"Summon Sayori or Yuri",
 						"yuri",
-						"3",
+						"0.7",
 						""
 					]
 				]
@@ -1274,6 +1321,17 @@
 						"Change Scroll Speed",
 						"0.85",
 						"0.2"
+					]
+				]
+			],
+			[
+				219600,
+				[
+					[
+						"Show death screen",
+						"true",
+						"",
+						""
 					]
 				]
 			]
