@@ -1238,7 +1238,8 @@ class PlayState extends MusicBeatState
 					if (daSong == 'roses')
 						FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
-
+				case 'stagnant':
+					startVideo('intro');
 				default:
 					startCountdown();
 			}
@@ -4219,7 +4220,7 @@ class PlayState extends MusicBeatState
 
 	function finishSong():Void
 	{
-		var finishCallback:Void->Void = endSong; // In case you want to change it in a specific song.
+		var finishCallback:Void->Void = beforeEndSong; // In case you want to change it in a specific song.
 
 		updateTime = false;
 		FlxG.sound.music.volume = 0;
@@ -4235,6 +4236,32 @@ class PlayState extends MusicBeatState
 			{
 				finishCallback();
 			});
+		}
+	}
+
+	function beforeEndSong()
+	{
+		trace('beforeEndSong');
+		endingSong = true;
+		if (isStoryMode)
+		{
+			trace('story mode check hueh');
+			switch (Paths.formatToSongPath(curSong))
+			{
+				case 'home':
+					trace('home check');
+					startVideo('ending');
+				default:
+					endSong();
+			}
+		}
+		else
+		{
+			switch (curSong)
+			{
+				default:
+					endSong();
+			}
 		}
 	}
 
@@ -4270,7 +4297,6 @@ class PlayState extends MusicBeatState
 		timeBar.visible = false;
 		timeTxt.visible = false;
 		canPause = false;
-		endingSong = true;
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
@@ -4304,7 +4330,7 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = FunkinLua.Function_Continue;
 		#end
 
-		if (ret != FunkinLua.Function_Stop && !transitioning)
+		if (ret != FunkinLua.Function_Stop && !transitioning && !inCutscene)
 		{
 			if (SONG.validScore)
 			{
