@@ -3954,7 +3954,8 @@ class PlayState extends MusicBeatState
 					iconP1.visible = true;
 					iconP2.visible = true;
 					scoreTxt.visible = true;
-					botplayTxt.visible = true;
+					if (cpuControlled)
+						botplayTxt.visible = true;
 					timeBar.visible = true;
 					timeBarBG.visible = true;
 					timeTxt.visible = true;
