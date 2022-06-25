@@ -3679,7 +3679,7 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
 						closetCloseUp.visible = true;
-					case 'ruined':
+					case 'ruined' | 'ruinedclub':
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
 						if (!ClientPrefs.lowQuality) evilSpace.visible = true;
@@ -3692,6 +3692,7 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
 						//We are going to lock the camera for this event
+						stageStatic.visible = true;
 						inthenotepad.visible = true;
 						isCameraOnForcedPos = true;
 						camFollow.set(650, 360);
