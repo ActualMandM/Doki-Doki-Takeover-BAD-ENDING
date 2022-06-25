@@ -86,7 +86,7 @@ class CreditsState extends MusicBeatState
 			[
 				'SirDusterBuster',
 				'duster',
-				'Director/Main Artist',
+				'Director/Main Artist/Animator',
 				'https://twitter.com/SirDusterBuster',
 				'A1D8EC'
 			],
@@ -133,32 +133,46 @@ class CreditsState extends MusicBeatState
 				'671FCF'
 			],
 			[
-				'Crim',
-				'crim',
-				'Art Assets - Sayori Sprites',
-				'https://twitter.com/CrimiiCrim',
+				'Omega',
+				'omega',
+				'Artist',
+				'https://twitter.com/ScrimbloCrimbo',
 				'E51154'
 			],
 			[
 				'Raze',
-				'crim',
-				'Art Assets',
+				'omega',
+				'Animator',
 				'https://www.youtube.com/channel/UCC550GafkWljtqAq0UDbYeQ',
-				'E51154'
+				'BF1137'
 			],
 			[
 				'Grand Hammer 6',
-				'crim',
-				'Art Assets',
+				'grand',
+				'Artist/Animator',
 				'https://twitter.com/GrandHammer6',
-				'E51154'
+				'4DEBB4'
 			],
 			[
 				'Ito', 
 				'ito', 
-				'Art Assets - Stages', 
+				'Background Artist', 
 				'https://twitter.com/ItoSaihara_', 
 				'C5005C'
+			],
+			[
+				'Carimelle', 
+				'carimelle', 
+				'Monika VA', 
+				'https://twitter.com/carimellevo', 
+				'C35DC7'
+			],
+			[
+				'Grant Paulsen', 
+				'grant', 
+				'Senpai VA', 
+				'https://twitter.com/grantpaulsenva', 
+				'913BAA8'
 			],
 			[''],
 			['Psych Engine Team'],
