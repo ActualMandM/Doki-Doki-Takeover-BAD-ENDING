@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				148,
-				23
+				19
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Nat Sing Note Left",
-			"indices": []
+			"indices": [],
+			"name": "Nat Sing Note Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				38,
-				-20
+				31,
+				-25
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Nat Sing Note Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Nat Sing Note Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-22,
-				-32
+				-38
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Nat Sing Note DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Nat Sing Note DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				60,
 				59
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Nat Sing Note Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Nat Sing Note Up"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": true,
-			"name": "Nat Idle"
+			"fps": 24,
+			"name": "Nat Idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -70,7 +70,7 @@
 		91
 	],
 	"camera_position": [
-		0,
+		-120,
 		0
 	],
 	"sing_duration": 6,
