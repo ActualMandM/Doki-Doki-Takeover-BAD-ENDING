@@ -121,7 +121,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Kallionic',
 				'kallionic',
-				'Musician - HOME',
+				'Musician - Menu Music and HOME',
 				'https://kallionic.com',
 				'FF4D7D'
 			],
@@ -137,6 +137,20 @@ class CreditsState extends MusicBeatState
 				'crim',
 				'Art Assets - Sayori Sprites',
 				'https://twitter.com/CrimiiCrim',
+				'E51154'
+			],
+			[
+				'Raze',
+				'crim',
+				'Art Assets',
+				'https://www.youtube.com/channel/UCC550GafkWljtqAq0UDbYeQ',
+				'E51154'
+			],
+			[
+				'Grand Hammer 6',
+				'crim',
+				'Art Assets',
+				'https://twitter.com/GrandHammer6',
 				'E51154'
 			],
 			[
