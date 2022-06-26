@@ -140,6 +140,7 @@ class PlayState extends MusicBeatState
 	var daStatic:BGSprite;
 	var redStatic:BGSprite;
 	var inthenotepad:BGSprite;
+	var notepadoverlay:BGSprite;
 	var stageStatic:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
@@ -634,6 +635,9 @@ class PlayState extends MusicBeatState
 				inthenotepad.visible = false;
 				add(inthenotepad);
 
+				notepadoverlay = new BGSprite('notepad_overlay', 0, 0, 1, 1);
+				notepadoverlay.visible = false;
+
 				closet = new BGSprite('clubroom/DDLCfarbg', -700, -520, 0.9, 0.9);
 				closet.setGraphicSize(Std.int(closet.width * 1.6));
 				closet.updateHitbox();
@@ -722,6 +726,7 @@ class PlayState extends MusicBeatState
 
 		if(curStage == 'home')
 		{
+			add(notepadoverlay);
 			add(glitchfront);
 		}
 
@@ -3644,6 +3649,7 @@ class PlayState extends MusicBeatState
 						closet.visible = false;
 						clubroom.visible = false;
 						inthenotepad.visible = false;
+						notepadoverlay.visible = false;
 						boyfriendGroup.x = BF_X;
 						boyfriendGroup.y = BF_Y;
 					case 'markov':
@@ -3695,6 +3701,7 @@ class PlayState extends MusicBeatState
 						//We are going to lock the camera for this event
 						stageStatic.visible = true;
 						inthenotepad.visible = true;
+						notepadoverlay.visible = true;
 						isCameraOnForcedPos = true;
 						camFollow.set(650, 360);
 						camFollowPos.setPosition(650, 360);
