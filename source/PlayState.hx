@@ -4031,13 +4031,13 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(val3))
 					val3 = 0xFFFFFFFF;
 				
-				switch (value1)
+				switch (value1.toLowerCase())
 				{
-					case 'black' | 'Black':
+					case 'black':
 						char.color = FlxColor.BLACK;
-					case 'gray' | 'Gray' | 'Grey' | 'grey':
+					case 'gray' | 'grey':
 						char.color = FlxColor.GRAY;
-					case 'white' | 'White' | 'default':
+					case 'white' | 'default':
 						char.color = FlxColor.WHITE;
 					default:
 						char.color = val3;
