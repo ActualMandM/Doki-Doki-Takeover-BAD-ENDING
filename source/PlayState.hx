@@ -3934,10 +3934,11 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(redStatic, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
 
 			case 'Show death screen':
+				var val1:Float = Std.parseFloat(value2);
 				var val2:Float = Std.parseFloat(value2);
 
 				if (value1 == null || value1 == 'false')
-					imdead.alpha = 0.00001;
+					val1 = 0.00001;
 
 				if (Math.isNaN(val2) || val2 == 0)
 					val2 = 0.0001;
