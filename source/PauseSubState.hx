@@ -47,7 +47,7 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		difficultyChoices.push('BACK');
 
-		pauseMusic = new FlxSound().loadEmbedded(Paths.music('freakyMenu'), true, true);
+		pauseMusic = new FlxSound().loadEmbedded(Paths.music('ghost'), true, true);
 		pauseMusic.volume = 0;
 		pauseMusic.play();
 
