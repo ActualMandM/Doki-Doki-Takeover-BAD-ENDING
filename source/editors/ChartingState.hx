@@ -219,7 +219,8 @@ class ChartingState extends MusicBeatState
 		[
 			'Show death screen',
 			"Self explanitory
-			Value 1: Just set it to 'true' in lowercase"	
+			Value 1: True or false you know what it does.
+			Value 2: Speed of fade in"	
 		],
 		[
 			'UI visibilty',
