@@ -31,7 +31,7 @@ class MainMenuState extends MusicBeatState
 	public static var psychEngineVersion:String = '0.5.1'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
-	var menuItems:FlxTypedGroup<FlxSprite>;
+	var menuItems:FlxTypedGroup<FlxText>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 
@@ -42,6 +42,15 @@ class MainMenuState extends MusicBeatState
 		#end
 		'credits',
 		'options'
+	];
+
+	var textShit:Array<String> = [
+		'Story Mode',
+		'Freeplay',
+		#if ACHIEVEMENTS_ALLOWED 'Achievements',
+		#end
+		'Credits',
+		'Options'
 	];
 
 	public static var firstStart:Bool = true;
@@ -60,7 +69,10 @@ class MainMenuState extends MusicBeatState
 	{
 		#if PUBLIC_BUILD
 		if (!ClientPrefs.storycomplete)
+		{
 			optionShit.remove('freeplay');
+			textShit.remove('Freeplay');
+		}
 		#end
 
 		if (!FlxG.sound.music.playing)
@@ -134,24 +146,18 @@ class MainMenuState extends MusicBeatState
 		else
 			logoBl.x = 40;
 
-		menuItems = new FlxTypedGroup<FlxSprite>();
+		menuItems = new FlxTypedGroup<FlxText>();
 		add(menuItems);
-
-		var tex = Paths.getSparrowAtlas('credits_assets');
 
 		for (i in 0...optionShit.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite(-350, 370 + (i * 50));
-			menuItem.frames = tex;
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
-			menuItem.ID = i;
-			menuItem.scale.set(1.5, 1.5);
-			// menuItem.screenCenter(X);
-			menuItems.add(menuItem);
-			menuItem.scrollFactor.set();
+			var menuItem:FlxText = new FlxText(-350, 370 + (i * 50), 0, textShit[i]);
+			menuItem.setFormat(Paths.font('riffic.ttf'), 27, FlxColor.WHITE, LEFT);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
+			menuItem.setBorderStyle(OUTLINE, 0xFF444444, 2);
+			menuItem.ID = i;
+			menuItems.add(menuItem);
+
 			if (firstStart)
 				FlxTween.tween(menuItem, {x: 50}, 1.2 + (i * 0.2), {
 					ease: FlxEase.elasticOut,
@@ -170,9 +176,6 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "DDTO BAD ENDING v" + Application.current.meta.get('version'), 12);
-		#if STREAMER_DEMO
-		versionShit.text = "DDTO BAD ENDING (STREAMER DEMO)";
-		#end
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -244,12 +247,6 @@ class MainMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
 			}
-
-			#if debug
-			if (FlxG.keys.pressed.I)
-				MusicBeatState.switchState(new DemoThanksState());
-			#end
-
 			
 			if (ctrl && curSelected == 0)
 			{
@@ -261,23 +258,23 @@ class MainMenuState extends MusicBeatState
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
-				menuItems.forEach(function(spr:FlxSprite)
+				menuItems.forEach(function(txt:FlxText)
 				{
-					if (curSelected != spr.ID)
+					if (curSelected != txt.ID)
 					{
-						FlxTween.tween(spr, {alpha: 0}, 1.3, {
+						FlxTween.tween(txt, {alpha: 0}, 1.3, {
 							ease: FlxEase.quadOut,
 							onComplete: function(twn:FlxTween)
 							{
-								spr.kill();
+								txt.kill();
 							}
 						});
 					}
 					else
 					{
-						if (ClientPrefs.flashing)
+						if (FlxG.save.data.flashing)
 						{
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
+							FlxFlicker.flicker(txt, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
 								goToState();
 							});
@@ -314,11 +311,7 @@ class MainMenuState extends MusicBeatState
 		switch (daChoice)
 		{
 			case 'story_mode' | 'story mode':
-				#if STREAMER_DEMO
-				PlayState.storyPlaylist = ['STAGNANT'];
-				#else
 				PlayState.storyPlaylist = ['STAGNANT', 'MARKOV', 'HOME'];
-				#end
 				PlayState.isStoryMode = true;
 				PlayState.storyDifficulty = 0;
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
@@ -361,16 +354,14 @@ class MainMenuState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = optionShit.length - 1;
 
-		menuItems.forEach(function(spr:FlxSprite)
+		menuItems.forEach(function(txt:FlxText)
 		{
-			spr.animation.play('idle');
+			txt.setBorderStyle(OUTLINE, 0xFF444444, 2);
 
-			if (spr.ID == curSelected)
-			{
-				spr.animation.play('selected');
-			}
+			if (txt.ID == curSelected)
+				txt.setBorderStyle(OUTLINE, 0xFFFF0513, 2);
 
-			spr.updateHitbox();
+			txt.updateHitbox();
 		});
 	}
 

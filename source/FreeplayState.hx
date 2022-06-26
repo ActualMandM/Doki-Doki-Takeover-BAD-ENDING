@@ -110,30 +110,6 @@ class FreeplayState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		#if STREAMER_DEMO
-		natsuki = new FlxSprite(37, 0);
-		natsuki.frames = Paths.getSparrowAtlas('freeplay/natsu_static', 'preload');
-		natsuki.animation.addByPrefix('play', 'Static_natsuki', 24, true);
-		natsuki.animation.play('play');
-		natsuki.antialiasing = ClientPrefs.globalAntialiasing;
-		add(natsuki);
-
-		yuri = new FlxSprite(37, 0);
-		yuri.frames = Paths.getSparrowAtlas('freeplay/yuri_static', 'preload');
-		yuri.animation.addByPrefix('play', 'static_yuri', 24, true);
-		yuri.animation.play('play');
-		yuri.antialiasing = ClientPrefs.globalAntialiasing;
-		add(yuri);
-
-		var yurihair:FlxSprite = new FlxSprite(107, 0);
-		yurihair.frames = Paths.getSparrowAtlas('freeplay/yurihair_static', 'preload');
-		yurihair.animation.addByPrefix('play', 'sayso_static', 24, true);
-		yurihair.animation.play('play');
-		yurihair.antialiasing = ClientPrefs.globalAntialiasing;
-		add(yurihair);
-
-		sayori = new FlxSprite().loadGraphic(Paths.image('freeplay/sayso_noyuri', 'preload'));
-		#else
 		natsuki = new FlxSprite().loadGraphic(Paths.image('freeplay/natsu', 'preload'));
 		natsuki.setPosition(37, 0);
 		natsuki.antialiasing = ClientPrefs.globalAntialiasing;
@@ -145,7 +121,6 @@ class FreeplayState extends MusicBeatState
 		add(yuri);
 
 		sayori = new FlxSprite().loadGraphic(Paths.image('freeplay/sayso', 'preload'));
-		#end
 
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
 		vignette.alpha = 0.8;
@@ -476,37 +451,29 @@ class FreeplayState extends MusicBeatState
 				yuritween = FlxTween.tween(yuri, {x: 177}, 0.25);
 				natsukitween = FlxTween.tween(natsuki, {x: 37}, 0.25);
 				
-				#if !STREAMER_DEMO
 				yuritween = FlxTween.color(yuri, 0.25, yuri.color, 0xFF444444);
 				natsukitween = FlxTween.color(natsuki, 0.25, natsuki.color, 0xFF444444);
-				#end
 				sayoritween = FlxTween.color(sayori, 0.25, sayori.color, 0xFFffffff);
 			case 'home':
 				yuritween = FlxTween.tween(yuri, {x: 177}, 0.25);
 				natsukitween = FlxTween.tween(natsuki, {x: 107}, 0.25);
 
-				#if !STREAMER_DEMO
 				yuritween = FlxTween.color(yuri, 0.25, yuri.color, 0xFF444444);
 				natsukitween = FlxTween.color(natsuki, 0.25, natsuki.color, 0xFFffffff);
-				#end
 				sayoritween = FlxTween.color(sayori, 0.25, sayori.color, 0xFF444444);
 			case 'markov':
 				yuritween = FlxTween.tween(yuri, {x: 107}, 0.25);
 				natsukitween = FlxTween.tween(natsuki, {x: 37}, 0.25);
 
-				#if !STREAMER_DEMO
 				yuritween = FlxTween.color(yuri, 0.25, yuri.color, 0xFFffffff);
 				natsukitween = FlxTween.color(natsuki, 0.25, natsuki.color, 0xFF444444);
-				#end
 				sayoritween = FlxTween.color(sayori, 0.25, sayori.color, 0xFF444444);
 			default:
 				yuritween = FlxTween.tween(yuri, {x: 177}, 0.25);
 				natsukitween = FlxTween.tween(natsuki, {x: 37}, 0.25);
 
-				#if !STREAMER_DEMO
 				yuritween = FlxTween.color(yuri, 0.25, yuri.color, 0xFF444444);
 				natsukitween = FlxTween.color(natsuki, 0.25, natsuki.color, 0xFF444444);
-				#end
 				sayoritween = FlxTween.color(sayori, 0.25, sayori.color, 0xFF444444);
 		}
 
