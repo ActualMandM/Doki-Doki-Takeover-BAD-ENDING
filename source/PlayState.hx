@@ -166,6 +166,7 @@ class PlayState extends MusicBeatState
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
 
 	public var camZooming:Bool = false;
+	var forcecamZooming:Bool = true;
 
 	private var curSong:String = "";
 
@@ -1370,17 +1371,6 @@ class PlayState extends MusicBeatState
 					startCharacterPos(newBoyfriend);
 					newBoyfriend.alpha = 0.00001;
 					startCharacterLua(newBoyfriend.curCharacter);
-
-					if (newBoyfriend.gameoverchara != null && boyfriend.gameoverchara != '' && !boyfriendMap.exists(newBoyfriend.gameoverchara))
-					{
-						trace(newBoyfriend.gameoverchara);
-						var newGOBoyfriend:Boyfriend = new Boyfriend(0, 0, newBoyfriend.gameoverchara);
-						boyfriendMap.set(newCharacter, newGOBoyfriend);
-						boyfriendGroup.add(newGOBoyfriend);
-						startCharacterPos(newGOBoyfriend);
-						newGOBoyfriend.alpha = 0.00001;
-						startCharacterLua(newGOBoyfriend.curCharacter);
-					}
 				}
 
 			case 1:
@@ -3705,7 +3695,7 @@ class PlayState extends MusicBeatState
 					case 'ruined' | 'ruinedclub':
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
-						if (!ClientPrefs.lowQuality) evilSpace.visible = true;
+						stageStatic.visible = true;
 						ruinedClubBG.visible = true;
 						glitchfront.visible = true;
 						glitchback.visible = true;
@@ -3958,7 +3948,8 @@ class PlayState extends MusicBeatState
 
 				if (Math.isNaN(val2) || val2 == 0)
 					val2 = 0.0001;
-
+				forcecamZooming = false;
+				camZooming = false;
 				FlxTween.tween(imdead, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
 
 
@@ -5020,7 +5011,7 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
+		if (Paths.formatToSongPath(SONG.song) != 'tutorial' && forcecamZooming)
 			camZooming = true;
 
 		if (note.noteType == 'Hey!' && dad.animOffsets.exists('hey'))

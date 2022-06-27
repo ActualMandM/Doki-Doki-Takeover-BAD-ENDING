@@ -197,5 +197,6 @@
 	],
 	"sing_duration": 4,
 	"scale": 1,
-	"gameover_Character": "gameover-bf-floormic"
+	"gameover_Character": "gameover-bf-floormic",
+	"death_Sound": "ddto_loss_sfx"
 }

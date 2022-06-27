@@ -458,6 +458,17 @@
 				]
 			],
 			[
+				97125,
+				[
+					[
+						"Screen in Darkness",
+						"1",
+						"0.1",
+						""
+					]
+				]
+			],
+			[
 				97200,
 				[
 					[
@@ -493,6 +504,23 @@
 						"Change Scroll Speed",
 						"1",
 						"0.2"
+					],
+					[
+						"Change Character",
+						"dad",
+						"natsuki",
+						""
+					]
+				]
+			],
+			[
+				97725,
+				[
+					[
+						"Screen in Darkness",
+						"0",
+						"0.5",
+						""
 					]
 				]
 			],
@@ -571,7 +599,7 @@
 					],
 					[
 						"Move Boyfriend Tween",
-						"520",
+						"550",
 						"100",
 						"0.2"
 					],
@@ -591,6 +619,18 @@
 						"Add/Remove Vignette",
 						"0.4",
 						"0.2",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-home",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"natsuki-home",
 						""
 					]
 				]
@@ -1133,7 +1173,7 @@
 					[
 						"Change Character",
 						"bf",
-						"sadbf",
+						"bf-home",
 						""
 					],
 					[
@@ -1325,12 +1365,23 @@
 				]
 			],
 			[
+				217200,
+				[
+					[
+						"Screen in Darkness",
+						"1",
+						"2",
+						""
+					]
+				]
+			],
+			[
 				219600,
 				[
 					[
 						"Show death screen",
-						"true",
-						"",
+						"1",
+						"0.1",
 						""
 					]
 				]
