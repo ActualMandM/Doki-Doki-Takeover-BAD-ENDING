@@ -32,6 +32,8 @@ typedef CharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
+	var gameover_Character:String;
+	var death_Sound:String;
 }
 
 typedef AnimArray = {
@@ -61,7 +63,8 @@ class Character extends FlxSprite
 	public var singDuration:Float = 4; //Multiplier of how long a character holds the sing pose
 	public var idleSuffix:String = '';
 	public var danceIdle:Bool = false; //Character use "danceLeft" and "danceRight" instead of "idle"
-
+	public var gameoverchara:String = 'bf';
+	public var deathsound:String = 'fnf_loss_sfx';
 	public var healthIcon:String = 'face';
 	public var animationsArray:Array<AnimArray> = [];
 
@@ -165,6 +168,9 @@ class Character extends FlxSprite
 
 				positionArray = json.position;
 				cameraPosition = json.camera_position;
+
+				gameoverchara = json.gameover_Character;
+				deathsound = json.death_Sound;
 
 				healthIcon = json.healthicon;
 				singDuration = json.sing_duration;

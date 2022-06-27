@@ -74,5 +74,8 @@
 		0
 	],
 	"sing_duration": 6,
-	"scale": 1
+	"scale": 1,
+	"gameover_Character": "gameover-bf-micless",
+	"death_Sound": "ddto_loss_sfx"
+	
 }

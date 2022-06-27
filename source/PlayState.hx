@@ -1363,12 +1363,24 @@ class PlayState extends MusicBeatState
 			case 0:
 				if (!boyfriendMap.exists(newCharacter))
 				{
+					trace(newCharacter);
 					var newBoyfriend:Boyfriend = new Boyfriend(0, 0, newCharacter);
 					boyfriendMap.set(newCharacter, newBoyfriend);
 					boyfriendGroup.add(newBoyfriend);
 					startCharacterPos(newBoyfriend);
 					newBoyfriend.alpha = 0.00001;
 					startCharacterLua(newBoyfriend.curCharacter);
+
+					if (newBoyfriend.gameoverchara != null && boyfriend.gameoverchara != '' && !boyfriendMap.exists(newBoyfriend.gameoverchara))
+					{
+						trace(newBoyfriend.gameoverchara);
+						var newGOBoyfriend:Boyfriend = new Boyfriend(0, 0, newBoyfriend.gameoverchara);
+						boyfriendMap.set(newCharacter, newGOBoyfriend);
+						boyfriendGroup.add(newGOBoyfriend);
+						startCharacterPos(newGOBoyfriend);
+						newGOBoyfriend.alpha = 0.00001;
+						startCharacterLua(newGOBoyfriend.curCharacter);
+					}
 				}
 
 			case 1:
@@ -3085,6 +3097,10 @@ class PlayState extends MusicBeatState
 				{
 					timer.active = true;
 				}
+				if (boyfriend.gameoverchara != null && boyfriend.gameoverchara != '')
+					GameOverSubstate.characterName = boyfriend.gameoverchara;
+				if (boyfriend.deathsound != null && boyfriend.gameoverchara != '')
+					GameOverSubstate.deathSoundName = boyfriend.deathsound;
 				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0],
 					boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
 
