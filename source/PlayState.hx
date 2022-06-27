@@ -1371,6 +1371,9 @@ class PlayState extends MusicBeatState
 					startCharacterPos(newBoyfriend);
 					newBoyfriend.alpha = 0.00001;
 					startCharacterLua(newBoyfriend.curCharacter);
+
+					if (newBoyfriend.gameoverchara != null && boyfriend.gameoverchara != '' && !boyfriendMap.exists(newBoyfriend.gameoverchara))
+						addCharacterToList(newBoyfriend.gameoverchara, 0);
 				}
 
 			case 1:
