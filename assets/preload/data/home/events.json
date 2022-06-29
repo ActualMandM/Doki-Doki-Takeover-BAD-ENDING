@@ -233,6 +233,12 @@
 						"0.5",
 						"1.8",
 						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"natsuki-sad",
+						"I'm not sorry hueh"
 					]
 				]
 			],
@@ -486,6 +492,17 @@
 				]
 			],
 			[
+				56400,
+				[
+					[
+						"Play Animation",
+						"eyes",
+						"dad",
+						""
+					]
+				]
+			],
+			[
 				57600,
 				[
 					[
@@ -581,7 +598,7 @@
 					[
 						"Change Character",
 						"dad",
-						"natsuki",
+						"natsuki-sad",
 						""
 					]
 				]
