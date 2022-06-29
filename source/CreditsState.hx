@@ -141,7 +141,7 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Raze',
-				'omega',
+				'raze',
 				'Animator',
 				'https://www.youtube.com/channel/UCC550GafkWljtqAq0UDbYeQ',
 				'BF1137'
