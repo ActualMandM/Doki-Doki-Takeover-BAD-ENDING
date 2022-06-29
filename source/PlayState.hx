@@ -4423,8 +4423,9 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-					if (curSong == 'home')
+					if (curSong.toLowerCase() == 'home' && !ClientPrefs.storycomplete)
 					{
+						trace('SETTY SET');
 						ClientPrefs.storycomplete = true;
 						ClientPrefs.saveSettings();
 					}
