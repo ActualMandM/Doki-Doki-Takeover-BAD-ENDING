@@ -168,10 +168,10 @@ class CreditsState extends MusicBeatState
 				'C35DC7'
 			],
 			[
-				'Grant Paulsen', 
-				'grant', 
-				'Senpai VA', 
-				'https://twitter.com/grantpaulsenva', 
+				'Max0KE', 
+				'max', 
+				'Playtesting', 
+				'https://twitter.com/MaxOKE_', 
 				'913BAA8'
 			],
 			[''],
