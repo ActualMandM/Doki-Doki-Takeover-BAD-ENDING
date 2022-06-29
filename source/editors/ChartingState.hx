@@ -239,6 +239,14 @@ class ChartingState extends MusicBeatState
 			"Self explanitory
 			Value 1:Summons 'sayori' or 'yuri'
 			Value 2: Speed of their appearance."
+		],
+		[
+			'Cat Doodles Stuff',
+			"
+				value 1 handles alpha
+				value 2 speed
+				value 3 kills the cats (Leave empty for it to not function smile)
+			"
 		]
 	];
 

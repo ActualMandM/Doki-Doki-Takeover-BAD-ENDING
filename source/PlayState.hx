@@ -142,6 +142,7 @@ class PlayState extends MusicBeatState
 	var inthenotepad:BGSprite;
 	var notepadoverlay:BGSprite;
 	var stageStatic:BGSprite;
+	var bakaOverlay:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
 
@@ -630,6 +631,17 @@ class PlayState extends MusicBeatState
 					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
+
+					bakaOverlay = new BGSprite('BakaBGDoodles', 0, 0, 1, 1, ['Normal Overlay'], true);
+					bakaOverlay.animation.addByPrefix('hueh', 'HOME Overlay', 24, false);
+					bakaOverlay.antialiasing = ClientPrefs.globalAntialiasing;
+					bakaOverlay.visible = true;
+					bakaOverlay.alpha = 0.0001;
+					bakaOverlay.cameras = [camHUD];
+					bakaOverlay.setGraphicSize(Std.int(FlxG.width));
+					bakaOverlay.updateHitbox();
+					bakaOverlay.screenCenter();
+					add(bakaOverlay);
 				}
 
 				inthenotepad = new BGSprite('notepad', 0, 0, 1, 1);
@@ -2316,7 +2328,7 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (!FlxG.autoPause && !paused && canPause && startedCountdown && !cpuControlled)
+		if (!FlxG.autoPause && !paused && canPause && startedCountdown && !cpuControlled && !inCutscene)
 		{
 			pauseState();
 		}
@@ -3980,9 +3992,12 @@ class PlayState extends MusicBeatState
 					scoreTxt.visible = true;
 					if (cpuControlled)
 						botplayTxt.visible = true;
-					timeBar.visible = true;
-					timeBarBG.visible = true;
-					timeTxt.visible = true;
+					if (!isStoryMode)
+					{
+						timeBar.visible = true;
+						timeBarBG.visible = true;
+						timeTxt.visible = true;
+					}
 				}
 			case 'Force Dance':
 				var char:Character = dad;
@@ -4087,7 +4102,30 @@ class PlayState extends MusicBeatState
 					val2 = 0.0001;
 
 				FlxTween.tween(char, {alpha: 1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+			case 'Cat Doodles Stuff':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				//value 1 handles alpha
+				//value 2 speed
+				//value 3 kills the cats
 
+				if (Math.isNaN(val1) || val1 == 0)
+					val1 = 0.00001;
+
+				if (Math.isNaN(val2) || val2 == 0)
+					val2 = 0.0001;
+
+				if (value3 == null || value3 == '')
+					FlxTween.tween(bakaOverlay, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+
+				if (value3 != null && value3 != '')
+				{
+					bakaOverlay.animation.play('hueh');
+					new FlxTimer().start(2, function(tmr:FlxTimer)
+					{
+						bakaOverlay.alpha = 0;
+					});
+				}
 			case 'Strumline Visibility':
 				
 				var strum:FlxTypedGroup<StrumNote>;
@@ -5535,7 +5573,7 @@ class PlayState extends MusicBeatState
 		{
 			moveCameraSection(Std.int(curStep / 16));
 		}
-		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0)
+		if (camZooming && FlxG.camera.zoom < 2 && ClientPrefs.camZooms && curBeat % 4 == 0)
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;

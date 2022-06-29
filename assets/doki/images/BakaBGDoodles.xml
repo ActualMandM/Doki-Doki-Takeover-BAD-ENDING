@@ -38,17 +38,17 @@
 	<SubTexture name="HOME Overlay0033" x="5" y="1370" width="616" height="287" frameX="-36" frameY="-109" frameWidth="679" frameHeight="450"/>
 	<SubTexture name="HOME Overlay0034" x="5" y="1370" width="616" height="287" frameX="-36" frameY="-109" frameWidth="679" frameHeight="450"/>
 	<SubTexture name="HOME Overlay0035" x="5" y="1370" width="616" height="287" frameX="-36" frameY="-109" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0036" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0037" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0038" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0039" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0040" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0041" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0042" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0043" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0044" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0045" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
-	<SubTexture name="HOME Overlay0046" x="626" y="1370" width="0" height="0" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0036" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0037" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0038" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0039" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0040" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0041" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0042" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0043" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0044" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0045" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
+	<SubTexture name="HOME Overlay0046" x="0" y="0" width="1" height="1" frameX="-402" frameY="-272" frameWidth="679" frameHeight="450"/>
 	<SubTexture name="Normal Overlay0000" x="631" y="1370" width="681" height="437"/>
 	<SubTexture name="Normal Overlay0001" x="631" y="1370" width="681" height="437"/>
 	<SubTexture name="Normal Overlay0002" x="631" y="1370" width="681" height="437"/>

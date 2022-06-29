@@ -100,6 +100,12 @@
 						"dad",
 						"1",
 						"0.7"
+					],
+					[
+						"Cat Doodles Stuff",
+						"1",
+						"1",
+						""
 					]
 				]
 			],
@@ -170,6 +176,42 @@
 						"dad",
 						"0",
 						"0"
+					],
+					[
+						"Cat Doodles Stuff",
+						"",
+						"",
+						"hueh"
+					],
+					[
+						"Change Stagnant Stage",
+						"poem",
+						"",
+						""
+					],
+					[
+						"Character Visibility",
+						"dad",
+						"0",
+						"0"
+					],
+					[
+						"Character Visibility",
+						"bf",
+						"0",
+						"0"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"0",
+						"0"
+					],
+					[
+						"Glitch Effect",
+						"0.2",
+						"",
+						""
 					]
 				]
 			],
@@ -184,12 +226,13 @@
 				]
 			],
 			[
-				36900,
+				35325,
 				[
 					[
-						"Change Camera Zoom",
-						"0.75",
-						"0.2"
+						"Red Static",
+						"0.5",
+						"1.8",
+						""
 					]
 				]
 			],
@@ -253,6 +296,36 @@
 						"UI visibilty",
 						"true",
 						"",
+						""
+					],
+					[
+						"Character Visibility",
+						"dad",
+						"1",
+						"0"
+					],
+					[
+						"Character Visibility",
+						"bf",
+						"1",
+						"0"
+					],
+					[
+						"Character Visibility",
+						"gf",
+						"1",
+						"0"
+					],
+					[
+						"Glitch Effect",
+						"0.2",
+						"",
+						""
+					],
+					[
+						"Red Static",
+						"0",
+						".1",
 						""
 					]
 				]
@@ -1389,6 +1462,12 @@
 						"bf",
 						"0",
 						"0"
+					],
+					[
+						"Red Static",
+						"1",
+						"0.1",
+						""
 					]
 				]
 			]
