@@ -1672,6 +1672,9 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
+		// disable filters on the caching camera
+		camCache.filtersEnabled = false;
+
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if (ret != FunkinLua.Function_Stop)
@@ -1861,9 +1864,6 @@ class PlayState extends MusicBeatState
 	function startSong():Void
 	{
 		startingSong = false;
-
-		// disable filters on the caching camera
-		camCache.filtersEnabled = false;
 
 		previousFrameTime = FlxG.game.ticks;
 		lastReportedPlayheadPosition = 0;
@@ -4313,6 +4313,7 @@ class PlayState extends MusicBeatState
 			{
 				case 'home':
 					trace('home check');
+					FlxG.camera.fade(FlxColor.BLACK, 0.1, false);
 					startVideo('ending');
 				default:
 					endSong();
