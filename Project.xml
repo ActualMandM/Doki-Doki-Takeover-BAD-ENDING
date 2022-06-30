@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Doki Doki Takeover! - BAD ENDING" file="DokiTakeover" package="com.ddtoteam.dokitakeover" main="Main" version="1.0.0" company="DDTO Team" />
+	<app title="Friday Night Funkin': Doki Doki Takeover! - BAD ENDING" file="DokiTakeover" package="com.teamtbd.dokitakeover" main="Main" version="1.0.0" company="Team TBD" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -34,11 +34,6 @@
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
-
-	<!-- _____________________________ DDTO Settings ____________________________ -->
-
-	<!-- Defines whether or not this is a public build. -->
-	<define name="PUBLIC_BUILD" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 

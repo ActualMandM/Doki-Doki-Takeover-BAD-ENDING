@@ -164,7 +164,7 @@ class TitleState extends MusicBeatState
 
 		if (!loadedPrefs)
 		{
-			FlxG.save.bind('badending', 'ddtoteam');
+			FlxG.save.bind('badending', 'teamtbd');
 			ClientPrefs.loadPrefs();
 			loadedPrefs = true;
 			trace('ONLY LOAD THIS ONCE');
@@ -618,11 +618,7 @@ class TitleState extends MusicBeatState
 			switch (sickBeats)
 			{
 				case 1:
-					#if PSYCH_WATERMARKS
 					createCoolText([''], 15);
-					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-					#end
 				// credTextShit.visible = true;
 				case 3:
 					addMoreText('Team TBD', 15);
