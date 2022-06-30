@@ -73,6 +73,13 @@ class MainMenuState extends MusicBeatState
 			optionShit.remove('freeplay');
 			textShit.remove('Freeplay');
 		}
+		else
+		{
+			//I'm making sure it SAVES. Im tired of this dumb game not saving settings
+			ClientPrefs.storycomplete = true;
+			ClientPrefs.firststart = false;
+			ClientPrefs.saveSettings();
+		}
 		#end
 
 		if (!FlxG.sound.music.playing)
@@ -235,6 +242,25 @@ class MainMenuState extends MusicBeatState
 		if (!selectedSomethin)
 		{
 			var ctrl = FlxG.keys.justPressed.CONTROL;
+
+			#if debug
+			if (FlxG.keys.justPressed.O)
+			{
+				trace('unlock all');
+				ClientPrefs.storycomplete = true;
+				ClientPrefs.firststart = false;
+				ClientPrefs.saveSettings();
+			}
+
+			if (FlxG.keys.justPressed.P)
+			{
+				trace('lock all');
+				ClientPrefs.storycomplete = false;
+				ClientPrefs.firststart = true;
+				ClientPrefs.saveSettings();
+			}
+			#end
+
 
 			if (controls.UI_UP_P)
 			{

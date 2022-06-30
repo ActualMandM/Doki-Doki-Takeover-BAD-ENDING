@@ -568,7 +568,7 @@ class PlayState extends MusicBeatState
 				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
 				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
 				evilClubBGScribbly.visible = false;
-				evilClubBGScribbly.alpha = 0;
+				evilClubBGScribbly.alpha = 0.0001;
 				add(evilClubBGScribbly);
 
 				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
@@ -1182,15 +1182,15 @@ class PlayState extends MusicBeatState
 		switch (daSong)
 		{
 			case 'stagnant' | 'markov' | 'home': //This is for the dark start thing
-				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-				add(darkScreen);
-				darkScreen.cameras = [camHUD];
-
 				imdead = new FlxSprite(0, 0).loadGraphic(Paths.image('everyoneisdead', 'doki'));
 				imdead.scrollFactor.set();
 				imdead.cameras = [camHUD];
 				imdead.alpha = 0.00001;
 				add(imdead);
+
+				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+				add(darkScreen);
+				darkScreen.cameras = [camHUD];
 		}
 
 		
@@ -3164,22 +3164,20 @@ class PlayState extends MusicBeatState
 				if (darkScreen != null)
 				{
 					var val1:Float = Std.parseFloat(value1);
+					var val2:Float = Std.parseFloat(value2);
 
 					if (Math.isNaN(val1) || val1 == 0)
 					{
 						val1 = 0.0001;
-						remove(darkScreen);
+					}
+					if (Math.isNaN(val2) || val2 == 0)
+					{
+						val2 = 0.0001;
 					}
 					
 					if (val1 != 0)
 					{
-						FlxTween.tween(darkScreen, {alpha: 0}, val1, {
-							ease: FlxEase.linear,
-							onComplete: function(twn:FlxTween)
-							{
-								remove(darkScreen);
-							}
-						});
+						FlxTween.tween(darkScreen, {alpha: val2}, val1, {ease: FlxEase.linear});
 					}
 				}
 			case 'Screen in Darkness':
@@ -3685,7 +3683,7 @@ class PlayState extends MusicBeatState
 						clubroom.visible = false;
 				}
 				
-				evilClubBGScribbly.alpha = 0;
+				evilClubBGScribbly.alpha = 0.0001;
 
 				switch (value1)
 				{
@@ -4312,6 +4310,8 @@ class PlayState extends MusicBeatState
 			switch (Paths.formatToSongPath(curSong))
 			{
 				case 'home':
+					ClientPrefs.storycomplete = true;
+					ClientPrefs.saveSettings();
 					trace('home check');
 					FlxG.camera.fade(FlxColor.BLACK, 0.1, false);
 					startVideo('ending');
@@ -4423,35 +4423,14 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
-					if (curSong.toLowerCase() == 'home' && !ClientPrefs.storycomplete)
-					{
-						trace('SETTY SET');
-						ClientPrefs.storycomplete = true;
-						ClientPrefs.saveSettings();
-					}
-
 					cancelMusicFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
 					if (FlxTransitionableState.skipNextTransIn)
 					{
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new MainMenuState());
-
-					// if ()
-					if (!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false))
-					{
-						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
-
-						if (SONG.validScore)
-						{
-							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
-						}
-
-						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
-						FlxG.save.flush();
-					}
 					changedDifficulty = false;
+					MusicBeatState.switchState(new MainMenuState());
 				}
 				else
 				{
@@ -4459,18 +4438,6 @@ class PlayState extends MusicBeatState
 
 					trace('LOADING NEXT SONG');
 					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
-
-					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
-					if (winterHorrorlandNext)
-					{
-						var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-							-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-						blackShit.scrollFactor.set();
-						add(blackShit);
-						camHUD.visible = false;
-
-						FlxG.sound.play(Paths.sound('Lights_Shut_off'));
-					}
 
 					FlxTransitionableState.skipNextTransIn = true;
 					FlxTransitionableState.skipNextTransOut = true;
@@ -4481,19 +4448,8 @@ class PlayState extends MusicBeatState
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
 
-					if (winterHorrorlandNext)
-					{
-						new FlxTimer().start(1.5, function(tmr:FlxTimer)
-						{
-							cancelMusicFadeTween();
-							LoadingState.loadAndSwitchState(new PlayState());
-						});
-					}
-					else
-					{
-						cancelMusicFadeTween();
-						LoadingState.loadAndSwitchState(new PlayState());
-					}
+					cancelMusicFadeTween();
+					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			}
 			else

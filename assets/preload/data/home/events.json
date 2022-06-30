@@ -1487,6 +1487,17 @@
 						""
 					]
 				]
+			],
+			[
+				224400,
+				[
+					[
+						"remove darkScreen",
+						"3",
+						"1",
+						"We can now bring it back. Hidden feature hueh"
+					]
+				]
 			]
 		],
 		"notes": [],

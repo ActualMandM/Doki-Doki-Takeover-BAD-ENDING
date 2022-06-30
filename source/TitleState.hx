@@ -79,6 +79,7 @@ class TitleState extends MusicBeatState
 	var lastKeysPressed:Array<FlxKey> = [];
 
 	var mustUpdate:Bool = false;
+	public static var loadedPrefs:Bool = false;
 
 	var titleJSON:TitleData;
 
@@ -160,8 +161,17 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('dokitakeover', 'ddtoteam');
-		ClientPrefs.loadPrefs();
+
+		if (!loadedPrefs)
+		{
+			FlxG.save.bind('badending', 'ddtoteam');
+			ClientPrefs.loadPrefs();
+			loadedPrefs = true;
+			trace('ONLY LOAD THIS ONCE');
+			trace(FlxG.save.data.firststart + ' First Start');
+			trace(FlxG.save.data.storycomplete + ' Story Complete');
+		}
+		
 
 		Highscore.load();
 

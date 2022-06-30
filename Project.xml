@@ -38,7 +38,7 @@
 	<!-- _____________________________ DDTO Settings ____________________________ -->
 
 	<!-- Defines whether or not this is a public build. -->
-	<!-- <define name="PUBLIC_BUILD" /> -->
+	<define name="PUBLIC_BUILD" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
