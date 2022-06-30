@@ -1200,6 +1200,7 @@ class PlayState extends MusicBeatState
 		
 		if (isStoryMode && !seenCutscene)
 		{
+			seenCutscene = true;
 			switch (daSong)
 			{
 				case "monster":
@@ -1265,7 +1266,6 @@ class PlayState extends MusicBeatState
 				default:
 					startCountdown();
 			}
-			seenCutscene = true;
 		}
 		else
 		{
