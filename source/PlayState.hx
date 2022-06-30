@@ -673,7 +673,7 @@ class PlayState extends MusicBeatState
 				evilPoem.visible = false;
 				add(evilPoem);
 
-				glitchback = new BGSprite('ruinedclub/glitchback1', -220, -110, 0.9, 1);
+				glitchback = new BGSprite('ruinedclub/glitchback1', -220, -110, 0.6, 1);
 				glitchback.setGraphicSize(Std.int(glitchback.width * 1.3));
 				glitchback.visible = false;
 				add(glitchback);
@@ -683,7 +683,7 @@ class PlayState extends MusicBeatState
 				ruinedClubBG.visible = false;
 				add(ruinedClubBG);
 
-				glitchfront = new BGSprite('ruinedclub/glitchfront1', -220, -110, 1, 1);
+				glitchfront = new BGSprite('ruinedclub/glitchfront1', -220, -110, 1.2, 1);
 				glitchfront.setGraphicSize(Std.int(glitchfront.width * 1.3));
 				glitchfront.visible = false;
 
