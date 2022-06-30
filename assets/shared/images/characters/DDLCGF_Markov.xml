@@ -2,18 +2,93 @@
 <TextureAtlas imagePath="DDLCGF_Markov.png">
 	<!-- Created with Adobe Animate version 22.0.5.191 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="GF Markov Idle0000" x="5" y="5" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0001" x="5" y="5" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0002" x="798" y="5" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0003" x="798" y="5" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0004" x="1584" y="5" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0005" x="2453" y="5" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0006" x="5" y="688" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0007" x="5" y="688" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0008" x="864" y="688" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0009" x="864" y="688" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0010" x="1737" y="688" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0011" x="1737" y="688" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0012" x="2528" y="688" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
-	<SubTexture name="GF Markov Idle0013" x="2528" y="688" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Home0000" x="5" y="5" width="703" height="609"/>
+	<SubTexture name="GF Home0001" x="5" y="5" width="703" height="609"/>
+	<SubTexture name="GF Home0002" x="713" y="5" width="699" height="600" frameX="-2" frameY="-9" frameWidth="703" frameHeight="609"/>
+	<SubTexture name="GF Home0003" x="713" y="5" width="699" height="600" frameX="-2" frameY="-9" frameWidth="703" frameHeight="609"/>
+	<SubTexture name="GF Home0004" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0005" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0006" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0007" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0008" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0009" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0010" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0011" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0012" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Home0013" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-6" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0000" x="1417" y="5" width="703" height="637" frameX="0" frameY="-12" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0001" x="1417" y="5" width="703" height="637" frameX="0" frameY="-12" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0002" x="2125" y="5" width="699" height="649" frameX="-2" frameY="0" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0003" x="2125" y="5" width="699" height="649" frameX="-2" frameY="0" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0004" x="2829" y="5" width="699" height="647" frameX="-2" frameY="-2" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0005" x="2829" y="5" width="699" height="647" frameX="-2" frameY="-2" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0006" x="5" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0007" x="5" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0008" x="709" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0009" x="709" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0010" x="1413" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0011" x="1413" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0012" x="2117" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0013" x="2117" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0014" x="1413" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0015" x="1413" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0016" x="2117" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0017" x="2117" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0018" x="5" y="659" width="699" height="645" frameX="-2" frameY="-4" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0019" x="2821" y="659" width="699" height="620" frameX="-2" frameY="-29" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0020" x="2821" y="659" width="699" height="620" frameX="-2" frameY="-29" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0021" x="5" y="1309" width="699" height="632" frameX="-2" frameY="-17" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0022" x="5" y="1309" width="699" height="632" frameX="-2" frameY="-17" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0023" x="709" y="1309" width="699" height="631" frameX="-2" frameY="-18" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0024" x="709" y="1309" width="699" height="631" frameX="-2" frameY="-18" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0025" x="1413" y="1309" width="699" height="629" frameX="-2" frameY="-20" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0026" x="1413" y="1309" width="699" height="629" frameX="-2" frameY="-20" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0027" x="2117" y="1309" width="703" height="620" frameX="0" frameY="-29" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0028" x="2117" y="1309" width="703" height="620" frameX="0" frameY="-29" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0029" x="2825" y="1309" width="699" height="594" frameX="-2" frameY="-55" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0030" x="2825" y="1309" width="699" height="594" frameX="-2" frameY="-55" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0031" x="5" y="1946" width="699" height="599" frameX="-2" frameY="-50" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0032" x="5" y="1946" width="699" height="599" frameX="-2" frameY="-50" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0033" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0034" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0035" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0036" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0037" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0038" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0039" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0040" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0041" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0042" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0043" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0044" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0045" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0046" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0047" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0048" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0049" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0050" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0051" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0052" x="1413" y="1946" width="703" height="603" frameX="0" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0053" x="1413" y="1946" width="703" height="603" frameX="0" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0054" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0055" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0056" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0057" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0058" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0059" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov End0060" x="709" y="1946" width="699" height="603" frameX="-2" frameY="-46" frameWidth="703" frameHeight="649"/>
+	<SubTexture name="GF Markov Idle0000" x="2121" y="1946" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0001" x="2121" y="1946" width="788" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0002" x="2914" y="1946" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0003" x="2914" y="1946" width="781" height="663" frameX="-87" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0004" x="5" y="2629" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0005" x="874" y="2629" width="864" height="650" frameX="-44" frameY="0" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0006" x="1743" y="2629" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0007" x="1743" y="2629" width="854" height="654" frameX="-49" frameY="-4" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0008" x="2602" y="2629" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0009" x="2602" y="2629" width="868" height="648" frameX="-42" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0010" x="5" y="3288" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0011" x="5" y="3288" width="786" height="678" frameX="0" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0012" x="796" y="3288" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
+	<SubTexture name="GF Markov Idle0013" x="796" y="3288" width="781" height="662" frameX="-87" frameY="-1" frameWidth="910" frameHeight="679"/>
 </TextureAtlas>

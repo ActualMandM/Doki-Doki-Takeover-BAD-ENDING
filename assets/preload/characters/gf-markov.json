@@ -1,26 +1,48 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
-			"anim": "danceLeft",
+			"loop": false,
 			"fps": 24,
-			"name": "GF Markov Idle",
-			"indices": []
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "GF Markov Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 24,
-			"name": "GF Markov Idle",
-			"indices": []
+			"anim": "danceRight",
+			"indices": [],
+			"name": "GF Markov Idle"
+		},
+		{
+			"offsets": [
+				-87,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "end",
+			"loop": false,
+			"name": "GF Markov End"
+		},
+		{
+			"offsets": [
+				-86,
+				-38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "home",
+			"loop": true,
+			"name": "GF Home"
 		}
 	],
 	"no_antialiasing": false,
