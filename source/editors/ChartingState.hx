@@ -247,6 +247,11 @@ class ChartingState extends MusicBeatState
 				value 2 speed
 				value 3 kills the cats (Leave empty for it to not function smile)
 			"
+		],
+		[
+			'Toggle Note Camera Movement',
+			"Self explanitory
+			True or False is the toggle"
 		]
 	];
 

@@ -287,6 +287,11 @@ class PlayState extends MusicBeatState
 
 	public var defaultCamZoom:Float = 1.05;
 	var defaultStageZoom:Float = 1.05;
+	
+	//Thank you Holofunk dev team. Y'all the greatest
+	var noteCam:Bool = false;
+	public var camNoteX:Float = 0;
+	public var camNoteY:Float = 0;
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -617,8 +622,7 @@ class PlayState extends MusicBeatState
 				swagShader = new ColorSwap();
 				swagShader.saturation = -100;
 
-				stageStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 1.0, 1.0, ['HomeStatic'], true);
-				//stageStatic.setGraphicSize(FlxG.width, FlxG.height);
+				stageStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 0, 0, ['HomeStatic'], true);
 				stageStatic.screenCenter();
 				stageStatic.y = -140;
 				stageStatic.visible = false;
@@ -757,7 +761,7 @@ class PlayState extends MusicBeatState
 		daStatic.alpha = 0.0001;
 		add(daStatic);
 
-		redStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 1.0, 1.0, ['HomeStatic'], true);
+		redStatic = new BGSprite('ruinedclub/HomeStatic', 0, 0, 1, 1, ['HomeStatic'], true);
 		redStatic.cameras = [camHUD];
 		redStatic.setGraphicSize(FlxG.width, FlxG.height);
 		redStatic.screenCenter();
@@ -2838,6 +2842,9 @@ class PlayState extends MusicBeatState
 				strumAlpha *= daNote.multAlpha;
 				var center:Float = strumY + Note.swagWidth / 2;
 
+				if (!endingSong && !isCameraOnForcedPos)
+					moveCameraSection(Std.int(curStep / 16));
+
 				if (daNote.copyX)
 				{
 					daNote.x = strumX;
@@ -3843,6 +3850,14 @@ class PlayState extends MusicBeatState
 						if (Math.isNaN(val2)) boyfriendGroup.y = BF_Y;
 						else boyfriendGroup.y = val2;
 				}
+			case 'Toggle Note Camera Movement':
+				switch (value1.toLowerCase().trim())
+				{
+					case 'true':
+						noteCam = true;
+					default:
+						noteCam = false;
+				}
 			case 'Move Opponent Tween':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -4119,7 +4134,7 @@ class PlayState extends MusicBeatState
 				if (value3 != null && value3 != '')
 				{
 					bakaOverlay.animation.play('hueh');
-					new FlxTimer().start(2, function(tmr:FlxTimer)
+					new FlxTimer().start(4, function(tmr:FlxTimer)
 					{
 						bakaOverlay.alpha = 0;
 					});
@@ -4222,6 +4237,11 @@ class PlayState extends MusicBeatState
 			{
 				camFollow.x += 150;
 			}
+
+			camFollow.x += camNoteX;
+			camFollow.y += camNoteY;
+
+			noteCamera(dad, false);
 		}
 		else
 		{
@@ -4246,15 +4266,35 @@ class PlayState extends MusicBeatState
 				camFollow.x -= 450;
 			}
 
-			if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
+			camFollow.x += camNoteX;
+			camFollow.y += camNoteY;
+
+			noteCamera(boyfriend, true);
+		}
+	}
+
+	private function noteCamera(focusedChar:Character, mustHit:Bool)
+	{
+		if (noteCam)
+		{
+			var camNoteExtend:Float = 15; // How powerful the camnote stuff is
+			if ((focusedChar == boyfriend && mustHit) || (focusedChar == dad && !mustHit))
 			{
-				cameraTwn = FlxTween.tween(FlxG.camera, {zoom: 1}, (Conductor.stepCrochet * 4 / 1000), {
-					ease: FlxEase.elasticInOut,
-					onComplete: function(twn:FlxTween)
-					{
-						cameraTwn = null;
-					}
-				});
+				camNoteX = 0;
+				if (focusedChar.animation.curAnim.name.startsWith('singLEFT'))
+					camNoteX -= camNoteExtend;
+				if (focusedChar.animation.curAnim.name.startsWith('singRIGHT'))
+					camNoteX += camNoteExtend;
+				if (focusedChar.animation.curAnim.name.startsWith('idle'))
+					camNoteX = 0;
+
+				camNoteY = 0;
+				if (focusedChar.animation.curAnim.name.startsWith('singDOWN'))
+					camNoteY += camNoteExtend;
+				if (focusedChar.animation.curAnim.name.startsWith('singUP'))
+					camNoteY -= camNoteExtend;
+				if (focusedChar.animation.curAnim.name.startsWith('idle'))
+					camNoteY = 0;
 			}
 		}
 	}
@@ -5529,7 +5569,7 @@ class PlayState extends MusicBeatState
 
 		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
 		{
-			moveCameraSection(Std.int(curStep / 16));
+			//moveCameraSection(Std.int(curStep / 16));
 		}
 		if (camZooming && FlxG.camera.zoom < 2 && ClientPrefs.camZooms && curBeat % 4 == 0)
 		{
