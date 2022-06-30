@@ -635,18 +635,18 @@ class PlayState extends MusicBeatState
 					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
-
-					bakaOverlay = new BGSprite('BakaBGDoodles', 0, 0, 1, 1, ['Normal Overlay'], true);
-					bakaOverlay.animation.addByPrefix('hueh', 'HOME Overlay', 24, false);
-					bakaOverlay.antialiasing = ClientPrefs.globalAntialiasing;
-					bakaOverlay.visible = true;
-					bakaOverlay.alpha = 0.0001;
-					bakaOverlay.cameras = [camHUD];
-					bakaOverlay.setGraphicSize(Std.int(FlxG.width));
-					bakaOverlay.updateHitbox();
-					bakaOverlay.screenCenter();
-					add(bakaOverlay);
 				}
+
+				bakaOverlay = new BGSprite('BakaBGDoodles', 0, 0, 1, 1, ['Normal Overlay'], true);
+				bakaOverlay.animation.addByPrefix('hueh', 'HOME Overlay', 24, false);
+				bakaOverlay.antialiasing = ClientPrefs.globalAntialiasing;
+				bakaOverlay.visible = true;
+				bakaOverlay.alpha = 0.0001;
+				bakaOverlay.cameras = [camHUD];
+				bakaOverlay.setGraphicSize(Std.int(FlxG.width));
+				bakaOverlay.updateHitbox();
+				bakaOverlay.screenCenter();
+				add(bakaOverlay);
 
 				inthenotepad = new BGSprite('notepad', 0, 0, 1, 1);
 				inthenotepad.visible = false;
