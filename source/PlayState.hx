@@ -2667,7 +2667,7 @@ class PlayState extends MusicBeatState
 			pauseState();
 		}
 
-		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene)
+		if (FlxG.keys.anyJustPressed(debugKeysChart) && !endingSong && !inCutscene && ClientPrefs.storycomplete)
 		{
 			openChartEditor();
 		}
@@ -2707,7 +2707,7 @@ class PlayState extends MusicBeatState
 		else
 			iconP2.animation.curAnim.curFrame = 0;
 
-		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene)
+		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene && ClientPrefs.storycomplete)
 		{
 			persistentUpdate = false;
 			paused = true;

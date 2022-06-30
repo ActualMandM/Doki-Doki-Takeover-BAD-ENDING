@@ -314,7 +314,7 @@ class MainMenuState extends MusicBeatState
 				});
 			}
 			#if desktop
-			else if (FlxG.keys.anyJustPressed(debugKeys))
+			else if (FlxG.keys.anyJustPressed(debugKeys) && ClientPrefs.storycomplete)
 			{
 				selectedSomethin = true;
 				MusicBeatState.switchState(new MasterEditorMenu());
@@ -361,7 +361,7 @@ class MainMenuState extends MusicBeatState
 					MusicBeatState.switchState(new CreditsState());
 			case 'options':
 				#if MODS_ALLOWED
-				if (FlxG.keys.pressed.M)
+				if (FlxG.keys.pressed.M && ClientPrefs.storycomplete)
 					MusicBeatState.switchState(new ModsMenuState());
 				else
 				#end
