@@ -82,7 +82,7 @@
 
 	<!-- <assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/> -->
 	<assets path='art/readme.txt' rename='fnf_readme.txt' />
-	<assets path='art/doki-readme.txt' rename='doki_readme.txt'/>
+	<!-- <assets path='art/doki-readme.txt' rename='doki_readme.txt'/> -->
 	<assets path='LICENSE' rename='LICENSE.txt' />
 	<!-- <template path='mods' /> -->
 
