@@ -4174,7 +4174,7 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(strum.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
 				}
 		}
-		callOnLuas('onEvent', [eventName, value1, value2]);
+		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
 
 	function funnyGlitch(duration:Float, sound:String):Void
