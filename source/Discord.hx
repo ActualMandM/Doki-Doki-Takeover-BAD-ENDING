@@ -1,6 +1,7 @@
 package;
 
 import Sys.sleep;
+import lime.app.Application;
 import discord_rpc.DiscordRpc;
 #if LUA_ALLOWED
 import llua.Lua;
@@ -15,7 +16,7 @@ class DiscordClient
 	{
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "902423702887628821",
+			clientID: "992607396780322907",
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -42,7 +43,7 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: "In the Menus",
 			state: null,
-			largeImageKey: 'dokialbum',
+			largeImageKey: 'ddto_be_discord',
 			largeImageText: "Friday Night Funkin': Doki Doki Takeover! - BAD ENDING"
 		});
 	}
@@ -78,8 +79,8 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: details,
 			state: state,
-			largeImageKey: 'dokialbum',
-			largeImageText: "Engine Version: " + MainMenuState.psychEngineVersion,
+			largeImageKey: 'ddto_be_discord',
+			largeImageText: 'Psych Engine Version: ${MainMenuState.psychEngineVersion}\nBAD ENDING Version: ${Application.current.meta.get('version')}',
 			smallImageKey: smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp: Std.int(startTimestamp / 1000),
