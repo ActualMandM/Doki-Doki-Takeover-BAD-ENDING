@@ -41,9 +41,12 @@ class FreeplayState extends MusicBeatState
 	var natsuki:FlxSprite;
 	var yuri:FlxSprite;
 
+	var diff:FlxSprite;
+
 	var sayoritween:FlxTween;
 	var natsukitween:FlxTween;
 	var yuritween:FlxTween;
+	var redStatic:FlxSprite;
 
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
@@ -110,6 +113,14 @@ class FreeplayState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
+		redStatic = new FlxSprite(0, 0);
+		redStatic.frames = Paths.getSparrowAtlas('ruinedclub/HomeStatic', 'doki');
+		redStatic.antialiasing = ClientPrefs.globalAntialiasing;
+		redStatic.animation.addByPrefix('hard', 'HomeStatic', 24);
+		redStatic.animation.play('hard');
+		redStatic.alpha = 0.001;
+		add(redStatic);
+
 		natsuki = new FlxSprite().loadGraphic(Paths.image('freeplay/natsu', 'preload'));
 		natsuki.setPosition(37, 0);
 		natsuki.antialiasing = ClientPrefs.globalAntialiasing;
@@ -121,14 +132,15 @@ class FreeplayState extends MusicBeatState
 		add(yuri);
 
 		sayori = new FlxSprite().loadGraphic(Paths.image('freeplay/sayso', 'preload'));
+		sayori.setPosition(107, 0);
+		sayori.antialiasing = ClientPrefs.globalAntialiasing;
+		add(sayori);
+
 
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
 		vignette.alpha = 0.8;
 		add(vignette);
 
-		sayori.setPosition(107, 0);
-		sayori.antialiasing = ClientPrefs.globalAntialiasing;
-		add(sayori);
 
 		songname = new FlxText(0, 550, 0, 'hueh', 72);
 		songname.screenCenter(X);
@@ -137,6 +149,16 @@ class FreeplayState extends MusicBeatState
 		songname.setBorderStyle(OUTLINE, FlxColor.BLACK, 3, 1);
 		songname.antialiasing = ClientPrefs.globalAntialiasing;
 		add(songname);
+
+		diff = new FlxSprite(453, 580);
+		diff.frames = Paths.getSparrowAtlas('freeplay/difficulties', 'preload');
+		diff.antialiasing = ClientPrefs.globalAntialiasing;
+		diff.animation.addByPrefix('hard', 'Hard', 24);
+		diff.animation.addByPrefix('unfair', 'Unfair', 24);
+		diff.animation.play('hard');
+		diff.updateHitbox();
+		diff.visible = false;
+		add(diff);
 
 		WeekData.setDirectoryFromWeek();
 
@@ -268,6 +290,15 @@ class FreeplayState extends MusicBeatState
 			changeSelection(shiftMult);
 		}
 
+		if (upP)
+		{
+			changeDiff(-1);
+		}
+		if (downP)
+		{
+			changeDiff(1);
+		}
+
 		if (controls.BACK)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -374,6 +405,47 @@ class FreeplayState extends MusicBeatState
 		PlayState.storyDifficulty = curDifficulty;
 		//diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
 		positionHighscore();
+
+		if (CoolUtil.difficulties[curDifficulty].toLowerCase() == 'unfair')
+			swapstyle(1);
+		else
+			swapstyle(0);
+	}
+
+	function swapstyle(hueh:Int)
+	{
+		if (hueh == 1)
+		{
+			trace("funny harder moder");
+			redStatic.alpha = 1;
+			natsuki.visible = false;
+			yuri.visible = false;
+			sayori.visible = false;
+
+			natsuki.loadGraphic(Paths.image('freeplay/natsuunfair', 'preload'));
+			yuri.loadGraphic(Paths.image('freeplay/yuriunfair', 'preload'));
+			sayori.loadGraphic(Paths.image('freeplay/saysounfair', 'preload'));
+
+			natsuki.visible = true;
+			yuri.visible = true;
+			sayori.visible = true;
+		}
+		else
+		{
+			trace("goku goes supersaiyan");
+			redStatic.alpha = 0.001;
+			natsuki.visible = false;
+			yuri.visible = false;
+			sayori.visible = false;
+
+			natsuki.loadGraphic(Paths.image('freeplay/natsu', 'preload'));
+			yuri.loadGraphic(Paths.image('freeplay/yuri', 'preload'));
+			sayori.loadGraphic(Paths.image('freeplay/sayso', 'preload'));
+
+			natsuki.visible = true;
+			yuri.visible = true;
+			sayori.visible = true;
+		}
 	}
 
 	function changeSelection(change:Int = 0, playSound:Bool = true)
