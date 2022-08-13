@@ -104,7 +104,7 @@
 				]
 			],
 			[
-				11400,
+				10800,
 				[
 					[
 						"Strumline Visibility",
@@ -162,7 +162,7 @@
 				[
 					[
 						"Change Camera Zoom",
-						"1.7",
+						"1.9",
 						"5"
 					]
 				]
@@ -466,7 +466,7 @@
 					],
 					[
 						"Change Camera Zoom",
-						"1.35",
+						"1.1",
 						"0.1",
 						""
 					]
@@ -483,7 +483,18 @@
 					],
 					[
 						"Change Camera Zoom",
-						"1.5",
+						"1.4",
+						"0.1",
+						""
+					]
+				]
+			],
+			[
+				57450,
+				[
+					[
+						"Change Camera Zoom",
+						"1.9",
 						"0.1",
 						""
 					]
@@ -493,27 +504,21 @@
 				57600,
 				[
 					[
-						"Change Camera Zoom",
-						"1.7",
-						"0.1",
-						""
-					],
-					[
 						"Add Camera Zoom",
-						"0.01",
+						"0.013",
 						"0.03",
 						""
 					],
 					[
 						"Screen Shake",
-						"0.3, 0.01",
-						"0.3, 0.006",
+						"0.3, 0.013",
+						"0.3, 0.004",
 						""
 					],
 					[
 						"Glitch Effect",
 						"0.1",
-						"",
+						"EyeSplode",
 						""
 					]
 				]
@@ -547,13 +552,13 @@
 					],
 					[
 						"Add/Remove Vignette",
-						"0.3",
+						"0.4",
 						"0.1",
 						""
 					],
 					[
 						"Change Camera Zoom",
-						"1.5",
+						"1.6",
 						"0.2",
 						""
 					],
@@ -583,6 +588,12 @@
 						"Change Camera Zoom",
 						"1.3",
 						"0.4",
+						""
+					],
+					[
+						"Toggle Note Camera Movement",
+						"true",
+						"",
 						""
 					]
 				]
@@ -629,6 +640,12 @@
 						"Red Static",
 						"0",
 						"0",
+						""
+					],
+					[
+						"Toggle Note Camera Movement",
+						"false",
+						"",
 						""
 					]
 				]
@@ -809,6 +826,18 @@
 						"Play Animation",
 						"home",
 						"gf",
+						""
+					],
+					[
+						"Glitch Effect",
+						"0.3",
+						"",
+						""
+					],
+					[
+						"Screen Shake",
+						"0.3,0.005",
+						"0.3,0.002",
 						""
 					]
 				]
@@ -1214,7 +1243,7 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.1",
+						"0.12",
 						""
 					],
 					[
@@ -1230,7 +1259,7 @@
 				[
 					[
 						"Add Camera Zoom",
-						"0.1",
+						"0.14",
 						""
 					]
 				]
@@ -1267,12 +1296,6 @@
 						"0",
 						"0.1",
 						""
-					],
-					[
-						"Toggle Note Camera Movement",
-						"false",
-						"",
-						""
 					]
 				]
 			],
@@ -1288,12 +1311,79 @@
 				]
 			],
 			[
+				145200,
+				[
+					[
+						"Add Camera Zoom",
+						"0.14",
+						"",
+						null
+					]
+				]
+			],
+			[
+				146400,
+				[
+					[
+						"Add Camera Zoom",
+						"0.14",
+						"",
+						null
+					]
+				]
+			],
+			[
+				147600,
+				[
+					[
+						"Add Camera Zoom",
+						"0.14",
+						"",
+						null
+					]
+				]
+			],
+			[
+				148800,
+				[
+					[
+						"Add Camera Zoom",
+						"0.14",
+						"",
+						null
+					]
+				]
+			],
+			[
+				150000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.14",
+						"",
+						null
+					]
+				]
+			],
+			[
 				153600,
 				[
 					[
 						"Red Static",
 						"1",
 						"0.7",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"",
+						""
+					],
+					[
+						"UI visibilty",
+						"false",
+						"",
 						""
 					]
 				]
@@ -1342,6 +1432,12 @@
 						"0.3",
 						"0",
 						""
+					],
+					[
+						"Toggle Note Camera Movement",
+						"false",
+						"",
+						""
 					]
 				]
 			],
@@ -1388,6 +1484,18 @@
 						"ruinedclub",
 						"",
 						""
+					],
+					[
+						"Toggle Note Camera Movement",
+						"true",
+						"",
+						""
+					],
+					[
+						"UI visibilty",
+						"true",
+						"",
+						""
 					]
 				]
 			],
@@ -1427,6 +1535,17 @@
 						"bf",
 						"0",
 						"0"
+					]
+				]
+			],
+			[
+				175275,
+				[
+					[
+						"Toggle Note Camera Movement",
+						"false",
+						"",
+						""
 					]
 				]
 			],
@@ -1500,6 +1619,17 @@
 				]
 			],
 			[
+				177300,
+				[
+					[
+						"Strumline Visibility",
+						"bf",
+						"1",
+						"0.7"
+					]
+				]
+			],
+			[
 				177750,
 				[
 					[
@@ -1507,12 +1637,6 @@
 						"bf",
 						"1",
 						"0.7"
-					],
-					[
-						"Strumline Visibility",
-						"bf",
-						"1",
-						"0.5"
 					]
 				]
 			],
