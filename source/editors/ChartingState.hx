@@ -252,6 +252,11 @@ class ChartingState extends MusicBeatState
 			'Toggle Note Camera Movement',
 			"Self explanitory
 			True or False is the toggle"
+		],
+		[
+			'Play SFX',
+			"Value 1: file name
+			Value 2: volume"
 		]
 	];
 

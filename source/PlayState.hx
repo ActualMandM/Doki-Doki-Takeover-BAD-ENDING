@@ -4160,6 +4160,15 @@ class PlayState extends MusicBeatState
 					FlxTween.cancelTweensOf(strum.members[i]);
 					FlxTween.tween(strum.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
 				}
+
+			case 'Play SFX':
+				var val2:Float = Std.parseFloat(value2);
+
+				if (Math.isNaN(val2))
+					val2 = 1;
+
+				FlxG.sound.play(Paths.sound(value1), val2);
+
 		}
 		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
