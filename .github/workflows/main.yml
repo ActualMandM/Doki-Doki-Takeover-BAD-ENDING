@@ -3,15 +3,18 @@
 name: Build
 
 # Controls when the action will run.
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#on:
+#  # Triggers the workflow on push or pull request events but only for the master branch
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+#
+#  # Allows you to run this workflow manually from the Actions tab
+#  workflow_dispatch:
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# This workflow only exists to build the game for Linux, no need for it to run for every commit
+on: workflow_dispatch
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
