@@ -2151,7 +2151,7 @@ class PlayState extends MusicBeatState
 			{
 				if (player >= 0)
 				{
-					var underlay = new FlxSprite(70 + ((FlxG.width / 2) * player), 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
+					var underlay = new FlxSprite(70 + ((FlxG.width / 2) * player), 0).makeGraphic(500, FlxG.height, FlxColor.BLACK);
 					underlay.alpha = ClientPrefs.noteUnderlay;
 					underlay.screenCenter(Y);
 					underlay.ID = player;
@@ -2160,10 +2160,14 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				var underlay = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
-				underlay.alpha = ClientPrefs.noteUnderlay;
-				underlay.screenCenter();
-				grpUnderlay.add(underlay);
+				if (player == 1)
+				{
+					var underlay = new FlxSprite(0, 0).makeGraphic(500, FlxG.height, FlxColor.BLACK);
+					underlay.alpha = ClientPrefs.noteUnderlay;
+					underlay.screenCenter();
+					underlay.ID = 1;
+					grpUnderlay.add(underlay);
+				}
 			}
 		}
 
@@ -3915,6 +3919,11 @@ class PlayState extends MusicBeatState
 				if (value2 == 'true')
 					tweenBool = true;
 
+				remove(grpUnderlay);
+				grpUnderlay = new FlxTypedGroup<FlxSprite>();
+				grpUnderlay.cameras = [camHUD];
+				add(grpUnderlay);
+
 				remove(strumLineNotes);
 				strumLineNotes = new FlxTypedGroup<StrumNote>();
 				strumLineNotes.cameras = [camHUD];
@@ -4159,6 +4168,7 @@ class PlayState extends MusicBeatState
 			case 'Strumline Visibility':
 				
 				var strum:FlxTypedGroup<StrumNote>;
+				var underlay:FlxSprite;
 				var val2:Float = Std.parseFloat(value2);
 				var val3:Float = Std.parseFloat(value3);
 
@@ -4177,18 +4187,26 @@ class PlayState extends MusicBeatState
 					case 'dad' | 'opponent':
 					{
 						strum = opponentStrums;
+						underlay = grpUnderlay.members[0];
 
 						if (ClientPrefs.middleScroll)
 							val2 *= 0.35;
 					}
 					default:
 						strum = playerStrums;
+						underlay = grpUnderlay.members[1];
 				}
 
 				for (i in 0...4)
 				{
 					FlxTween.cancelTweensOf(strum.members[i]);
 					FlxTween.tween(strum.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
+				}
+
+				if (underlay != null)
+				{
+					FlxTween.cancelTweensOf(underlay);
+					FlxTween.tween(underlay, {alpha: val2 * ClientPrefs.noteUnderlay}, val3, {ease: FlxEase.circOut});
 				}
 
 			case 'Play SFX':
