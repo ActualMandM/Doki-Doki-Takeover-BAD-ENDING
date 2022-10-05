@@ -55,6 +55,7 @@ class Paths
 				@:privateAccess
 				if (obj != null)
 				{
+					GPUFunctions.disposeTexturesByKey(key);
 					openfl.Assets.cache.removeBitmapData(key);
 					FlxG.bitmap._cache.remove(key);
 					obj.destroy();
@@ -78,6 +79,7 @@ class Paths
 			var obj = FlxG.bitmap._cache.get(key);
 			if (obj != null && !currentTrackedAssets.exists(key))
 			{
+				GPUFunctions.disposeTexturesByKey(key);
 				openfl.Assets.cache.removeBitmapData(key);
 				FlxG.bitmap._cache.remove(key);
 				obj.destroy();
@@ -338,7 +340,11 @@ class Paths
 		{
 			if (!currentTrackedAssets.exists(key))
 			{
-				var newGraphic:FlxGraphic = FlxG.bitmap.add(path, false, key);
+				var newGraphic:FlxGraphic;
+				if (ClientPrefs.gpuTextures)
+					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, path, false);
+				else
+					newGraphic = FlxG.bitmap.add(path, false, path);
 				newGraphic.persist = true;
 				currentTrackedAssets.set(key, newGraphic);
 			}

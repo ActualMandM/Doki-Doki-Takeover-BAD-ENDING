@@ -49,23 +49,20 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		var option:Option = new Option('Middlescroll', 'If checked, your notes get centered.', 'middleScroll', 'bool', false);
 		addOption(option);
 
+		var option:Option = new Option('Note Underlay', 'Changes how visible the underlay for the notes are.', 'noteUnderlay', 'percent', 0);
+		addOption(option);
+		option.scrollSpeed = 1.6;
+		option.minValue = 0.0;
+		option.maxValue = 1;
+		option.changeValue = 0.1;
+		option.decimals = 1;
+
 		var option:Option = new Option('Ghost Tapping', "If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",
 			'ghostTapping', 'bool', true);
 		addOption(option);
 
 		var option:Option = new Option('Disable Reset Button', "If checked, pressing Reset won't do anything.", 'noReset', 'bool', false);
 		addOption(option);
-
-		/*var option:Option = new Option('Note Delay',
-				'Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.',
-				'noteOffset',
-				'int',
-				0);
-			option.displayFormat = '%vms';
-			option.scrollSpeed = 100;
-			option.minValue = 0;
-			option.maxValue = 500;
-			addOption(option); */
 
 		var option:Option = new Option('Rating Offset', 'Changes how late/early you have to hit for a "Sick!"\nHigher values mean you have to hit later.',
 			'ratingOffset', 'int', 0);

@@ -65,8 +65,8 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
-	public static var STRUM_X = 42;
-	public static var STRUM_X_MIDDLESCROLL = -278;
+	public static var STRUM_X = 49;
+	public static var STRUM_X_MIDDLESCROLL = -272;
 
 	public static var ratingStuff:Array<Dynamic> = [
 		['You Suck!', 0.2], // From 0% to 19%
@@ -165,6 +165,7 @@ class PlayState extends MusicBeatState
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
+	private var grpUnderlay:FlxTypedGroup<FlxSprite>;
 
 	public var camZooming:Bool = false;
 	var forcecamZooming:Bool = true;
@@ -952,14 +953,21 @@ class PlayState extends MusicBeatState
 			strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
 
+		grpUnderlay = new FlxTypedGroup<FlxSprite>();
+		add(grpUnderlay);
+
+		strumLineNotes = new FlxTypedGroup<StrumNote>();
+		add(strumLineNotes);
+		add(grpNoteSplashes);
+
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 
 		if (isStoryMode)
 			showTime = false;
 
-		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
+		timeTxt = new FlxText(0, 19, 400, "", 32);
 		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		timeTxt.scrollFactor.set();
+		timeTxt.screenCenter(X);
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
 		timeTxt.visible = showTime;
@@ -994,11 +1002,7 @@ class PlayState extends MusicBeatState
 		add(timeTxt);
 		timeBarBG.sprTracker = timeBar;
 
-		strumLineNotes = new FlxTypedGroup<StrumNote>();
-		add(strumLineNotes);
-		add(grpNoteSplashes);
-
-		if (ClientPrefs.timeBarType == 'Song Name')
+		if (ClientPrefs.timeBarType == 'Song Name' || ClientPrefs.timeBarType == 'Combined')
 		{
 			timeTxt.size = 24;
 			timeTxt.y += 3;
@@ -1122,9 +1126,9 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
+		botplayTxt = new FlxText(0, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		botplayTxt.scrollFactor.set();
+		botplayTxt.screenCenter(X);
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
 		add(botplayTxt);
@@ -1133,6 +1137,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
+		grpUnderlay.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -2140,6 +2145,28 @@ class PlayState extends MusicBeatState
 				noteStyle = 'pixel';
 		}
 
+		if (ClientPrefs.noteUnderlay > 0)
+		{
+			if (!ClientPrefs.middleScroll)
+			{
+				if (player >= 0)
+				{
+					var underlay = new FlxSprite(70 + ((FlxG.width / 2) * player), 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
+					underlay.alpha = ClientPrefs.noteUnderlay;
+					underlay.screenCenter(Y);
+					underlay.ID = player;
+					grpUnderlay.add(underlay);
+				}
+			}
+			else
+			{
+				var underlay = new FlxSprite(0, 0).makeGraphic(500, FlxG.height * 2, FlxColor.BLACK);
+				underlay.alpha = ClientPrefs.noteUnderlay;
+				underlay.screenCenter();
+				grpUnderlay.add(underlay);
+			}
+		}
+
 		for (i in 0...4)
 		{
 			// FlxG.log.add(i);
@@ -2747,6 +2774,9 @@ class PlayState extends MusicBeatState
 
 					if (ClientPrefs.timeBarType != 'Song Name')
 						timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+
+					if (ClientPrefs.timeBarType == 'Combined')
+						timeTxt.text = '${SONG.song} (${FlxStringUtil.formatTime(secondsTotal, false)})';
 				}
 			}
 
