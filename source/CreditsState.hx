@@ -239,7 +239,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Smokey',
 				'smokey',
-				'Spritemap Texture Support, GPU Textures',
+				'Spritemap Texture Support',
 				'https://twitter.com/Smokey_5_',
 				'4D5DBD'
 			],
