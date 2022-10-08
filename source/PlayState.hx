@@ -2375,7 +2375,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
-
+	var iTime:Float = 0;
 	#if debug
 	var debugScale:Float = 1.0;
 	#end
@@ -2383,7 +2383,11 @@ class PlayState extends MusicBeatState
 	override public function update(elapsed:Float)
 	{
 		if (staticlol != null && !ClientPrefs.lowQuality)
+		{
+			iTime += elapsed;
 			staticlol.alpha.value = [staticAlpha];
+			staticlol.iTime.value = [iTime];
+		}
 
 		#if debug
 		if (evilClubBG != null)
