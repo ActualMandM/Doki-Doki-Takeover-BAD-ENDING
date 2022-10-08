@@ -342,9 +342,9 @@ class Paths
 			{
 				var newGraphic:FlxGraphic;
 				if (ClientPrefs.gpuTextures)
-					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, path, false);
+					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, key, false);
 				else
-					newGraphic = FlxG.bitmap.add(path, false, path);
+					newGraphic = FlxG.bitmap.add(path, false, key);
 				newGraphic.persist = true;
 				currentTrackedAssets.set(key, newGraphic);
 			}
