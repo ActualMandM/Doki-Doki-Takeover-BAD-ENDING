@@ -710,7 +710,7 @@ class PlayState extends MusicBeatState
 
 		// shaders right here lol
 		// funny static for all stages
-		if (!ClientPrefs.lowQuality)
+		if (ClientPrefs.shaders)
 		{
 			staticlol = new StaticShader();
 			camGame.setFilters([new ShaderFilter(staticlol)]);
@@ -2382,7 +2382,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if (staticlol != null && !ClientPrefs.lowQuality)
+		if (staticlol != null && ClientPrefs.shaders)
 		{
 			iTime += elapsed;
 			staticlol.alpha.value = [staticAlpha];
@@ -3781,7 +3781,7 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(val1))
 					val1 = 0.5;
 
-				if (!ClientPrefs.lowQuality) funnyGlitch(val1, value2);
+				if (ClientPrefs.shaders) funnyGlitch(val1, value2);
 			case 'Glitch increase':
 				switch (Std.parseFloat(value1))
 				{
