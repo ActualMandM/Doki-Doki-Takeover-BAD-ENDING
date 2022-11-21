@@ -101,7 +101,7 @@ class CreditsState extends MusicBeatState
 				'M&M',
 				'mandm',
 				'Programmer',
-				'https://twitter.com/ActualMandM',
+				'https://linktr.ee/ActualMandM',
 				'1DADBB'
 			],
 			[
