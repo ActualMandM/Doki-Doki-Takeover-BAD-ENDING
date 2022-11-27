@@ -122,7 +122,7 @@ class CreditsState extends MusicBeatState
 				'Kallionic',
 				'kallionic',
 				'Musician - Menu Music and HOME',
-				'https://kallionic.com',
+				'https://www.youtube.com/channel/UCcvpO7nF9VoXwsK_ZVQX3BQ',
 				'FF4D7D'
 			],
 			[
