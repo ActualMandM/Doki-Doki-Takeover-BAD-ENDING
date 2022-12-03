@@ -126,13 +126,6 @@ class CreditsState extends MusicBeatState
 				'FF4D7D'
 			],
 			[
-				'DiscWraith',
-				'discwraith',
-				'Charting',
-				'https://twitter.com/DiscWraith',
-				'671FCF'
-			],
-			[
 				'Omega',
 				'omega',
 				'Artist',
