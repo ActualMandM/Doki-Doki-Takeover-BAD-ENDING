@@ -119,10 +119,10 @@ class CreditsState extends MusicBeatState
 				'88DE30'
 			],
 			[
-				'Kallionic',
-				'kallionic',
+				'Kairii',
+				'kairii',
 				'Musician - Menu Music and HOME',
-				'https://www.youtube.com/channel/UCcvpO7nF9VoXwsK_ZVQX3BQ',
+				'https://www.youtube.com/@RiiStudios',
 				'FF4D7D'
 			],
 			[
