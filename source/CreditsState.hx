@@ -126,8 +126,15 @@ class CreditsState extends MusicBeatState
 				'FF4D7D'
 			],
 			[
-				'Omega',
-				'omega',
+				'Flootena',
+				'floot',
+				'Charting',
+				'https://twitter.com/FlootenaDX',
+				'8457E4'
+			],
+			[
+				'Crim',
+				'crim',
 				'Artist',
 				'https://twitter.com/ScrimbloCrimbo',
 				'E51154'
