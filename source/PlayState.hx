@@ -529,9 +529,9 @@ class PlayState extends MusicBeatState
 			case 'clubroomevil': // DDTO BAD ENDING
 				if (!ClientPrefs.lowQuality)
 				{
-					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
+					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 				}
@@ -557,9 +557,9 @@ class PlayState extends MusicBeatState
 					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
 					deskfront.updateHitbox();
 
-					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
+					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					evilSpace.visible = false;
 					add(evilSpace);
@@ -590,9 +590,9 @@ class PlayState extends MusicBeatState
 			case 'markov':
 				if (!ClientPrefs.lowQuality)
 				{
-					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
+					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 				}
@@ -630,9 +630,9 @@ class PlayState extends MusicBeatState
 
 				if (!ClientPrefs.lowQuality)
 				{
-					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'), 0.1, 0.1);
+					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
+					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.lowestCamZoom = 0.8;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 				}

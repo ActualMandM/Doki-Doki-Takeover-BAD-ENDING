@@ -103,7 +103,7 @@ class FreeplayState extends MusicBeatState
 		}
 		WeekData.setDirectoryFromWeek();
 
-		var evilSpace:FlxBackdrop = new FlxBackdrop(Paths.image('bigmonika/Sky', 'doki'), 0.1, 0.1);
+		var evilSpace:FlxBackdrop = new FlxBackdrop(Paths.image('bigmonika/Sky', 'doki'));
 		evilSpace.velocity.set(-10, 0);
 		evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 		add(evilSpace);
