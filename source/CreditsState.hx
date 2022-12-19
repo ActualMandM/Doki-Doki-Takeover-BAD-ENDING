@@ -92,10 +92,10 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Sun Spirit',
-				'sunspirit',
+				'jorge',
 				'Director/Programmer',
 				'https://twitter.com/Jorge_SunSpirit',
-				'DB8B2E'
+				'FF8B51'
 			],
 			[
 				'M&M',
