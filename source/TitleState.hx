@@ -164,7 +164,7 @@ class TitleState extends MusicBeatState
 
 		if (!loadedPrefs)
 		{
-			FlxG.save.bind('badending', 'teamtbd');
+			FlxG.save.bind('BadEnding', 'TeamTBD');
 			ClientPrefs.loadPrefs();
 			loadedPrefs = true;
 			trace('ONLY LOAD THIS ONCE');
