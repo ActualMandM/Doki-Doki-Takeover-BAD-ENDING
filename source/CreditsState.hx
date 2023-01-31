@@ -102,7 +102,7 @@ class CreditsState extends MusicBeatState
 				'mandm',
 				'Programmer',
 				'https://linktr.ee/ActualMandM',
-				'1DADBB'
+				'AE5291'
 			],
 			[
 				'DuskieWhy',
