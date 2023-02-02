@@ -127,10 +127,10 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Flootena',
-				'floot',
+				'flootena',
 				'Charting',
 				'https://twitter.com/FlootenaDX',
-				'8457E4'
+				'63539B'
 			],
 			[
 				'Crim',
