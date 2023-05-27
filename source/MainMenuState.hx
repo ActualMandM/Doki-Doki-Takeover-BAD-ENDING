@@ -38,8 +38,6 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story mode',
 		'freeplay',
-		#if ACHIEVEMENTS_ALLOWED 'awards',
-		#end
 		'credits',
 		'options'
 	];
@@ -47,8 +45,6 @@ class MainMenuState extends MusicBeatState
 	var textShit:Array<String> = [
 		'Story Mode',
 		'Freeplay',
-		#if ACHIEVEMENTS_ALLOWED 'Achievements',
-		#end
 		'Credits',
 		'Options'
 	];
@@ -69,8 +65,10 @@ class MainMenuState extends MusicBeatState
 	{
 		if (!ClientPrefs.storycomplete)
 		{
+			#if !debug
 			optionShit.remove('freeplay');
 			textShit.remove('Freeplay');
+			#end
 		}
 		else
 		{
@@ -215,16 +213,6 @@ class MainMenuState extends MusicBeatState
 
 		super.create();
 	}
-
-	#if ACHIEVEMENTS_ALLOWED
-	// Unlocks "Freaky on a Friday Night" achievement
-	function giveAchievement()
-	{
-		add(new AchievementObject('friday_night_play', camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "friday_night_play"');
-	}
-	#end
 
 	var selectedSomethin:Bool = false;
 	override function update(elapsed:Float)
