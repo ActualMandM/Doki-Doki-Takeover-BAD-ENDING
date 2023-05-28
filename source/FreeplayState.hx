@@ -265,8 +265,6 @@ class FreeplayState extends MusicBeatState
 		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 		positionHighscore();
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
 		var leftP = controls.UI_LEFT_P;
 		var rightP = controls.UI_RIGHT_P;
 		var accepted = controls.ACCEPT;
@@ -365,6 +363,7 @@ class FreeplayState extends MusicBeatState
 			}
 			else
 			{
+				changeDiff();
 				isDiffSelect = true;
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				diffstuff.visible = true;

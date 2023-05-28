@@ -28,7 +28,7 @@ class CoolUtil
 			num = PlayState.storyDifficulty;
 
 		var fileSuffix:String = difficulties[num];
-		if (fileSuffix != defaultDifficulty)
+		if (fileSuffix.toLowerCase() != defaultDifficulty.toLowerCase())
 		{
 			fileSuffix = '-' + fileSuffix;
 		}
