@@ -133,6 +133,13 @@ class CreditsState extends MusicBeatState
 				'63539B'
 			],
 			[
+				'Chompo',
+				'chompo',
+				'Charting',
+				'https://twitter.com/MrChompsALot',
+				'84C25F'
+			],
+			[
 				'Crim',
 				'crim',
 				'Artist',
