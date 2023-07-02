@@ -29,7 +29,11 @@ import flixel.math.FlxMath;
 import flixel.math.FlxMatrix;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
+#if (flixel >= "5.3.0")
+import flixel.sound.FlxSound;
+#else
 import flixel.system.FlxSound;
+#end
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -39,7 +43,6 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSort;
 import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
-import motion.Actuate;
 import motion.easing.*;
 import haxe.Json;
 import lime.utils.Assets;
@@ -2237,8 +2240,6 @@ class PlayState extends MusicBeatState
 			if (carTimer != null)
 				carTimer.active = false;
 
-			Actuate.pauseAll();
-
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
 			{
@@ -2284,8 +2285,6 @@ class PlayState extends MusicBeatState
 
 			if (carTimer != null)
 				carTimer.active = true;
-
-			Actuate.resumeAll();
 
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
@@ -3771,9 +3770,12 @@ class PlayState extends MusicBeatState
 
 				if (val2 > 0)
 				{
-					Actuate.tween(evilClubBGScribbly, val2, {alpha: 1}).ease(Sine.easeIn).onComplete(function()
-					{
-						evilClubBGScribbly.alpha = 1;
+					FlxTween.tween(evilClubBGScribbly, {alpha: 1}, val2, {
+						ease: FlxEase.sineIn,
+						onComplete: function(twn:FlxTween)
+						{
+							evilClubBGScribbly.alpha = 1;
+						}
 					});
 				}
 			case 'Glitch Effect':
@@ -3958,9 +3960,12 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					Actuate.tween(FlxG.camera, val2, {zoom: val1}).ease(Linear.easeNone).onComplete(function()
-					{
-						defaultCamZoom = val1;
+					FlxTween.tween(FlxG.camera, {zoom: val1}, val2, {
+						ease: FlxEase.linear,
+						onComplete: function(twn:FlxTween)
+						{
+							defaultCamZoom = val1;
+						}
 					});
 				}
 
@@ -4076,10 +4081,13 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					Actuate.tween(poemTransition, 0.25, {alpha: 0}).ease(Sine.easeOut).onComplete(function()
-					{
-						poemTransition.alpha = 0;
-						poemTransition.visible = false;
+					FlxTween.tween(poemTransition, {alpha: 0}, 0.25, {
+						ease: FlxEase.sineOut,
+						onComplete: function(twn:FlxTween)
+						{
+							poemTransition.alpha = 0;
+							poemTransition.visible = false;
+						}
 					});
 				}
 

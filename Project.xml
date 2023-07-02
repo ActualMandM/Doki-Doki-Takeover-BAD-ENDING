@@ -105,8 +105,6 @@
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" />
 
-	<haxelib name="actuate" />
-
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
