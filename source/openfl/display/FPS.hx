@@ -79,7 +79,7 @@ class FPS extends TextField
 
 		var currentCount = times.length;
 		currentFPS = Math.round((currentCount + cacheCount) / 2);
-		if (currentFPS > FlxG.save.data.fpsCap) currentFPS = FlxG.save.data.fpsCap;
+		if (currentFPS > ClientPrefs.framerate) currentFPS = ClientPrefs.framerate;
 
 		if (currentCount != cacheCount /*&& visible*/)
 		{
@@ -92,6 +92,10 @@ class FPS extends TextField
 			#end
 
 			textColor = 0xFFFF0000;
+			if (memoryMegas > 3000 || currentFPS < 60)
+			{
+				textColor = 0xFFAA0000;
+			}
 
 			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
 			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();
