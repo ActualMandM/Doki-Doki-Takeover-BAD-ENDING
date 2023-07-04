@@ -30,7 +30,7 @@ class CreditsState extends MusicBeatState
 
 	var bg:FlxSprite;
 	var descText:FlxText;
-	var intendedColor:Int;
+	var intendedColor:FlxColor;
 	var colorTween:FlxTween;
 
 	override function create()
@@ -330,7 +330,7 @@ class CreditsState extends MusicBeatState
 		descText.borderSize = 2.4;
 		add(descText);
 
-		bg.color = getCurrentBGColor();
+		bg.color = FlxColor.fromString('#' + creditsStuff[curSelected][4]);
 		intendedColor = bg.color;
 		changeSelection();
 		super.create();
@@ -387,7 +387,7 @@ class CreditsState extends MusicBeatState
 		}
 		while (unselectableCheck(curSelected));
 
-		var newColor:Int = getCurrentBGColor();
+		var newColor:Int = FlxColor.fromString('#' + creditsStuff[curSelected][4]);
 		if (newColor != intendedColor)
 		{
 			if (colorTween != null)
@@ -420,16 +420,6 @@ class CreditsState extends MusicBeatState
 			}
 		}
 		descText.text = creditsStuff[curSelected][2];
-	}
-
-	function getCurrentBGColor()
-	{
-		var bgColor:String = creditsStuff[curSelected][4];
-		if (!bgColor.startsWith('0x'))
-		{
-			bgColor = '0xFF' + bgColor;
-		}
-		return Std.parseInt(bgColor);
 	}
 
 	private function unselectableCheck(num:Int):Bool
