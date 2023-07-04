@@ -387,7 +387,7 @@ class CreditsState extends MusicBeatState
 		}
 		while (unselectableCheck(curSelected));
 
-		var newColor:Int = FlxColor.fromString('#' + creditsStuff[curSelected][4]);
+		var newColor:FlxColor = FlxColor.fromString('#' + creditsStuff[curSelected][4]);
 		if (newColor != intendedColor)
 		{
 			if (colorTween != null)
