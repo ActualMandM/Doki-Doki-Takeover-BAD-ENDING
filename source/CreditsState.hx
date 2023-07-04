@@ -179,7 +179,7 @@ class CreditsState extends MusicBeatState
 				'max', 
 				'Playtesting', 
 				'https://twitter.com/MaxOKE_', 
-				'913BAA8'
+				'AD0832'
 			],
 			[''],
 			['Psych Engine Team'],
