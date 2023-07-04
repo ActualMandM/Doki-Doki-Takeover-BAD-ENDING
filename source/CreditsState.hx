@@ -128,14 +128,14 @@ class CreditsState extends MusicBeatState
 			[
 				'Flootena',
 				'flootena',
-				'Charting',
+				'Charting - MARKOV',
 				'https://twitter.com/FlootenaDX',
 				'63539B'
 			],
 			[
 				'Chompo',
 				'chompo',
-				'Charting',
+				'Charting - STAGNANT and HOME',
 				'https://twitter.com/MrChompsALot',
 				'84C25F'
 			],
