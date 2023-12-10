@@ -119,11 +119,11 @@ class CreditsState extends MusicBeatState
 				'88DE30'
 			],
 			[
-				'Kairii',
-				'kairii',
+				'JACKALRUIN',
+				'jackalruin',
 				'Musician - Menu Music and HOME',
-				'https://www.youtube.com/@RiiStudios',
-				'FF4D7D'
+				'https://www.youtube.com/@JACKALRUIN',
+				'342E4D'
 			],
 			[
 				'Flootena',
