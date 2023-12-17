@@ -39,7 +39,10 @@ class Paths
 			dumpExclusions.push(key);
 	}
 
-	public static var dumpExclusions:Array<String> = [];
+	public static var dumpExclusions:Array<String> = [
+		'assets/music/freakyMenu.$SOUND_EXT',
+		'assets/music/ghost.$SOUND_EXT'
+	];
 
 	/// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory()
@@ -320,32 +323,42 @@ class Paths
 	public static function returnGraphic(key:String, ?library:String)
 	{
 		#if MODS_ALLOWED
-		if (FileSystem.exists(modsImages(key)))
+		var modKey:String = modsImages(key);
+		if (FileSystem.exists(modKey))
 		{
-			if (!currentTrackedAssets.exists(key))
+			if (!currentTrackedAssets.exists(modKey))
 			{
-				var newBitmap:BitmapData = BitmapData.fromFile(modsImages(key));
-				var newGraphic:FlxGraphic = FlxGraphic.fromBitmapData(newBitmap, false, key);
+				var newBitmap:BitmapData = BitmapData.fromFile(modKey);
+				var newGraphic:FlxGraphic = FlxGraphic.fromBitmapData(newBitmap, false, modKey);
 				newGraphic.persist = true;
-				currentTrackedAssets.set(key, newGraphic);
+				currentTrackedAssets.set(modKey, newGraphic);
 			}
-			localTrackedAssets.push(key);
-			return currentTrackedAssets.get(key);
+			localTrackedAssets.push(modKey);
+			return currentTrackedAssets.get(modKey);
 		}
 		#end
+
 		var path = getPath('images/$key.png', IMAGE, library);
 		if (OpenFlAssets.exists(path, IMAGE))
 		{
-			if (!currentTrackedAssets.exists(key))
+			if (!currentTrackedAssets.exists(path))
 			{
-				var newGraphic:FlxGraphic = FlxG.bitmap.add(path, false, key);
+				var newGraphic:FlxGraphic;
+
+				if (ClientPrefs.gpuTextures)
+					newGraphic = FlxGraphic.fromBitmapData(GPUFunctions.getBitmaponGPU(path), false, path, false);
+				else
+					newGraphic = FlxG.bitmap.add(path, false, path);
+
 				newGraphic.persist = true;
-				currentTrackedAssets.set(key, newGraphic);
+				currentTrackedAssets.set(path, newGraphic);
 			}
-			localTrackedAssets.push(key);
-			return currentTrackedAssets.get(key);
+
+			localTrackedAssets.push(path);
+			return currentTrackedAssets.get(path);
 		}
-		trace('oh no $key returned null NOOOO');
+
+		trace('"$path" is returning null');
 		return null;
 	}
 

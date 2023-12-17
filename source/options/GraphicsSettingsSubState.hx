@@ -34,6 +34,23 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		title = 'Graphics';
 		rpcTitle = 'Graphics Settings Menu'; // for Discord Rich Presence
 
+		var option:Option = new Option('Fullscreen',
+			'If checked, runs the game in fullscreen.',
+			'fullscreen',
+			'bool',
+			false);
+		option.onChange = onChangeFullscreen;
+		addOption(option);
+
+		#if !html5 // Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
+		var option:Option = new Option('Framerate', "Pretty self explanatory, isn't it?", 'framerate', 'int', 60);
+		addOption(option);
+		option.minValue = 60;
+		option.maxValue = 330; // Originally 240 but increased to 2x of 165
+		option.displayFormat = '%v FPS';
+		option.onChange = onChangeFramerate;
+		#end
+
 		// I'd suggest using "Low Quality" as an example for making your own option since it is the simplest here
 		var option:Option = new Option('Low Quality', // Name
 			'If checked, disables some background details,\ndecreases loading times and improves performance.', // Description
@@ -55,14 +72,13 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			true); // Default value
 		addOption(option);
 
-		#if !html5 // Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
-		var option:Option = new Option('Framerate', "Pretty self explanatory, isn't it?", 'framerate', 'int', 60);
+		var option:Option = new Option('GPU Textures',
+			'If checked, renders textures on the GPU instead,\ndecreasing memory usage.',
+			'gpuTextures',
+			'bool',
+			true);
 		addOption(option);
-		option.minValue = 60;
-		option.maxValue = 330; // Originally 240 but increased to 2x of 165
-		option.displayFormat = '%v FPS';
-		option.onChange = onChangeFramerate;
-		#end
+
 		super();
 	}
 
@@ -86,5 +102,10 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			FlxG.updateFramerate = ClientPrefs.framerate;
 			FlxG.drawFramerate = ClientPrefs.framerate;
 		}
+	}
+
+	function onChangeFullscreen()
+	{
+		FlxG.fullscreen = ClientPrefs.fullscreen;
 	}
 }

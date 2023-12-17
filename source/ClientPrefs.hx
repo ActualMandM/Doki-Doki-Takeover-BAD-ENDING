@@ -13,12 +13,13 @@ class ClientPrefs
 	public static var noteUnderlay:Float = 0;
 	public static var showFPS:Bool = false;
 	public static var flashing:Bool = true;
-	public static var gpuTextures:Bool = false; // Might attempt this again
+	public static var gpuTextures:Bool = true;
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
 	public static var shaders:Bool = true;
 	public static var framerate:Int = 60;
+	public static var fullscreen:Bool = false;
 	public static var cursing:Bool = true;
 	public static var violence:Bool = true;
 	public static var camZooms:Bool = true;
@@ -104,12 +105,13 @@ class ClientPrefs
 		FlxG.save.data.noteUnderlay = noteUnderlay;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
-		//FlxG.save.data.gpuTextures = gpuTextures;
+		FlxG.save.data.gpuTextures = gpuTextures;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
 		FlxG.save.data.shaders = shaders;
 		FlxG.save.data.framerate = framerate;
+		FlxG.save.data.fullscreen = fullscreen;
 		FlxG.save.data.storycomplete = storycomplete;
 		FlxG.save.data.firststart = firststart;
 		// FlxG.save.data.cursing = cursing;
@@ -183,12 +185,10 @@ class ClientPrefs
 		{
 			flashing = FlxG.save.data.flashing;
 		}
-		/*
 		if (FlxG.save.data.gpuTextures != null)
 		{
 			gpuTextures = FlxG.save.data.gpuTextures;
 		}
-		*/
 		if (FlxG.save.data.globalAntialiasing != null)
 		{
 			globalAntialiasing = FlxG.save.data.globalAntialiasing;
@@ -229,6 +229,11 @@ class ClientPrefs
 		{
 			FlxG.updateFramerate = framerate;
 			FlxG.drawFramerate = framerate;
+		}
+		if (FlxG.save.data.fullscreen != null)
+		{
+			fullscreen = FlxG.save.data.fullscreen;
+			FlxG.fullscreen = fullscreen;
 		}
 		/*if(FlxG.save.data.cursing != null) {
 				cursing = FlxG.save.data.cursing;
