@@ -15,7 +15,7 @@ typedef BPMChangeEvent =
 
 class Conductor
 {
-	public static var bpm:Float = 100;
+	public static var bpm(default, set):Float = 100.0;
 	public static var crochet:Float = ((60 / bpm) * 1000); // beats in milliseconds
 	public static var stepCrochet:Float = crochet / 4; // steps in milliseconds
 	public static var songPosition:Float;
@@ -76,11 +76,12 @@ class Conductor
 		trace("new BPM map BUDDY " + bpmChangeMap);
 	}
 
-	public static function changeBPM(newBpm:Float)
+	public static function set_bpm(newBPM:Float)
 	{
-		bpm = newBpm;
+		bpm = newBPM;
 
 		crochet = ((60 / bpm) * 1000);
 		stepCrochet = crochet / 4;
+		return newBPM;
 	}
 }
