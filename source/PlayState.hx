@@ -1299,6 +1299,7 @@ class PlayState extends MusicBeatState
 		precacheList.set('MARKOVNOTE_assets', 'image');
 		precacheList.set('NOTE_splashes_doki', 'image');
 		precacheList.set('poemUI/NOTE_assets', 'image');
+		precacheList.set('poemUI/noteSplashes', 'image');
 
 		#if desktop
 		// Updating Discord Rich Presence.

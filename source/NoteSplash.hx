@@ -11,14 +11,20 @@ class NoteSplash extends FlxSprite
 	private var idleAnim:String;
 	private var textureLoaded:String = null;
 
+	private var ddtoStyled:Bool = true;
+
 	public function new(x:Float = 0, y:Float = 0, ?note:Int = 0)
 	{
 		super(x, y);
 
-		var skin:String = 'noteSplashes';
-		if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
-			skin = PlayState.SONG.splashSkin;
+		var skin:String = 'NOTE_splashes_doki';
 
+		if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
+		{
+			skin = PlayState.SONG.splashSkin;
+			ddtoStyled = false;
+		}
+		
 		loadAnims(skin);
 
 		colorSwap = new ColorSwap();
@@ -30,9 +36,6 @@ class NoteSplash extends FlxSprite
 
 	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null, hueColor:Float = 0, satColor:Float = 0, brtColor:Float = 0, noteStyle:String = '')
 	{
-		setPosition(x - Note.swagWidth * 0.95, y - Note.swagWidth);
-		alpha = 0.6;
-
 		if (texture == null)
 		{
 			if (noteStyle != null)
@@ -41,30 +44,49 @@ class NoteSplash extends FlxSprite
 				{
 					case 'poem':
 						texture = 'poemUI/noteSplashes';
+						ddtoStyled = false;
 					default:
-						texture = 'noteSplashes';
+						texture = 'NOTE_splashes_doki';
+						ddtoStyled = true;
 				}
 			}
 			else
 			{
-				texture = 'noteSplashes';
+				texture = 'NOTE_splashes_doki';
+				ddtoStyled = true;
 			}
 
 			if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
+			{
 				texture = PlayState.SONG.splashSkin;
+				ddtoStyled = false;
+			}
 		}
 
 		if (textureLoaded != texture)
-		{
 			loadAnims(texture);
-		}
-		colorSwap.hue = hueColor;
-		colorSwap.saturation = satColor;
-		colorSwap.brightness = brtColor;
-		offset.set(10, 10);
 
-		var animNum:Int = FlxG.random.int(1, 2);
+		if (ddtoStyled)
+		{
+			setPosition(x - 25, y - 25);
+			alpha = 1;
+			flipX = FlxG.random.bool(0.5);
+			angle = FlxG.random.float(0, 45);
+			offset.set(width * 0.3, height * 0.3);
+		}
+		else
+		{
+			setPosition(x - Note.swagWidth * 0.95, y - Note.swagWidth);
+			alpha = 0.6;
+			colorSwap.hue = hueColor;
+			colorSwap.saturation = satColor;
+			colorSwap.brightness = brtColor;
+			offset.set(10, 10);
+		}
+
+		var animNum:Int = 2 /* FlxG.random.int(1, 2)*/;
 		animation.play('note' + note + '-' + animNum, true);
+
 		if (animation.curAnim != null)
 			animation.curAnim.frameRate = 24 + FlxG.random.int(-2, 2);
 	}
@@ -72,7 +94,8 @@ class NoteSplash extends FlxSprite
 	function loadAnims(skin:String)
 	{
 		frames = Paths.getSparrowAtlas(skin);
-		for (i in 1...3)
+
+		for (i in /*1*/ 2...3)
 		{
 			animation.addByPrefix("note1-" + i, "note splash blue " + i, 24, false);
 			animation.addByPrefix("note2-" + i, "note splash green " + i, 24, false);
@@ -84,8 +107,10 @@ class NoteSplash extends FlxSprite
 	override function update(elapsed:Float)
 	{
 		if (animation.curAnim != null)
+		{
 			if (animation.curAnim.finished)
 				kill();
+		}
 
 		super.update(elapsed);
 	}
