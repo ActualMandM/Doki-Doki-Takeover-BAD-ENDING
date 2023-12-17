@@ -13,6 +13,7 @@ class ClientPrefs
 	public static var noteUnderlay:Float = 0;
 	public static var showFPS:Bool = false;
 	public static var flashing:Bool = true;
+	public static var gpuTextures:Bool = false; // Might attempt this again
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
@@ -31,6 +32,7 @@ class ClientPrefs
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = false;
+	public static var hitsoundVolume:Float = 0;
 	public static var autoPause:Bool = false;
 	public static var storycomplete:Bool = false;
 	public static var firststart:Bool = true;
@@ -102,6 +104,7 @@ class ClientPrefs
 		FlxG.save.data.noteUnderlay = noteUnderlay;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
+		//FlxG.save.data.gpuTextures = gpuTextures;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
@@ -132,6 +135,7 @@ class ClientPrefs
 		FlxG.save.data.safeFrames = safeFrames;
 		FlxG.save.data.gameplaySettings = gameplaySettings;
 		FlxG.save.data.controllerMode = controllerMode;
+		FlxG.save.data.hitsoundVolume = hitsoundVolume;
 		FlxG.save.data.autoPause = autoPause;
 
 		FlxG.save.data.language = language;
@@ -179,6 +183,12 @@ class ClientPrefs
 		{
 			flashing = FlxG.save.data.flashing;
 		}
+		/*
+		if (FlxG.save.data.gpuTextures != null)
+		{
+			gpuTextures = FlxG.save.data.gpuTextures;
+		}
+		*/
 		if (FlxG.save.data.globalAntialiasing != null)
 		{
 			globalAntialiasing = FlxG.save.data.globalAntialiasing;
@@ -290,6 +300,10 @@ class ClientPrefs
 		if (FlxG.save.data.controllerMode != null)
 		{
 			controllerMode = FlxG.save.data.controllerMode;
+		}
+		if (FlxG.save.data.hitsoundVolume != null)
+		{
+			hitsoundVolume = FlxG.save.data.hitsoundVolume;
 		}
 		if (FlxG.save.data.autoPause != null)
 		{

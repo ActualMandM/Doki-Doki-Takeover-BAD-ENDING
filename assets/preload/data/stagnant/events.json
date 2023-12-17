@@ -459,6 +459,11 @@
 						"10,12.5"
 					],
 					[
+						"Change HUD Font",
+						"poem",
+						""
+					],
+					[
 						"Change Stagnant Stage",
 						"poem",
 						""
@@ -550,6 +555,11 @@
 					],
 					[
 						"Change Time Graphic",
+						"",
+						""
+					],
+					[
+						"Change HUD Font",
 						"",
 						""
 					],
@@ -847,6 +857,11 @@
 						"Change Time Graphic",
 						"poemUI/,-poem",
 						"10,12.5"
+					],
+					[
+						"Change HUD Font",
+						"poem",
+						""
 					],
 					[
 						"Change Stagnant Stage",

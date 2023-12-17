@@ -60,16 +60,17 @@ using StringTools;
 class ChartingState extends MusicBeatState
 {
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
-		[
-			'',
-			'Alt Animation',
-			'Hey!',
-			'Hurt Note',
-			'GF Sing',
-			'No Animation',
-			'Note of Markov',
-			'Sayo Sing', 
-			'Yuri Sing'];
+	[
+		'',
+		'Alt Animation',
+		'Hey!',
+		'Hurt Note',
+		'GF Sing',
+		'No Animation',
+		'Note of Markov',
+		'Sayo Sing', 
+		'Yuri Sing'
+	];
 
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -131,6 +132,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Change Time Graphic',
 			"Value 1: The prefix and suffix for the graphic\nValue 2: The offset of the graphic\n(both separated by commas)"
+		],
+		[
+			'Change HUD Font',
+			"Value 1: Font type"
 		],
 		[
 			'Change Stagnant Stage',
@@ -2173,7 +2178,7 @@ class ChartingState extends MusicBeatState
 					{
 						if ((playSoundBf.checked && note.mustPress) || (playSoundDad.checked && !note.mustPress))
 						{
-							var soundToPlay = 'ChartingTick';
+							var soundToPlay = 'hitsound';
 							if (_song.player1 == 'gf')
 							{ // Easter egg
 								soundToPlay = 'GF_' + Std.string(data + 1);

@@ -334,6 +334,9 @@ class PlayState extends MusicBeatState
 	// Less laggy controls
 	private var keysArray:Array<Dynamic>;
 
+	// Precaching shit
+	var precacheList:Map<String, String> = new Map<String, String>();
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -716,8 +719,8 @@ class PlayState extends MusicBeatState
 		if (ClientPrefs.shaders)
 		{
 			staticlol = new StaticShader();
-			camGame.setFilters([new ShaderFilter(staticlol)]);
-			camCache.setFilters([new ShaderFilter(staticlol)]);
+			camGame.filters = [new ShaderFilter(staticlol)];
+			camCache.filters = [new ShaderFilter(staticlol)];
 			staticlol.alpha.value = [staticAlpha];
 		}
 
@@ -969,8 +972,9 @@ class PlayState extends MusicBeatState
 			showTime = false;
 
 		timeTxt = new FlxText(0, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("Aller_Rg.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.screenCenter(X);
+		timeTxt.antialiasing = ClientPrefs.globalAntialiasing;
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
 		timeTxt.visible = showTime;
@@ -1123,14 +1127,16 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("Aller_Rg.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.antialiasing = ClientPrefs.globalAntialiasing;
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(0, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("riffic.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.antialiasing = ClientPrefs.globalAntialiasing;
 		botplayTxt.screenCenter(X);
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -1281,9 +1287,18 @@ class PlayState extends MusicBeatState
 		RecalculateRating();
 
 		// PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
-		CoolUtil.precacheSound('missnote1');
-		CoolUtil.precacheSound('missnote2');
-		CoolUtil.precacheSound('missnote3');
+		if (ClientPrefs.hitsoundVolume > 0)
+			precacheList.set('hitsound', 'sound');
+
+		for (i in 1...4)
+			precacheList.set('missnote$i', 'sound');
+
+		precacheList.set('alphabet', 'image');
+
+		// Bad Ending specific caching
+		precacheList.set('MARKOVNOTE_assets', 'image');
+		precacheList.set('NOTE_splashes_doki', 'image');
+		precacheList.set('poemUI/NOTE_assets', 'image');
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -1300,6 +1315,21 @@ class PlayState extends MusicBeatState
 		callOnLuas('onCreatePost', []);
 
 		super.create();
+
+		cachePopUpScore();
+
+		for (key => type in precacheList)
+		{
+			switch (type)
+			{
+				case 'image':
+					Paths.image(key);
+				case 'sound':
+					Paths.sound(key);
+				case 'music':
+					Paths.music(key);
+			}
+		}
 
 		Paths.clearUnusedMemory();
 	}
@@ -1348,6 +1378,17 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
+	public function cacheHealthBarGraphic(?prefix:String = '', ?suffix:String = '')
+	{
+		var path:String = prefix + 'healthBar' + suffix;
+		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
+
+		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
+			path = 'healthBar';
+
+		Paths.image(path);
+	}
+
 	public function reloadHealthBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
 	{
 		var path:String = prefix + 'healthBar' + suffix;
@@ -1366,6 +1407,17 @@ class PlayState extends MusicBeatState
 			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 
 		healthBar.updateBar();
+	}
+
+	public function cacheTimeBarGraphic(?prefix:String = '', ?suffix:String = '')
+	{
+		var path:String = prefix + 'timeBar' + suffix;
+		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
+
+		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end!OpenFlAssets.exists(gamePath, IMAGE))
+			path = 'timeBar';
+
+		Paths.image(path);
 	}
 
 	public function reloadTimeBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
@@ -2106,6 +2158,19 @@ class PlayState extends MusicBeatState
 
 				var newCharacter:String = event[3];
 				addCharacterToList(newCharacter, charType);
+
+			case 'Change Combo UI':
+				cachePopUpScore(event[2], event[3]);
+
+			/* do not ask me why these don't work
+			case 'Change Health Graphic':
+				var stringArray:Array<String> = event[2].trim().split(',');
+				cacheHealthBarGraphic(stringArray[0], stringArray[1]);
+
+			case 'Change Time Graphic':
+				var stringArray:Array<String> = event[2].trim().split(',');
+				cacheTimeBarGraphic(stringArray[0], stringArray[1]);
+			*/
 		}
 
 		if (!eventPushedMap.exists(event[1]))
@@ -2381,7 +2446,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if (staticlol != null && ClientPrefs.shaders)
+		if (staticlol != null && ClientPrefs.shaders && camGame.filtersEnabled)
 		{
 			iTime += elapsed;
 			staticlol.alpha.value = [staticAlpha];
@@ -3668,7 +3733,26 @@ class PlayState extends MusicBeatState
 				if (value2 == '') offsetArray = ['0', '0'];
 
 				reloadTimeBarGraphic(stringArray[0], stringArray[1], Std.parseFloat(offsetArray[0]), Std.parseFloat(offsetArray[1]));
-			
+
+			case 'Change HUD Font':
+				switch (value1)
+				{
+					default: // ddto
+						timeTxt.font = Paths.font("Aller_Rg.ttf");
+						scoreTxt.font = Paths.font("Aller_Rg.ttf");
+						botplayTxt.font = Paths.font("riffic.ttf");
+
+					case 'fnf':
+						timeTxt.font = Paths.font("vcr.ttf");
+						scoreTxt.font = Paths.font("vcr.ttf");
+						botplayTxt.font = Paths.font("vcr.ttf");
+
+					case 'poem':
+						timeTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
+						scoreTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
+						botplayTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
+				}
+
 			case 'Change Stagnant Stage':
 				var val2:Float = Std.parseFloat(value2);
 				if (Math.isNaN(val2))
@@ -4605,6 +4689,24 @@ class PlayState extends MusicBeatState
 	public var totalPlayed:Int = 0;
 	public var totalNotesHit:Float = 0.0;
 
+	private function cachePopUpScore(prefix:String = '', suffix:String = '')
+	{
+		if (isPixelStage)
+		{
+			if (prefix != '') prefix = 'pixelUI/';
+			if (suffix != '') suffix = '-pixel';
+		}
+
+		Paths.image(prefix + "sick" + suffix);
+		Paths.image(prefix + "good" + suffix);
+		Paths.image(prefix + "bad" + suffix);
+		Paths.image(prefix + "shit" + suffix);
+		Paths.image(prefix + "combo" + suffix);
+
+		for (i in 0...10)
+			Paths.image(prefix + 'num' + i + suffix);
+	}
+
 	private function popUpScore(note:Note = null):Void
 	{
 		var noteDiff:Float = Math.abs(note.strumTime - Conductor.songPosition + ClientPrefs.ratingOffset);
@@ -5184,6 +5286,9 @@ class PlayState extends MusicBeatState
 		{
 			if (cpuControlled && (note.ignoreNote || note.hitCausesMiss))
 				return;
+
+			if (ClientPrefs.hitsoundVolume > 0 && !note.hitsoundDisabled)
+				FlxG.sound.play(Paths.sound('hitsound'), ClientPrefs.hitsoundVolume);
 
 			if (note.hitCausesMiss)
 			{
