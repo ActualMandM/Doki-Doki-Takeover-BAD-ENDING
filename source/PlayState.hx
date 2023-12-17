@@ -3744,15 +3744,24 @@ class PlayState extends MusicBeatState
 						scoreTxt.font = Paths.font("Aller_Rg.ttf");
 						botplayTxt.font = Paths.font("riffic.ttf");
 
+						scoreTxt.borderSize = 1.25;
+						botplayTxt.borderSize = 1.25;
+
 					case 'fnf':
 						timeTxt.font = Paths.font("vcr.ttf");
 						scoreTxt.font = Paths.font("vcr.ttf");
 						botplayTxt.font = Paths.font("vcr.ttf");
 
+						scoreTxt.borderSize = 1.25;
+						botplayTxt.borderSize = 1.25;
+
 					case 'poem':
 						timeTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
 						scoreTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
 						botplayTxt.font = Paths.font("VTKS_ANIMAL_2.ttf");
+
+						scoreTxt.borderSize = 2;
+						botplayTxt.borderSize = 2;
 				}
 
 			case 'Change Stagnant Stage':
