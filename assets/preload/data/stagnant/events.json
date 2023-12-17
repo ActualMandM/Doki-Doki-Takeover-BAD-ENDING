@@ -7,6 +7,17 @@
 		"player3": null,
 		"events": [
 			[
+				0,
+				[
+					[
+						"Change Combo UI",
+						"normalUI/",
+						"-normal",
+						""
+					]
+				]
+			],
+			[
 				2666.66666666667,
 				[
 					[
@@ -133,6 +144,12 @@
 						"Add/Remove Vignette",
 						"0.2",
 						"0"
+					],
+					[
+						"Change Combo UI",
+						"",
+						"",
+						""
 					]
 				]
 			],
@@ -228,15 +245,16 @@
 						"Force Dance",
 						"gf",
 						""
-					]
-				]
-			],
-			[
-				45333.3333333333,
-				[
+					],
 					[
 						"Glitch increase",
 						"3",
+						""
+					],
+					[
+						"Change Combo UI",
+						"normalUI/",
+						"-normal",
 						""
 					]
 				]
@@ -363,6 +381,12 @@
 						"Add/Remove Vignette",
 						"0.3",
 						"0"
+					],
+					[
+						"Change Combo UI",
+						"",
+						"",
+						""
 					]
 				]
 			],
