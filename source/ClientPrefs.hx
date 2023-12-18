@@ -13,7 +13,7 @@ class ClientPrefs
 	public static var noteUnderlay:Float = 0;
 	public static var showFPS:Bool = false;
 	public static var flashing:Bool = true;
-	public static var gpuTextures:Bool = true;
+	public static var gpuTextures:Bool = false;
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;

@@ -72,8 +72,8 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			true); // Default value
 		addOption(option);
 
-		var option:Option = new Option('GPU Textures',
-			'If checked, renders textures on the GPU instead,\ndecreasing memory usage.',
+		var option:Option = new Option('GPU Textures*',
+			'If checked, renders textures on the GPU instead,\ndecreasing memory usage.\n\n*Experimental, may cause issues.',
 			'gpuTextures',
 			'bool',
 			true);

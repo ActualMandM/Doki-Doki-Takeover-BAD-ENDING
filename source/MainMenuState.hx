@@ -52,6 +52,8 @@ class MainMenuState extends MusicBeatState
 	public static var firstStart:Bool = true;
 	var focused:Bool = true;
 
+	var changeTxt:FlxText;
+
 	var funnyTimer:FlxTimer;
 	var logo:FlxSprite;
 	var logoBl:FlxSprite;
@@ -117,17 +119,6 @@ class MainMenuState extends MusicBeatState
 		logo = new FlxSprite(-260, 0).loadGraphic(Paths.image('Credits_LeftSide'));
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logo);
-		if (firstStart)
-			FlxTween.tween(logo, {x: -60}, 1.2, {
-				ease: FlxEase.elasticOut,
-				onComplete: function(flxTween:FlxTween)
-				{
-					firstStart = false;
-					changeItem();
-				}
-			});
-		else
-			logo.x = -60;
 
 		logoBl = new FlxSprite(-160, -40);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -137,7 +128,10 @@ class MainMenuState extends MusicBeatState
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
+
 		if (firstStart)
+		{
+			FlxTween.tween(logo, {x: -60}, 1.2, {ease: FlxEase.elasticOut});
 			FlxTween.tween(logoBl, {x: 40}, 1.2, {
 				ease: FlxEase.elasticOut,
 				onComplete: function(flxTween:FlxTween)
@@ -146,8 +140,12 @@ class MainMenuState extends MusicBeatState
 					changeItem();
 				}
 			});
+		}
 		else
+		{
+			logo.x = -60;
 			logoBl.x = 40;
+		}
 
 		menuItems = new FlxTypedGroup<FlxText>();
 		add(menuItems);
@@ -162,24 +160,24 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 
 			if (firstStart)
-				FlxTween.tween(menuItem, {x: 50}, 1.2 + (i * 0.2), {
-					ease: FlxEase.elasticOut,
-					onComplete: function(flxTween:FlxTween)
-					{
-						firstStart = false;
-						changeItem();
-					}
-				});
+				FlxTween.tween(menuItem, {x: 50}, 1.2 + (i * 0.2), {ease: FlxEase.elasticOut});
 			else
 				menuItem.x = 50;
 		}
 
+		changeTxt = new FlxText(58, menuItems.members[0].y + 33, 0, 'Press CTRL to open Gameplay Changers', 14);
+		changeTxt.setFormat(Paths.font("riffic.ttf"), 14, FlxColor.WHITE, LEFT);
+		changeTxt.setBorderStyle(OUTLINE, 0xFFFF0513, 1.25);
+		changeTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		changeTxt.visible = false;
+		changeTxt.alpha = 0;
+		add(changeTxt);
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
-		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "DDTO BAD ENDING v" + Application.current.meta.get('version'), 12);
-		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
@@ -192,9 +190,7 @@ class MainMenuState extends MusicBeatState
 		vignette.alpha = 0.6;
 		add(vignette);
 
-		// NG.core.calls.event.logEvent('swag').send();
-
-		changeItem();
+		changeItem(0, false);
 
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
@@ -353,7 +349,7 @@ class MainMenuState extends MusicBeatState
 		}
 	}
 
-	function changeItem(huh:Int = 0)
+	function changeItem(huh:Int = 0, tween:Bool = true)
 	{
 		curSelected += huh;
 
@@ -361,6 +357,16 @@ class MainMenuState extends MusicBeatState
 			curSelected = 0;
 		if (curSelected < 0)
 			curSelected = optionShit.length - 1;
+
+		if (tween)
+		{
+			FlxTween.cancelTweensOf(changeTxt);
+			changeTxt.visible = (curSelected == 0);
+			changeTxt.alpha = 0;
+	
+			if (changeTxt.visible)
+				FlxTween.tween(changeTxt, {alpha: 1}, 0.75, {ease: FlxEase.circOut, startDelay: 0.5});
+		}
 
 		menuItems.forEach(function(txt:FlxText)
 		{
