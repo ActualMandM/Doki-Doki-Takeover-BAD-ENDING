@@ -16,21 +16,32 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import flixel.FlxCamera;
 
 class PauseSubState extends MusicBeatSubstate
 {
-	var grpMenuShit:FlxTypedGroup<Alphabet>;
+	var grpMenuShit:FlxTypedGroup<FlxText>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Exit to menu']; // bro we ain't offering 'Change Difficulty', get good
+	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Exit to Menu'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
-	var practiceText:FlxText;
 
-	// var botplayText:FlxText;
+	var bg:FlxSprite;
+	var logo:FlxSprite;
+	var logoBl:FlxSprite;
+
+	var levelInfo:FlxText;
+	var levelDifficulty:FlxText;
+	var blueballedTxt:FlxText;
+	var practiceText:FlxText;
+	var chartingText:FlxText;
+
+	var canPress:Bool = true;
+
 	public static var transCamera:FlxCamera;
 
 	public function new(x:Float, y:Float)
@@ -57,43 +68,53 @@ class PauseSubState extends MusicBeatSubstate
 
 		FlxG.sound.list.add(pauseMusic);
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 		add(bg);
 
-		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
+		levelInfo = new FlxText(20, 15, 0, "", 32);
 		levelInfo.text += PlayState.SONG.song;
 		levelInfo.scrollFactor.set();
-		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
+		levelInfo.antialiasing = ClientPrefs.globalAntialiasing;
+		levelInfo.setFormat(CoolUtil.getFont('aller'), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		levelInfo.borderSize = 1.25;
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
-		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
+		levelDifficulty = new FlxText(20, 15 + 32, 0, "", 32);
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
+		levelDifficulty.setFormat(CoolUtil.getFont('aller'), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		levelDifficulty.borderSize = 1.25;
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
-		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
+		blueballedTxt = new FlxText(20, 15 + 64, 0, "", 32);
 		blueballedTxt.text = "Blueballed: " + PlayState.deathCounter;
 		blueballedTxt.scrollFactor.set();
-		blueballedTxt.setFormat(Paths.font('vcr.ttf'), 32);
+		blueballedTxt.antialiasing = ClientPrefs.globalAntialiasing;
+		blueballedTxt.setFormat(CoolUtil.getFont('aller'), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		blueballedTxt.borderSize = 1.25;
 		blueballedTxt.updateHitbox();
 		add(blueballedTxt);
 
 		practiceText = new FlxText(20, 15 + 101, 0, "PRACTICE MODE", 32);
 		practiceText.scrollFactor.set();
-		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
+		practiceText.antialiasing = ClientPrefs.globalAntialiasing;
+		practiceText.setFormat(CoolUtil.getFont('aller'), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		practiceText.borderSize = 1.25;
 		practiceText.x = FlxG.width - (practiceText.width + 20);
 		practiceText.updateHitbox();
 		practiceText.visible = PlayState.instance.practiceMode;
 		add(practiceText);
 
-		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
+		chartingText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
 		chartingText.scrollFactor.set();
-		chartingText.setFormat(Paths.font('vcr.ttf'), 32);
+		chartingText.antialiasing = ClientPrefs.globalAntialiasing;
+		chartingText.setFormat(CoolUtil.getFont('aller'), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		chartingText.borderSize = 1.25;
 		chartingText.x = FlxG.width - (chartingText.width + 20);
 		chartingText.y = FlxG.height - (chartingText.height + 20);
 		chartingText.updateHitbox();
@@ -113,15 +134,42 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
 
-		grpMenuShit = new FlxTypedGroup<Alphabet>();
+		logo = new FlxSprite(-260, 0).loadGraphic(Paths.image('Credits_LeftSide'));
+		logo.antialiasing = ClientPrefs.globalAntialiasing;
+		add(logo);
+
+		FlxTween.tween(logo, {x: -60}, 1.2, {
+			ease: FlxEase.elasticOut
+		});
+
+		logoBl = new FlxSprite(-160, -40);
+		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
+		logoBl.scale.set(0.5, 0.5);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, true);
+		logoBl.animation.play('bump');
+		logoBl.updateHitbox();
+		add(logoBl);
+
+		FlxTween.tween(logoBl, {x: 40}, 1.2, {
+			ease: FlxEase.elasticOut
+		});
+
+		grpMenuShit = new FlxTypedGroup<FlxText>();
 		add(grpMenuShit);
 
 		for (i in 0...menuItems.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-			songText.isMenuItem = true;
-			songText.targetY = i;
+			var songText:FlxText = new FlxText(-350, 370 + (i * 50), 0, menuItems[i]);
+			songText.setFormat(CoolUtil.getFont('riffic'), 27, FlxColor.WHITE, LEFT);
+			songText.antialiasing = ClientPrefs.globalAntialiasing;
+			songText.setBorderStyle(OUTLINE, 0xFF444444, 2);
+			songText.ID = i;
 			grpMenuShit.add(songText);
+
+			FlxTween.tween(songText, {x: 50}, 1.2 + (i * 0.2), {
+				ease: FlxEase.elasticOut
+			});
 		}
 
 		changeSelection();
@@ -152,6 +200,7 @@ class PauseSubState extends MusicBeatSubstate
 		if (accepted)
 		{
 			var daSelected:String = menuItems[curSelected];
+
 			if (difficultyChoices.contains(daSelected))
 			{
 				var name:String = PlayState.SONG.song.toLowerCase();
@@ -166,26 +215,26 @@ class PauseSubState extends MusicBeatSubstate
 				return;
 			}
 
-			switch (daSelected)
+			switch (daSelected.toLowerCase())
 			{
-				case "Resume":
-					close();
-				case 'Change Difficulty':
+				case "resume":
+					closeMenu();
+				case 'change difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
-				case 'Toggle Practice Mode':
+				case 'toggle practice mode':
 					PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
 					PlayState.changedDifficulty = true;
 					practiceText.visible = PlayState.instance.practiceMode;
-				case "Restart Song":
+				case "restart song":
 					restartSong();
-				case 'Toggle Botplay':
+				case 'toggle botplay':
 					PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
 					PlayState.changedDifficulty = true;
 					PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
 					PlayState.instance.botplayTxt.alpha = 1;
 					PlayState.instance.botplaySine = 0;
-				case "Exit to menu":
+				case "exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					if (PlayState.isStoryMode)
@@ -200,7 +249,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.changedDifficulty = false;
 					PlayState.chartingMode = false;
 
-				case 'BACK':
+				case 'back':
 					menuItems = menuItemsOG;
 					regenMenu();
 			}
@@ -227,7 +276,6 @@ class PauseSubState extends MusicBeatSubstate
 	override function destroy()
 	{
 		pauseMusic.destroy();
-
 		super.destroy();
 	}
 
@@ -242,37 +290,66 @@ class PauseSubState extends MusicBeatSubstate
 		if (curSelected >= menuItems.length)
 			curSelected = 0;
 
-		var bullShit:Int = 0;
-
-		for (item in grpMenuShit.members)
+		grpMenuShit.forEach(function(txt:FlxText)
 		{
-			item.targetY = bullShit - curSelected;
-			bullShit++;
+			if (txt.ID == curSelected)
+				txt.setBorderStyle(OUTLINE, 0xFFFF0513, 2);
+			else
+				txt.setBorderStyle(OUTLINE, 0xFF444444, 2);
+		});
+	}
 
-			item.alpha = 0.6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
+	function closeMenu()
+	{
+		// Tweens!
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+		canPress = false;
 
-			if (item.targetY == 0)
-			{
-				item.alpha = 1;
-				// item.setGraphicSize(Std.int(item.width));
-			}
+		FlxTween.cancelTweensOf(logo);
+		FlxTween.cancelTweensOf(logoBl);
+		FlxTween.cancelTweensOf(bg);
+
+		FlxTween.cancelTweensOf(levelInfo);
+		FlxTween.cancelTweensOf(levelDifficulty);
+		FlxTween.cancelTweensOf(blueballedTxt);
+		FlxTween.cancelTweensOf(practiceText);
+
+		for (i in 0...grpMenuShit.length)
+		{
+			FlxTween.cancelTweensOf(grpMenuShit.members[i]);
+			FlxTween.tween(grpMenuShit.members[i], {x: -350}, 0.5, {ease: FlxEase.quartInOut});
 		}
+
+		FlxTween.tween(logo, {x: -500}, 0.7, {ease: FlxEase.quartInOut});
+		FlxTween.tween(logoBl, {x: -500}, 0.7, {ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
+
+		FlxTween.tween(levelInfo, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
+		FlxTween.tween(levelDifficulty, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
+		FlxTween.tween(blueballedTxt, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
+		FlxTween.tween(practiceText, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
+
+		new FlxTimer().start(0.6, function(tmr:FlxTimer)
+		{
+			close();
+		});
 	}
 
 	function regenMenu():Void
 	{
 		for (i in 0...grpMenuShit.members.length)
-		{
 			this.grpMenuShit.remove(this.grpMenuShit.members[0], true);
-		}
+
 		for (i in 0...menuItems.length)
 		{
-			var item = new Alphabet(0, 70 * i + 30, menuItems[i], true, false);
-			item.isMenuItem = true;
-			item.targetY = i;
-			grpMenuShit.add(item);
+			var songText:FlxText = new FlxText(50, 370 + (i * 50), 0, menuItems[i]);
+			songText.setFormat(CoolUtil.getFont('riffic'), 27, FlxColor.WHITE, LEFT);
+			songText.antialiasing = ClientPrefs.globalAntialiasing;
+			songText.setBorderStyle(OUTLINE, 0xFF444444, 2);
+			songText.ID = i;
+			grpMenuShit.add(songText);
 		}
+
 		curSelected = 0;
 		changeSelection();
 	}

@@ -124,7 +124,7 @@ class MainMenuState extends MusicBeatState
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.scale.set(0.5, 0.5);
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, true);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 		add(logoBl);
@@ -382,8 +382,6 @@ class MainMenuState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-
-		logoBl.animation.play('bump', true);
 	}
 
 	override public function onFocusLost():Void
