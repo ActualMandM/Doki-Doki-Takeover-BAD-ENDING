@@ -1254,8 +1254,10 @@ class PlayState extends MusicBeatState
 			precacheList.set('missnote$i', 'sound');
 
 		precacheList.set('alphabet', 'image');
+		precacheList.set('noteSplashes', 'image');
 
 		// Bad Ending specific caching
+		precacheList.set('ghost', 'music');
 		precacheList.set('MARKOVNOTE_assets', 'image');
 		precacheList.set('NOTE_splashes_doki', 'image');
 		precacheList.set('poemUI/NOTE_assets', 'image');
@@ -1341,17 +1343,6 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	public function cacheHealthBarGraphic(?prefix:String = '', ?suffix:String = '')
-	{
-		var path:String = prefix + 'healthBar' + suffix;
-		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
-
-		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
-			path = 'healthBar';
-
-		Paths.image(path);
-	}
-
 	public function reloadHealthBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
 	{
 		var path:String = prefix + 'healthBar' + suffix;
@@ -1393,17 +1384,6 @@ class PlayState extends MusicBeatState
 			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 
 		healthBar.updateBar();
-	}
-
-	public function cacheTimeBarGraphic(?prefix:String = '', ?suffix:String = '')
-	{
-		var path:String = prefix + 'timeBar' + suffix;
-		var gamePath:String = Paths.getPath('images/$path.png', IMAGE);
-
-		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end!OpenFlAssets.exists(gamePath, IMAGE))
-			path = 'timeBar';
-
-		Paths.image(path);
 	}
 
 	public function reloadTimeBarGraphic(?prefix:String = '', ?suffix:String = '', ?offsetX:Float = 0, ?offsetY:Float = 0)
@@ -1744,9 +1724,6 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
-		// disable filters on the caching camera
-		camCache.filtersEnabled = false;
-
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if (ret != FunkinLua.Function_Stop)
@@ -1848,6 +1825,9 @@ class PlayState extends MusicBeatState
 							}
 						});
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+
+						// disable filters on the caching camera
+						camCache.filtersEnabled = false;
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.scrollFactor.set();
@@ -2181,21 +2161,26 @@ class PlayState extends MusicBeatState
 			case 'Change Combo UI':
 				cachePopUpScore(event[2], event[3]);
 
-			/* do not ask me why these don't work
 			case 'Change Health Graphic':
-				var stringArray:Array<String> = event[2].trim().split(',');
-				cacheHealthBarGraphic(stringArray[0], stringArray[1]);
+				if (event[2].length > 0)
+				{
+					var split:Array<String> = event[2].split(',');
+					Paths.image(split[0].trim() + 'healthBar' + split[1].trim());
+				}
 
 			case 'Change Time Graphic':
-				var stringArray:Array<String> = event[2].trim().split(',');
-				cacheTimeBarGraphic(stringArray[0], stringArray[1]);
-			*/
+				if (event[2].length > 0)
+				{
+					var split:Array<String> = event[2].split(',');
+					Paths.image(split[0].trim() + 'timeBar' + split[1].trim());
+				}
+
+			case 'Eye Popup':
+				Paths.image('MarkovEyes', 'doki');
 		}
 
 		if (!eventPushedMap.exists(event[1]))
-		{
 			eventPushedMap.set(event[1], true);
-		}
 	}
 
 	function eventNoteEarlyTrigger(event:Array<Dynamic>):Float
@@ -4270,12 +4255,14 @@ class PlayState extends MusicBeatState
 				eye.scrollFactor.set();
 				eye.cameras = [camHUD];
 				add(eye);
-				// TODO: make this delete itself so it don't take up memory lol
+
 				// goku goes super saiyan
 				new FlxTimer().start(4.61, function(tmr:FlxTimer)
 				{
 					remove(eye);
+					eye.destroy();
 				});
+
 			case 'Summon Sayori or Yuri':
 				var char:Character = extra1;
 				var val2:Float = Std.parseFloat(value2);

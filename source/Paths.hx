@@ -40,6 +40,11 @@ class Paths
 	}
 
 	public static var dumpExclusions:Array<String> = [
+		// images
+		'assets/images/Credits_LeftSide.png',
+		'assets/images/logoBumpin.png',
+		'assets/images/scrolling_BG.png',
+		// music
 		'assets/music/freakyMenu.$SOUND_EXT',
 		'assets/music/ghost.$SOUND_EXT'
 	];

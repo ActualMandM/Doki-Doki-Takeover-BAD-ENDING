@@ -39,14 +39,16 @@ class MainMenuState extends MusicBeatState
 		'story mode',
 		'freeplay',
 		'credits',
-		'options'
+		'options',
+		'exit'
 	];
 
 	var textShit:Array<String> = [
 		'Story Mode',
 		'Freeplay',
 		'Credits',
-		'Options'
+		'Options',
+		'Exit Game'
 	];
 
 	public static var firstStart:Bool = true;
@@ -346,6 +348,8 @@ class MainMenuState extends MusicBeatState
 				else
 				#end
 				MusicBeatState.switchState(new options.OptionsState());
+			case 'exit':
+				openSubState(new CloseGameSubState());
 		}
 	}
 
@@ -405,6 +409,7 @@ class MainMenuState extends MusicBeatState
 		{
 			funnyTimer.cancel();
 			focused = true;
+			FlxTween.cancelTweensOf(oof);
 			FlxTween.tween(oof, {alpha: 0.0001}, 0.1, {ease: FlxEase.circOut});
 		}
 		super.onFocus();
