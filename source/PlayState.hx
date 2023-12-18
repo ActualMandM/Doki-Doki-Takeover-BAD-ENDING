@@ -5731,19 +5731,16 @@ class PlayState extends MusicBeatState
 
 	override function stepHit()
 	{
-		super.stepHit();
-
-		if (20 < Math.abs(FlxG.sound.music.time - Conductor.songPosition)
-			|| SONG.needsVoices
-			&& 20 < Math.abs(vocals.time - Conductor.songPosition))
+		if (Math.abs(FlxG.sound.music.time - (Conductor.songPosition - Conductor.offset)) > 20
+			|| (SONG.needsVoices && Math.abs(vocals.time - (Conductor.songPosition - Conductor.offset)) > 20))
 		{
 			resyncVocals();
 		}
 
+		super.stepHit();
+
 		if (curStep == lastStepHit)
-		{
 			return;
-		}
 
 		lastStepHit = curStep;
 		setOnLuas('curStep', curStep);
