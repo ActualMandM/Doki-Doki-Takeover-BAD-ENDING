@@ -266,6 +266,10 @@ class ChartingState extends MusicBeatState
 			'Play SFX',
 			"Value 1: file name
 			Value 2: volume"
+		],
+		[
+			'Markov note spawns blood',
+			"Value 1: true/false"
 		]
 	];
 

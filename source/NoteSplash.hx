@@ -44,7 +44,7 @@ class NoteSplash extends FlxSprite
 				{
 					case 'poem':
 						texture = 'poemUI/noteSplashes';
-						ddtoStyled = false;
+						ddtoStyled = true;
 					default:
 						texture = 'NOTE_splashes_doki';
 						ddtoStyled = true;

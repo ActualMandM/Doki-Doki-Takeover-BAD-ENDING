@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="blooddrip.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gone0000" x="0" y="0" width="1" height="1"/>
+	<SubTexture name="blood0000" x="0" y="0" width="500" height="500"/>
+	<SubTexture name="blood0001" x="500" y="0" width="500" height="500"/>
+	<SubTexture name="blood0002" x="1000" y="0" width="500" height="500"/>
+	<SubTexture name="blood0003" x="1500" y="0" width="500" height="500"/>
+	<SubTexture name="blood0004" x="2000" y="0" width="500" height="500"/>
+	<SubTexture name="blood0005" x="2500" y="0" width="500" height="500"/>
+	<SubTexture name="blood0006" x="3000" y="0" width="500" height="500"/>
+	<SubTexture name="blood0007" x="3500" y="0" width="500" height="500"/>
+	<SubTexture name="blood0008" x="0" y="500" width="500" height="500"/>
+	<SubTexture name="blood0009" x="500" y="500" width="500" height="500"/>
+	<SubTexture name="blood0010" x="1000" y="500" width="500" height="500"/>
+	<SubTexture name="blood0011" x="1500" y="500" width="500" height="500"/>
+	<SubTexture name="blood0012" x="2000" y="500" width="500" height="500"/>
+	<SubTexture name="blood0013" x="2500" y="500" width="500" height="500"/>
+	<SubTexture name="blood0014" x="3000" y="500" width="500" height="500"/>
+	<SubTexture name="blood0015" x="3500" y="500" width="500" height="500"/>
+	<SubTexture name="blood0016" x="0" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0017" x="500" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0018" x="1000" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0019" x="1500" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0020" x="2000" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0021" x="2500" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0022" x="3000" y="1000" width="500" height="500"/>
+	<SubTexture name="blood0023" x="3500" y="1000" width="500" height="500"/>
+</TextureAtlas>

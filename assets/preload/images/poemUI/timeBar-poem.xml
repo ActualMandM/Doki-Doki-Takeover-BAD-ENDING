@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="timeBar.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="timeBar0000" x="8" y="8" width="421" height="45"/>
+	<SubTexture name="timeBar0001" x="8" y="8" width="421" height="45"/>
+	<SubTexture name="timeBar0002" x="8" y="8" width="421" height="45"/>
+	<SubTexture name="timeBar0003" x="8" y="61" width="421" height="45"/>
+	<SubTexture name="timeBar0004" x="8" y="61" width="421" height="45"/>
+	<SubTexture name="timeBar0005" x="8" y="61" width="421" height="45"/>
+	<SubTexture name="timeBar0006" x="8" y="114" width="421" height="45"/>
+	<SubTexture name="timeBar0007" x="8" y="114" width="421" height="45"/>
+	<SubTexture name="timeBar0008" x="8" y="114" width="421" height="45"/>
+</TextureAtlas>

@@ -451,12 +451,12 @@
 					[
 						"Change Health Graphic",
 						"poemUI/,-poem",
-						"10,12.5"
+						"10,20"
 					],
 					[
 						"Change Time Graphic",
 						"poemUI/,-poem",
-						"10,12.5"
+						"10,15"
 					],
 					[
 						"Change HUD Font",
@@ -851,12 +851,12 @@
 					[
 						"Change Health Graphic",
 						"poemUI/,-poem",
-						"10,12.5"
+						"10,20"
 					],
 					[
 						"Change Time Graphic",
 						"poemUI/,-poem",
-						"10,12.5"
+						"10,15"
 					],
 					[
 						"Change HUD Font",

@@ -148,6 +148,7 @@ class PlayState extends MusicBeatState
 	var bakaOverlay:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
+	var bloodDrips:Bool = false;
 
 	var swagShader:ColorSwap;
 
@@ -165,6 +166,7 @@ class PlayState extends MusicBeatState
 	private static var prevCamFollowPos:FlxObject;
 
 	public var strumLineNotes:FlxTypedGroup<StrumNote>;
+	public var bloodStrums:FlxTypedGroup<FlxSprite>;
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
@@ -253,6 +255,7 @@ class PlayState extends MusicBeatState
 	var vignette:FlxSprite;
 	var imdead:FlxSprite;
 	var darkScreen:FlxSprite;
+	var titleCard:FlxSprite;
 	var darkoverlay:FlxSprite;
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
@@ -273,6 +276,7 @@ class PlayState extends MusicBeatState
 	var glitchfront:BGSprite;
 	var glitchback:BGSprite;
 	var evilPoem:BGSprite;
+	var bloodyBG:BGSprite;
 	var poemTransition:BGSprite;
 	var closetCloseUp:BGSprite;
 
@@ -618,6 +622,12 @@ class PlayState extends MusicBeatState
 				evilPoem.visible = false;
 				add(evilPoem);
 
+				bloodyBG = new BGSprite('bgBlood', -220, 0, 1, 1, ['bgBlood'], false);
+				bloodyBG.animation.addByPrefix('bgBlood', 'bgBlood', 12, false);
+				bloodyBG.setGraphicSize(Std.int(bloodyBG.width * 1.3));
+				bloodyBG.alpha = 0.001;
+				add(bloodyBG);
+
 				closetCloseUp = new BGSprite('ClosetBG', -250, 0, 1, 1);
 				closetCloseUp.setGraphicSize(Std.int(closetCloseUp.width * 0.85));
 				closetCloseUp.updateHitbox();
@@ -878,12 +888,6 @@ class PlayState extends MusicBeatState
 		{
 			switch (curStage)
 			{
-				case 'limo':
-					gfVersion = 'gf-car';
-				case 'mall' | 'mallEvil':
-					gfVersion = 'gf-christmas';
-				case 'school' | 'schoolEvil':
-					gfVersion = 'gf-pixel';
 				default:
 					gfVersion = 'gf';
 			}
@@ -965,6 +969,9 @@ class PlayState extends MusicBeatState
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
 		add(grpNoteSplashes);
+
+		bloodStrums = new FlxTypedGroup<FlxSprite>();
+		add(bloodStrums);
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 
@@ -1147,6 +1154,7 @@ class PlayState extends MusicBeatState
 
 		grpUnderlay.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
+		bloodStrums.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1207,6 +1215,17 @@ class PlayState extends MusicBeatState
 				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				add(darkScreen);
 				darkScreen.cameras = [camHUD];
+
+				titleCard = new FlxSprite();
+				titleCard.frames = Paths.getSparrowAtlas('titlecards/${daSong}', 'doki'); // curSong
+				titleCard.animation.addByPrefix('idle', 'card', 24, true);
+				titleCard.animation.play('idle');
+				titleCard.antialiasing = ClientPrefs.globalAntialiasing;
+				titleCard.cameras = [camHUD];
+				titleCard.screenCenter();
+				titleCard.alpha = 0.001;
+				titleCard.scale.set(0.8,0.8);
+				add(titleCard);
 		}
 
 		
@@ -1215,64 +1234,6 @@ class PlayState extends MusicBeatState
 			seenCutscene = true;
 			switch (daSong)
 			{
-				case "monster":
-					var whiteScreen:FlxSprite = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
-					add(whiteScreen);
-					whiteScreen.scrollFactor.set();
-					whiteScreen.blend = ADD;
-					camHUD.visible = false;
-					snapCamFollowToPos(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-					inCutscene = true;
-
-					FlxTween.tween(whiteScreen, {alpha: 0}, 1, {
-						startDelay: 0.1,
-						ease: FlxEase.linear,
-						onComplete: function(twn:FlxTween)
-						{
-							camHUD.visible = true;
-							remove(whiteScreen);
-							startCountdown();
-						}
-					});
-					FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
-					gf.playAnim('scared', true);
-					boyfriend.playAnim('scared', true);
-
-				case "winter-horrorland":
-					var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-					add(blackScreen);
-					blackScreen.scrollFactor.set();
-					camHUD.visible = false;
-					inCutscene = true;
-
-					FlxTween.tween(blackScreen, {alpha: 0}, 0.7, {
-						ease: FlxEase.linear,
-						onComplete: function(twn:FlxTween)
-						{
-							remove(blackScreen);
-						}
-					});
-					FlxG.sound.play(Paths.sound('Lights_Turn_On'));
-					snapCamFollowToPos(400, -2050);
-					FlxG.camera.focusOn(camFollow);
-					FlxG.camera.zoom = 1.5;
-
-					new FlxTimer().start(0.8, function(tmr:FlxTimer)
-					{
-						camHUD.visible = true;
-						remove(blackScreen);
-						FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5, {
-							ease: FlxEase.quadInOut,
-							onComplete: function(twn:FlxTween)
-							{
-								startCountdown();
-							}
-						});
-					});
-				case 'senpai' | 'roses' | 'thorns':
-					if (daSong == 'roses')
-						FlxG.sound.play(Paths.sound('ANGRY'));
-					schoolIntro(doof);
 				case 'stagnant':
 					startVideo('intro');
 				default:
@@ -1298,7 +1259,9 @@ class PlayState extends MusicBeatState
 		precacheList.set('MARKOVNOTE_assets', 'image');
 		precacheList.set('NOTE_splashes_doki', 'image');
 		precacheList.set('poemUI/NOTE_assets', 'image');
-		precacheList.set('poemUI/noteSplashes', 'image');
+		precacheList.set('poemUI/NOTE_assets', 'image');
+		precacheList.set('poemUI/MARKOVNOTE_assets', 'image');
+		precacheList.set('stab', 'sound');
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -1397,7 +1360,30 @@ class PlayState extends MusicBeatState
 		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
 			path = 'healthBar';
 
-		healthBarBG.loadGraphic(Paths.image(path));
+		var xmlPath:String = 'images/' + path + '.xml';
+		var modpath = '';
+		var isAnimated = false;
+		#if MODS_ALLOWED
+		modpath = Paths.modFolders(xmlPath);
+		if (!FileSystem.exists(path))
+			modpath = Paths.getPreloadPath(xmlPath);
+		if (FileSystem.exists(modpath))
+			isAnimated = true;
+		#else
+		modpath = Paths.getPreloadPath(xmlPath);
+		if (Assets.exists(modpath))
+			isAnimated = true;
+		#end
+
+		if (isAnimated)
+		{
+			healthBarBG.frames = Paths.getSparrowAtlas(path);
+			healthBarBG.animation.addByPrefix('idle', 'healthBar', 24, true);
+			healthBarBG.animation.play('idle');
+		}
+		else
+			healthBarBG.loadGraphic(Paths.image(path));
+
 		healthBarBG.offset.set(offsetX, offsetY);
 	}
 
@@ -1428,7 +1414,30 @@ class PlayState extends MusicBeatState
 		if (#if MODS_ALLOWED !FileSystem.exists(Paths.modsImages(path)) && #end !OpenFlAssets.exists(gamePath, IMAGE))
 			path = 'timeBar';
 
-		timeBarBG.loadGraphic(Paths.image(path));
+		var xmlPath:String = 'images/' + path + '.xml';
+		var modpath = '';
+		var isAnimated = false;
+		#if MODS_ALLOWED
+		modpath = Paths.modFolders(xmlPath);
+		if (!FileSystem.exists(path))
+			modpath = Paths.getPreloadPath(xmlPath);
+		if (FileSystem.exists(modpath))
+			isAnimated = true;
+		#else
+		modpath = Paths.getPreloadPath(xmlPath);
+		if (Assets.exists(modpath))
+			isAnimated = true;
+		#end
+
+		if (isAnimated)
+		{
+			timeBarBG.frames = Paths.getSparrowAtlas(path);
+			timeBarBG.animation.addByPrefix('idle', 'timeBar', 24, true);
+			timeBarBG.animation.play('idle');
+		}
+		else
+			timeBarBG.loadGraphic(Paths.image(path));
+
 		timeBarBG.offset.set(offsetX, offsetY);
 	}
 
@@ -1755,7 +1764,6 @@ class PlayState extends MusicBeatState
 				setOnLuas('defaultOpponentStrumY' + i, opponentStrums.members[i].y);
 				// if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
-
 			startedCountdown = true;
 			Conductor.songPosition = 0;
 			Conductor.songPosition -= Conductor.crochet * 5;
@@ -1798,13 +1806,11 @@ class PlayState extends MusicBeatState
 				switch (Paths.formatToSongPath(curSong))
 				{
 					case 'stagnant' | 'home' | 'markov':
-						trace('songcheck');
 						introSoundsSuffix = '-ddto';
 						introAssets.set('default', ['blank', 'blank', 'blank']);
 					default:
 						introAssets.set('default', ['ready', 'set', 'go']);
 				}
-				introAssets.set('default', ['ready', 'set', 'go']);
 				introAssets.set('pixel', ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel']);
 
 				var introAlts:Array<String> = introAssets.get('default');
@@ -1828,6 +1834,19 @@ class PlayState extends MusicBeatState
 				switch (swagCounter)
 				{
 					case 0:
+						FlxTween.tween(titleCard, {alpha: 1, 'scale.x': 1, 'scale.y': 1}, 3, {
+							ease: FlxEase.cubeOut, onComplete: function(twn:FlxTween)
+							{
+								FlxTween.tween(titleCard, {alpha: 0}, 2, {
+									ease: FlxEase.cubeOut,
+									startDelay: 1, onComplete: function(twn:FlxTween)
+									{
+										remove(titleCard);
+										titleCard.destroy();
+									}
+								});
+							}
+						});
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
@@ -2277,6 +2296,25 @@ class PlayState extends MusicBeatState
 
 			strumLineNotes.add(babyArrow);
 			babyArrow.postAddedToGroup();
+
+			if (player == 0)
+			{
+				//Create blood stuff here
+				var offsetx:Int = -190;
+				var offsety:Int = 0;
+				if (ClientPrefs.downScroll) offsety = -380;
+
+				var blood:FlxSprite = new FlxSprite(babyArrow.x + offsetx, babyArrow.y + offsety);
+				blood.frames = Paths.getSparrowAtlas('blooddrip', 'preload');
+				blood.antialiasing = ClientPrefs.globalAntialiasing;
+				blood.animation.addByPrefix('idle', 'gone', 24, false);
+				blood.animation.addByPrefix('drip', 'blood', 24, false);
+				blood.animation.play('idle');
+				blood.alpha = targetAlpha;
+				blood.flipY = ClientPrefs.downScroll;
+				blood.ID = i; 
+				bloodStrums.add(blood);
+			}
 		}
 	}
 
@@ -3826,6 +3864,12 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.9;
 						FlxG.camera.zoom = 0.9;
 						evilPoem.visible = true;
+					case 'markovpoem':
+						defaultCamZoom = 0.9;
+						FlxG.camera.zoom = 0.9;
+						evilPoem.visible = true;
+						bloodyBG.alpha = 1;
+						bloodyBG.animation.play('bgBlood');
 					case 'closet':
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
@@ -4322,6 +4366,14 @@ class PlayState extends MusicBeatState
 					val2 = 1;
 
 				FlxG.sound.play(Paths.sound(value1), val2);
+			case 'Markov note spawns blood':
+				switch (value1.toLowerCase().trim())
+				{
+					case 'true':
+						bloodDrips = true;
+					default:
+						bloodDrips = false;
+				}
 
 		}
 		callOnLuas('onEvent', [eventName, value1, value2, value3]);
@@ -5261,6 +5313,17 @@ class PlayState extends MusicBeatState
 			{
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
+
+				if (bloodDrips)
+				{
+					var spr:FlxSprite;
+					spr = bloodStrums.members[Std.int(Math.abs(note.noteData))];
+					if (spr.animation.curAnim.name.startsWith('idle'))
+					{
+						spr.animation.play('drip');
+						FlxG.sound.play(Paths.sound('stab'));
+					}
+				}
 			}
 		}
 

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="icon-sayoripoem.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="idle0001" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="idle0002" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="idle0003" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="idle0004" x="150" y="0" width="150" height="150"/>
+	<SubTexture name="idle0005" x="150" y="0" width="150" height="150"/>
+	<SubTexture name="idle0006" x="150" y="0" width="150" height="150"/>
+	<SubTexture name="idle0007" x="150" y="0" width="150" height="150"/>
+	<SubTexture name="idle0008" x="300" y="0" width="150" height="150"/>
+	<SubTexture name="idle0009" x="300" y="0" width="150" height="150"/>
+	<SubTexture name="idle0010" x="300" y="0" width="150" height="150"/>
+	<SubTexture name="idle0011" x="300" y="0" width="150" height="150"/>
+	<SubTexture name="losing0000" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="losing0001" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="losing0002" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="losing0003" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="losing0004" x="150" y="150" width="150" height="150"/>
+	<SubTexture name="losing0005" x="150" y="150" width="150" height="150"/>
+	<SubTexture name="losing0006" x="150" y="150" width="150" height="150"/>
+	<SubTexture name="losing0007" x="150" y="150" width="150" height="150"/>
+	<SubTexture name="losing0008" x="300" y="150" width="150" height="150"/>
+	<SubTexture name="losing0009" x="300" y="150" width="150" height="150"/>
+	<SubTexture name="losing0010" x="300" y="150" width="150" height="150"/>
+	<SubTexture name="losing0011" x="300" y="150" width="150" height="150"/>
+</TextureAtlas>
