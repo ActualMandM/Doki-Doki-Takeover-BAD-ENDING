@@ -377,17 +377,17 @@ class PlayState extends MusicBeatState
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
-		camOther = new FlxCamera();
 		camCache = new FlxCamera();
+		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
-		camOther.bgColor.alpha = 0;
 		camCache.bgColor.alpha = 0;
+		camOther.bgColor.alpha = 0;
 		camGame.filtersEnabled = false;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
-		FlxG.cameras.add(camOther);
 		FlxG.cameras.add(camCache);
+		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
 		FlxCamera.defaultCameras = [camGame];
@@ -1214,14 +1214,14 @@ class PlayState extends MusicBeatState
 
 				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				add(darkScreen);
-				darkScreen.cameras = [camHUD];
+				darkScreen.cameras = [camOther];
 
 				titleCard = new FlxSprite();
 				titleCard.frames = Paths.getSparrowAtlas('titlecards/${daSong}', 'doki'); // curSong
 				titleCard.animation.addByPrefix('idle', 'card', 24, true);
 				titleCard.animation.play('idle');
 				titleCard.antialiasing = ClientPrefs.globalAntialiasing;
-				titleCard.cameras = [camHUD];
+				titleCard.cameras = [camOther];
 				titleCard.screenCenter();
 				titleCard.alpha = 0.001;
 				titleCard.scale.set(0.8,0.8);
@@ -1828,6 +1828,8 @@ class PlayState extends MusicBeatState
 
 						// disable filters on the caching camera
 						camCache.filtersEnabled = false;
+
+						darkScreen.cameras = [camHUD];
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.scrollFactor.set();
