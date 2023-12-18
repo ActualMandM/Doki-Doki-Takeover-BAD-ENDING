@@ -1,96 +1,25 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				181,
 				412
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SadSayo Idle"
-		},
-		{
-			"offsets": [
-				176,
-				397
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14
-			],
 			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "SadSayo Down"
+			"name": "SadSayo Idle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				188,
-				403
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14
-			],
-			"fps": 24,
-			"anim": "singLEFT",
 			"loop": false,
-			"name": "SadSayo Left"
-		},
-		{
-			"offsets": [
-				169,
-				398
-			],
-			"indices": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14
-			],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "SadSayo Right"
-		},
-		{
 			"offsets": [
 				179,
-				407
+				395
 			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SadSayo Down",
 			"indices": [
 				2,
 				3,
@@ -105,11 +34,82 @@
 				12,
 				13,
 				14
-			],
-			"fps": 24,
-			"anim": "singUP",
+			]
+		},
+		{
 			"loop": false,
-			"name": "SadSayo Up"
+			"offsets": [
+				207,
+				403
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SadSayo Left",
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				175,
+				402
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SadSayo Right",
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				410
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SadSayo Up",
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
 		}
 	],
 	"no_antialiasing": false,
