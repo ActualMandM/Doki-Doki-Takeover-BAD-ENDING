@@ -184,74 +184,76 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		var upP = controls.UI_UP_P;
-		var downP = controls.UI_DOWN_P;
-		var accepted = controls.ACCEPT;
-
-		if (upP)
+		if (canPress)
 		{
-			changeSelection(-1);
-		}
-		if (downP)
-		{
-			changeSelection(1);
-		}
-
-		if (accepted)
-		{
-			var daSelected:String = menuItems[curSelected];
-
-			if (difficultyChoices.contains(daSelected))
+			var upP = controls.UI_UP_P;
+			var downP = controls.UI_DOWN_P;
+			var accepted = controls.ACCEPT;
+	
+			if (upP)
+				changeSelection(-1);
+			if (downP)
+				changeSelection(1);
+	
+			if (accepted)
 			{
-				var name:String = PlayState.SONG.song.toLowerCase();
-				var poop = Highscore.formatSong(name, curSelected);
-				PlayState.SONG = Song.loadFromJson(poop, name);
-				PlayState.storyDifficulty = curSelected;
-				CustomFadeTransition.nextCamera = transCamera;
-				MusicBeatState.resetState();
-				FlxG.sound.music.volume = 0;
-				PlayState.changedDifficulty = true;
-				PlayState.chartingMode = false;
-				return;
-			}
-
-			switch (daSelected.toLowerCase())
-			{
-				case "resume":
-					closeMenu();
-				case 'change difficulty':
-					menuItems = difficultyChoices;
-					regenMenu();
-				case 'toggle practice mode':
-					PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
+				var daSelected:String = menuItems[curSelected];
+	
+				if (difficultyChoices.contains(daSelected))
+				{
+					var name:String = PlayState.SONG.song.toLowerCase();
+					var poop = Highscore.formatSong(name, curSelected);
+					PlayState.SONG = Song.loadFromJson(poop, name);
+					PlayState.storyDifficulty = curSelected;
+					CustomFadeTransition.nextCamera = transCamera;
+					MusicBeatState.resetState();
+					FlxG.sound.music.volume = 0;
 					PlayState.changedDifficulty = true;
-					practiceText.visible = PlayState.instance.practiceMode;
-				case "restart song":
-					restartSong();
-				case 'toggle botplay':
-					PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
-					PlayState.changedDifficulty = true;
-					PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
-					PlayState.instance.botplayTxt.alpha = 1;
-					PlayState.instance.botplaySine = 0;
-				case "exit to menu":
-					PlayState.deathCounter = 0;
-					PlayState.seenCutscene = false;
-					if (PlayState.isStoryMode)
-					{
-						MusicBeatState.switchState(new MainMenuState());
-					}
-					else
-					{
-						MusicBeatState.switchState(new FreeplayState());
-					}
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-					PlayState.changedDifficulty = false;
 					PlayState.chartingMode = false;
+					return;
+				}
+	
+				switch (daSelected.toLowerCase())
+				{
+					case "resume":
+						closeMenu();
 
-				case 'back':
-					menuItems = menuItemsOG;
-					regenMenu();
+					case 'change difficulty':
+						menuItems = difficultyChoices;
+						regenMenu();
+
+					case 'toggle practice mode':
+						PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
+						PlayState.changedDifficulty = true;
+						practiceText.visible = PlayState.instance.practiceMode;
+
+					case "restart song":
+						restartSong();
+
+					case 'toggle botplay':
+						PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
+						PlayState.changedDifficulty = true;
+						PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
+						PlayState.instance.botplayTxt.alpha = 1;
+						PlayState.instance.botplaySine = 0;
+
+					case "exit to menu":
+						PlayState.deathCounter = 0;
+						PlayState.seenCutscene = false;
+
+						if (PlayState.isStoryMode)
+							MusicBeatState.switchState(new MainMenuState());
+						else
+							MusicBeatState.switchState(new FreeplayState());
+
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						PlayState.changedDifficulty = false;
+						PlayState.chartingMode = false;
+	
+					case 'back':
+						menuItems = menuItemsOG;
+						regenMenu();
+				}
 			}
 		}
 	}
