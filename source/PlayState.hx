@@ -2511,7 +2511,8 @@ class PlayState extends MusicBeatState
 			if (ClientPrefs.timeBarType == 'Time Elapsed')
 				songCalc = curTime;
 
-			var secondsTotal:Float = Math.max(0, Math.floor(songCalc / 1000));
+			var secondsTotal:Int = Math.floor(songCalc / 1000);
+			if (secondsTotal < 0) secondsTotal = 0;
 
 			if (ClientPrefs.timeBarType.startsWith('Time'))
 				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
