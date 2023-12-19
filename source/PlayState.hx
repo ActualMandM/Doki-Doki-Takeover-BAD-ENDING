@@ -1254,7 +1254,6 @@ class PlayState extends MusicBeatState
 			precacheList.set('missnote$i', 'sound');
 
 		precacheList.set('alphabet', 'image');
-		precacheList.set('noteSplashes', 'image');
 
 		// Bad Ending specific caching
 		precacheList.set('ghost', 'music');
@@ -2179,6 +2178,13 @@ class PlayState extends MusicBeatState
 
 			case 'Eye Popup':
 				Paths.image('MarkovEyes', 'doki');
+
+			case 'Play SFX':
+				Paths.sound(event[2]);
+
+			case 'Glitch Effect':
+				if (event[3].length > 0)
+					Paths.sound(event[3]);
 		}
 
 		if (!eventPushedMap.exists(event[1]))
@@ -3908,7 +3914,7 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(val1))
 					val1 = 0.5;
 
-				if (ClientPrefs.shaders) funnyGlitch(val1, value2);
+				funnyGlitch(val1, value2);
 			case 'Glitch increase':
 				switch (Std.parseFloat(value1))
 				{
@@ -4370,15 +4376,15 @@ class PlayState extends MusicBeatState
 
 	function funnyGlitch(duration:Float, sound:String):Void
 	{
+		if (sound.length > 0)
+			FlxG.sound.play(Paths.sound(sound));
+
 		// don't do anything if the user decided to be funny
-		if (duration <= 0)
+		if (!ClientPrefs.shaders || duration <= 0)
 			return;
 
 		camGame.filtersEnabled = true;
 		FlxTween.tween(this, {staticAlpha: 1}, 0.5, {ease:FlxEase.circOut});
-
-		if (sound != '')
-			FlxG.sound.play(Paths.sound(sound));
 
 		new FlxTimer().start(duration, function(tmr:FlxTimer)
 		{
