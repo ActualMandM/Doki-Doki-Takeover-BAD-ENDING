@@ -43,8 +43,6 @@ class FreeplayState extends MusicBeatState
 	var natsuki:FlxSprite;
 	var yuri:FlxSprite;
 
-	var diff:FlxSprite;
-
 	var sayoritween:FlxTween;
 	var natsukitween:FlxTween;
 	var yuritween:FlxTween;
@@ -140,7 +138,6 @@ class FreeplayState extends MusicBeatState
 		sayori.antialiasing = ClientPrefs.globalAntialiasing;
 		add(sayori);
 
-
 		vignette = new FlxSprite(0, 0).loadGraphic(Paths.image('menuvignette'));
 		vignette.alpha = 0.8;
 		add(vignette);
@@ -152,8 +149,6 @@ class FreeplayState extends MusicBeatState
 		redoverlay.animation.play('hard');
 		redoverlay.alpha = 0.001;
 		add(redoverlay);
-
-
 
 		songname = new FlxText(0, 550, 0, 'hueh', 50);
 		songname.screenCenter(X);
@@ -172,16 +167,6 @@ class FreeplayState extends MusicBeatState
 		diffstuff.visible = false;
 		diffstuff.screenCenter(X);
 		add(diffstuff);
-
-		diff = new FlxSprite(453, 580);
-		diff.frames = Paths.getSparrowAtlas('freeplay/difficulties', 'preload');
-		diff.antialiasing = ClientPrefs.globalAntialiasing;
-		diff.animation.addByPrefix('hard', 'Hard', 24);
-		diff.animation.addByPrefix('unfair', 'Unfair', 24);
-		diff.animation.play('hard');
-		diff.updateHitbox();
-		diff.visible = false;
-		add(diff);
 
 		WeekData.setDirectoryFromWeek();
 
@@ -411,7 +396,6 @@ class FreeplayState extends MusicBeatState
 		positionHighscore();
 
 		swapstyle(curDifficulty);
-
 	}
 
 	function swapstyle(hueh:Int)

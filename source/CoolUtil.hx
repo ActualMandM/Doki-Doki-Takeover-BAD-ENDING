@@ -2,10 +2,6 @@ package;
 
 import flixel.FlxG;
 import flixel.util.FlxSave;
-import openfl.utils.Assets;
-import lime.utils.Assets as LimeAssets;
-import lime.utils.AssetLibrary;
-import lime.utils.AssetManifest;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
@@ -126,13 +122,8 @@ class CoolUtil
 		return dumbArray;
 	}
 
-	// uhhhh does this even work at all? i'm starting to doubt
-	public static function precacheSound(sound:String, ?library:String = null):Void
-	{
-		var EmbeddedSound = Paths.sound(sound, library);
-		if (Assets.exists(EmbeddedSound, SOUND) || Assets.exists(EmbeddedSound, MUSIC))
-			Assets.getSound(EmbeddedSound, true);
-	}
+	inline public static function precacheSound(sound:String, ?library:String = null):Void
+		Paths.sound(sound, library);
 
 	public static function browserLoad(site:String)
 	{
@@ -141,21 +132,6 @@ class CoolUtil
 		#else
 		FlxG.openURL(site);
 		#end
-	}
-
-	public static function saveCheck(Company:String, File:String, Path:String = 'ninjamuffin99', Name:String = 'funkin'):Bool
-	{
-		// TODO: Get path for Linux and Mac
-		#if (sys && windows)
-		return FileSystem.exists(Sys.getEnv("appdata") + '\\${Company}\\${File}\\${Path}\\${Name}.sol');
-		#else
-		return false;
-		#end
-	}
-
-	inline public static function crash()
-	{
-		Sys.exit(0);
 	}
 
 	public static function getFont(type:String = 'vcr'):String
@@ -171,7 +147,7 @@ class CoolUtil
 			case 'riffic':
 				font = 'Riffic Free Bold';
 			case 'pixel':
-				font = 'LanaPixel';
+				font = 'Pixel Arial 11 Bold';
 			default:
 				font = 'VCR OSD Mono';
 		}
