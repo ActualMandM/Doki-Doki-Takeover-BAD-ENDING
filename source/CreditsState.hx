@@ -12,10 +12,6 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
-#if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 import lime.utils.Assets;
 
 using StringTools;
@@ -174,6 +170,7 @@ class CreditsState extends MusicBeatState
 				icon.xAdd = optionText.width + 10;
 				icon.sprTracker = optionText;
 				icon.animation.play('idle');
+				icon.ID = i;
 
 				// using a FlxGroup is too much fuss!
 				iconArray.push(icon);
@@ -229,12 +226,7 @@ class CreditsState extends MusicBeatState
 
 		do
 		{
-			curSelected += change;
-
-			if (curSelected < 0)
-				curSelected = creditsStuff.length - 1;
-			if (curSelected >= creditsStuff.length)
-				curSelected = 0;
+			curSelected = FlxMath.wrap(curSelected + change, 0, creditsStuff.length - 1);
 		}
 		while (unselectableCheck(curSelected));
 
@@ -246,20 +238,13 @@ class CreditsState extends MusicBeatState
 			bullShit++;
 
 			if (!unselectableCheck(bullShit - 1))
-			{
-				item.alpha = 0.6;
-
-				if (item.targetY == 0)
-					item.alpha = 1;
-			}
+				item.alpha = (item.targetY == 0 ? 1 : 0.6);
 		}
 
-		if (!unselectableCheck(curSelected - 1))
+		if (!unselectableCheck(curSelected))
 		{
 			for (icon in iconArray)
-				icon.animation.play('idle');
-	
-			iconArray[curSelected - 1]?.animation.play('select');
+				icon.animation.play(icon.ID == curSelected ? 'select' : 'idle');
 		}
 
 		descText.text = creditsStuff[curSelected][2];
