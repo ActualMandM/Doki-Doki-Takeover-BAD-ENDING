@@ -159,7 +159,14 @@ class CreditsState extends MusicBeatState
 			optionText.yAdd -= 70;
 
 			if (isSelectable)
+			{
 				optionText.x -= 70;
+			}
+			else
+			{
+				optionText.setFormat(CoolUtil.getFont('animal'), 72, FlxColor.BLACK, CENTER);
+				optionText.screenCenter(X);
+			}
 
 			optionText.forceX = optionText.x;
 			optionText.targetY = i;
