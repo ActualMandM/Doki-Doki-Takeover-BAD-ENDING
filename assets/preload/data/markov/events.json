@@ -266,6 +266,12 @@
 						"1.3",
 						"0",
 						""
+					],
+					[
+						"Toggle Note Camera Movement",
+						"true",
+						"",
+						""
 					]
 				]
 			],
@@ -1225,6 +1231,12 @@
 						"0.2",
 						"",
 						""
+					],
+					[
+						"Markov note spawns blood",
+						"true",
+						"",
+						""
 					]
 				]
 			],
@@ -1427,6 +1439,12 @@
 					],
 					[
 						"UI visibilty",
+						"false",
+						"",
+						""
+					],
+					[
+						"Markov note spawns blood",
 						"false",
 						"",
 						""
