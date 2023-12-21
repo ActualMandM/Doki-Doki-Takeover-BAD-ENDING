@@ -47,19 +47,19 @@ class CreditsState extends MusicBeatState
 			[
 				'SirDusterBuster',
 				'duster',
-				'Director/Main Artist/Animator',
+				'Team TBD Lead, Director/Main Artist/Animator',
 				'https://twitter.com/SirDusterBuster'
 			],
 			[
 				'Sun Spirit',
 				'jorge',
-				'Director/Programmer',
+				'Team TBD Lead, Director/Programmer',
 				'https://twitter.com/Jorge_SunSpirit'
 			],
 			[
 				'HighPoweredKeyz',
 				'hpk',
-				'Team TBD Lead/Chromatic Creator',
+				'Team TBD Lead, Chromatic Creator',
 				'https://twitter.com/HighPoweredArt'
 			],
 			[
@@ -159,7 +159,14 @@ class CreditsState extends MusicBeatState
 			optionText.yAdd -= 70;
 
 			if (isSelectable)
+			{
 				optionText.x -= 70;
+			}
+			else
+			{
+				optionText.setFormat(CoolUtil.getFont('animal'), 72, FlxColor.BLACK, CENTER);
+				optionText.screenCenter(X);
+			}
 
 			optionText.forceX = optionText.x;
 			optionText.targetY = i;
