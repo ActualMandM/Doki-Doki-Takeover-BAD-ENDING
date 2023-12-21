@@ -5013,11 +5013,8 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			if (note.noteType != 'Note of Markov')
-			{
-				char.playAnim(animToPlay, true);
-				char.holdTimer = 0;
-			}
+			char.playAnim(animToPlay, true);
+			char.holdTimer = 0;
 		}
 
 		if (SONG.needsVoices)
