@@ -270,6 +270,14 @@ class ChartingState extends MusicBeatState
 		[
 			'Markov note spawns blood',
 			"Value 1: true/false"
+		],
+		[
+			'Spawn Red Eyes',
+			"Value 1: anything here spawns them in, typing 'fadeout' will make them go away \n Value 2: speed of fade out"
+		],
+		[
+			'Stab Border',
+			"Value 1: does it regardless of what you put here"
 		]
 	];
 

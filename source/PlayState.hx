@@ -128,11 +128,13 @@ class PlayState extends MusicBeatState
 	public var extra2:Character;
 
 	var daStatic:BGSprite;
+	var screenPulse:BGSprite;
 	var redStatic:BGSprite;
 	var inthenotepad:BGSprite;
 	var notepadoverlay:BGSprite;
 	var stageStatic:BGSprite;
 	var bakaOverlay:BGSprite;
+	var funnyEyes:BGSprite;
 	var staticlol:StaticShader;
 	private var staticAlpha:Float = 0;
 	var bloodDrips:Bool = false;
@@ -233,6 +235,8 @@ class PlayState extends MusicBeatState
 	var evilSpace:FlxBackdrop;
 	var clouds:FlxBackdrop;
 	var fancyclouds:FlxBackdrop;
+	var windowlight:BGSprite;
+	var clubroomdark:BGSprite;
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
 	var ruinedClubBG:BGSprite;
@@ -521,7 +525,7 @@ class PlayState extends MusicBeatState
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
 					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
-					evilSpace.y -= 100;
+					evilSpace.y -= 300;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					evilSpace.visible = false;
 					add(evilSpace);
@@ -529,7 +533,7 @@ class PlayState extends MusicBeatState
 					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
 					clouds.scrollFactor.set(0.1, 0.1);
 					clouds.velocity.set(-13, 0);
-					clouds.y -= 100;
+					clouds.y -= 300;
 					clouds.antialiasing = ClientPrefs.globalAntialiasing;
 					clouds.scale.set(0.7, 0.7);
 					clouds.visible = false;
@@ -538,7 +542,7 @@ class PlayState extends MusicBeatState
 					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
 					fancyclouds.scrollFactor.set(0.1, 0.1);
 					fancyclouds.velocity.set(-13, 0);
-					fancyclouds.y -= 100;
+					fancyclouds.y -= 300;
 					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
 					fancyclouds.scale.set(0.7, 0.7);
 					fancyclouds.alpha = 1;
@@ -550,6 +554,19 @@ class PlayState extends MusicBeatState
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				evilClubBG.visible = false;
 				add(evilClubBG);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
+					clubroomdark.visible = false;
+					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
+					add(clubroomdark);
+
+					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
+					windowlight.visible = false;
+					windowlight.setGraphicSize(Std.int(windowlight.width * 1.3));
+					add(windowlight);
+				}
 
 				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
 				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
@@ -574,12 +591,14 @@ class PlayState extends MusicBeatState
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
 					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
+					evilSpace.y -= 300;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 
 					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
 					clouds.scrollFactor.set(0.1, 0.1);
 					clouds.velocity.set(-13, 0);
+					clouds.y -= 300;
 					clouds.antialiasing = ClientPrefs.globalAntialiasing;
 					clouds.scale.set(0.7, 0.7);
 					add(clouds);
@@ -587,16 +606,27 @@ class PlayState extends MusicBeatState
 					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
 					fancyclouds.scrollFactor.set(0.1, 0.1);
 					fancyclouds.velocity.set(-13, 0);
+					fancyclouds.y -= 300;
 					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
 					fancyclouds.scale.set(0.7, 0.7);
 					fancyclouds.alpha = 1;
-					fancyclouds.visible = false;
 					add(fancyclouds);
 				}
 
 				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				add(evilClubBG);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
+					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
+					add(clubroomdark);
+
+					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
+					windowlight.setGraphicSize(Std.int(windowlight.width * 1.3));
+					add(windowlight);
+				}
 
 				evilClubBGScribbly = new BGSprite('BGsketch', -220, -110, 1, 1, ['BGSketch'], true);
 				evilClubBGScribbly.setGraphicSize(Std.int(evilClubBGScribbly.width * 1.3));
@@ -621,6 +651,15 @@ class PlayState extends MusicBeatState
 				closetCloseUp.visible = false;
 				add(closetCloseUp);
 
+				funnyEyes = new BGSprite('EyeMidwayBG', 0, 0, 1, 1, ['Midway'], true);
+				funnyEyes.antialiasing = ClientPrefs.globalAntialiasing;
+				funnyEyes.alpha = 0.0001;
+				funnyEyes.cameras = [camHUD];
+				funnyEyes.setGraphicSize(Std.int(FlxG.width));
+				funnyEyes.updateHitbox();
+				funnyEyes.screenCenter();
+				add(funnyEyes);
+
 			case 'home':
 				swagShader = new ColorSwap();
 				swagShader.saturation = -100;
@@ -636,12 +675,14 @@ class PlayState extends MusicBeatState
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
 					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
+					evilSpace.y -= 300;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
 
 					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
 					clouds.scrollFactor.set(0.1, 0.1);
 					clouds.velocity.set(-13, 0);
+					clouds.y -= 300;
 					clouds.antialiasing = ClientPrefs.globalAntialiasing;
 					clouds.scale.set(0.7, 0.7);
 					add(clouds);
@@ -649,10 +690,10 @@ class PlayState extends MusicBeatState
 					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
 					fancyclouds.scrollFactor.set(0.1, 0.1);
 					fancyclouds.velocity.set(-13, 0);
+					fancyclouds.y -= 300;
 					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
 					fancyclouds.scale.set(0.7, 0.7);
 					fancyclouds.alpha = 1;
-					fancyclouds.visible = false;
 					add(fancyclouds);
 				}
 
@@ -690,6 +731,17 @@ class PlayState extends MusicBeatState
 				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * 1.3));
 				evilClubBG.visible = false;
 				add(evilClubBG);
+
+				if (!ClientPrefs.lowQuality)
+				{
+					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
+					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
+					add(clubroomdark);
+
+					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
+					windowlight.setGraphicSize(Std.int(windowlight.width * 1.3));
+					add(windowlight);
+				}
 
 				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
 				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
@@ -772,6 +824,13 @@ class PlayState extends MusicBeatState
 		vignette.cameras = [camHUD];
 		vignette.alpha = 0.00001;
 		add(vignette);
+
+		screenPulse = new BGSprite('vignetteend', 0, 0, 1, 1);
+		screenPulse.cameras = [camHUD];
+		screenPulse.setGraphicSize(FlxG.width, FlxG.height);
+		screenPulse.screenCenter();
+		screenPulse.alpha = 0.0001;
+		add(screenPulse);
 
 		daStatic= new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
 		daStatic.cameras = [camHUD];	
@@ -2600,10 +2659,12 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if (fancyclouds != null && fancyclouds.visible)
+		if (!ClientPrefs.lowQuality && fancyclouds.visible)//if one is visible all of them are anyway
 		{
 			floatshit += 0.007 / FramerateTools.timeMultiplier();
 			fancyclouds.alpha += Math.sin(floatshit) / FramerateTools.timeMultiplier() / 5;
+			clubroomdark.alpha -= Math.sin(floatshit) / FramerateTools.timeMultiplier() / 5;
+			windowlight.alpha += Math.sin(floatshit) / FramerateTools.timeMultiplier() / 5;
 		}
 
 		if (ratingName == '?')
@@ -3432,6 +3493,8 @@ class PlayState extends MusicBeatState
 							evilSpace.visible = false;
 							clouds.visible = false;
 							fancyclouds.visible = false;
+							windowlight.visible = false;
+							clubroomdark.visible = false;
 						}
 						stageStatic.visible = false;
 						ruinedClubBG.visible = false;
@@ -3452,6 +3515,8 @@ class PlayState extends MusicBeatState
 							evilSpace.visible = false;
 							clouds.visible = false;
 							fancyclouds.visible = false;
+							windowlight.visible = false;
+							clubroomdark.visible = false;
 						}
 						closet.visible = false;
 						clubroom.visible = false;
@@ -3473,6 +3538,8 @@ class PlayState extends MusicBeatState
 							evilSpace.visible = true;
 							clouds.visible = true;
 							fancyclouds.visible = true;
+							windowlight.visible = true;
+							clubroomdark.visible = true;
 						}
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
@@ -4001,7 +4068,25 @@ class PlayState extends MusicBeatState
 					default:
 						bloodDrips = false;
 				}
-
+			case 'Spawn Red Eyes':
+				if (funnyEyes != null)
+				{
+					switch (value1.toLowerCase().trim())
+					{
+						default: // Spawn the eyes here	
+							funnyEyes.alpha = 1;
+							FlxG.camera.flash(FlxColor.RED, 0.5);
+						case 'fadeout': // make em disappear here
+							var val2:Float = Std.parseFloat(value2);
+							if (Math.isNaN(val2))
+								val2 = 1;
+							FlxTween.tween(funnyEyes, {alpha: 0.001}, val2, {ease: FlxEase.circOut});
+					}
+				}
+			case 'Stab Border':
+				FlxTween.cancelTweensOf(screenPulse);
+				screenPulse.alpha = 1;
+				FlxTween.tween(screenPulse, {alpha: 0.001}, 0.5, {ease: FlxEase.circOut});
 		}
 		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
