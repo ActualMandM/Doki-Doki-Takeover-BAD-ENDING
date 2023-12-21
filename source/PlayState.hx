@@ -210,6 +210,7 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var camCache:FlxCamera;
 	public var cameraSpeed:Float = 1;
+	public var camNoteExtend:Float = 15; // How powerful the camnote stuff is
 
 	// Bad Ending specific variables
 	var pixelShitPart1:String = "";
@@ -230,6 +231,8 @@ class PlayState extends MusicBeatState
 	var clubroom:BGSprite;
 	var deskfront:BGSprite;
 	var evilSpace:FlxBackdrop;
+	var clouds:FlxBackdrop;
+	var fancyclouds:FlxBackdrop;
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
 	var ruinedClubBG:BGSprite;
@@ -239,6 +242,8 @@ class PlayState extends MusicBeatState
 	var bloodyBG:BGSprite;
 	var poemTransition:BGSprite;
 	var closetCloseUp:BGSprite;
+
+	var floatshit:Float = 0;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -516,9 +521,29 @@ class PlayState extends MusicBeatState
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
 					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
+					evilSpace.y -= 100;
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					evilSpace.visible = false;
 					add(evilSpace);
+
+					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
+					clouds.scrollFactor.set(0.1, 0.1);
+					clouds.velocity.set(-13, 0);
+					clouds.y -= 100;
+					clouds.antialiasing = ClientPrefs.globalAntialiasing;
+					clouds.scale.set(0.7, 0.7);
+					clouds.visible = false;
+					add(clouds);
+
+					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
+					fancyclouds.scrollFactor.set(0.1, 0.1);
+					fancyclouds.velocity.set(-13, 0);
+					fancyclouds.y -= 100;
+					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
+					fancyclouds.scale.set(0.7, 0.7);
+					fancyclouds.alpha = 1;
+					fancyclouds.visible = false;
+					add(fancyclouds);
 				}
 
 				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
@@ -551,6 +576,22 @@ class PlayState extends MusicBeatState
 					evilSpace.velocity.set(-10, 0);
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
+
+					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
+					clouds.scrollFactor.set(0.1, 0.1);
+					clouds.velocity.set(-13, 0);
+					clouds.antialiasing = ClientPrefs.globalAntialiasing;
+					clouds.scale.set(0.7, 0.7);
+					add(clouds);
+
+					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
+					fancyclouds.scrollFactor.set(0.1, 0.1);
+					fancyclouds.velocity.set(-13, 0);
+					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
+					fancyclouds.scale.set(0.7, 0.7);
+					fancyclouds.alpha = 1;
+					fancyclouds.visible = false;
+					add(fancyclouds);
 				}
 
 				evilClubBG = new BGSprite('bigmonika/BG', -220, -110, 1, 1);
@@ -597,6 +638,22 @@ class PlayState extends MusicBeatState
 					evilSpace.velocity.set(-10, 0);
 					evilSpace.antialiasing = ClientPrefs.globalAntialiasing;
 					add(evilSpace);
+
+					clouds = new FlxBackdrop(Paths.image('bigmonika/Clouds', 'doki'));
+					clouds.scrollFactor.set(0.1, 0.1);
+					clouds.velocity.set(-13, 0);
+					clouds.antialiasing = ClientPrefs.globalAntialiasing;
+					clouds.scale.set(0.7, 0.7);
+					add(clouds);
+
+					fancyclouds = new FlxBackdrop(Paths.image('bigmonika/mask', 'doki'));
+					fancyclouds.scrollFactor.set(0.1, 0.1);
+					fancyclouds.velocity.set(-13, 0);
+					fancyclouds.antialiasing = ClientPrefs.globalAntialiasing;
+					fancyclouds.scale.set(0.7, 0.7);
+					fancyclouds.alpha = 1;
+					fancyclouds.visible = false;
+					add(fancyclouds);
 				}
 
 				bakaOverlay = new BGSprite('BakaBGDoodles', 0, 0, 1, 1, ['Normal Overlay'], true);
@@ -865,12 +922,12 @@ class PlayState extends MusicBeatState
 		grpUnderlay = new FlxTypedGroup<FlxSprite>();
 		add(grpUnderlay);
 
+		bloodStrums = new FlxTypedGroup<FlxSprite>();
+		add(bloodStrums);
+
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
 		add(grpNoteSplashes);
-
-		bloodStrums = new FlxTypedGroup<FlxSprite>();
-		add(bloodStrums);
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 
@@ -2543,6 +2600,12 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
+		if (fancyclouds != null && fancyclouds.visible)
+		{
+			floatshit += 0.007 / FramerateTools.timeMultiplier();
+			fancyclouds.alpha += Math.sin(floatshit) / FramerateTools.timeMultiplier() / 5;
+		}
+
 		if (ratingName == '?')
 		{
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
@@ -3367,6 +3430,8 @@ class PlayState extends MusicBeatState
 						{
 							deskfront.visible = false;
 							evilSpace.visible = false;
+							clouds.visible = false;
+							fancyclouds.visible = false;
 						}
 						stageStatic.visible = false;
 						ruinedClubBG.visible = false;
@@ -3385,6 +3450,8 @@ class PlayState extends MusicBeatState
 						{
 							deskfront.visible = false;
 							evilSpace.visible = false;
+							clouds.visible = false;
+							fancyclouds.visible = false;
 						}
 						closet.visible = false;
 						clubroom.visible = false;
@@ -3401,7 +3468,12 @@ class PlayState extends MusicBeatState
 					case 'evil':
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
-						if (!ClientPrefs.lowQuality) evilSpace.visible = true;
+						if (!ClientPrefs.lowQuality)
+						{
+							evilSpace.visible = true;
+							clouds.visible = true;
+							fancyclouds.visible = true;
+						}
 						evilClubBG.visible = true;
 						evilClubBGScribbly.visible = true;
 					case 'poem':
@@ -3447,7 +3519,6 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.9;
 						FlxG.camera.zoom = 0.9;
 						stageStatic.visible = true;
-
 				}
 
 				if (val2 > 0)
@@ -3560,6 +3631,7 @@ class PlayState extends MusicBeatState
 						else boyfriendGroup.y = val2;
 				}
 			case 'Toggle Note Camera Movement':
+				var val2:Float = Std.parseFloat(value2);
 				switch (value1.toLowerCase().trim())
 				{
 					case 'true':
@@ -3567,6 +3639,9 @@ class PlayState extends MusicBeatState
 					default:
 						noteCam = false;
 				}
+
+				if (Math.isNaN(val2)) camNoteExtend = 15;
+				else camNoteExtend = val2;
 			case 'Move Opponent Tween':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -3877,14 +3952,14 @@ class PlayState extends MusicBeatState
 					val3 = 0.01;
 
 				trace(value1 + ' & ' + value2 + ' & ' + value3);
-
+				var includeBlood:Bool = false;
 				switch (value1)
 				{
 					case 'dad' | 'opponent':
 					{
 						strum = opponentStrums;
 						underlay = grpUnderlay.members[0];
-
+						if (bloodDrips) includeBlood = true;
 						if (ClientPrefs.middleScroll)
 							val2 *= 0.35;
 					}
@@ -3897,6 +3972,12 @@ class PlayState extends MusicBeatState
 				{
 					FlxTween.cancelTweensOf(strum.members[i]);
 					FlxTween.tween(strum.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
+					if (includeBlood)
+					{
+						FlxTween.cancelTweensOf(bloodStrums.members[i]);
+						FlxTween.tween(bloodStrums.members[i], {alpha: val2}, val3, {ease: FlxEase.circOut});
+					}
+				
 				}
 
 				if (underlay != null)
@@ -4014,7 +4095,6 @@ class PlayState extends MusicBeatState
 	{
 		if (noteCam)
 		{
-			var camNoteExtend:Float = 15; // How powerful the camnote stuff is
 			if ((focusedChar == boyfriend && mustHit) || (focusedChar == dad && !mustHit))
 			{
 				camNoteX = 0;
@@ -4837,21 +4917,21 @@ class PlayState extends MusicBeatState
 				char = extra2;
 			}
 
+			if (note.noteType == 'Note of Markov' && bloodDrips && !note.isSustainNote)
+			{
+				var spr:FlxSprite;
+				spr = bloodStrums.members[Std.int(Math.abs(note.noteData))];
+				if (spr.animation.curAnim.name.startsWith('idle'))
+				{
+					spr.animation.play('drip');
+					FlxG.sound.play(Paths.sound('stab'));
+				}
+			}
+
 			if (note.noteType != 'Note of Markov')
 			{
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
-
-				if (bloodDrips)
-				{
-					var spr:FlxSprite;
-					spr = bloodStrums.members[Std.int(Math.abs(note.noteData))];
-					if (spr.animation.curAnim.name.startsWith('idle'))
-					{
-						spr.animation.play('drip');
-						FlxG.sound.play(Paths.sound('stab'));
-					}
-				}
 			}
 		}
 

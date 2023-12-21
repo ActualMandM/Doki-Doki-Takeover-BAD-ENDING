@@ -254,21 +254,28 @@ class TitleState extends MusicBeatState
 		Conductor.bpm = titleJSON.bpm;
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite();
+		backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
+		backdrop.velocity.set(-40, -40);
+		backdrop.antialiasing = ClientPrefs.globalAntialiasing;
+		add(backdrop);
 
-		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none")
-		{
-			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
-			add(bg);
-		}
-		else
-		{
-			// bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-			backdrop = new FlxBackdrop(Paths.image('scrolling_BG'));
-			backdrop.velocity.set(-40, -40);
-			backdrop.antialiasing = ClientPrefs.globalAntialiasing;
-			add(backdrop);
-		}
+		var creditsBG:FlxBackdrop = new FlxBackdrop(Paths.image('pocBackground'));
+		creditsBG.velocity.set(-50, 0);
+		creditsBG.antialiasing = ClientPrefs.globalAntialiasing;
+		add(creditsBG);
+
+		var scanline:FlxBackdrop = new FlxBackdrop(Paths.image('scanlines'));
+		scanline.velocity.set(0, 20);
+		scanline.antialiasing = ClientPrefs.globalAntialiasing;
+		add(scanline);
+
+		var gradient:FlxSprite = new FlxSprite().loadGraphic(Paths.image('gradent'));
+		gradient.antialiasing = ClientPrefs.globalAntialiasing;
+		gradient.scrollFactor.set(0.1, 0.1);
+		gradient.screenCenter();
+		gradient.setGraphicSize(Std.int(gradient.width * 1.4));
+		add(gradient);
+		
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 

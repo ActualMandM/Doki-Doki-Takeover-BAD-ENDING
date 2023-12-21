@@ -26,27 +26,27 @@
 	<SubTexture name="Stagnant Death Confirm0021" x="2040" y="249" width="500" height="233"/>
 	<SubTexture name="Stagnant Death Confirm0022" x="2548" y="249" width="500" height="233"/>
 	<SubTexture name="Stagnant Death Idle0000" x="3056" y="249" width="500" height="233"/>
-	<SubTexture name="Stagnant Death Intro0000" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0001" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0002" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0003" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0004" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0005" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0006" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0007" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0008" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0009" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0010" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0011" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0012" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0013" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0014" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0015" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0016" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0017" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0018" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0019" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0020" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0000" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0001" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0002" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0003" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0004" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0005" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0006" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0007" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0008" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0009" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0010" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0011" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0012" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0013" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0014" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0015" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0016" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0017" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0018" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0019" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0020" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
 	<SubTexture name="Stagnant Death Intro0021" x="3572" y="249" width="726" height="726"/>
 	<SubTexture name="Stagnant Death Intro0022" x="4306" y="249" width="726" height="726"/>
 	<SubTexture name="Stagnant Death Intro0023" x="5040" y="249" width="726" height="726"/>
@@ -113,35 +113,35 @@
 	<SubTexture name="Stagnant Death Intro0084" x="1476" y="3919" width="726" height="726"/>
 	<SubTexture name="Stagnant Death Intro0085" x="8" y="3185" width="726" height="726"/>
 	<SubTexture name="Stagnant Death Intro0086" x="742" y="3185" width="726" height="726"/>
-	<SubTexture name="Stagnant Death Intro0087" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0088" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0089" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0090" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0091" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0092" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0093" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0094" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0095" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0096" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0097" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0098" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0099" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0100" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0101" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0102" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0103" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0104" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0105" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0106" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0107" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0108" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0109" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0110" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0111" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0112" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0113" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0114" x="3564" y="249" width="0" height="0" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
-	<SubTexture name="Stagnant Death Intro0115" x="3564" y="249" width="0" height="0" frameX="-205" frameY="-254" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0087" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0088" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0089" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0090" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0091" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0092" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0093" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0094" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0095" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0096" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0097" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0098" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0099" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0100" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0101" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0102" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0103" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0104" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0105" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0106" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0107" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0108" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0109" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0110" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0111" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0112" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0113" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0114" x="3564" y="249" width="1" height="1" frameX="0" frameY="0" frameWidth="726" frameHeight="726"/>
+	<SubTexture name="Stagnant Death Intro0115" x="3564" y="249" width="1" height="1" frameX="-205" frameY="-254" frameWidth="726" frameHeight="726"/>
 	<SubTexture name="Stagnant Death Intro0116" x="2210" y="3919" width="500" height="233" frameX="-205" frameY="-254" frameWidth="726" frameHeight="726"/>
 	<SubTexture name="Stagnant Death Intro0117" x="2718" y="3919" width="500" height="233" frameX="-205" frameY="-254" frameWidth="726" frameHeight="726"/>
 	<SubTexture name="Stagnant Death Intro0118" x="3226" y="3919" width="500" height="233" frameX="-205" frameY="-254" frameWidth="726" frameHeight="726"/>
