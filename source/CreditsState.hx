@@ -169,6 +169,8 @@ class CreditsState extends MusicBeatState
 				icon.animation.addByPrefix('select', 'select', 24, false);
 				icon.xAdd = optionText.width + 10;
 				icon.sprTracker = optionText;
+				icon.scale.set(0.85, 0.85);
+				icon.updateHitbox();
 				icon.animation.play('idle');
 				icon.ID = i;
 
