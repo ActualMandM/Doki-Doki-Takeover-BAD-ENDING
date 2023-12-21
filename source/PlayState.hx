@@ -5004,12 +5004,12 @@ class PlayState extends MusicBeatState
 
 			if (note.noteType == 'Note of Markov' && bloodDrips && !note.isSustainNote)
 			{
+				FlxG.sound.play(Paths.sound('stab'));
 				var spr:FlxSprite;
 				spr = bloodStrums.members[Std.int(Math.abs(note.noteData))];
 				if (spr.animation.curAnim.name.startsWith('idle'))
 				{
 					spr.animation.play('drip');
-					FlxG.sound.play(Paths.sound('stab'));
 				}
 			}
 
