@@ -20,7 +20,7 @@ class CreditsState extends MusicBeatState
 {
 	var curSelected:Int = -1;
 
-	private var grpOptions:FlxTypedGroup<Alphabet>;
+	private var grpOptions:FlxTypedGroup<AlphabetText>;
 	private var iconArray:Array<AttachedSprite> = [];
 	private var creditsStuff:Array<Array<String>> = [];
 
@@ -38,7 +38,7 @@ class CreditsState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		grpOptions = new FlxTypedGroup<Alphabet>();
+		grpOptions = new FlxTypedGroup<AlphabetText>();
 		add(grpOptions);
 
 		var pisspoop:Array<Array<String>> = [
@@ -75,7 +75,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/DuskieWhy'
 			],
 			[
-				'Matt$',
+				'Matt$', // animal showed this as MATTS
 				'matt',
 				'Musician - STAGNANT and MARKOV',
 				'https://twitter.com/matt_currency'
@@ -151,7 +151,9 @@ class CreditsState extends MusicBeatState
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
 
-			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], !isSelectable, false);
+			var optionText:AlphabetText = new AlphabetText(0, 70 * i, 0, creditsStuff[i][0]);
+			optionText.setFormat(CoolUtil.getFont('chicken'), 84, FlxColor.BLACK, CENTER);
+			optionText.antialiasing = ClientPrefs.globalAntialiasing;
 			optionText.isMenuItem = true;
 			optionText.screenCenter(X);
 			optionText.yAdd -= 70;
@@ -168,6 +170,7 @@ class CreditsState extends MusicBeatState
 				var icon:AttachedSprite = new AttachedSprite('credits/icons/' + creditsStuff[i][1], 'idle');
 				icon.animation.addByPrefix('select', 'select', 24, false);
 				icon.xAdd = optionText.width + 10;
+				icon.yAdd = -optionText.height / 2;
 				icon.sprTracker = optionText;
 				icon.scale.set(0.85, 0.85);
 				icon.updateHitbox();

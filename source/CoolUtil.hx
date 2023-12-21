@@ -142,6 +142,8 @@ class CoolUtil
 		{
 			case 'animal':
 				font = 'vtks animal 2';
+			case 'chicken':
+				font = 'ChickenScratch AOE';
 			case 'aller':
 				font = 'Aller';
 			case 'riffic':
