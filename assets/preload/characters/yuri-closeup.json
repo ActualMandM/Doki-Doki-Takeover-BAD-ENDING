@@ -1,81 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "YuriIdle"
+			"fps": 24,
+			"name": "YuriIdle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-9,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "YuriUp"
+			"fps": 24,
+			"name": "YuriUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				8,
+				56,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "YuriDown"
+			"fps": 24,
+			"name": "YuriDown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				83,
+				93,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "YuriLeft"
+			"fps": 24,
+			"name": "YuriLeft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-48,
+				-27,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "YuriRight"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": true,
 			"fps": 24,
-			"anim": "final",
-			"indices": [],
-			"name": "YuriFinal"
+			"name": "YuriRight",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				410,
 				190
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "YuriFirstPersonJumpscare"
+			"fps": 24,
+			"name": "YuriFirstPersonJumpscare",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -95,6 +84,6 @@
 		-170,
 		99
 	],
-	"sing_duration": 6,
+	"sing_duration": 8,
 	"scale": 1
 }
