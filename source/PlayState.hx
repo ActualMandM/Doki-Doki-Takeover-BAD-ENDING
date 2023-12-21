@@ -3785,7 +3785,7 @@ class PlayState extends MusicBeatState
 				else
 				{
 					FlxTween.tween(FlxG.camera, {zoom: val1}, val2, {
-						ease: FlxEase.linear,
+						ease: FlxEase.cubeInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							defaultCamZoom = val1;
