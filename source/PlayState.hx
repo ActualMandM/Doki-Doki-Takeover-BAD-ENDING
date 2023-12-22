@@ -974,9 +974,10 @@ class PlayState extends MusicBeatState
 		Conductor.songPosition = -5000;
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, 50).makeGraphic(FlxG.width, 10);
+		strumLine.scrollFactor.set();
+
 		if (ClientPrefs.downScroll)
 			strumLine.y = FlxG.height - 150;
-		strumLine.scrollFactor.set();
 
 		grpUnderlay = new FlxTypedGroup<FlxSprite>();
 		add(grpUnderlay);
@@ -988,10 +989,7 @@ class PlayState extends MusicBeatState
 		add(strumLineNotes);
 		add(grpNoteSplashes);
 
-		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
-
-		if (isStoryMode)
-			showTime = false;
+		var showTime:Bool = ClientPrefs.timeBarType != 'Disabled';
 
 		timeTxt = new FlxText(0, 19, 400, "", 32);
 		timeTxt.setFormat(Paths.font("Aller_Rg.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1000,13 +998,13 @@ class PlayState extends MusicBeatState
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
 		timeTxt.visible = showTime;
+
 		if (ClientPrefs.downScroll)
 			timeTxt.y = FlxG.height - 44;
 
 		if (ClientPrefs.timeBarType == 'Song Name')
-		{
 			timeTxt.text = SONG.song;
-		}
+
 		updateTime = showTime;
 
 		timeBarBG = new AttachedSprite('timeBar');
@@ -1042,8 +1040,6 @@ class PlayState extends MusicBeatState
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
-
-		// startCountdown();
 
 		generateSong(SONG.song);
 		#if LUA_ALLOWED
