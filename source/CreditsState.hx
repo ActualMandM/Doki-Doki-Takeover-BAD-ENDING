@@ -133,13 +133,13 @@ class CreditsState extends MusicBeatState
 			[
 				'Psych Engine',
 				'psych',
-				'bbpanzu, flicky, Kade, Keoiki, MasterEric, Nebula, Proxy, River, Shubs, Smokey, Sqirra',
+				'Shadow Mario, Riveren, bb-panzu, shubs, CrowPlexus, Keoiki, SqirraRNG, EliteMasterEric, PolybiusProxy, Tahir, iFlicky, KadeDev, superpowers04, CheemAndFriends',
 				'https://github.com/ShadowMario/FNF-PsychEngine',
 			],
 			[
 				'Funkin\' Crew',
 				'psych',
-				'ninjamuffin99, PhantomArcade, Kawai Sprite, evilsk8r, MasterEric',
+				'ninjamuffin99, PhantomArcade, Kawai Sprite, evilsk8r, EliteMasterEric',
 				'https://funkin.me/',
 			]
 		];
