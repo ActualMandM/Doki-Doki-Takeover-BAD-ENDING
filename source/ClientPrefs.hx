@@ -11,6 +11,7 @@ class ClientPrefs
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var noteUnderlay:Float = 0;
+	public static var noteCamera:Float = 1;
 	public static var showFPS:Bool = false;
 	public static var flashing:Bool = true;
 	public static var gpuTextures:Bool = false;
@@ -103,6 +104,7 @@ class ClientPrefs
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.noteUnderlay = noteUnderlay;
+		FlxG.save.data.noteCamera = noteCamera;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.gpuTextures = gpuTextures;
@@ -116,7 +118,7 @@ class ClientPrefs
 		FlxG.save.data.firststart = firststart;
 		// FlxG.save.data.cursing = cursing;
 		// FlxG.save.data.violence = violence;
-		FlxG.save.data.camZooms = camZooms;
+		//FlxG.save.data.camZooms = camZooms;
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
@@ -164,6 +166,10 @@ class ClientPrefs
 		if (FlxG.save.data.noteUnderlay != null)
 		{
 			noteUnderlay = FlxG.save.data.noteUnderlay;
+		}
+		if (FlxG.save.data.noteCamera != null)
+		{
+			noteCamera = FlxG.save.data.noteCamera;
 		}
 		if (FlxG.save.data.storycomplete != null)
 		{
@@ -235,16 +241,20 @@ class ClientPrefs
 			fullscreen = FlxG.save.data.fullscreen;
 			FlxG.fullscreen = fullscreen;
 		}
-		/*if(FlxG.save.data.cursing != null) {
-				cursing = FlxG.save.data.cursing;
-			}
-			if(FlxG.save.data.violence != null) {
-				violence = FlxG.save.data.violence;
-		}*/
+		/*
+		if (FlxG.save.data.cursing != null)
+		{
+			cursing = FlxG.save.data.cursing;
+		}
+		if (FlxG.save.data.violence != null)
+		{
+			violence = FlxG.save.data.violence;
+		}
 		if (FlxG.save.data.camZooms != null)
 		{
 			camZooms = FlxG.save.data.camZooms;
 		}
+		*/
 		if (FlxG.save.data.hideHud != null)
 		{
 			hideHud = FlxG.save.data.hideHud;

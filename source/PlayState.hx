@@ -3694,17 +3694,23 @@ class PlayState extends MusicBeatState
 						else boyfriendGroup.y = val2;
 				}
 			case 'Toggle Note Camera Movement':
-				var val2:Float = Std.parseFloat(value2);
-				switch (value1.toLowerCase().trim())
+				if (ClientPrefs.noteCamera > 0)
 				{
-					case 'true':
-						noteCam = true;
-					default:
-						noteCam = false;
-				}
+					var val2:Float = Std.parseFloat(value2);
 
-				if (Math.isNaN(val2)) camNoteExtend = 15;
-				else camNoteExtend = val2;
+					switch (value1.toLowerCase().trim())
+					{
+						case 'true' | '1':
+							noteCam = true;
+						default:
+							noteCam = false;
+					}
+	
+					if (Math.isNaN(val2))
+						camNoteExtend = 15 * ClientPrefs.noteCamera;
+					else
+						camNoteExtend = val2 * ClientPrefs.noteCamera;
+				}
 			case 'Move Opponent Tween':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
