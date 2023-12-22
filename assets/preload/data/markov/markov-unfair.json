@@ -89,6 +89,18 @@
 						17876.7123287671,
 						2,
 						0
+					],
+					[
+						16438.3561643836,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						16438.3561643836,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -173,6 +185,18 @@
 						24452.0547945205,
 						4,
 						0
+					],
+					[
+						23013.698630137,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						23013.698630137,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -382,6 +406,12 @@
 						32465.7534246575,
 						7,
 						0
+					],
+					[
+						32054.7945205479,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -518,6 +548,12 @@
 						36164.3835616438,
 						6,
 						1541.09589041096
+					],
+					[
+						37191.7808219178,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -575,6 +611,12 @@
 						39452.0547945205,
 						6,
 						2465.75342465753
+					],
+					[
+						39452.0547945205,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -586,7 +628,296 @@
 				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						42739.7260273973,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						42842.4657534247,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43047.9452054795,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43150.6849315069,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						42842.4657534247,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						42739.7260273973,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43047.9452054795,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43150.6849315069,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43356.1643835616,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						43356.1643835616,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						43458.904109589,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43664.3835616438,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						43458.904109589,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43664.3835616438,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						43767.1232876712,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						43767.1232876712,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						42739.7260273973,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43150.6849315069,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43047.9452054795,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						42842.4657534247,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						42842.4657534247,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						42739.7260273973,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						42945.2054794521,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43047.9452054795,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43150.6849315069,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43458.904109589,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43356.1643835616,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43664.3835616438,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43767.1232876712,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						43458.904109589,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43356.1643835616,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43561.6438356164,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43664.3835616438,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						43767.1232876712,
+						7,
+						0,
+						"Note of Markov"
+					]
+				],
 				"lengthInSteps": 16,
 				"mustHitSection": false
 			},
@@ -780,6 +1111,30 @@
 						50227.397260274,
 						0,
 						225
+					],
+					[
+						49627.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						49927.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						50227.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						50527.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"lengthInSteps": 16,
@@ -818,6 +1173,12 @@
 						51877.397260274,
 						2,
 						225
+					],
+					[
+						50827.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -946,6 +1307,30 @@
 						55027.397260274,
 						0,
 						225
+					],
+					[
+						54427.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						54727.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						55027.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						55327.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -1128,6 +1513,12 @@
 						59077.397260274,
 						3,
 						225
+					],
+					[
+						58777.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1198,6 +1589,12 @@
 						60127.397260274,
 						1,
 						0
+					],
+					[
+						60127.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1378,6 +1775,12 @@
 						63877.397260274,
 						3,
 						225
+					],
+					[
+						63577.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1448,6 +1851,12 @@
 						64927.397260274,
 						1,
 						0
+					],
+					[
+						64927.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1473,6 +1882,12 @@
 						66127.397260274,
 						1,
 						225
+					],
+					[
+						65227.397260274,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1616,6 +2031,12 @@
 						68677.397260274,
 						5,
 						0
+					],
+					[
+						67627.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -1713,6 +2134,24 @@
 						69727.397260274,
 						6,
 						0
+					],
+					[
+						68827.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						69727.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						69877.397260274,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -1806,6 +2245,18 @@
 						70927.397260274,
 						5,
 						0
+					],
+					[
+						70927.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						71077.397260274,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -1908,6 +2359,12 @@
 						72277.397260274,
 						3,
 						0
+					],
+					[
+						71452.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2018,6 +2475,12 @@
 						73552.397260274,
 						3,
 						0
+					],
+					[
+						72652.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2308,6 +2771,12 @@
 						78352.397260274,
 						2,
 						0
+					],
+					[
+						77227.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2418,6 +2887,18 @@
 						79477.397260274,
 						4,
 						0
+					],
+					[
+						78427.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						78427.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2558,6 +3039,12 @@
 						81952.397260274,
 						1,
 						0
+					],
+					[
+						81727.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2703,6 +3190,12 @@
 						84352.397260274,
 						1,
 						0
+					],
+					[
+						84127.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2762,6 +3255,42 @@
 						87577.397260274,
 						3,
 						225
+					],
+					[
+						86827.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						86827.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						87052.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						87052.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						87277.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						87277.397260274,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2790,13 +3319,49 @@
 					],
 					[
 						88777.397260274,
-						0,
-						225
+						1,
+						205.479452054795
 					],
 					[
 						89077.397260274,
-						1,
+						0,
 						0
+					],
+					[
+						88027.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						88027.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						88252.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						88252.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88477.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						88477.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2862,6 +3427,12 @@
 						90352.397260274,
 						1,
 						0
+					],
+					[
+						89902.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2890,13 +3461,13 @@
 					],
 					[
 						91102.397260274,
-						1,
+						0,
 						0
 					],
 					[
 						91327.397260274,
-						0,
-						225
+						1,
+						205.479452054795
 					]
 				],
 				"altAnim": false,
@@ -2937,6 +3508,54 @@
 						92677.397260274,
 						5,
 						0
+					],
+					[
+						91627.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						91627.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						91627.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						91627.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						91852.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						91852.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						92077.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						92077.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -2970,6 +3589,42 @@
 						93877.397260274,
 						5,
 						0
+					],
+					[
+						92827.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						92827.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						93052.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						93052.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						93277.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						93277.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -3035,6 +3690,12 @@
 						95152.397260274,
 						5,
 						0
+					],
+					[
+						94702.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -3089,11 +3750,6 @@
 						600
 					],
 					[
-						96652.397260274,
-						0,
-						0
-					],
-					[
 						96877.397260274,
 						1,
 						0
@@ -3109,29 +3765,52 @@
 						0
 					],
 					[
-						96577.397260274,
-						1,
-						0
-					],
-					[
-						96727.397260274,
-						3,
-						0
-					],
-					[
 						97177.397260274,
 						1,
 						0
 					],
 					[
 						97327.397260274,
-						0,
+						2,
 						0
 					],
 					[
 						97477.397260274,
+						2,
+						0
+					],
+					[
+						96577.397260274,
+						3,
+						0
+					],
+					[
+						96652.397260274,
+						1,
+						0
+					],
+					[
+						96727.397260274,
 						0,
 						0
+					],
+					[
+						96427.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						96427.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						97177.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"altAnim": false,
@@ -3197,13 +3876,18 @@
 			{
 				"sectionNotes": [
 					[
+						99727.397260274,
+						0,
+						0
+					],
+					[
 						98827.397260274,
-						2,
+						3,
 						0
 					],
 					[
 						98902.397260274,
-						3,
+						2,
 						0
 					],
 					[
@@ -3212,13 +3896,28 @@
 						0
 					],
 					[
+						99427.397260274,
+						3,
+						0
+					],
+					[
+						99877.397260274,
+						3,
+						0
+					],
+					[
+						99577.397260274,
+						1,
+						0
+					],
+					[
 						99052.397260274,
-						2,
+						3,
 						0
 					],
 					[
 						99127.397260274,
-						3,
+						0,
 						0
 					],
 					[
@@ -3227,24 +3926,16 @@
 						0
 					],
 					[
-						99427.397260274,
-						2,
-						0
-					],
-					[
-						99577.397260274,
-						3,
-						0
-					],
-					[
-						99727.397260274,
+						98827.397260274,
+						7,
 						0,
-						0
+						"Note of Markov"
 					],
 					[
-						99877.397260274,
-						1,
-						0
+						99652.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"typeOfSection": 0,
@@ -3310,12 +4001,18 @@
 						101077.397260274,
 						5,
 						0
+					],
+					[
+						100627.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 100,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3324,17 +4021,7 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						101227.397260274,
-						0,
-						0
-					],
-					[
 						101377.397260274,
-						2,
-						0
-					],
-					[
-						101827.397260274,
 						2,
 						0
 					],
@@ -3344,40 +4031,56 @@
 						0
 					],
 					[
-						101527.397260274,
-						3,
+						101752.397260274,
+						0,
 						0
 					],
 					[
-						101677.397260274,
+						101227.397260274,
 						1,
 						0
 					],
 					[
-						101752.397260274,
+						101527.397260274,
+						1,
+						0
+					],
+					[
+						101677.397260274,
+						3,
+						0
+					],
+					[
+						101827.397260274,
+						1,
+						0
+					],
+					[
+						102277.397260274,
+						1,
+						0
+					],
+					[
+						102127.397260274,
+						2,
+						0
+					],
+					[
+						101977.397260274,
 						0,
 						0
 					],
 					[
 						101977.397260274,
 						3,
-						0
-					],
-					[
-						102127.397260274,
-						1,
-						0
-					],
-					[
-						102277.397260274,
-						3,
-						0
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3385,11 +4088,6 @@
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						102427.397260274,
-						4,
-						0
-					],
 					[
 						102577.397260274,
 						6,
@@ -3434,12 +4132,23 @@
 						103477.397260274,
 						7,
 						0
+					],
+					[
+						102427.397260274,
+						5,
+						0
+					],
+					[
+						103327.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3489,19 +4198,43 @@
 					],
 					[
 						103927.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						104227.397260274,
 						0,
-						225
+						513.698630136986
 					],
 					[
 						104227.397260274,
 						1,
-						525
+						0,
+						"Note of Markov"
+					],
+					[
+						104227.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						104227.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						104227.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3531,21 +4264,6 @@
 					],
 					[
 						104827.397260274,
-						2,
-						0
-					],
-					[
-						104977.397260274,
-						1,
-						0
-					],
-					[
-						104902.397260274,
-						3,
-						0
-					],
-					[
-						105052.397260274,
 						2,
 						0
 					],
@@ -3608,12 +4326,33 @@
 						105952.397260274,
 						4,
 						0
+					],
+					[
+						104902.397260274,
+						0,
+						0
+					],
+					[
+						105052.397260274,
+						3,
+						0
+					],
+					[
+						104977.397260274,
+						1,
+						0
+					],
+					[
+						105727.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3658,9 +4397,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3720,9 +4459,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3736,26 +4475,6 @@
 						0
 					],
 					[
-						109177.397260274,
-						2,
-						0
-					],
-					[
-						108577.397260274,
-						2,
-						0
-					],
-					[
-						108727.397260274,
-						3,
-						0
-					],
-					[
-						108877.397260274,
-						0,
-						0
-					],
-					[
 						109027.397260274,
 						1,
 						0
@@ -3764,12 +4483,32 @@
 						109327.397260274,
 						1,
 						0
+					],
+					[
+						108577.397260274,
+						3,
+						0
+					],
+					[
+						108727.397260274,
+						0,
+						0
+					],
+					[
+						108877.397260274,
+						2,
+						0
+					],
+					[
+						109177.397260274,
+						3,
+						0
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3793,20 +4532,20 @@
 						0
 					],
 					[
-						110227.397260274,
-						1,
-						225
-					],
-					[
 						110527.397260274,
 						0,
 						225
+					],
+					[
+						110227.397260274,
+						3,
+						205.479452054795
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3825,11 +4564,6 @@
 						0
 					],
 					[
-						110827.397260274,
-						3,
-						825
-					],
-					[
 						111277.397260274,
 						5,
 						0
@@ -3843,12 +4577,35 @@
 						111877.397260274,
 						7,
 						0
+					],
+					[
+						110827.397260274,
+						2,
+						821.917808219178
+					],
+					[
+						110827.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						110827.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						110827.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3908,9 +4665,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3955,9 +4712,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -3992,9 +4749,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4074,14 +4831,20 @@
 					],
 					[
 						116677.397260274,
-						2,
+						3,
 						0
+					],
+					[
+						116227.397260274,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4145,30 +4908,36 @@
 						0
 					],
 					[
-						117502.397260274,
-						0,
-						0
-					],
-					[
 						117727.397260274,
 						3,
 						0
 					],
 					[
-						117877.397260274,
+						117502.397260274,
 						1,
 						0
 					],
 					[
-						117952.397260274,
+						117877.397260274,
 						2,
 						0
+					],
+					[
+						117952.397260274,
+						0,
+						0
+					],
+					[
+						117427.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4238,14 +5007,20 @@
 					],
 					[
 						119077.397260274,
-						3,
-						225
+						1,
+						205.479452054795
+					],
+					[
+						118627.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4302,12 +5077,18 @@
 						119527.397260274,
 						0,
 						0
+					],
+					[
+						119827.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4315,11 +5096,6 @@
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						121027.397260274,
-						0,
-						225
-					],
 					[
 						120577.397260274,
 						5,
@@ -4341,24 +5117,9 @@
 						0
 					],
 					[
-						120427.397260274,
-						2,
-						0
-					],
-					[
 						120577.397260274,
 						3,
 						0
-					],
-					[
-						120727.397260274,
-						2,
-						0
-					],
-					[
-						121327.397260274,
-						1,
-						225
 					],
 					[
 						120802.397260274,
@@ -4389,12 +5150,44 @@
 						121477.397260274,
 						6,
 						0
+					],
+					[
+						120427.397260274,
+						0,
+						0
+					],
+					[
+						120727.397260274,
+						0,
+						0
+					],
+					[
+						121327.397260274,
+						2,
+						205.479452054795
+					],
+					[
+						121027.397260274,
+						1,
+						205.479452054795
+					],
+					[
+						121027.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						121327.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4413,24 +5206,9 @@
 						0
 					],
 					[
-						121627.397260274,
-						3,
-						0
-					],
-					[
 						121777.397260274,
 						2,
 						0
-					],
-					[
-						121927.397260274,
-						3,
-						0
-					],
-					[
-						122227.397260274,
-						1,
-						225
 					],
 					[
 						122527.397260274,
@@ -4476,12 +5254,39 @@
 						122752.397260274,
 						6,
 						0
+					],
+					[
+						121627.397260274,
+						0,
+						0
+					],
+					[
+						121927.397260274,
+						0,
+						0
+					],
+					[
+						122227.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						122227.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						122527.397260274,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4500,11 +5305,6 @@
 						225
 					],
 					[
-						123727.397260274,
-						3,
-						225
-					],
-					[
 						123577.397260274,
 						6,
 						0
@@ -4517,11 +5317,6 @@
 					[
 						122977.397260274,
 						1,
-						0
-					],
-					[
-						123127.397260274,
-						3,
 						0
 					],
 					[
@@ -4553,12 +5348,34 @@
 						123877.397260274,
 						7,
 						225
+					],
+					[
+						123127.397260274,
+						0,
+						0
+					],
+					[
+						123727.397260274,
+						1,
+						205.479452054795
+					],
+					[
+						123427.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						123727.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4573,11 +5390,6 @@
 					],
 					[
 						124177.397260274,
-						2,
-						0
-					],
-					[
-						124177.397260274,
 						6,
 						0
 					],
@@ -4587,18 +5399,8 @@
 						0
 					],
 					[
-						124327.397260274,
-						3,
-						0
-					],
-					[
 						124627.397260274,
 						1,
-						225
-					],
-					[
-						124927.397260274,
-						2,
 						225
 					],
 					[
@@ -4615,12 +5417,39 @@
 						124927.397260274,
 						5,
 						225
+					],
+					[
+						124177.397260274,
+						1,
+						0
+					],
+					[
+						124327.397260274,
+						2,
+						0
+					],
+					[
+						124927.397260274,
+						0,
+						205.479452054795
+					],
+					[
+						124627.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						124927.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4658,12 +5487,18 @@
 						3,
 						375,
 						"No Animation"
+					],
+					[
+						125227.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4688,9 +5523,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4731,9 +5566,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4758,9 +5593,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4825,9 +5660,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4897,9 +5732,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -4964,9 +5799,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5041,9 +5876,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5070,12 +5905,36 @@
 						134827.397260274,
 						6,
 						0
+					],
+					[
+						134827.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						134827.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						134827.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						134827.397260274,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5112,12 +5971,36 @@
 						136627.397260274,
 						1,
 						525
+					],
+					[
+						136027.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						136027.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						136027.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						136027.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5144,12 +6027,36 @@
 						137227.397260274,
 						4,
 						0
+					],
+					[
+						137227.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						137227.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						137227.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						137227.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5186,12 +6093,36 @@
 						139027.397260274,
 						5,
 						525
+					],
+					[
+						138427.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						138427.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						138427.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						138427.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5218,12 +6149,36 @@
 						139627.397260274,
 						7,
 						1125
+					],
+					[
+						139627.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						139627.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						139627.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						139627.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5250,12 +6205,36 @@
 						140827.397260274,
 						7,
 						0
+					],
+					[
+						140827.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						140827.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						140827.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						140827.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5282,12 +6261,36 @@
 						142027.397260274,
 						1,
 						0
+					],
+					[
+						142027.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						142027.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						142027.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						142027.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5314,12 +6317,24 @@
 						143227.397260274,
 						7,
 						675
+					],
+					[
+						143227.397260274,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						143227.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5380,9 +6395,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5442,9 +6457,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5504,9 +6519,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5566,9 +6581,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5623,9 +6638,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5685,9 +6700,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5747,9 +6762,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5809,9 +6824,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5866,9 +6881,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5923,9 +6938,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -5990,9 +7005,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6042,9 +7057,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6104,9 +7119,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6171,9 +7186,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6228,9 +7243,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6285,9 +7300,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6334,12 +7349,30 @@
 						164677.397260274,
 						0,
 						0
+					],
+					[
+						163627.397260274,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						164527.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						164677.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6386,12 +7419,30 @@
 						165877.397260274,
 						0,
 						0
+					],
+					[
+						165727.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						165877.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						164827.397260274,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6448,12 +7499,18 @@
 						166852.397260274,
 						1,
 						0
+					],
+					[
+						166552.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6510,12 +7567,18 @@
 						168052.397260274,
 						1,
 						0
+					],
+					[
+						167752.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6555,9 +7618,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6677,9 +7740,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6796,12 +7859,48 @@
 						170827.397260274,
 						5,
 						0
+					],
+					[
+						170827.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						170827.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						171202.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						171202.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						171652.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						171652.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6898,12 +7997,36 @@
 						172477.397260274,
 						6,
 						0
+					],
+					[
+						172627.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						172702.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						172552.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						172552.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -6958,9 +8081,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7020,9 +8143,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7082,9 +8205,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7144,9 +8267,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7201,9 +8324,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7263,9 +8386,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7325,9 +8448,9 @@
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7384,12 +8507,24 @@
 						182677.397260274,
 						2,
 						0
+					],
+					[
+						182527.397260274,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						182677.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7461,12 +8596,24 @@
 						183877.397260274,
 						1,
 						0
+					],
+					[
+						182827.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						182827.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -7531,9 +8678,9 @@
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -7585,12 +8732,18 @@
 						186277.397260274,
 						1,
 						0
+					],
+					[
+						185452.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -7677,12 +8830,24 @@
 						187402.397260274,
 						3,
 						0
+					],
+					[
+						186877.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						187177.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -7764,12 +8929,24 @@
 						187627.397260274,
 						5,
 						375
+					],
+					[
+						187777.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						188377.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -7851,12 +9028,24 @@
 						188977.397260274,
 						5,
 						375
+					],
+					[
+						189352.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						189802.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -7923,12 +9112,18 @@
 						190777.397260274,
 						4,
 						375
+					],
+					[
+						190477.397260274,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8023,14 +9218,20 @@
 					],
 					[
 						192352.397260274,
-						1,
+						0,
 						0
+					],
+					[
+						191977.397260274,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8047,21 +9248,6 @@
 						192502.397260274,
 						5,
 						0
-					],
-					[
-						192427.397260274,
-						2,
-						300
-					],
-					[
-						192877.397260274,
-						3,
-						0
-					],
-					[
-						193027.397260274,
-						3,
-						225
 					],
 					[
 						193327.397260274,
@@ -8117,12 +9303,50 @@
 						193477.397260274,
 						5,
 						0
+					],
+					[
+						192427.397260274,
+						1,
+						359.58904109589
+					],
+					[
+						192877.397260274,
+						2,
+						0
+					],
+					[
+						193177.397260274,
+						2,
+						0
+					],
+					[
+						193027.397260274,
+						2,
+						0
+					],
+					[
+						192427.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						193327.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						193327.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8184,12 +9408,18 @@
 						194677.397260274,
 						4,
 						225
+					],
+					[
+						194077.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8244,9 +9474,9 @@
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8333,12 +9563,24 @@
 						197002.397260274,
 						7,
 						0
+					],
+					[
+						196777.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						196477.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8423,9 +9665,9 @@
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8437,16 +9679,6 @@
 						199102.397260274,
 						5,
 						0
-					],
-					[
-						199027.397260274,
-						2,
-						375
-					],
-					[
-						199477.397260274,
-						3,
-						375
 					],
 					[
 						198427.397260274,
@@ -8507,12 +9739,28 @@
 						198577.397260274,
 						1,
 						375
+					],
+					[
+						199027.397260274,
+						0,
+						359.58904109589
+					],
+					[
+						199477.397260274,
+						2,
+						359.58904109589
+					],
+					[
+						199027.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8572,19 +9820,19 @@
 					],
 					[
 						199927.397260274,
-						2,
-						375
+						3,
+						359.58904109589
 					],
 					[
 						200377.397260274,
-						0,
-						375
+						1,
+						359.58904109589
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8593,22 +9841,7 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						200827.397260274,
-						3,
-						225
-					],
-					[
 						201127.397260274,
-						1,
-						225
-					],
-					[
-						201427.397260274,
-						0,
-						225
-					],
-					[
-						201727.397260274,
 						1,
 						225
 					],
@@ -8681,12 +9914,39 @@
 						201952.397260274,
 						5,
 						0
+					],
+					[
+						200827.397260274,
+						2,
+						205.479452054795
+					],
+					[
+						201427.397260274,
+						2,
+						205.479452054795
+					],
+					[
+						201727.397260274,
+						0,
+						205.479452054795
+					],
+					[
+						201352.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						201652.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8758,12 +10018,24 @@
 						203077.397260274,
 						1,
 						0
+					],
+					[
+						202027.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						202627.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8848,9 +10120,9 @@
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -8914,20 +10186,44 @@
 						0
 					],
 					[
-						205402.397260274,
-						0,
-						0
-					],
-					[
 						205477.397260274,
 						2,
 						0
+					],
+					[
+						205402.397260274,
+						1,
+						0
+					],
+					[
+						204727.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						204802.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						204952.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						205027.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -8942,11 +10238,6 @@
 					],
 					[
 						206527.397260274,
-						2,
-						0
-					],
-					[
-						206752.397260274,
 						2,
 						0
 					],
@@ -8999,12 +10290,41 @@
 						206677.397260274,
 						1,
 						0
+					],
+					[
+						206752.397260274,
+						3,
+						0
+					],
+					[
+						206377.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						206302.397260274,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						206227.397260274,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						206152.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -9033,11 +10353,6 @@
 						0
 					],
 					[
-						206827.397260274,
-						3,
-						750
-					],
-					[
 						207127.397260274,
 						5,
 						0
@@ -9056,12 +10371,23 @@
 						207427.397260274,
 						4,
 						0
+					],
+					[
+						206827.397260274,
+						1,
+						770.547945205479
+					],
+					[
+						206827.397260274,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -9120,11 +10446,6 @@
 						0
 					],
 					[
-						208627.397260274,
-						5,
-						0
-					],
-					[
 						208777.397260274,
 						6,
 						0
@@ -9143,12 +10464,17 @@
 						209152.397260274,
 						4,
 						0
+					],
+					[
+						208627.397260274,
+						5,
+						0
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -9212,20 +10538,56 @@
 						0
 					],
 					[
-						210202.397260274,
-						4,
-						0
-					],
-					[
 						210277.397260274,
 						6,
 						0
+					],
+					[
+						210202.397260274,
+						5,
+						0
+					],
+					[
+						209527.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						209602.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						209827.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						209752.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						210202.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						210127.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -9297,12 +10659,36 @@
 						211477.397260274,
 						5,
 						0
+					],
+					[
+						211027.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						210952.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						211252.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						211177.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 138,
-				"changeBPM": false
+				"bpm": 138
 			},
 			{
 				"altAnim": false,
@@ -9381,30 +10767,36 @@
 						225
 					],
 					[
-						211927.397260274,
-						1,
-						225
-					],
-					[
-						212227.397260274,
-						3,
-						225
-					],
-					[
-						212527.397260274,
-						1,
-						225
-					],
-					[
 						211627.397260274,
 						5,
 						0
+					],
+					[
+						211927.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						212227.397260274,
+						2,
+						205.479452054795
+					],
+					[
+						212527.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						212452.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -9483,40 +10875,40 @@
 						0
 					],
 					[
-						212827.397260274,
-						2,
-						0
-					],
-					[
-						212977.397260274,
-						2,
-						0
-					],
-					[
 						213127.397260274,
-						3,
+						0,
 						0
 					],
 					[
 						213277.397260274,
-						1,
+						0,
 						0
 					],
 					[
 						213427.397260274,
-						0,
-						150
+						2,
+						154.109589041096
 					],
 					[
 						213727.397260274,
-						0,
-						150
+						2,
+						154.109589041096
+					],
+					[
+						212827.397260274,
+						1,
+						0
+					],
+					[
+						212977.397260274,
+						1,
+						0
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -9595,26 +10987,6 @@
 						0
 					],
 					[
-						214027.397260274,
-						2,
-						0
-					],
-					[
-						214177.397260274,
-						3,
-						0
-					],
-					[
-						214327.397260274,
-						1,
-						0
-					],
-					[
-						214477.397260274,
-						1,
-						0
-					],
-					[
 						214627.397260274,
 						2,
 						150
@@ -9623,12 +10995,38 @@
 						214927.397260274,
 						2,
 						150
+					],
+					[
+						214027.397260274,
+						0,
+						0
+					],
+					[
+						214177.397260274,
+						0,
+						0
+					],
+					[
+						214327.397260274,
+						3,
+						0
+					],
+					[
+						214477.397260274,
+						3,
+						0
+					],
+					[
+						214402.397260274,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -9707,30 +11105,36 @@
 						0
 					],
 					[
-						215227.397260274,
-						0,
-						150
-					],
-					[
-						215527.397260274,
-						0,
-						150
-					],
-					[
 						215827.397260274,
 						2,
 						150
 					],
 					[
+						215227.397260274,
+						3,
+						154.109589041096
+					],
+					[
+						215527.397260274,
+						3,
+						154.109589041096
+					],
+					[
 						216127.397260274,
-						1,
-						225
+						0,
+						205.479452054795
+					],
+					[
+						215452.397260274,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 138,
-				"changeBPM": false,
-				"noteStyle": ""
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -9738,16 +11142,6 @@
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						216427.397260274,
-						3,
-						225
-					],
-					[
-						216727.397260274,
-						2,
-						0
-					],
 					[
 						216802.397260274,
 						0,
@@ -9825,14 +11219,25 @@
 					],
 					[
 						216427.397260274,
+						2,
+						205.479452054795,
+						"Note of Markov"
+					],
+					[
+						216427.397260274,
+						3,
+						0
+					],
+					[
+						216727.397260274,
 						1,
 						0
 					]
 				],
 				"gfSection": false,
+				"bpm": 138,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 138
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -9858,12 +11263,8 @@
 					[
 						217627.397260274,
 						3,
-						225
-					],
-					[
-						217927.397260274,
-						2,
-						0
+						225,
+						"Note of Markov"
 					],
 					[
 						218002.397260274,
@@ -9907,11 +11308,6 @@
 					],
 					[
 						217627.397260274,
-						2,
-						0
-					],
-					[
-						217627.397260274,
 						6,
 						0
 					],
@@ -9939,12 +11335,22 @@
 						218527.397260274,
 						4,
 						150
+					],
+					[
+						217627.397260274,
+						2,
+						0
+					],
+					[
+						217927.397260274,
+						2,
+						0
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -9952,11 +11358,6 @@
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						218827.397260274,
-						0,
-						225
-					],
 					[
 						219127.397260274,
 						2,
@@ -10019,11 +11420,6 @@
 					],
 					[
 						218827.397260274,
-						1,
-						0
-					],
-					[
-						218827.397260274,
 						6,
 						0
 					],
@@ -10051,12 +11447,23 @@
 						219727.397260274,
 						6,
 						150
+					],
+					[
+						218827.397260274,
+						1,
+						205.479452054795,
+						"Note of Markov"
+					],
+					[
+						218827.397260274,
+						2,
+						0
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10072,16 +11479,6 @@
 					[
 						220927.397260274,
 						0,
-						0
-					],
-					[
-						220027.397260274,
-						3,
-						225
-					],
-					[
-						220327.397260274,
-						1,
 						0
 					],
 					[
@@ -10153,12 +11550,22 @@
 						220927.397260274,
 						5,
 						225
+					],
+					[
+						220327.397260274,
+						3,
+						0
+					],
+					[
+						220027.397260274,
+						1,
+						205.479452054795
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10199,16 +11606,6 @@
 					[
 						221227.397260274,
 						1,
-						225
-					],
-					[
-						221527.397260274,
-						0,
-						225
-					],
-					[
-						221827.397260274,
-						2,
 						225
 					],
 					[
@@ -10265,12 +11662,41 @@
 						221227.397260274,
 						5,
 						0
+					],
+					[
+						221527.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						221827.397260274,
+						0,
+						205.479452054795,
+						"Note of Markov"
+					],
+					[
+						221377.397260274,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						221602.397260274,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						222277.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10380,9 +11806,9 @@
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10391,9 +11817,9 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10405,21 +11831,6 @@
 						224827.397260274,
 						7,
 						525
-					],
-					[
-						224827.397260274,
-						3,
-						525
-					],
-					[
-						225427.397260274,
-						2,
-						225
-					],
-					[
-						225727.397260274,
-						0,
-						225
 					],
 					[
 						225427.397260274,
@@ -10430,12 +11841,27 @@
 						225727.397260274,
 						4,
 						225
+					],
+					[
+						224827.397260274,
+						2,
+						513.698630136986
+					],
+					[
+						225427.397260274,
+						3,
+						205.479452054795
+					],
+					[
+						225727.397260274,
+						0,
+						205.479452054795
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10449,19 +11875,9 @@
 						225
 					],
 					[
-						226027.397260274,
-						2,
-						375
-					],
-					[
 						226477.397260274,
 						1,
 						375
-					],
-					[
-						226927.397260274,
-						3,
-						225
 					],
 					[
 						226027.397260274,
@@ -10472,12 +11888,22 @@
 						226477.397260274,
 						5,
 						375
+					],
+					[
+						226027.397260274,
+						3,
+						359.58904109589
+					],
+					[
+						226927.397260274,
+						0,
+						205.479452054795
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10489,12 +11915,85 @@
 						227227.397260274,
 						6,
 						1125
+					],
+					[
+						227227.397260274,
+						2,
+						1130.13698630137,
+						"No Animation"
+					],
+					[
+						227227.397260274,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						227227.397260274,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
 			},
 			{
 				"altAnim": false,
@@ -10525,9 +12024,9 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 146
+				"bpm": 146,
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -10536,9 +12035,9 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 146
+				"bpm": 146,
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -10547,9 +12046,64 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 146
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": false,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -10624,72 +12178,6 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
 				"changeBPM": false,
 				"noteStyle": "",
 				"bpm": 146
@@ -10712,20 +12200,9 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"changeBPM": false,
 				"noteStyle": "",
-				"bpm": 146
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"changeBPM": false,
-				"noteStyle": "",
-				"bpm": 146
+				"bpm": 146,
+				"changeBPM": false
 			},
 			{
 				"altAnim": false,
@@ -10773,18 +12250,7 @@
 			},
 			{
 				"altAnim": false,
-				"mustHitSection": false,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
-				"changeBPM": false,
-				"noteStyle": ""
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": false,
+				"mustHitSection": true,
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -10795,7 +12261,51 @@
 			},
 			{
 				"altAnim": false,
-				"mustHitSection": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 146,
+				"changeBPM": false
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 146
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -10855,31 +12365,31 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 146,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 146,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"bpm": 146,
 				"changeBPM": false,
-				"noteStyle": ""
+				"noteStyle": "",
+				"bpm": 146
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 146
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 146
 			},
 			{
 				"altAnim": false,
@@ -10959,70 +12469,48 @@
 				"changeBPM": false
 			},
 			{
-				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
 				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
 				"bpm": 146,
-				"changeBPM": false,
-				"mustHitSection": true
+				"changeBPM": false
 			},
 			{
-				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
 				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"gfSection": false,
 				"bpm": 146,
 				"changeBPM": false,
-				"mustHitSection": true
+				"noteStyle": ""
 			},
 			{
-				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
 				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 146,
+				"gfSection": false,
 				"changeBPM": false,
-				"mustHitSection": true
+				"noteStyle": "",
+				"bpm": 146
 			},
 			{
-				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
 				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 146,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
-				"noteStyle": "",
 				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 146,
-				"changeBPM": false,
-				"mustHitSection": true
-			},
-			{
 				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"bpm": 146,
-				"changeBPM": false,
-				"mustHitSection": true
+				"changeBPM": false
 			},
 			{
 				"noteStyle": "",
@@ -11039,11 +12527,11 @@
 		"player2": "yuri-closet",
 		"events": [],
 		"song": "MARKOV",
+		"needsVoices": true,
 		"validScore": true,
 		"stage": "markov",
-		"needsVoices": true,
 		"bpm": 146,
-		"speed": 2.3,
+		"speed": 2.5,
 		"noteStyle": "normal"
 	}
 }

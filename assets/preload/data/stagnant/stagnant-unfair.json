@@ -1,28 +1,27 @@
 {
 	"song": {
-		"sectionLengths": [],
 		"player1": "bf-doki",
-		"events": [],
-		"gfVersion": "gf-realdoki",
-		"player2": "sayori",
+		"sectionLengths": [],
 		"notes": [
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						2666.66666666667,
@@ -55,13 +54,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						4000,
@@ -94,13 +93,13 @@
 						333.333333333333
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						5333.33333333333,
@@ -133,13 +132,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						6666.66666666667,
@@ -172,13 +171,13 @@
 						333.333333333333
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						8000,
@@ -216,13 +215,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						9333.33333333333,
@@ -245,13 +244,13 @@
 						333.333333333332
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						10666.6666666667,
@@ -289,13 +288,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						12000,
@@ -318,13 +317,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						13333.3333333333,
@@ -407,13 +406,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						14666.6666666667,
@@ -496,13 +495,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						16000,
@@ -545,13 +544,13 @@
 						222.222222222223
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						17333.3333333333,
@@ -594,13 +593,13 @@
 						222.222222222223
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						18666.6666666667,
@@ -683,13 +682,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						20000,
@@ -770,15 +769,27 @@
 						21222.2222222222,
 						6,
 						0
+					],
+					[
+						20000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						20000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						21333.3333333333,
@@ -819,15 +830,21 @@
 						22333.3333333333,
 						0,
 						250
+					],
+					[
+						21333.3333333333,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						22666.6666666667,
@@ -868,15 +885,21 @@
 						23666.6666666667,
 						3,
 						250
+					],
+					[
+						22885.4166666667,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						24000,
@@ -894,13 +917,13 @@
 						916.666666666664
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						25666.6666666667,
@@ -913,13 +936,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						26666.6666666667,
@@ -947,13 +970,13 @@
 						916.666666666664
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						28333.3333333333,
@@ -971,13 +994,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						29333.3333333333,
@@ -1005,13 +1028,13 @@
 						916.666666666668
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						31000,
@@ -1029,13 +1052,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						32000,
@@ -1073,13 +1096,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						33333.3333333333,
@@ -1112,13 +1135,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						34666.6666666667,
@@ -1139,15 +1162,27 @@
 						35666.6666666667,
 						3,
 						250
+					],
+					[
+						34666.6666666667,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						35333.3333333333,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						36000,
@@ -1168,15 +1203,27 @@
 						37000,
 						0,
 						250
+					],
+					[
+						36000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						36666.6666666667,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						37333.3333333333,
@@ -1227,15 +1274,39 @@
 						38333.3333333333,
 						6,
 						250
+					],
+					[
+						37833.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						37833.3333333333,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						38166.6666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						38166.6666666667,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						38666.6666666667,
@@ -1288,13 +1359,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						40000,
@@ -1335,15 +1406,27 @@
 						41166.6666666667,
 						2,
 						0
+					],
+					[
+						40500,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						40333.3333333333,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						41333.3333333333,
@@ -1384,15 +1467,21 @@
 						42333.3333333333,
 						6,
 						250
+					],
+					[
+						41500,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						42666.6666666667,
@@ -1403,15 +1492,39 @@
 						42666.6666666667,
 						0,
 						1250
+					],
+					[
+						42666.6666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						42666.6666666667,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						42666.6666666667,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						42666.6666666667,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						44000,
@@ -1422,15 +1535,39 @@
 						44000,
 						5,
 						1250
+					],
+					[
+						44000,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						44000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						44000,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						44000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						45333.3333333333,
@@ -1463,13 +1600,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						46666.6666666667,
@@ -1502,13 +1639,13 @@
 						333.333333333336
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						48000,
@@ -1541,13 +1678,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						49333.3333333333,
@@ -1580,13 +1717,13 @@
 						333.333333333328
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						50666.6666666667,
@@ -1624,13 +1761,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						52000,
@@ -1653,13 +1790,13 @@
 						333.333333333336
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						53333.3333333333,
@@ -1697,13 +1834,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						54666.6666666667,
@@ -1726,13 +1863,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						56000,
@@ -1815,13 +1952,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						57333.3333333333,
@@ -1904,13 +2041,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						58666.6666666667,
@@ -1953,13 +2090,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						60000,
@@ -2002,13 +2139,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						61333.3333333333,
@@ -2091,13 +2228,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						62666.6666666667,
@@ -2178,15 +2315,39 @@
 						63888.8888888889,
 						5,
 						0
+					],
+					[
+						62666.6666666667,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						62666.6666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						63333.3333333334,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						63333.3333333334,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						64000,
@@ -2227,15 +2388,21 @@
 						65000,
 						3,
 						222.222222222219
+					],
+					[
+						64220.8333333334,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						65333.3333333333,
@@ -2276,15 +2443,21 @@
 						66333.3333333333,
 						0,
 						333.333333333343
+					],
+					[
+						65547.9166666667,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						67000,
@@ -2307,13 +2480,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						68000,
@@ -2361,13 +2534,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						69333.3333333333,
@@ -2405,13 +2578,13 @@
 						333.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						70666.6666666667,
@@ -2444,13 +2617,13 @@
 						333.333333333328
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						72000,
@@ -2478,13 +2651,13 @@
 						416.666666666672
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						73333.3333333333,
@@ -2517,13 +2690,13 @@
 						416.666666666672
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						74666.6666666667,
@@ -2564,15 +2737,21 @@
 						75666.6666666667,
 						0,
 						250
+					],
+					[
+						75500,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						76000,
@@ -2618,15 +2797,21 @@
 						77000,
 						0,
 						0
+					],
+					[
+						76833.3333333333,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						77333.3333333333,
@@ -2652,15 +2837,21 @@
 						78333.3333333333,
 						1,
 						0
+					],
+					[
+						77500,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						78666.6666666667,
@@ -2743,13 +2934,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						80000,
@@ -2767,13 +2958,13 @@
 						416.666666666672
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						81500,
@@ -2786,13 +2977,13 @@
 						666.666666666672
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						82666.6666666667,
@@ -2810,13 +3001,13 @@
 						416.666666666657
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						84166.6666666667,
@@ -2829,13 +3020,13 @@
 						583.333333333328
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						85333.3333333333,
@@ -2846,15 +3037,27 @@
 						85333.3333333333,
 						4,
 						1250
+					],
+					[
+						85333.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						85333.3333333333,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						86666.6666666667,
@@ -2865,15 +3068,27 @@
 						86666.6666666667,
 						1,
 						1250
+					],
+					[
+						86666.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						86666.6666666666,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						88000,
@@ -2884,15 +3099,159 @@
 						88666.6666666667,
 						2,
 						583.333333333328
+					],
+					[
+						88166.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						88250,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						88333.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						88416.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						88500,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						88333.3333333333,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						88333.3333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						88333.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88250,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88166.6666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88416.6666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88500,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						88916.6666666666,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						88916.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89083.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89166.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89250,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89083.3333333333,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						89083.3333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						89083.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						89166.6666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						89250,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						89333.3333333333,
@@ -2903,29 +3262,275 @@
 						90000,
 						0,
 						583.333333333328
+					],
+					[
+						89500,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89583.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89750,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89666.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						89500,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						89666.6666666666,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						89500,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89583.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						89666.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89833.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90166.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90250,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90333.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90416.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90500,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90166.6666666666,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						90166.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						90250,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						90333.3333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						90333.3333333333,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						90666.6666666667,
 						1,
 						1250
+					],
+					[
+						90833.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						90916.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						91000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						91083.3333333333,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						91083.3333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						91000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						90916.6666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						90833.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						91166.6666666666,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						91166.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						91250,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						91250,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						91583.3333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						91500,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						91416.6666666666,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						91416.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						91500,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						91583.3333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						91666.6666666666,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						91750,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						91916.6666666666,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						92000,
@@ -2933,13 +3538,13 @@
 						1250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						93333.3333333333,
@@ -2957,13 +3562,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						94666.6666666667,
@@ -2986,13 +3591,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						96000,
@@ -3000,13 +3605,13 @@
 						1250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						97333.3333333333,
@@ -3014,13 +3619,13 @@
 						1250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						98666.6666666667,
@@ -3086,15 +3691,39 @@
 						99916.6666666667,
 						0,
 						0
+					],
+					[
+						98999.9999999999,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						99166.6666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						99416.6666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						99583.3333333333,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						100000,
@@ -3162,13 +3791,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						101333.333333333,
@@ -3211,11 +3840,6 @@
 						0
 					],
 					[
-						101916.666666667,
-						2,
-						0
-					],
-					[
 						102000,
 						4,
 						583.333333333328
@@ -3236,11 +3860,6 @@
 						0
 					],
 					[
-						102250,
-						0,
-						0
-					],
-					[
 						102333.333333333,
 						3,
 						0
@@ -3256,18 +3875,34 @@
 						0
 					],
 					[
-						102583.333333333,
-						2,
+						101916.666666667,
+						3,
 						0
+					],
+					[
+						102250,
+						1,
+						0
+					],
+					[
+						102583.333333333,
+						3,
+						0
+					],
+					[
+						101500,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						102666.666666667,
@@ -3348,15 +3983,33 @@
 						103916.666666667,
 						3,
 						0
+					],
+					[
+						103000,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						103333.333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						103666.666666667,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						104000,
@@ -3422,15 +4075,33 @@
 						105250,
 						3,
 						0
+					],
+					[
+						104416.666666667,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						104833.333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						105000,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						105333.333333333,
@@ -3496,15 +4167,21 @@
 						106500,
 						1,
 						0
+					],
+					[
+						105916.666666667,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						106666.666666667,
@@ -3547,11 +4224,6 @@
 						0
 					],
 					[
-						107250,
-						2,
-						0
-					],
-					[
 						107333.333333333,
 						0,
 						0
@@ -3572,11 +4244,6 @@
 						0
 					],
 					[
-						107583.333333333,
-						1,
-						0
-					],
-					[
 						107666.666666667,
 						2,
 						0
@@ -3592,18 +4259,34 @@
 						0
 					],
 					[
-						107916.666666667,
+						107250,
 						3,
 						0
+					],
+					[
+						107583.333333333,
+						0,
+						0
+					],
+					[
+						107916.666666667,
+						2,
+						0
+					],
+					[
+						106833.333333333,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						108000,
@@ -3684,15 +4367,27 @@
 						109250,
 						0,
 						0
+					],
+					[
+						108166.666666667,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						109000,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						109333.333333333,
@@ -3783,16 +4478,40 @@
 						110583.333333333,
 						1,
 						0
+					],
+					[
+						109333.333333333,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						109666.666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						109666.666666667,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						109333.333333333,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						110666.666666667,
@@ -3903,16 +4622,22 @@
 						111916.666666667,
 						2,
 						0
+					],
+					[
+						111500,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						112000,
@@ -3983,16 +4708,46 @@
 						113250,
 						3,
 						0
+					],
+					[
+						112000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						112000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						112333.333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						112333.333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						112166.666666667,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						113333.333333333,
@@ -4080,14 +4835,14 @@
 						83.3333333333285
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						114666.666666667,
@@ -4178,16 +4933,64 @@
 						115916.666666667,
 						2,
 						0
+					],
+					[
+						114833.333333333,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						114666.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						115000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						115166.666666667,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						114666.666666667,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						114666.666666667,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						115000,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						115000,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						116000,
@@ -4298,16 +5101,22 @@
 						117250,
 						1,
 						0
+					],
+					[
+						116833.333333333,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						117333.333333333,
@@ -4378,16 +5187,40 @@
 						118583.333333333,
 						0,
 						0
+					],
+					[
+						117333.333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						117333.333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						117666.666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						117666.666666667,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						118666.666666667,
@@ -4473,16 +5306,28 @@
 						119833.333333333,
 						5,
 						0
+					],
+					[
+						119416.666666667,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						119083.333333333,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						120000,
@@ -4555,14 +5400,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						121333.333333333,
@@ -4630,14 +5475,14 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						122833.333333333,
@@ -4738,16 +5583,28 @@
 						123833.333333333,
 						5,
 						83.333333333343
+					],
+					[
+						123083.333333333,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						123083.333333333,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						124000,
@@ -4828,16 +5685,28 @@
 						125166.666666667,
 						0,
 						0
+					],
+					[
+						124083.333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						124083.333333333,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						125333.333333333,
@@ -4910,14 +5779,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						126666.666666667,
@@ -4985,14 +5854,14 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						128166.666666667,
@@ -5093,16 +5962,76 @@
 						129166.666666667,
 						0,
 						83.3333333333285
+					],
+					[
+						128166.666666666,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						128250,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						128333.333333333,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						128250,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						128166.666666666,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						128333.333333333,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						128500,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						128666.666666666,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						128500,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						128666.666666666,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						129333.333333333,
@@ -5183,16 +6112,28 @@
 						130500,
 						0,
 						0
+					],
+					[
+						130000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						130000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						130666.666666667,
@@ -5315,14 +6256,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						132000,
@@ -5410,14 +6351,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						133333.333333333,
@@ -5460,14 +6401,14 @@
 						416.666666666657
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						134666.666666667,
@@ -5565,14 +6506,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						136000,
@@ -5658,16 +6599,22 @@
 						137250,
 						5,
 						0
+					],
+					[
+						136750,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						137333.333333333,
@@ -5738,16 +6685,34 @@
 						138583.333333333,
 						6,
 						0
+					],
+					[
+						137416.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						137500,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						138083.333333333,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						138666.666666667,
@@ -5850,14 +6815,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						140000,
@@ -5923,16 +6888,28 @@
 						141166.666666667,
 						0,
 						0
+					],
+					[
+						140166.666666667,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						140166.666666667,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						141333.333333333,
@@ -5975,14 +6952,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						142666.666666667,
@@ -6045,14 +7022,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						144000,
@@ -6095,14 +7072,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						145333.333333333,
@@ -6163,16 +7140,22 @@
 						146583.333333333,
 						3,
 						0
+					],
+					[
+						146583.333333333,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						146666.666666667,
@@ -6238,16 +7221,22 @@
 						147916.666666667,
 						3,
 						0
+					],
+					[
+						147250,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						148000,
@@ -6318,16 +7307,40 @@
 						149166.666666667,
 						1,
 						0
+					],
+					[
+						148416.666666667,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						149250,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						149250,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						149000,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						149333.333333333,
@@ -6393,16 +7406,22 @@
 						150583.333333333,
 						0,
 						0
+					],
+					[
+						149916.666666667,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						150666.666666667,
@@ -6478,16 +7497,22 @@
 						151833.333333333,
 						2,
 						0
+					],
+					[
+						151666.666666667,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						152000,
@@ -6503,15 +7528,21 @@
 						153000,
 						0,
 						0
+					],
+					[
+						152000,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						153333.333333333,
@@ -6534,13 +7565,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						154666.666666667,
@@ -6563,13 +7594,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						156000,
@@ -6597,13 +7628,13 @@
 						333.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						158000,
@@ -6616,13 +7647,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						158666.666666667,
@@ -6645,13 +7676,13 @@
 						583.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						160333.333333333,
@@ -6664,13 +7695,13 @@
 						583.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						161333.333333333,
@@ -6681,15 +7712,27 @@
 						162333.333333333,
 						1,
 						0
+					],
+					[
+						162333.333333333,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						162333.333333333,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						162666.666666667,
@@ -6705,15 +7748,21 @@
 						163666.666666667,
 						3,
 						0
+					],
+					[
+						162666.666666667,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						164000,
@@ -6736,13 +7785,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						165333.333333333,
@@ -6765,13 +7814,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						166666.666666667,
@@ -6799,13 +7848,13 @@
 						333.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						168666.666666667,
@@ -6818,13 +7867,13 @@
 						250
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						169333.333333333,
@@ -6842,13 +7891,13 @@
 						583.333333333314
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						171000,
@@ -6861,13 +7910,13 @@
 						583.333333333314
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						172000,
@@ -6880,13 +7929,13 @@
 						583.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						173333.333333333,
@@ -6897,15 +7946,21 @@
 						174000,
 						1,
 						583.333333333343
+					],
+					[
+						173333.333333333,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						174666.666666667,
@@ -6916,15 +7971,21 @@
 						175333.333333333,
 						2,
 						666.666666666657
+					],
+					[
+						174666.666666667,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						176000,
@@ -6935,15 +7996,21 @@
 						176666.666666667,
 						1,
 						583.333333333343
+					],
+					[
+						176000,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						177333.333333333,
@@ -6954,15 +8021,21 @@
 						178000,
 						3,
 						583.333333333343
+					],
+					[
+						177333.333333333,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						178666.666666667,
@@ -6973,15 +8046,21 @@
 						179333.333333333,
 						2,
 						583.333333333314
+					],
+					[
+						178666.666666667,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						180000,
@@ -6992,15 +8071,21 @@
 						180666.666666667,
 						0,
 						666.666666666686
+					],
+					[
+						180000,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						181333.333333333,
@@ -7016,15 +8101,21 @@
 						182000,
 						5,
 						583.333333333343
+					],
+					[
+						181333.333333334,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						182666.666666667,
@@ -7045,15 +8136,27 @@
 						183333.333333333,
 						6,
 						583.333333333314
+					],
+					[
+						182666.666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						182666.666666667,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						184000,
@@ -7069,15 +8172,21 @@
 						184666.666666667,
 						1,
 						583.333333333343
+					],
+					[
+						184000,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						185333.333333333,
@@ -7098,15 +8207,27 @@
 						186000,
 						2,
 						583.333333333343
+					],
+					[
+						185333.333333334,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						185333.333333334,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						186666.666666667,
@@ -7122,15 +8243,21 @@
 						187333.333333333,
 						5,
 						583.333333333314
+					],
+					[
+						186666.666666667,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						188000,
@@ -7151,15 +8278,27 @@
 						188666.666666667,
 						7,
 						666.666666666686
+					],
+					[
+						188000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						188000,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						190000,
@@ -7172,13 +8311,13 @@
 						583.333333333343
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						190666.666666667,
@@ -7201,13 +8340,13 @@
 						916.666666666657
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						192000,
@@ -7240,13 +8379,13 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						193333.333333333,
@@ -7287,15 +8426,111 @@
 						194333.333333333,
 						7,
 						250
+					],
+					[
+						193333.333333334,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						193416.666666667,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						193666.666666667,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						193750,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						194000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						194083.333333334,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						194333.333333334,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						194416.666666667,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						193333.333333334,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						193416.666666667,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						193666.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						193750,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						194000,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						194083.333333334,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						194333.333333334,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						194416.666666667,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						194666.666666667,
@@ -7304,11 +8539,6 @@
 					],
 					[
 						194666.666666667,
-						0,
-						0
-					],
-					[
-						194750,
 						0,
 						0
 					],
@@ -7353,11 +8583,6 @@
 						0
 					],
 					[
-						195250,
-						3,
-						0
-					],
-					[
 						195333.333333333,
 						7,
 						0
@@ -7398,11 +8623,6 @@
 						0
 					],
 					[
-						195750,
-						1,
-						0
-					],
-					[
 						195833.333333333,
 						4,
 						0
@@ -7416,16 +8636,31 @@
 						195916.666666667,
 						0,
 						0
+					],
+					[
+						194750,
+						3,
+						0
+					],
+					[
+						195250,
+						2,
+						0
+					],
+					[
+						195750,
+						0,
+						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						196000,
@@ -7455,11 +8690,6 @@
 					[
 						196250,
 						6,
-						0
-					],
-					[
-						196250,
-						1,
 						0
 					],
 					[
@@ -7503,11 +8733,6 @@
 						0
 					],
 					[
-						196750,
-						3,
-						0
-					],
-					[
 						196833.333333333,
 						5,
 						583.333333333314
@@ -7538,27 +8763,50 @@
 						0
 					],
 					[
-						197250,
-						3,
-						0
-					]
-				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
-				"mustHitSection": true,
-				"noteStyle": "poem"
-			},
-			{
-				"sectionNotes": [
-					[
-						197333.333333333,
+						196250,
 						0,
 						0
 					],
 					[
-						197416.666666667,
+						196750,
+						2,
+						0
+					],
+					[
+						197250,
+						2,
+						0
+					],
+					[
+						196666.666666667,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						196833.333333334,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						196083.333333334,
+						4,
+						0,
+						"Note of Markov"
+					]
+				],
+				"noteStyle": "poem",
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 180
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						197333.333333333,
 						0,
 						0
 					],
@@ -7603,11 +8851,6 @@
 						0
 					],
 					[
-						197916.666666667,
-						3,
-						0
-					],
-					[
 						198000,
 						1,
 						0
@@ -7638,11 +8881,6 @@
 						0
 					],
 					[
-						198333.333333333,
-						1,
-						0
-					],
-					[
 						198416.666666667,
 						1,
 						0
@@ -7661,16 +8899,31 @@
 						198583.333333333,
 						0,
 						0
+					],
+					[
+						197416.666666667,
+						3,
+						0
+					],
+					[
+						197916.666666667,
+						2,
+						0
+					],
+					[
+						198333.333333334,
+						0,
+						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						198666.666666667,
@@ -7689,11 +8942,6 @@
 					],
 					[
 						198833.333333333,
-						1,
-						0
-					],
-					[
-						198916.666666667,
 						1,
 						0
 					],
@@ -7766,16 +9014,27 @@
 						199833.333333333,
 						0,
 						0
+					],
+					[
+						198916.666666667,
+						0,
+						0
+					],
+					[
+						199333.333333334,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						200000,
@@ -7785,11 +9044,6 @@
 					[
 						200000,
 						6,
-						0
-					],
-					[
-						200083.333333333,
-						3,
 						0
 					],
 					[
@@ -7833,11 +9087,6 @@
 						0
 					],
 					[
-						200583.333333333,
-						0,
-						0
-					],
-					[
 						200666.666666667,
 						2,
 						0
@@ -7878,11 +9127,6 @@
 						0
 					],
 					[
-						201083.333333333,
-						2,
-						0
-					],
-					[
 						201166.666666667,
 						1,
 						0
@@ -7896,16 +9140,31 @@
 						201250,
 						3,
 						0
+					],
+					[
+						200083.333333334,
+						2,
+						0
+					],
+					[
+						200583.333333334,
+						1,
+						0
+					],
+					[
+						201083.333333334,
+						3,
+						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						201333.333333333,
@@ -7930,11 +9189,6 @@
 					[
 						201500,
 						6,
-						0
-					],
-					[
-						201583.333333333,
-						2,
 						0
 					],
 					[
@@ -7983,11 +9237,6 @@
 						500
 					],
 					[
-						202083.333333333,
-						0,
-						0
-					],
-					[
 						202166.666666667,
 						3,
 						0
@@ -8018,27 +9267,50 @@
 						0
 					],
 					[
-						202583.333333333,
-						0,
-						0
-					]
-				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
-				"mustHitSection": false,
-				"noteStyle": "poem"
-			},
-			{
-				"sectionNotes": [
-					[
-						202666.666666667,
+						201583.333333334,
 						3,
 						0
 					],
 					[
-						202750,
+						202083.333333334,
+						1,
+						0
+					],
+					[
+						202583.333333334,
+						1,
+						0
+					],
+					[
+						201416.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						202000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						202166.666666667,
+						4,
+						0,
+						"Note of Markov"
+					]
+				],
+				"noteStyle": "poem",
+				"mustHitSection": false,
+				"changeBPM": false,
+				"bpm": 180
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [
+					[
+						202666.666666667,
 						3,
 						0
 					],
@@ -8083,11 +9355,6 @@
 						0
 					],
 					[
-						203250,
-						0,
-						0
-					],
-					[
 						203333.333333333,
 						2,
 						0
@@ -8123,11 +9390,6 @@
 						0
 					],
 					[
-						203750,
-						2,
-						0
-					],
-					[
 						203833.333333333,
 						1,
 						0
@@ -8141,16 +9403,31 @@
 						203916.666666667,
 						3,
 						0
+					],
+					[
+						202750,
+						0,
+						0
+					],
+					[
+						203250,
+						1,
+						0
+					],
+					[
+						203750,
+						3,
+						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						204000,
@@ -8170,11 +9447,6 @@
 					[
 						204166.666666667,
 						7,
-						0
-					],
-					[
-						204250,
-						2,
 						0
 					],
 					[
@@ -8246,16 +9518,27 @@
 						205166.666666667,
 						7,
 						0
+					],
+					[
+						204250,
+						3,
+						0
+					],
+					[
+						204250,
+						6,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						205333.333333333,
@@ -8363,14 +9646,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						206666.666666667,
@@ -8478,14 +9761,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						208000,
@@ -8616,16 +9899,28 @@
 						209250,
 						2,
 						0
+					],
+					[
+						208416.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						208750,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						209333.333333333,
@@ -8731,16 +10026,22 @@
 						210583.333333333,
 						2,
 						0
+					],
+					[
+						210083.333333334,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"noteStyle": "poem",
-				"bpm": 180,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 180,
+				"noteStyle": "poem"
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						210666.666666667,
@@ -8848,14 +10149,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						212000,
@@ -8963,14 +10264,14 @@
 						0
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						213333.333333333,
@@ -9101,16 +10402,28 @@
 						214583.333333333,
 						1,
 						0
+					],
+					[
+						213750,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						214083.333333334,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						214666.666666667,
@@ -9206,70 +10519,116 @@
 						215916.666666667,
 						1,
 						0
+					],
+					[
+						215416.666666667,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						215250,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						215166.666666667,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						215500,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						216000,
+						3,
+						2666.66666666667
+					],
+					[
+						216000,
+						4,
+						2666.66666666667
+					],
+					[
+						216000,
 						6,
-						5333.33333333334
+						0,
+						"Note of Markov"
 					],
 					[
 						216000,
 						2,
-						5333.33333333334
+						0,
+						"Note of Markov"
+					],
+					[
+						216000,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						216000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
-				"typeOfSection": 0,
-				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"noteStyle": "poem",
 				"mustHitSection": false,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
-				"sectionNotes": [],
-				"typeOfSection": 0,
 				"lengthInSteps": 16,
-				"bpm": 180,
-				"changeBPM": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"noteStyle": "poem",
 				"mustHitSection": true,
-				"noteStyle": "poem"
+				"changeBPM": false,
+				"bpm": 180
 			},
 			{
 				"altAnim": false,
@@ -9371,6 +10730,39 @@
 				"changeBPM": false
 			},
 			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 180,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 180
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 180,
+				"changeBPM": false
+			},
+			{
 				"noteStyle": "",
 				"gfSection": false,
 				"lengthInSteps": 16,
@@ -9382,12 +10774,15 @@
 				"mustHitSection": true
 			}
 		],
+		"player2": "sayori",
+		"gfVersion": "gf-realdoki",
+		"events": [],
 		"song": "STAGNANT",
-		"validScore": true,
-		"sections": 0,
-		"needsVoices": true,
 		"stage": "stagnant",
-		"speed": 2.8,
-		"bpm": 180
+		"needsVoices": true,
+		"sections": 0,
+		"validScore": true,
+		"bpm": 180,
+		"speed": 2.8
 	}
 }

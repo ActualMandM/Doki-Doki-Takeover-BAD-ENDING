@@ -70,8 +70,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Yuri_BLOODS",
 	"position": [
-		-200,
-		-50
+		-190,
+		-70
 	],
 	"healthicon": "yuri-crazy",
 	"flip_x": false,
@@ -81,8 +81,8 @@
 		230
 	],
 	"camera_position": [
-		-170,
-		99
+		-190,
+		109
 	],
 	"sing_duration": 9,
 	"scale": 1

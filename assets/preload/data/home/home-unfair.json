@@ -693,6 +693,12 @@
 						38100,
 						0,
 						225
+					],
+					[
+						37200,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -722,6 +728,18 @@
 						39300,
 						0,
 						225
+					],
+					[
+						38400,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						38400,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -751,6 +769,12 @@
 						40500,
 						3,
 						225
+					],
+					[
+						39600,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -834,6 +858,12 @@
 						43050,
 						1,
 						0
+					],
+					[
+						42825,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -878,6 +908,12 @@
 						44250,
 						1,
 						0
+					],
+					[
+						44025,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -1030,6 +1066,18 @@
 						47850,
 						3,
 						0
+					],
+					[
+						46950,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						46950,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -1307,6 +1355,18 @@
 						51450,
 						0,
 						0
+					],
+					[
+						51150,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						51150,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -1485,6 +1545,18 @@
 						53850,
 						6,
 						0
+					],
+					[
+						53700,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						53625,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -1649,6 +1721,18 @@
 						1,
 						525,
 						"No Animation"
+					],
+					[
+						56400,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						56400,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -1700,6 +1784,36 @@
 						2,
 						75,
 						"No Animation"
+					],
+					[
+						58425,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						58575,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						58275,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						58125,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						58050,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -1759,6 +1873,24 @@
 						59850,
 						0,
 						0
+					],
+					[
+						59025,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						59775,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						59325,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -1833,6 +1965,12 @@
 						61050,
 						3,
 						0
+					],
+					[
+						60300,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -2020,6 +2158,24 @@
 						64650,
 						0,
 						0
+					],
+					[
+						64200,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						63975,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						64650,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -2069,6 +2225,18 @@
 						65850,
 						2,
 						0
+					],
+					[
+						64950,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						65775,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -2158,6 +2326,12 @@
 						67125,
 						3,
 						0
+					],
+					[
+						66825,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -2271,6 +2445,18 @@
 						69450,
 						0,
 						0
+					],
+					[
+						68850,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						69150,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -2345,6 +2531,18 @@
 						70650,
 						3,
 						0
+					],
+					[
+						69900,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						70350,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -2443,6 +2641,24 @@
 						73050,
 						1,
 						0
+					],
+					[
+						72225,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						72600,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						72750,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -2565,6 +2781,18 @@
 						76725,
 						2,
 						0
+					],
+					[
+						75900,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						76275,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -2639,6 +2867,18 @@
 						77850,
 						3,
 						0
+					],
+					[
+						77175,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						77775,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -2780,6 +3020,18 @@
 						82500,
 						3,
 						225
+					],
+					[
+						82275,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						82200,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -3001,6 +3253,18 @@
 						87300,
 						5,
 						225
+					],
+					[
+						86400,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						86400,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -3110,6 +3374,12 @@
 						88725,
 						3,
 						0
+					],
+					[
+						87900,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -3171,11 +3441,6 @@
 						0
 					],
 					[
-						89475,
-						1,
-						0
-					],
-					[
 						89550,
 						6,
 						375
@@ -3196,17 +3461,34 @@
 						0
 					],
 					[
-						89775,
-						3,
-						0
-					],
-					[
 						89850,
 						1,
 						0
 					],
 					[
 						89925,
+						2,
+						0
+					],
+					[
+						88875,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89325,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						89475,
+						0,
+						0
+					],
+					[
+						89775,
 						2,
 						0
 					]
@@ -3441,6 +3723,30 @@
 						93525,
 						3,
 						0
+					],
+					[
+						92625,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						93000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						92400,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						93000,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -3610,6 +3916,30 @@
 						94725,
 						7,
 						0
+					],
+					[
+						93600,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						93975,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						94050,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						93600,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -3679,6 +4009,54 @@
 						95850,
 						3,
 						0
+					],
+					[
+						94800,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						95100,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						95400,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						95700,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						94800,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						95100,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						95400,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						95700,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -3758,6 +4136,48 @@
 						97050,
 						2,
 						0
+					],
+					[
+						96075,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						96300,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						96525,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						96900,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						96675,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						96450,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						96000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4436,6 +4856,42 @@
 						117450,
 						6,
 						0
+					],
+					[
+						116400,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						116400,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						116400,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						116400,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						116400,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						116400,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4534,6 +4990,42 @@
 						119850,
 						2,
 						0
+					],
+					[
+						118800,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						118800,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						118800,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						118800,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						118800,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						118800,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4652,6 +5144,42 @@
 						122250,
 						1,
 						0
+					],
+					[
+						121200,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						121200,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						121200,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						121200,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						121200,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						121200,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4740,6 +5268,42 @@
 						124500,
 						3,
 						225
+					],
+					[
+						123600,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						123600,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						123600,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						123600,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						123600,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						123600,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4858,6 +5422,42 @@
 						127050,
 						2,
 						0
+					],
+					[
+						126000,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						126000,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						126000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						126000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						126000,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						126000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -4976,6 +5576,42 @@
 						129450,
 						1,
 						0
+					],
+					[
+						128400,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						128400,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						128400,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						128400,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						128400,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						128400,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5114,6 +5750,42 @@
 						131850,
 						1,
 						0
+					],
+					[
+						130800,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						130800,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						130800,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						130800,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						130800,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						130800,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5183,6 +5855,30 @@
 						132900,
 						3,
 						225
+					],
+					[
+						132525,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						132525,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						132375,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						132375,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5242,6 +5938,42 @@
 						134100,
 						0,
 						225
+					],
+					[
+						133200,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						133200,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						133200,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						133200,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						133200,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						133200,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5271,6 +6003,102 @@
 						134700,
 						1,
 						825
+					],
+					[
+						135150,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						135150,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						135150,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						135150,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						135375,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						135300,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						135300,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						135225,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						135225,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						135225,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						135225,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						135300,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						135300,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						135375,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						135375,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						135375,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5440,6 +6268,18 @@
 						136725,
 						3,
 						0
+					],
+					[
+						136125,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						136125,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -5609,6 +6449,18 @@
 						137925,
 						0,
 						0
+					],
+					[
+						137775,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						137775,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -5778,6 +6630,54 @@
 						139125,
 						1,
 						0
+					],
+					[
+						138225,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						138600,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						138675,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						138825,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						138225,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						138600,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						138675,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						138825,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -5947,6 +6847,30 @@
 						139875,
 						0,
 						0
+					],
+					[
+						139275,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						139275,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						140250,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						140250,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -6116,6 +7040,18 @@
 						141525,
 						2,
 						0
+					],
+					[
+						140850,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						140850,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -6389,6 +7325,24 @@
 						143925,
 						1,
 						0
+					],
+					[
+						142800,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						143100,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						143400,
+						5,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -6493,6 +7447,18 @@
 						145050,
 						2,
 						0
+					],
+					[
+						144300,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						144750,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -6562,6 +7528,54 @@
 						146250,
 						1,
 						75
+					],
+					[
+						145200,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						145200,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						145800,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						145800,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						145200,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						145200,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						145800,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						145800,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -6631,6 +7645,54 @@
 						147450,
 						1,
 						75
+					],
+					[
+						146400,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						146400,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						146400,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						146400,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						147000,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						147000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						147000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						147000,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -6700,6 +7762,54 @@
 						148650,
 						3,
 						75
+					],
+					[
+						147600,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						147600,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						147600,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						147600,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						148200,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						148200,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						148650,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						148650,
+						4,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -6769,6 +7879,42 @@
 						149850,
 						3,
 						0
+					],
+					[
+						149400,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						149400,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						148800,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						148800,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						148800,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						148800,
+						2,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -6938,6 +8084,18 @@
 						151125,
 						3,
 						0
+					],
+					[
+						150000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						150000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -7276,6 +8434,18 @@
 						153525,
 						1,
 						0
+					],
+					[
+						153525,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						153525,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -7389,6 +8559,12 @@
 						155850,
 						0,
 						0
+					],
+					[
+						154800,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -7635,6 +8811,12 @@
 						160725,
 						3,
 						0
+					],
+					[
+						159600,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -7724,6 +8906,12 @@
 						161925,
 						0,
 						0
+					],
+					[
+						160875,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -7778,6 +8966,48 @@
 						163050,
 						3,
 						0
+					],
+					[
+						162150,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						162300,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						162450,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						162600,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						162750,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						162900,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						163050,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -7827,6 +9057,54 @@
 						164250,
 						3,
 						0
+					],
+					[
+						163200,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						163350,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						163500,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						163650,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						163800,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						163950,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						164100,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						164250,
+						0,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -7876,6 +9154,30 @@
 						165300,
 						7,
 						225
+					],
+					[
+						164400,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						164400,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						164400,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						164400,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -8204,6 +9506,42 @@
 						167850,
 						1,
 						0
+					],
+					[
+						166950,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						166950,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						167700,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						167700,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						167775,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						167775,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -8681,6 +10019,30 @@
 						171525,
 						1,
 						0
+					],
+					[
+						170925,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						170925,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						171375,
+						7,
+						0,
+						"Note of Markov"
+					],
+					[
+						171375,
+						3,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -8749,6 +10111,42 @@
 						173400,
 						3,
 						525
+					],
+					[
+						172800,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						172800,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						173400,
+						6,
+						0,
+						"Note of Markov"
+					],
+					[
+						173400,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						173400,
+						2,
+						0,
+						"Note of Markov"
+					],
+					[
+						173400,
+						1,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -8768,6 +10166,42 @@
 						174000,
 						2,
 						1200
+					],
+					[
+						174000,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						174000,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						174000,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						174000,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						174000,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						174000,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": false,
@@ -10929,6 +12363,42 @@
 						219600,
 						2,
 						1200
+					],
+					[
+						219600,
+						1,
+						0,
+						"Note of Markov"
+					],
+					[
+						219600,
+						0,
+						0,
+						"Note of Markov"
+					],
+					[
+						219600,
+						3,
+						0,
+						"Note of Markov"
+					],
+					[
+						219600,
+						4,
+						0,
+						"Note of Markov"
+					],
+					[
+						219600,
+						5,
+						0,
+						"Note of Markov"
+					],
+					[
+						219600,
+						7,
+						0,
+						"Note of Markov"
 					]
 				],
 				"mustHitSection": true,
@@ -10950,64 +12420,86 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 200,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 200,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 200,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 200,
-				"changeBPM": false
-			},
-			{
-				"altAnim": false,
-				"mustHitSection": true,
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"gfSection": false,
-				"noteStyle": "",
-				"bpm": 200,
-				"changeBPM": false
-			},
-			{
-				"noteStyle": "",
-				"gfSection": false,
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"bpm": 200,
 				"changeBPM": false,
-				"mustHitSection": true
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"noteStyle": ""
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 200
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"changeBPM": false,
+				"noteStyle": "",
+				"bpm": 200
+			},
+			{
+				"altAnim": false,
+				"mustHitSection": true,
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"gfSection": false,
+				"noteStyle": "",
+				"bpm": 200,
+				"changeBPM": false
 			},
 			{
 				"noteStyle": "",
@@ -11030,6 +12522,6 @@
 		"stage": "home",
 		"validScore": true,
 		"bpm": 200,
-		"speed": 2.7
+		"speed": 2.9
 	}
 }

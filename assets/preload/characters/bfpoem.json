@@ -76,5 +76,5 @@
 	"sing_duration": 6,
 	"scale": 1,
 	"gameover_Character": "gameover-poem",
-	"death_Sound": "ddto_loss_sfx"
+	"death_Sound": "stagnantdeath"
 }
