@@ -133,7 +133,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Psych Engine',
 				'psych',
-				'Shadow Mario, Riveren, bb-panzu, shubs, CrowPlexus, Keoiki, SqirraRNG, EliteMasterEric, PolybiusProxy, Tahir, iFlicky, KadeDev, superpowers04, CheemAndFriends',
+				'Shadow Mario, Riveren, bb-panzu, CrowPlexus, Keoiki, SqirraRNG, EliteMasterEric, PolybiusProxy, Tahir, iFlicky, KadeDev, superpowers04, CheemAndFriends',
 				'https://github.com/ShadowMario/FNF-PsychEngine',
 			],
 			[
