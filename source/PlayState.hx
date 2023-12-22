@@ -560,7 +560,6 @@ class PlayState extends MusicBeatState
 					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
 					clubroomdark.visible = false;
 					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
-					add(clubroomdark);
 
 					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
 					windowlight.visible = false;
@@ -621,7 +620,6 @@ class PlayState extends MusicBeatState
 				{
 					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
 					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
-					add(clubroomdark);
 
 					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
 					windowlight.setGraphicSize(Std.int(windowlight.width * 1.3));
@@ -736,10 +734,11 @@ class PlayState extends MusicBeatState
 				{
 					clubroomdark = new BGSprite('bigmonika/shadow', -220, -110, 1, 1);
 					clubroomdark.setGraphicSize(Std.int(clubroomdark.width * 1.3));
-					add(clubroomdark);
+					clubroomdark.visible = false;
 
 					windowlight = new BGSprite('bigmonika/WindowLight', -220, -110, 1, 1);
 					windowlight.setGraphicSize(Std.int(windowlight.width * 1.3));
+					windowlight.visible = false;
 					add(windowlight);
 				}
 
@@ -812,10 +811,14 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
-		if(curStage == 'home')
+		switch (curStage)
 		{
-			add(notepadoverlay);
-			add(glitchfront);
+			case 'home':
+				if (!ClientPrefs.lowQuality) add(clubroomdark);
+				add(notepadoverlay);
+				add(glitchfront);
+			case 'stagnant' | 'markov':
+				if (!ClientPrefs.lowQuality) add(clubroomdark);
 		}
 
 		//stealing this from DDTO
@@ -2294,18 +2297,17 @@ class PlayState extends MusicBeatState
 			if (player == 0)
 			{
 				//Create blood stuff here
-				var offsetx:Int = -190;
-				var offsety:Int = 0;
-				if (ClientPrefs.downScroll) offsety = -380;
+				var offsetx:Float = babyArrow.x + -270;
+				var offsety:Float = babyArrow.y + -25;
 
-				var blood:FlxSprite = new FlxSprite(babyArrow.x + offsetx, babyArrow.y + offsety);
+				var blood:FlxSprite = new FlxSprite(offsetx, offsety);
 				blood.frames = Paths.getSparrowAtlas('blooddrip', 'preload');
 				blood.antialiasing = ClientPrefs.globalAntialiasing;
 				blood.animation.addByPrefix('idle', 'gone', 24, false);
 				blood.animation.addByPrefix('drip', 'blood', 24, false);
 				blood.animation.play('idle');
+				blood.scale.set(1.3, 1.3);
 				blood.alpha = targetAlpha;
-				blood.flipY = ClientPrefs.downScroll;
 				blood.ID = i; 
 				bloodStrums.add(blood);
 			}

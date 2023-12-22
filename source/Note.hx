@@ -116,7 +116,7 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
-				case 'Note of Markov':
+				case 'Note of Markov' | 'Note of Markov (Play anim)':
 					ignoreNote = mustPress;
 					reloadNote('MARKOV');
 					noteSplashTexture = 'HURTnoteSplashes';
@@ -125,6 +125,7 @@ class Note extends FlxSprite
 					colorSwap.brightness = 0;
 					missHealth = 420;
 					hitCausesMiss = true;
+					if (value == 'Note of Markov') noAnimation = true;
 				case 'No Animation':
 					noAnimation = true;
 				case 'GF Sing':

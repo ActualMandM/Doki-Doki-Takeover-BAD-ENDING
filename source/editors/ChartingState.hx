@@ -68,6 +68,7 @@ class ChartingState extends MusicBeatState
 		'GF Sing',
 		'No Animation',
 		'Note of Markov',
+		'Note of Markov (Play anim)',
 		'Sayo Sing', 
 		'Yuri Sing'
 	];
