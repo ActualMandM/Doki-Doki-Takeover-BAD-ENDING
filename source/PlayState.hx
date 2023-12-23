@@ -5018,7 +5018,7 @@ class PlayState extends MusicBeatState
 				char = extra2;
 			}
 
-			if (note.noteType == 'Note of Markov' && bloodDrips && !note.isSustainNote)
+			if (note.noteType == 'Note of Markov (Play anim)' && bloodDrips && !note.isSustainNote)
 			{
 				FlxG.sound.play(Paths.sound('stab'));
 				var spr:FlxSprite;
