@@ -1,77 +1,88 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
-				0
+				-1
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "BlurriIdle"
+			"fps": 24,
+			"name": "ClosetYuriIdle",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-10,
-				4
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				0,
+				-1
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BlurriRight"
+			"fps": 24,
+			"name": "ClosetYuriRight",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-2,
-				22
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				0,
+				44
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "BlurriUp"
+			"fps": 24,
+			"name": "ClosetYuriUp",
+			"indices": []
 		},
 		{
-			"offsets": [
-				8,
-				-80
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-1,
+				-21
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "BlurriDown"
+			"fps": 24,
+			"name": "ClosetYuriDown",
+			"indices": []
 		},
 		{
-			"offsets": [
-				53,
-				3
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				7,
+				-1
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "BlurriLeft"
+			"fps": 24,
+			"name": "ClosetYuriLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				16
+			],
+			"anim": "appear",
+			"fps": 24,
+			"name": "ClosetYuriIntro",
+			"indices": []
 		},
 		{
 			"offsets": [
-				2,
-				0
+				5,
+				2
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "appear",
 			"indices": [],
-			"name": "BlurriAppear"
+			"fps": 24,
+			"anim": "leaves",
+			"loop": false,
+			"name": "ClosetYuriOutro"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Yuri_Closet",
 	"position": [
-		60,
-		20
+		40,
+		60
 	],
 	"healthicon": "yuri-closet",
 	"flip_x": false,
@@ -81,9 +92,9 @@
 		30
 	],
 	"camera_position": [
-		-170,
-		79
+		-120,
+		9
 	],
 	"sing_duration": 6,
-	"scale": 1
+	"scale": 1.1
 }
