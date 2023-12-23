@@ -240,6 +240,7 @@ class PlayState extends MusicBeatState
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
 	var ruinedClubBG:BGSprite;
+	var squear:BGSprite;
 	var glitchfront:BGSprite;
 	var glitchback:BGSprite;
 	var evilPoem:BGSprite;
@@ -774,6 +775,11 @@ class PlayState extends MusicBeatState
 					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
 					deskfront.updateHitbox();
 					deskfront.shader = swagShader.shader;
+
+					squear = new BGSprite('squear', -220, 0, 1, 1, ['Squear'], true);
+					squear.setGraphicSize(Std.int(ruinedClubBG.width * 1.3));
+					squear.alpha = 0.001;
+					squear.blend = SCREEN;
 				}
 
 		}
@@ -814,7 +820,11 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'home':
-				if (!ClientPrefs.lowQuality) add(clubroomdark);
+				if (!ClientPrefs.lowQuality)
+				{
+					add(clubroomdark);
+					add(squear);
+				}
 				add(notepadoverlay);
 				add(glitchfront);
 			case 'stagnant' | 'markov':
@@ -3493,6 +3503,7 @@ class PlayState extends MusicBeatState
 							fancyclouds.visible = false;
 							windowlight.visible = false;
 							clubroomdark.visible = false;
+							squear.alpha = 0.001;
 						}
 						stageStatic.visible = false;
 						ruinedClubBG.visible = false;
@@ -3560,6 +3571,7 @@ class PlayState extends MusicBeatState
 						FlxG.camera.zoom = 0.8;
 						stageStatic.visible = true;
 						ruinedClubBG.visible = true;
+						if (!ClientPrefs.lowQuality) squear.alpha = 1;
 						glitchfront.visible = true;
 						glitchback.visible = true;
 					case 'notepad':

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="squear.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="SquearPart2TheRemix_00000.png" x="0" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00001.png" x="1280" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00002.png" x="2560" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00003.png" x="3840" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00004.png" x="5120" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00005.png" x="6400" y="0" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00006.png" x="0" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00007.png" x="1280" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00008.png" x="2560" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00009.png" x="3840" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00010.png" x="5120" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00011.png" x="6400" y="720" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00012.png" x="0" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00013.png" x="1280" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00014.png" x="2560" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00015.png" x="3840" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00016.png" x="5120" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00017.png" x="6400" y="1440" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00018.png" x="0" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00019.png" x="1280" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00020.png" x="2560" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00021.png" x="3840" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00022.png" x="5120" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00023.png" x="6400" y="2160" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00024.png" x="0" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00025.png" x="1280" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00026.png" x="2560" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00027.png" x="3840" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00028.png" x="5120" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00029.png" x="6400" y="2880" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00030.png" x="0" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00031.png" x="1280" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00032.png" x="2560" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00033.png" x="3840" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00034.png" x="5120" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00035.png" x="6400" y="3600" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00036.png" x="0" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00037.png" x="1280" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00038.png" x="2560" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00039.png" x="3840" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00040.png" x="5120" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00041.png" x="6400" y="4320" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00042.png" x="0" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00043.png" x="1280" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00044.png" x="2560" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00045.png" x="3840" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00046.png" x="5120" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00047.png" x="6400" y="5040" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00048.png" x="0" y="5760" width="1280" height="720"/>
+	<SubTexture name="SquearPart2TheRemix_00049.png" x="1280" y="5760" width="1280" height="720"/>
+</TextureAtlas>
