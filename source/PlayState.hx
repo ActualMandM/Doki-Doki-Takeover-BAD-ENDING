@@ -5276,7 +5276,7 @@ class PlayState extends MusicBeatState
 	{
 		if (FlxG.sound.music.time >= -ClientPrefs.noteOffset)
 		{
-			if (Conductor.songPosition <= vocals.length && Math.abs(vocals.time - FlxG.sound.music.time) > 20)
+			if (Conductor.songPosition <= vocals.length && Math.abs(vocals.time - FlxG.sound.music.time) > 15)
 				resyncVocals();
 		}
 

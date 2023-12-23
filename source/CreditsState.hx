@@ -51,7 +51,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/SirDusterBuster'
 			],
 			[
-				'Sun Spirit',
+				'Jorge - SunSpirit',
 				'jorge',
 				'Team TBD Lead, Director/Programmer',
 				'https://twitter.com/Jorge_SunSpirit'
@@ -96,10 +96,10 @@ class CreditsState extends MusicBeatState
 				'Chompo',
 				'chompo',
 				'Charting - STAGNANT and HOME',
-				'https://twitter.com/MrChompsALot'
+				'https://twitter.com/chompoWRLD'
 			],
 			[
-				'Crim',
+				'crim',
 				'crim',
 				'Artist',
 				'https://twitter.com/ScrimbloCrimbo'
@@ -117,7 +117,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/GrandHammer6'
 			],
 			[
-				'Ito', 
+				'Ito Saihara', 
 				'ito', 
 				'Background Artist', 
 				'https://twitter.com/ItoSaihara_'
