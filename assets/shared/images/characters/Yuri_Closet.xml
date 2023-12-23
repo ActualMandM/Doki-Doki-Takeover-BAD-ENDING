@@ -31,8 +31,6 @@
 	<SubTexture name="ClosetYuriIdle0012" x="3143" y="8" width="508" height="668" frameX="0" frameY="0" frameWidth="511" frameHeight="669"/>
 	<SubTexture name="ClosetYuriIdle0013" x="3143" y="8" width="508" height="668" frameX="0" frameY="0" frameWidth="511" frameHeight="669"/>
 	<SubTexture name="ClosetYuriIdle0014" x="3143" y="8" width="508" height="668" frameX="0" frameY="0" frameWidth="511" frameHeight="669"/>
-	<SubTexture name="ClosetYuriIdle0015" x="3659" y="8" width="0" height="0" frameX="-3" frameY="1" frameWidth="511" frameHeight="669"/>
-	<SubTexture name="ClosetYuriIdle0016" x="3659" y="8" width="0" height="0" frameX="-3" frameY="1" frameWidth="511" frameHeight="669"/>
 	<SubTexture name="ClosetYuriIntro0000" x="3667" y="8" width="366" height="516" frameX="-81" frameY="-131" frameWidth="513" frameHeight="698"/>
 	<SubTexture name="ClosetYuriIntro0001" x="3667" y="8" width="366" height="516" frameX="-81" frameY="-131" frameWidth="513" frameHeight="698"/>
 	<SubTexture name="ClosetYuriIntro0002" x="3667" y="8" width="366" height="516" frameX="-81" frameY="-131" frameWidth="513" frameHeight="698"/>
