@@ -1,7 +1,7 @@
 {
 	"animations": [
 		{
-			"loop": true,
+			"loop": false,
 			"offsets": [
 				0,
 				-1
