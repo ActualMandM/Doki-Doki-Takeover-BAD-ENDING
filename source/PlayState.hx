@@ -3853,14 +3853,13 @@ class PlayState extends MusicBeatState
 					iconP1.visible = true;
 					iconP2.visible = true;
 					scoreTxt.visible = true;
+
 					if (cpuControlled)
 						botplayTxt.visible = true;
-					if (!isStoryMode)
-					{
-						timeBar.visible = true;
-						timeBarBG.visible = true;
-						timeTxt.visible = true;
-					}
+
+					timeBar.visible = true;
+					timeBarBG.visible = true;
+					timeTxt.visible = true;
 				}
 			case 'Force Dance':
 				var char:Character = dad;
