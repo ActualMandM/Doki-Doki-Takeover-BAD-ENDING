@@ -153,7 +153,7 @@
 			"fps": 24,
 			"anim": "idle",
 			"loop": false,
-			"name": "BF Idle"
+			"name": "BF idle dance"
 		}
 	],
 	"no_antialiasing": false,
