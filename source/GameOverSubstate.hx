@@ -24,6 +24,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var deathSoundName:String = 'fnf_loss_sfx';
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
+	public static var markovGameover:Bool = false;
 
 	public static var instance:GameOverSubstate;
 
@@ -33,6 +34,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		deathSoundName = 'fnf_loss_sfx';
 		loopSoundName = 'gameOver';
 		endSoundName = 'gameOverEnd';
+		markovGameover = false;
 	}
 
 	override function create()
@@ -50,6 +52,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance.setOnLuas('inGameOver', true);
 
 		Conductor.songPosition = 0;
+		if (markovGameover) characterName = 'gameover-markov';
 
 		boyfriend = new Boyfriend(x, y, characterName);
 		boyfriend.x += boyfriend.positionArray[0];

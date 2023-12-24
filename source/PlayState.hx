@@ -662,7 +662,7 @@ class PlayState extends MusicBeatState
 				funnyEyes.updateHitbox();
 				funnyEyes.screenCenter();
 				add(funnyEyes);
-
+				addCharacterToList('gameover-markov', 0); //Not a thingie
 			case 'home':
 				swagShader = new ColorSwap();
 				swagShader.saturation = -100;
@@ -3468,6 +3468,7 @@ class PlayState extends MusicBeatState
 						boyfriendGroup.y = BF_Y;
 					case 'markov':
 						closetCloseUp.visible = false;
+						GameOverSubstate.markovGameover = false;
 					case 'stagnant':
 						if (!ClientPrefs.lowQuality)
 						{
@@ -3517,10 +3518,12 @@ class PlayState extends MusicBeatState
 						funnyEyes.setGraphicSize(Std.int(bloodyBG.width * 1.3));
 						funnyEyes.cameras = [camGame];
 						funnyEyes.alpha = 1;
+						GameOverSubstate.markovGameover = true;
 					case 'closet':
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
 						closetCloseUp.visible = true;
+						GameOverSubstate.markovGameover = true;
 					case 'ruined' | 'ruinedclub':
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
