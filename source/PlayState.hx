@@ -128,11 +128,16 @@ class PlayState extends MusicBeatState
 	public var extra2:Character;
 
 	var daStatic:BGSprite;
+	var stagstatic:BGSprite;
 	var screenPulse:BGSprite;
 	var redStatic:BGSprite;
 	var inthenotepad:BGSprite;
 	var notepadoverlay:BGSprite;
 	var stageStatic:BGSprite;
+	var bgwindo:FlxBackdrop;
+	var bgwindo2:FlxBackdrop;
+	var cambgwindo:FlxBackdrop;
+	var cambgwindo2:FlxBackdrop;
 	var bakaOverlay:BGSprite;
 	var funnyEyes:BGSprite;
 	var staticlol:StaticShader;
@@ -240,7 +245,6 @@ class PlayState extends MusicBeatState
 	var evilClubBG:BGSprite;
 	var evilClubBGScribbly:BGSprite;
 	var ruinedClubBG:BGSprite;
-	var squear:BGSprite;
 	var glitchfront:BGSprite;
 	var glitchback:BGSprite;
 	var evilPoem:BGSprite;
@@ -671,6 +675,18 @@ class PlayState extends MusicBeatState
 
 				if (!ClientPrefs.lowQuality)
 				{
+					bgwindo = new FlxBackdrop(Paths.image('ruinedclub/bgwindows2'));
+					bgwindo.velocity.set(-40, 0);
+					bgwindo.scrollFactor.set(0.5, 0.5);
+					bgwindo.antialiasing = ClientPrefs.globalAntialiasing;
+					add(bgwindo);
+
+					bgwindo2 = new FlxBackdrop(Paths.image('ruinedclub/bgwindows'));
+					bgwindo2.velocity.set(-60, 0);
+					bgwindo2.scrollFactor.set(0.8, 0.8);
+					bgwindo2.antialiasing = ClientPrefs.globalAntialiasing;
+					add(bgwindo2);
+
 					evilSpace = new FlxBackdrop(Paths.image('bigmonika/Sky'));
 					evilSpace.scrollFactor.set(0.1, 0.1);
 					evilSpace.velocity.set(-10, 0);
@@ -775,11 +791,6 @@ class PlayState extends MusicBeatState
 					deskfront.setGraphicSize(Std.int(deskfront.width * 1.6));
 					deskfront.updateHitbox();
 					deskfront.shader = swagShader.shader;
-
-					squear = new BGSprite('squear', -220, 0, 1, 1, ['Squear'], true);
-					squear.setGraphicSize(Std.int(ruinedClubBG.width * 1.3));
-					squear.alpha = 0.001;
-					squear.blend = SCREEN;
 				}
 
 		}
@@ -823,7 +834,6 @@ class PlayState extends MusicBeatState
 				if (!ClientPrefs.lowQuality)
 				{
 					add(clubroomdark);
-					add(squear);
 				}
 				add(notepadoverlay);
 				add(glitchfront);
@@ -845,7 +855,7 @@ class PlayState extends MusicBeatState
 		screenPulse.alpha = 0.0001;
 		add(screenPulse);
 
-		daStatic= new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
+		daStatic = new BGSprite('daSTAT', 0, 0, 1.0, 1.0, ['staticFLASH'], true);
 		daStatic.cameras = [camHUD];	
 		daStatic.setGraphicSize(FlxG.width, FlxG.height);
 		daStatic.screenCenter();
@@ -859,6 +869,24 @@ class PlayState extends MusicBeatState
 		redStatic.alpha = 0.0001;
 		add(redStatic);
 
+		cambgwindo = new FlxBackdrop(Paths.image('ruinedclub/bgwindows2'));
+		cambgwindo.velocity.set(-40, 0);
+		cambgwindo.antialiasing = ClientPrefs.globalAntialiasing;
+		cambgwindo.alpha = 0.0001;
+		add(cambgwindo);
+
+		cambgwindo2 = new FlxBackdrop(Paths.image('ruinedclub/bgwindows'));
+		cambgwindo2.velocity.set(-60, 0);
+		cambgwindo2.antialiasing = ClientPrefs.globalAntialiasing;
+		cambgwindo2.alpha = 0.0001;
+		add(cambgwindo2);
+
+		stagstatic = new BGSprite('stagnant_glitch', 0, 0, 1.0, 1.0, ['sadface 2'], false);
+		stagstatic.cameras = [camHUD];
+		stagstatic.setGraphicSize(FlxG.width, FlxG.height);
+		stagstatic.screenCenter();
+		stagstatic.alpha = 0.0001;
+		add(stagstatic);
 
 		trace(boyfriendGroup);
 		trace(dadGroup);
@@ -1824,19 +1852,24 @@ class PlayState extends MusicBeatState
 				switch (swagCounter)
 				{
 					case 0:
-						FlxTween.tween(titleCard, {alpha: 1, 'scale.x': 1, 'scale.y': 1}, 3, {
-							ease: FlxEase.cubeOut, onComplete: function(twn:FlxTween)
-							{
-								FlxTween.tween(titleCard, {alpha: 0}, 2, {
-									ease: FlxEase.cubeOut,
-									startDelay: 1, onComplete: function(twn:FlxTween)
-									{
-										remove(titleCard);
-										titleCard.destroy();
-									}
-								});
-							}
-						});
+						if (titleCard != null)
+						{
+							FlxTween.tween(titleCard, {alpha: 1, 'scale.x': 1, 'scale.y': 1}, 3, {
+								ease: FlxEase.cubeOut,
+								onComplete: function(twn:FlxTween)
+								{
+									FlxTween.tween(titleCard, {alpha: 0}, 2, {
+										ease: FlxEase.cubeOut,
+										startDelay: 1,
+										onComplete: function(twn:FlxTween)
+										{
+											remove(titleCard);
+											titleCard.destroy();
+										}
+									});
+								}
+							});
+						}
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 
 						// disable filters on the caching camera
@@ -2484,126 +2517,43 @@ class PlayState extends MusicBeatState
 		}
 
 		#if debug
-		if (evilClubBG != null)
+		if (FlxG.keys.pressed.CONTROL
+			&& (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L || FlxG.keys.pressed.U))
 		{
-			// Position
-			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L))
+			isCameraOnForcedPos = !FlxG.keys.pressed.U;
+
+			if (FlxG.keys.pressed.I)
 			{
-				if (FlxG.keys.justPressed.I)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						extra1.y -= 50;
-					else
-						extra1.y -= 10;
-				}
-				else if (FlxG.keys.justPressed.K)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						extra1.y += 50;
-					else
-						extra1.y += 10;
-				}
-
-				if (FlxG.keys.justPressed.J)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						extra1.x -= 50;
-					else
-						extra1.x -= 10;
-				}
-				else if (FlxG.keys.justPressed.L)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						extra1.x += 50;
-					else
-						extra1.x += 10;
-				}
-
-				trace('X: ${extra1.x} | Y: ${extra1.y}');
+				if (FlxG.keys.pressed.SHIFT)
+					camFollow.y += -50;
+				else
+					camFollow.y += -10;
+			}
+			else if (FlxG.keys.pressed.K)
+			{
+				if (FlxG.keys.pressed.SHIFT)
+					camFollow.y += 50;
+				else
+					camFollow.y += 10;
 			}
 
-			if (FlxG.keys.pressed.SHIFT && (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L))
+			if (FlxG.keys.pressed.J)
 			{
-				if (FlxG.keys.justPressed.I)
-				{
-						extra2.y -= 10;
-				}
-				else if (FlxG.keys.justPressed.K)
-				{
-						extra2.y += 10;
-				}
-
-				if (FlxG.keys.justPressed.J)
-				{
-						extra2.x -= 10;
-				}
-				else if (FlxG.keys.justPressed.L)
-				{
-						extra2.x += 10;
-				}
-
-				trace('X: ${extra2.x} | Y: ${extra2.y}');
+				if (FlxG.keys.pressed.SHIFT)
+					camFollow.x += -50;
+				else
+					camFollow.x += -10;
 			}
-
-			// Scroll Factor
-			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.T || FlxG.keys.pressed.F || FlxG.keys.pressed.G || FlxG.keys.pressed.H))
+			else if (FlxG.keys.pressed.L)
 			{
-				if (FlxG.keys.justPressed.T)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.scrollFactor.y -= 0.01;
-					else
-						evilClubBG.scrollFactor.y -= 0.1;
-				}
-				else if (FlxG.keys.justPressed.G)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.scrollFactor.y += 0.01;
-					else
-						evilClubBG.scrollFactor.y += 0.1;
-				}
-
-				if (FlxG.keys.justPressed.F)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.scrollFactor.x -= 0.01;
-					else
-						evilClubBG.scrollFactor.x -= 0.1;
-				}
-				else if (FlxG.keys.justPressed.H)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						evilClubBG.scrollFactor.x += 0.01;
-					else
-						evilClubBG.scrollFactor.x += 0.1;
-				}
-
-				trace('scrollX: ${evilClubBG.scrollFactor.x} | scrollY: ${evilClubBG.scrollFactor.y}');
-			}
-
-			// Scale
-			if (FlxG.keys.pressed.CONTROL && (FlxG.keys.pressed.U || FlxG.keys.pressed.O))
-			{
-				if (FlxG.keys.justPressed.O)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						debugScale += 0.1;
-					else
-						debugScale += 0.01;
-				}
-				else if (FlxG.keys.justPressed.U)
-				{
-					if (FlxG.keys.pressed.SHIFT)
-						debugScale -= 0.1;
-					else
-						debugScale -= 0.01;
-				}
-
-				evilClubBG.setGraphicSize(Std.int(evilClubBG.width * debugScale));
-
-				trace('Scale: ' + debugScale);
+				if (FlxG.keys.pressed.SHIFT)
+					camFollow.x += 50;
+				else
+					camFollow.x += 10;
 			}
 		}
+
+		FlxG.watch.addQuick("camFollow", [camFollow.x, camFollow.y]);
 		#end
 
 		if (startedCountdown && !paused)
@@ -2667,7 +2617,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if (!ClientPrefs.lowQuality && fancyclouds.visible)//if one is visible all of them are anyway
+		if (!ClientPrefs.lowQuality && fancyclouds != null && fancyclouds.visible)//if one is visible all of them are anyway
 		{
 			floatshit += 0.007 / FramerateTools.timeMultiplier();
 			fancyclouds.alpha += Math.sin(floatshit) / FramerateTools.timeMultiplier() / 5;
@@ -3503,9 +3453,10 @@ class PlayState extends MusicBeatState
 							fancyclouds.visible = false;
 							windowlight.visible = false;
 							clubroomdark.visible = false;
-							squear.alpha = 0.001;
 						}
 						stageStatic.visible = false;
+						bgwindo.visible = false;
+						bgwindo2.visible = false;
 						ruinedClubBG.visible = false;
 						glitchfront.visible = false;
 						glitchback.visible = false;
@@ -3574,8 +3525,9 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
 						stageStatic.visible = true;
+						bgwindo.visible = true;
+						bgwindo2.visible = true;
 						ruinedClubBG.visible = true;
-						if (!ClientPrefs.lowQuality) squear.alpha = 1;
 						glitchfront.visible = true;
 						glitchback.visible = true;
 					case 'notepad':
@@ -3585,6 +3537,8 @@ class PlayState extends MusicBeatState
 						FlxG.camera.zoom = 1.0;
 						//We are going to lock the camera for this event
 						stageStatic.visible = true;
+						bgwindo.visible = true;
+						bgwindo2.visible = true;
 						inthenotepad.visible = true;
 						notepadoverlay.visible = true;
 						isCameraOnForcedPos = true;
@@ -3633,6 +3587,9 @@ class PlayState extends MusicBeatState
 						FlxTween.cancelTweensOf(daStatic);
 						remove(daStatic);
 				}
+			case 'Stagnant Glitch':
+				stagstatic.dance();
+				stagstatic.alpha = 1;
 			case 'Character Visibility':
 				var charType:Int = 0;
 				var val2:Float = Std.parseFloat(value2);
@@ -3845,7 +3802,6 @@ class PlayState extends MusicBeatState
 
 				if (val2 != 0)
 					FlxTween.tween(redStatic, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
-
 			case 'Show death screen':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -3858,7 +3814,9 @@ class PlayState extends MusicBeatState
 				forcecamZooming = false;
 				camZooming = false;
 				FlxTween.tween(imdead, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
-
+				FlxTween.tween(cambgwindo, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+				FlxTween.tween(cambgwindo2, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
+			case '':
 
 			case 'UI visibilty':
 				if (value1 == null || value1 == 'false')

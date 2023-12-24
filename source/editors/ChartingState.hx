@@ -279,6 +279,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Stab Border',
 			"Value 1: does it regardless of what you put here"
+		],
+		[
+			'Stagnant Glitch',
+			'Yes'
 		]
 	];
 
