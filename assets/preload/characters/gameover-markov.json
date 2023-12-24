@@ -1,44 +1,44 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				243,
-				259
+				0,
+				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "firstDeath",
-			"fps": 24,
-			"name": "Stagnant Death Intro",
-			"indices": []
+			"indices": [],
+			"name": "YuriWatches Intro"
 		},
 		{
+			"offsets": [
+				0,
+				0
+			],
 			"loop": true,
-			"offsets": [
-				37,
-				5
-			],
-			"anim": "deathLoop",
 			"fps": 24,
-			"name": "Stagnant Death Idle",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "YuriWatches Loop"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				37,
-				5
+				0,
+				0
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "Stagnant Death Confirm",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "YuriWatches Confirm"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/StagnantGameOver",
+	"image": "characters/MarkovGameOver",
 	"position": [
 		0,
-		350
+		0
 	],
 	"healthicon": "bf",
 	"flip_x": true,

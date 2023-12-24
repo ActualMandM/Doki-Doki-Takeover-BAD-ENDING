@@ -25,6 +25,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
 	public static var markovGameover:Bool = false;
+	var camZoom:Float = 1;
 
 	public static var instance:GameOverSubstate;
 
@@ -52,7 +53,12 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance.setOnLuas('inGameOver', true);
 
 		Conductor.songPosition = 0;
-		if (markovGameover) characterName = 'gameover-markov';
+		if (markovGameover) 
+		{
+			deathSoundName = 'YuriWatchesYouDie';
+			characterName = 'gameover-markov';
+			camZoom = 0.9;
+		}	
 
 		boyfriend = new Boyfriend(x, y, characterName);
 		boyfriend.x += boyfriend.positionArray[0];
@@ -75,7 +81,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollowPos.setPosition(camFollow.x, camFollow.y);
 		add(camFollowPos);
 
-		FlxG.camera.zoom = 1;
+		FlxG.camera.zoom = camZoom;
 		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 	}
 

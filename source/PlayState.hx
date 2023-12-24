@@ -1278,7 +1278,7 @@ class PlayState extends MusicBeatState
 
 				darkScreen = new FlxSprite(0, 0).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				add(darkScreen);
-				darkScreen.cameras = [camOther];
+				darkScreen.cameras = [camHUD];
 
 				titleCard = new FlxSprite();
 				titleCard.frames = Paths.getSparrowAtlas('titlecards/${daSong}', 'doki'); // curSong
@@ -1886,8 +1886,6 @@ class PlayState extends MusicBeatState
 
 						// disable filters on the caching camera
 						camCache.filtersEnabled = false;
-
-						darkScreen.cameras = [camHUD];
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.scrollFactor.set();
