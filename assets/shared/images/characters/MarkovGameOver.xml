@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MarkovGameOver.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="YuriWatches Confirm0000" x="8" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0001" x="1126" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0002" x="2244" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0003" x="3362" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0004" x="4480" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0005" x="5598" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0006" x="6716" y="8" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0007" x="8" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0008" x="1126" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0009" x="2244" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0010" x="5598" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0011" x="4480" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0012" x="3362" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0013" x="2244" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0014" x="1126" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0015" x="8" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0016" x="6760" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0017" x="5642" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0018" x="3406" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0019" x="4524" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0020" x="3362" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0021" x="3362" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0022" x="3362" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0023" x="4480" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0024" x="4480" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0025" x="4480" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0026" x="4480" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Confirm0027" x="5598" y="1039" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0000" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0001" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0002" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0003" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0004" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0005" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0006" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0007" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0008" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0009" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0010" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0011" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0012" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0013" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0014" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0015" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0016" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0017" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0018" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0019" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0020" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0021" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0022" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0023" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0024" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0025" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0026" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0027" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0028" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0029" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0030" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0031" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0032" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0033" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0034" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0035" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0036" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0037" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0038" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0039" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0040" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0041" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0042" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0043" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0044" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0045" x="6716" y="1039" width="0" height="0" frameX="0" frameY="2" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0046" x="6716" y="1039" width="0" height="0" frameX="-399" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0047" x="6724" y="1039" width="301" height="84" frameX="-399" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0048" x="7033" y="1039" width="301" height="84" frameX="-399" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0049" x="7342" y="1039" width="301" height="84" frameX="-399" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0050" x="7651" y="1039" width="302" height="84" frameX="-406" frameY="-406" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0051" x="8" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0052" x="317" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0053" x="626" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0054" x="935" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0055" x="1244" y="2070" width="300" height="83" frameX="-415" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0056" x="1552" y="2070" width="301" height="84" frameX="-416" frameY="-416" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0057" x="1861" y="2070" width="301" height="84" frameX="-416" frameY="-416" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0058" x="2170" y="2070" width="301" height="84" frameX="-416" frameY="-416" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0059" x="2479" y="2070" width="301" height="84" frameX="-416" frameY="-416" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0060" x="2788" y="2070" width="301" height="84" frameX="-401" frameY="-414" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0061" x="3097" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0062" x="3097" y="2070" width="301" height="84" frameX="-409" frameY="-404" frameWidth="1110" frameHeight="1023"/>
+	<SubTexture name="YuriWatches Intro0063" x="3406" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0064" x="4524" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0065" x="5642" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0066" x="6760" y="2070" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0067" x="8" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0068" x="1126" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0069" x="2244" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0070" x="3362" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0071" x="4480" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0072" x="5598" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0073" x="6716" y="3101" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0074" x="8" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0075" x="1126" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0076" x="2244" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0077" x="3362" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0078" x="4480" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0079" x="5598" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0080" x="6716" y="4132" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0081" x="8" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0082" x="1126" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0083" x="1126" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0084" x="2244" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0085" x="2244" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0086" x="2244" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0087" x="2244" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0088" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0089" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0090" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0091" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0092" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0093" x="4480" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Intro0094" x="5598" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0000" x="6716" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0001" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0002" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0003" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0004" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0005" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0006" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0007" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0008" x="3362" y="5163" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0009" x="8" y="6194" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0010" x="1126" y="6194" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0011" x="2244" y="6194" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0012" x="2244" y="6194" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0013" x="2244" y="6194" width="1110" height="1023"/>
+	<SubTexture name="YuriWatches Loop0014" x="2244" y="6194" width="1110" height="1023"/>
+</TextureAtlas>
