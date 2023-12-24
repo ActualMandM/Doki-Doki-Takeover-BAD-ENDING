@@ -16,7 +16,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var camFollow:FlxPoint;
 	var camFollowPos:FlxObject;
-	var updateCamera:Bool = false;
+	//var updateCamera:Bool = false;
 
 	var stageSuffix:String = "";
 
@@ -70,24 +70,26 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		boyfriend.playAnim('firstDeath');
 
-		var exclude:Array<Int> = [];
-
 		camFollowPos = new FlxObject(0, 0, 1, 1);
-		camFollowPos.setPosition(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2));
+		//camFollowPos.setPosition(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2));
+		camFollowPos.setPosition(camFollow.x, camFollow.y);
 		add(camFollowPos);
+
+		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 	}
 
-	var isFollowingAlready:Bool = false;
+	//var isFollowingAlready:Bool = false;
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
 		PlayState.instance.callOnLuas('onUpdate', [elapsed]);
-		if (updateCamera)
-		{
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
-			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
-		}
+
+		//if (updateCamera)
+		//{
+		//	var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
+		//	camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+		//}
 
 		if (controls.ACCEPT)
 		{
@@ -111,12 +113,12 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (boyfriend.animation.curAnim.name == 'firstDeath')
 		{
-			if (boyfriend.animation.curAnim.curFrame >= 12 && !isFollowingAlready)
-			{
-				FlxG.camera.follow(camFollowPos, LOCKON, 1);
-				updateCamera = true;
-				isFollowingAlready = true;
-			}
+			//if (boyfriend.animation.curAnim.curFrame >= 12 && !isFollowingAlready)
+			//{
+			//	FlxG.camera.follow(camFollowPos, LOCKON, 1);
+			//	updateCamera = true;
+			//	isFollowingAlready = true;
+			//}
 
 			if (boyfriend.animation.curAnim.finished)
 			{
@@ -135,8 +137,6 @@ class GameOverSubstate extends MusicBeatSubstate
 	override function beatHit()
 	{
 		super.beatHit();
-
-		// FlxG.log.add('beat');
 	}
 
 	var isEnding:Bool = false;
