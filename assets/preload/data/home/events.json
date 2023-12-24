@@ -1680,12 +1680,64 @@
 				]
 			],
 			[
+				195600,
+				[
+					[
+						"Tween in the holy light",
+						"1",
+						"20",
+						""
+					]
+				]
+			],
+			[
 				214350,
 				[
 					[
 						"Change Scroll Speed",
 						"0.85",
 						"0.2"
+					]
+				]
+			],
+			[
+				214800,
+				[
+					[
+						"Tween in the holy light",
+						"0",
+						"0.1",
+						""
+					],
+					[
+						"Tint Character",
+						"red",
+						"bf",
+						""
+					],
+					[
+						"Tint Character",
+						"red",
+						"dad",
+						""
+					],
+					[
+						"Tint Character",
+						"hueh",
+						"gf",
+						"990000"
+					],
+					[
+						"Tint Character",
+						"hueh",
+						"sayori",
+						"990000"
+					],
+					[
+						"Tint Character",
+						"hueh",
+						"yuri",
+						"990000"
 					]
 				]
 			],

@@ -1,41 +1,41 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				37,
-				11
-			],
-			"anim": "firstDeath",
-			"fps": 24,
-			"name": "BF dies",
-			"indices": []
-		},
-		{
-			"loop": true,
 			"offsets": [
 				37,
 				5
 			],
-			"anim": "deathLoop",
+			"loop": false,
 			"fps": 24,
-			"name": "BF Dead Loop",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF die confirm"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				37,
-				69
+				21,
+				5
 			],
-			"anim": "deathConfirm",
+			"loop": true,
 			"fps": 24,
-			"name": "BF Dead confirm",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF die loop"
+		},
+		{
+			"offsets": [
+				30,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF die intro"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/gameover_bf_floorMIC",
+	"image": "characters/SadBFDies_Assets",
 	"position": [
 		0,
 		350

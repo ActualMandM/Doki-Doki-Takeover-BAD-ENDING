@@ -174,5 +174,7 @@
 		-60
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 1,
+	"gameover_Character": "gameover-sadbf",
+	"death_Sound": "sad_death"
 }

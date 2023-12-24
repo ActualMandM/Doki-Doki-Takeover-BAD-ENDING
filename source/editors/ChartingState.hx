@@ -283,6 +283,10 @@ class ChartingState extends MusicBeatState
 		[
 			'Stagnant Glitch',
 			'Yes'
+		],
+		[
+			'Tween in the holy light',
+			'Value 1: Alpha, Value 2: Speed'
 		]
 	];
 

@@ -130,6 +130,7 @@ class PlayState extends MusicBeatState
 	var daStatic:BGSprite;
 	var stagstatic:BGSprite;
 	var screenPulse:BGSprite;
+	var holylight:BGSprite;
 	var redStatic:BGSprite;
 	var inthenotepad:BGSprite;
 	var notepadoverlay:BGSprite;
@@ -887,6 +888,14 @@ class PlayState extends MusicBeatState
 		stagstatic.screenCenter();
 		stagstatic.alpha = 0.0001;
 		add(stagstatic);
+
+		holylight = new BGSprite('deadlight', 0, 0, 1, 1);
+		holylight.cameras = [camHUD];
+		holylight.setGraphicSize(FlxG.width, FlxG.height);
+		holylight.screenCenter();
+		holylight.alpha = 0.0001;
+		add(holylight);
+
 
 		trace(boyfriendGroup);
 		trace(dadGroup);
@@ -3899,7 +3908,7 @@ class PlayState extends MusicBeatState
 			case 'Tint Character':
 				//Only used for home but might as well make it universal
 				var char:Character = boyfriend;
-				var val3:Int = Std.parseInt(value3);
+				var val3:Int = FlxColor.fromString('#' + value3);
 				switch (value2.toLowerCase().trim())
 				{
 					default:
@@ -3908,6 +3917,10 @@ class PlayState extends MusicBeatState
 						char = gf;
 					case 'dad':
 						char = dad;
+					case 'yuri':
+						char = extra2;
+					case 'sayori':
+						char = extra1;
 				}
 
 				if (Math.isNaN(val3))
@@ -3915,6 +3928,8 @@ class PlayState extends MusicBeatState
 				
 				switch (value1.toLowerCase())
 				{
+					case 'red':
+						char.color = FlxColor.RED;
 					case 'black':
 						char.color = FlxColor.BLACK;
 					case 'gray' | 'grey':
@@ -4071,6 +4086,16 @@ class PlayState extends MusicBeatState
 				FlxTween.cancelTweensOf(screenPulse);
 				screenPulse.alpha = 1;
 				FlxTween.tween(screenPulse, {alpha: 0.001}, val1, {ease: FlxEase.circOut});
+			case 'Tween in the holy light':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				if (Math.isNaN(val1))
+					val1 = 1;
+				if (Math.isNaN(val2))
+					val1 = 0.1;
+
+				FlxTween.cancelTweensOf(holylight);
+				FlxTween.tween(holylight, {alpha: val1}, val2, {ease: FlxEase.linear});
 		}
 		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
