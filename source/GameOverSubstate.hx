@@ -75,6 +75,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollowPos.setPosition(camFollow.x, camFollow.y);
 		add(camFollowPos);
 
+		FlxG.camera.zoom = 1;
 		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 	}
 
