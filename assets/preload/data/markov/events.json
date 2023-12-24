@@ -1612,12 +1612,6 @@
 						""
 					],
 					[
-						"Stab Border",
-						"",
-						"",
-						""
-					],
-					[
 						"Toggle Note Camera Movement",
 						"false",
 						"",
@@ -1628,12 +1622,6 @@
 			[
 				223852.397260274,
 				[
-					[
-						"Change Stagnant Stage",
-						"markovpoem",
-						"",
-						""
-					],
 					[
 						"Change Camera Zoom",
 						"1.2",
@@ -1673,6 +1661,12 @@
 			[
 				224827.397260274,
 				[
+					[
+						"Change Stagnant Stage",
+						"markovpoem",
+						"",
+						""
+					],
 					[
 						"Change Character",
 						"dad",
@@ -1716,6 +1710,12 @@
 					[
 						"Play SFX",
 						"fall",
+						"",
+						""
+					],
+					[
+						"Stab Border",
+						"0.001",
 						"",
 						""
 					]

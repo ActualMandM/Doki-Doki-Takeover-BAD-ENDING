@@ -633,7 +633,7 @@ class PlayState extends MusicBeatState
 				evilClubBGScribbly.alpha = 0;
 				add(evilClubBGScribbly);
 
-				evilPoem = new BGSprite('PaperBG', -220, -110, 1, 1, ['PaperBG'], true);
+				evilPoem = new BGSprite('markovend', -220, -110, 1, 1);
 				evilPoem.setGraphicSize(Std.int(evilPoem.width * 1.3));
 				evilPoem.visible = false;
 				add(evilPoem);
@@ -3562,6 +3562,10 @@ class PlayState extends MusicBeatState
 						evilPoem.visible = true;
 						bloodyBG.alpha = 1;
 						bloodyBG.animation.play('bgBlood');
+						screenPulse.alpha = 1;
+						funnyEyes.setGraphicSize(Std.int(bloodyBG.width * 1.3));
+						funnyEyes.cameras = [camGame];
+						funnyEyes.alpha = 1;
 					case 'closet':
 						defaultCamZoom = 1.0;
 						FlxG.camera.zoom = 1.0;
@@ -4100,9 +4104,12 @@ class PlayState extends MusicBeatState
 					}
 				}
 			case 'Stab Border':
+				var val1:Float = Std.parseFloat(value1);
+				if (Math.isNaN(val1))
+					val1 = 0.5;
 				FlxTween.cancelTweensOf(screenPulse);
 				screenPulse.alpha = 1;
-				FlxTween.tween(screenPulse, {alpha: 0.001}, 0.5, {ease: FlxEase.circOut});
+				FlxTween.tween(screenPulse, {alpha: 0.001}, val1, {ease: FlxEase.circOut});
 		}
 		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
