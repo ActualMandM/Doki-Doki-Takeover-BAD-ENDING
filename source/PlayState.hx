@@ -889,6 +889,9 @@ class PlayState extends MusicBeatState
 		stagstatic.alpha = 0.0001;
 		add(stagstatic);
 
+		// just incase
+		precacheList.set('stagnant_glitch', 'image');
+
 		holylight = new BGSprite('deadlight', 0, 0, 1, 1);
 		holylight.cameras = [camHUD];
 		holylight.setGraphicSize(FlxG.width, FlxG.height);
