@@ -3314,6 +3314,7 @@ class PlayState extends MusicBeatState
 							boyfriend.alpha = 0.00001;
 							boyfriend = boyfriendMap.get(value2);
 							boyfriend.alpha = lastAlpha;
+							boyfriend.dance(false);
 							iconP1.changeIcon(boyfriend.healthIcon);
 						}
 						setOnLuas('boyfriendName', boyfriend.curCharacter);
@@ -3342,6 +3343,7 @@ class PlayState extends MusicBeatState
 								gf.visible = false;
 							}
 							dad.alpha = lastAlpha;
+							dad.dance(false);
 							iconP2.changeIcon(dad.healthIcon);
 						}
 						setOnLuas('dadName', dad.curCharacter);
@@ -3358,6 +3360,7 @@ class PlayState extends MusicBeatState
 							gf.alpha = 0.00001;
 							gf = gfMap.get(value2);
 							gf.alpha = lastAlpha;
+							gf.dance(false);
 						}
 						setOnLuas('gfName', gf.curCharacter);
 				}
@@ -3538,8 +3541,11 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.8;
 						FlxG.camera.zoom = 0.8;
 						stageStatic.visible = true;
-						bgwindo.visible = true;
-						bgwindo2.visible = true;
+						if (!ClientPrefs.lowQuality)
+						{
+							bgwindo.visible = true;
+							bgwindo2.visible = true;
+						}
 						ruinedClubBG.visible = true;
 						glitchfront.visible = true;
 						glitchback.visible = true;
@@ -3550,8 +3556,11 @@ class PlayState extends MusicBeatState
 						FlxG.camera.zoom = 1.0;
 						//We are going to lock the camera for this event
 						stageStatic.visible = true;
-						bgwindo.visible = true;
-						bgwindo2.visible = true;
+						if (!ClientPrefs.lowQuality)
+						{
+							bgwindo.visible = true;
+							bgwindo2.visible = true;
+						}
 						inthenotepad.visible = true;
 						notepadoverlay.visible = true;
 						isCameraOnForcedPos = true;
@@ -3829,7 +3838,6 @@ class PlayState extends MusicBeatState
 				FlxTween.tween(imdead, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
 				FlxTween.tween(cambgwindo, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
 				FlxTween.tween(cambgwindo2, {alpha: val1}, val2, {ease: FlxEase.linear, onComplete: function(twn:FlxTween){}});
-			case '':
 
 			case 'UI visibilty':
 				if (value1 == null || value1 == 'false')

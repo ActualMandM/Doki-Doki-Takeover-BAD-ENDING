@@ -226,8 +226,6 @@ class Character extends FlxSprite
 
 		if (!animdebug && facing != initFacing)
 		{
-			
-
 			if (animation.getByName('singRIGHT') != null)
 				{
 					var oldRight = animation.getByName('singRIGHT').frames;
@@ -310,21 +308,21 @@ class Character extends FlxSprite
 	/**
 	 * FOR GF DANCING SHIT
 	 */
-	public function dance()
+	public function dance(force:Bool = true)
 	{
 		if (!debugMode && !specialAnim)
 		{
-			if(danceIdle)
+			if (!force && animation.curAnim.name.startsWith('sing'))
+				return;
+
+			if (danceIdle)
 			{
 				danced = !danced;
-
-				if (danced)
-					playAnim('danceRight' + idleSuffix);
-				else
-					playAnim('danceLeft' + idleSuffix);
+				playAnim((danced ? 'danceRight' : 'danceLeft') + idleSuffix);
 			}
-			else if(animation.getByName('idle' + idleSuffix) != null) {
-					playAnim('idle' + idleSuffix);
+			else if (animation.getByName('idle' + idleSuffix) != null)
+			{
+				playAnim('idle' + idleSuffix);
 			}
 		}
 	}
