@@ -1,5 +1,5 @@
 ![Doki Doki Takeover! - BAD ENDING logo](art/api.png)
-## Built on **[Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine)** - **[GameBanana](https://gamebanana.com/mods/386603)**
+## Built on **[Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) - [GameBanana](https://gamebanana.com/mods/386603) - [GameJolt](https://gamejolt.com/games/DDTO-BadEnding/863820)**
 
 # Original Game Links
 
