@@ -3463,10 +3463,10 @@ class PlayState extends MusicBeatState
 							fancyclouds.visible = false;
 							windowlight.visible = false;
 							clubroomdark.visible = false;
+							bgwindo.visible = false;
+							bgwindo2.visible = false;
 						}
 						stageStatic.visible = false;
-						bgwindo.visible = false;
-						bgwindo2.visible = false;
 						ruinedClubBG.visible = false;
 						glitchfront.visible = false;
 						glitchback.visible = false;
